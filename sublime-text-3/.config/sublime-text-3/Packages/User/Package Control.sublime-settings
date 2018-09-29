@@ -1,0 +1,41 @@
+{
+	"bootstrapped": true,
+	"in_process_packages":
+	[
+	],
+	"installed_packages":
+	[
+		"Anaconda",
+		"AutoFileName",
+		"BracketHighlighter",
+		"Color Highlighter",
+		"Compare Side-By-Side",
+		"DocBlockr",
+		"Dockerfile Syntax Highlighting",
+		"DotENV",
+		"EditorConfig",
+		"FileIcons",
+		"Git",
+		"GitGutter",
+		"Gitignore",
+		"JavaIME",
+		"JsPrettier",
+		"LaTeXTools",
+		"MarkdownLivePreview",
+		"MarkdownPreview",
+		"Package Control",
+		"RevertFontSize",
+		"Sass",
+		"SideBarTools",
+		"SQLTools",
+		"SublimeLinter",
+		"SublimeLinter-eslint",
+		"SublimeLinter-javac",
+		"SublimeLinter-php",
+		"SublimeLinter-tslint",
+		"TypeScript",
+		"Vue Syntax Highlight",
+		"Vuetify",
+		"Writing Color Scheme"
+	]
+}

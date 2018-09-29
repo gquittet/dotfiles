@@ -1,0 +1,43 @@
+{
+	"color_scheme": "Packages/Color Scheme - Default/Mariana.sublime-color-scheme",
+	"default_line_ending": "unix",
+	"drag_text": false,
+	"folder_exclude_patterns":
+	[
+		".svn",
+		".git",
+		".hg",
+		".idea",
+		".vscode",
+		"build",
+		"CVS",
+		"dist",
+		"node_modules"
+	],
+	"font_face": "Ubuntu Mono",
+	"font_options":
+	[
+		"gray_antialias",
+		"subpixel_antialias"
+	],
+	"font_size": 11,
+	"highlight_line": true,
+	"highlight_modified_tabs": true,
+	"ignored_packages":
+	[
+		"Vintage"
+	],
+	"overlay_scroll_bars": "enabled",
+	"revert_font_size": 11,
+	"rulers":
+	[
+		80
+	],
+	"show_encoding": true,
+	"smart_indent": true,
+	"tab_size": 4,
+	"theme": "Default.sublime-theme",
+	"translate_tabs_to_spaces": true,
+	"trim_trailing_white_space_on_save": true,
+	"word_wrap": true
+}
