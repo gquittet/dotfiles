@@ -1,5 +1,8 @@
 [
     { "keys": ["alt+d"], "command": "goto_definition" },
+    { "keys": ["ctrl+alt+a"], "command": "align_tab",
+       "args" : {"live_preview" : true}
+    },
     { "keys": ["ctrl+alt+f"], "command": "js_prettier" },
     { "keys": ["ctrl+alt+i"], "command": "reindent" },
     { "keys": ["ctrl+alt+s"], "command": "reveal_in_side_bar" },
