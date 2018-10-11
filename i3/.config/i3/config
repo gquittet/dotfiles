@@ -74,10 +74,10 @@ bindsym $mod+Shift+Up move up
 bindsym $mod+Shift+Right move right
 
 # split in horizontal orientation
-bindsym $mod+comma split v
+bindsym $mod+comma split h
 
 # split in vertical orientation
-bindsym $mod+period split h
+bindsym $mod+period split v
 
 # enter fullscreen mode for the focused container
 bindsym $mod+Shift+f fullscreen toggle
@@ -191,12 +191,9 @@ mode "$mode_resize" {
         bindsym Escape mode "default"
 }
 
-bindsym $mod+r mode "$mode_resize"
-
+# Mode System
 set $locker xtrlock -b && sleep 1
-
 set $mode_system system
-
 mode "$mode_system" {
     bindsym e exec --no-startup-id i3-msg exit, mode "default"
     bindsym l exec --no-startup-id $locker, mode "default"
@@ -210,8 +207,6 @@ mode "$mode_system" {
     bindsym Escape mode "default"
 }
 
-bindsym $mod+Pause mode "$mode_system"
-
 # Mode screen capture
 set $mode_screen_capture capture
 set $screen_capture_command scrot -q 100
@@ -224,9 +219,6 @@ mode "$mode_screen_capture" {
     bindsym Return mode "default"
     bindsym Escape mode "default"
 }
-
-bindsym Mod1+Sys_Req mode "$mode_screen_capture"
-
 
 
 
@@ -266,6 +258,10 @@ hide_edge_borders smart
 for_window [class="^.*"] border pixel 6
 #for_window [class="^.*"] border none
 
+# Floating
+floating_minimum_size 100 x 100
+floating_maximum_size 1280 x 720
+
 # Gaps
 # gaps inner $gapsValueInner
 # gaps outer $gapsValueOuter
@@ -280,7 +276,10 @@ focus_follows_mouse no
 # Applications window settings
 for_window [class="Lxappearance"] floating enable
 for_window [class="mpv"] floating enable
-for_window [class="Franz"] move container to workspace 10
+# for_window [class="Franz"] move container to workspace 10
+
+# Workspace
+workspace_layout tabbed
 
 
 
@@ -292,6 +291,11 @@ bindsym $mod+u [urgent=latest] focus
 # Function keys
 bindsym F1 exec --no-startup-id echo "I don't need help" > /dev/null
 bindsym F11 fullscreen toggle
+
+# Modes
+bindsym $mod+r mode "$mode_resize"
+bindsym $mod+Pause mode "$mode_system"
+bindsym Mod1+Sys_Req mode "$mode_screen_capture"
 
 # Projection
 bindsym XF86Display exec --no-startup-id $term -e "bash -c ~/.scripts/show-screens.sh"
