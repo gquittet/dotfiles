@@ -274,6 +274,7 @@ for_window [window_role="task_dialog"] floating enable
 focus_follows_mouse no
 
 # Applications window settings
+for_window [class="Arandr"] floating enable
 for_window [class="Lxappearance"] floating enable
 for_window [class="mpv"] floating enable
 for_window [title="ncmpcpp"] floating enable
