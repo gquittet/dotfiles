@@ -276,6 +276,8 @@ focus_follows_mouse no
 # Applications window settings
 for_window [class="Lxappearance"] floating enable
 for_window [class="mpv"] floating enable
+for_window [title="ncmpcpp"] floating enable
+for_window [title="ranger"] floating enable
 # for_window [class="Franz"] move container to workspace 10
 
 # Workspace
@@ -306,7 +308,8 @@ bindsym $mod+n move scratchpad
 
 # Sofwares shortcut
 bindsym $mod+f exec --no-startup-id pcmanfm
-bindsym $mod+p exec --no-startup-id $term -e "bash -c ~/.scripts/ncmpcpp.sh"
+bindsym Shift+$mod+e exec --no-startup-id $term -e "ranger"
+bindsym $mod+p exec --no-startup-id $term -e "ncmpcpp"
 
 # Sreen brightness controls
 bindsym XF86MonBrightnessUp exec --no-startup-id xbacklight -inc 5 # increase screen brightness
