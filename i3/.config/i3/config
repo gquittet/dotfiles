@@ -278,6 +278,7 @@ for_window [class="Arandr"] floating enable
 for_window [class="Lxappearance"] floating enable
 for_window [class="mpv"] floating enable
 for_window [title="ncmpcpp"] floating enable
+for_window [class="Pcmanfm"] floating enable
 for_window [title="ranger"] floating enable
 # for_window [class="Franz"] move container to workspace 10
 
