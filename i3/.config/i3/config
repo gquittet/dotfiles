@@ -209,11 +209,12 @@ mode "$mode_system" {
 
 # Mode screen capture
 set $mode_screen_capture capture
-set $screen_capture_command scrot -q 100
+set $screen_capture_command maim -f png -m 10 ~/$(date '+%Y-%m-%d-%H%M%S').png
+set $put_to_clipboard | xclip -selection clipboard -t image/png
 mode "$mode_screen_capture" {
-    bindsym --release s exec --no-startup-id $screen_capture_command, mode "default"
-    bindsym --release Shift+s exec --no-startup-id $screen_capture_command -s, mode "default"
-    bindsym --release w exec --no-startup-id $screen_capture_command -u, mode "default"
+    bindsym --release s exec --no-startup-id $screen_capture_command $put_to_clipboard, mode "default"
+    bindsym --release Shift+s exec --no-startup-id $screen_capture_command -s $put_to_clipboard, mode "default"
+    bindsym --release w exec --no-startup-id $screen_capture_command -st 9999999 $put_to_clipboard, mode "default"
 
     # back to normal: Enter or Escape
     bindsym Return mode "default"
@@ -276,6 +277,7 @@ focus_follows_mouse no
 # Applications window settings
 for_window [class="Arandr"] floating enable
 for_window [class="Lxappearance"] floating enable
+for_window [class="Lxtask"] floating enable
 for_window [class="mpv"] floating enable
 for_window [title="ncmpcpp"] floating enable
 for_window [class="Pcmanfm"] floating enable
@@ -299,7 +301,7 @@ bindsym F11 fullscreen toggle
 # Modes
 bindsym $mod+r mode "$mode_resize"
 bindsym $mod+Pause mode "$mode_system"
-bindsym Mod1+Sys_Req mode "$mode_screen_capture"
+bindsym $mod+Print mode "$mode_screen_capture"
 
 # Projection
 bindsym XF86Display exec --no-startup-id $term -e "bash -c ~/.scripts/show-screens.sh"
@@ -339,4 +341,5 @@ exec --no-startup-id [ ! -s ~/.mpd/pid ] && mpd
 exec --no-startup-id nm-applet &
 exec_always --no-startup-id wal -i "$HOME/Pictures/Wallpapers/wallhaven-37411.jpg" --saturate 0.8 -a "97" --iterative
 exec --no-startup-id killall redshift; redshift -l 50.4:3.8
+exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
 
