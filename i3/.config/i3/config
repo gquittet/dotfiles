@@ -47,7 +47,7 @@ bindsym $mod+Shift+c kill
 # installed.
 #bindsym $mod+d exec --no-startup-id i3-dmenu-desktop
 bindsym $mod+d exec --no-startup-id ~/.scripts/rofi.sh -d
-bindsym $mod+Shift+d exec --no-startup-id ~/.scripts/rofi.sh -w
+bindsym Mod1+Tab exec --no-startup-id ~/.scripts/rofi.sh -w
 
 # change focus
 bindsym $mod+h focus left
@@ -280,7 +280,9 @@ for_window [class="Lxappearance"] floating enable
 for_window [class="Lxtask"] floating enable
 for_window [class="mpv"] floating enable
 for_window [title="ncmpcpp"] floating enable
+for_window [class="Nm-connection-editor"] floating enable
 for_window [class="Pcmanfm"] floating enable
+for_window [title="QEMU/KVM Connection Details"] floating enable
 for_window [title="ranger"] floating enable
 # for_window [class="Franz"] move container to workspace 10
 
