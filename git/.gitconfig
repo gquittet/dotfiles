@@ -1,0 +1,27 @@
+[user]
+	email = guillaume.quittet@gmail.com
+	name = Guillaume Quittet
+[alias]
+    co  = checkout
+    cob = checkout -b
+    f   = fetch -p
+    c   = commit
+    cm  = commit -m
+    cem = commit --allow-empty -m
+    p   = push
+    pu  = push -u
+    puo = push -u origin
+    ba  = branch -a
+    bd  = branch -d
+    bD  = branch -D
+    dc  = diff --cached
+    
+    st = status -sb
+    a = add
+    ap = add -p
+    
+    plg = log --graph --pretty='format:%C(red)%d%C(reset) %C(yellow)%h%C(reset) %ar %C(green)%aN%C(reset) %s'
+    tlg = log --stat --since='1 Day Ago' --graph --pretty=oneline --abbrev-commit --date=relative
+    lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
+    rank = shortlog -sn --no-merges
+    bdm = "!git branch --merged | grep -v '*' | xargs -n 1 git branch -d"
