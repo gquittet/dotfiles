@@ -6,9 +6,12 @@
     cob = checkout -b
     f   = fetch -p
     c   = commit
+    ca  = commit --amend
+    cam = commit --amend -m
     cm  = commit -m
     cem = commit --allow-empty -m
     p   = push
+    pl  = pull
     pu  = push -u
     puo = push -u origin
     ba  = branch -a
