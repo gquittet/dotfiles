@@ -47,10 +47,6 @@ Plug 'easymotion/vim-easymotion'
 " Use abreviations and then type : <C-Y>,
 Plug 'mattn/emmet-vim'
 
-" fzf
-Plug 'junegunn/fzf'
-Plug 'junegunn/fzf.vim'
-
 " Git
 Plug 'tpope/vim-fugitive'
 
@@ -66,6 +62,9 @@ Plug 'artur-shaik/vim-javacomplete2'
 " Jedi vim : Python completition
 " Don't forget to install this : sudo pip install jedi
 Plug 'davidhalter/jedi-vim'
+
+" LeaderF
+Plug 'Yggdroot/LeaderF', { 'do': './install.sh' }
 
 " Markdown
 function! BuildComposer(info)
