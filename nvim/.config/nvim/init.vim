@@ -43,6 +43,9 @@ Plug 'dracula/vim'
 " Press <Leader><Leader> and the letter that you want to go
 Plug 'easymotion/vim-easymotion'
 
+" EditorConfig
+Plug 'editorconfig/editorconfig-vim'
+
 " Emmet : new ZenCoding
 " Use abreviations and then type : <C-Y>,
 Plug 'mattn/emmet-vim'
@@ -53,6 +56,9 @@ Plug 'tpope/vim-fugitive'
 " Grammalecte
 Plug 'dpelle/vim-Grammalecte'
 
+" Gruvbox
+Plug 'morhetz/gruvbox'
+
 " Indent Guide
 Plug 'nathanaelkane/vim-indent-guides'
 
@@ -62,9 +68,6 @@ Plug 'artur-shaik/vim-javacomplete2'
 " Jedi vim : Python completition
 " Don't forget to install this : sudo pip install jedi
 Plug 'davidhalter/jedi-vim'
-
-" LeaderF
-Plug 'Yggdroot/LeaderF', { 'do': './install.sh' }
 
 " Markdown
 function! BuildComposer(info)
@@ -138,13 +141,6 @@ Plug 'mbbill/undotree'
 
 " VueJS
 Plug 'posva/vim-vue'
-
-" Wal
-Plug 'dylanaraps/wal.vim'
-
-
-" Very last one
-" Plug 'ryanoasis/vim-devicons'
 
 
 " All of your Plugins must be added before the following line
@@ -276,6 +272,10 @@ nmap <leader>bp :bprevious<CR>
 nmap <leader>bf :bfirst<CR>
 nmap <leader>bd :bdelete<CR>
 
+" Denite file rec
+nmap <leader>p :Denite file_rec<CR>
+nmap <leader>g :Denite grep<CR>
+
 " Git
 nmap <leader>gs :Gstatus<CR>
 nmap <leader>ga :Git add -A<CR>
@@ -332,8 +332,11 @@ map <Leader>u :UndotreeToggle<CR>
 " ====================================================
 
 " Airline
-" let g:airline_powerline_fonts = 1
-" let g:airline#extensions#ale#enabled = 1
+let g:airline_powerline_fonts = 1
+let g:airline#extensions#tabline#enabled = 1
+let g:airline#extensions#tabline#left_sep = ' '
+let g:airline#extensions#tabline#left_alt_sep = '|'
+let g:airline#extensions#ale#enabled = 1
 
 " ALE
 " Lint only when I save the file
@@ -431,16 +434,18 @@ if (has("gui_running"))
     set guioptions-=L    " remove left-hand scroll bar
 endif
 
+
 " Use GUI colors in terminal
-if (has("termguicolors"))
-    let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
-    let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
-    set termguicolors
-endif
+" if (has("termguicolors"))
+    " let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
+    " let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
+    " set termguicolors
+" endif
 
 " Set the full color compatibility for vim and terminal
 syntax enable
-colorscheme dracula
+let g:gruvbox_italic = '1'
+colorscheme gruvbox
+set background=dark
 " colorscheme PaperColor
 " set background=light
-" colorscheme wal
