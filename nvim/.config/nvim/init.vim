@@ -24,15 +24,6 @@ Plug 'Rip-Rip/clang_complete'
 " Denite for helm feature and better implementation that Unite
 Plug 'Shougo/denite.nvim'
 
-" Deoplete for async completion
-if has('nvim')
-  Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
-else
-  Plug 'Shougo/deoplete.nvim'
-  Plug 'roxma/nvim-yarp'
-  Plug 'roxma/vim-hug-neovim-rpc'
-endif
-
 " VIM-Dispatch : Useful for starting Omnisharp
 Plug 'tpope/vim-dispatch'
 
@@ -86,11 +77,6 @@ Plug 'tmhedberg/matchit'
 
 " NERDCommenter : Better comments in vim
 Plug 'scrooloose/nerdcommenter'
-
-" NERDTree
-Plug 'scrooloose/nerdtree'
-" NERDTree GIT support
-Plug 'Xuyuanp/nerdtree-git-plugin'
 
 " Numbers.vim
 Plug 'myusuf3/numbers.vim'
@@ -166,20 +152,25 @@ set hidden                          " Any buffer can be hidden
 set history=1000                    " Set a huge history
 set linespace=0                     " No extra spaces between rows
 set nojoinspaces                    " Prevents inserting two spaces after punctuation on a join (J)
-set path+=**                        " fuzzy matching
 set relativenumber                  " set the number in vim
 set scrolljump=5                    " Lines to scroll when cursor leaves screen
 set scrolloff=3                     " Minimum lines to keep above and below cursor
 set showmatch                       " Show current brackets
 set splitbelow                      " Puts new split windows to the bottom of the current
 set splitright                      " Puts new vsplit windows to the right of the current
-set wildmenu                        " Show list instead of just completing
-set wildmode=list:longest,full      " Command <Tab> completion, list matches, then longest common part, then all.
 set winminheight=0                  " Windows can be 0 line height
 
+" Fuzzy matching
+set path+=**                       " fuzzy matching with :find *.ext*
+set wildmenu                       " Show list instead of just completing
+set wildignore+=**/node_modules/** " Ignore some folders
+set wildignore+=**/.git/**
+set wildignore+=**/build/**
+set wildignore+=**/dist/**
+
 " Folding
-set nofoldenable          " Auto fold code
-set foldmethod=syntax   " Fold are defined by syntax highlighting
+" set nofoldenable      " Auto fold code
+set foldmethod=syntax " Fold are defined by syntax highlighting
 
 " Indentation
 " Don't enable smarindent or cindent with filetype plugin indent on
@@ -194,10 +185,13 @@ set listchars=tab:»»,trail:•,nbsp:~     " Display invisible characters
 set mouse=a
 
 " Netrw
-let g:netrw_liststyle = 3
-let g:netrw_browse_split = 4
-let g:netrw_altv = 1
+let g:netrw_banner=0         " Disable banner
+let g:netrw_browse_split = 4 " Open in prior window
+let g:netrw_altv = 1         " Open split to the right
+let g:netrw_liststyle = 3    " Tree view
 let g:netrw_winsize = 20
+let g:netrw_list_hide=netrw_gitignore#Hide()
+let g:netrw_list_hide.=',\(^\|\s\s\)\zs\.\S\+'
 
 " Omni Completiton
 autocmd FileType css setlocal omnifunc=csscomplete#CompleteCSS
@@ -294,9 +288,6 @@ nmap <leader>ge :Gedit<CR>
 
 " Highlight
 map <C-h> :nohl<CR>
-
-" NERDTree
-map <C-n> :NERDTreeToggle<CR>
 
 " Numbers.vim
 nnoremap <F3> :NumbersToggle<CR>
@@ -412,9 +403,6 @@ call denite#custom#var('grep', 'pattern_opt', [])
 call denite#custom#var('grep', 'separator', ['--'])
 call denite#custom#var('grep', 'final_opts', [])
 
-" Deoplete
-let g:deoplete#enable_at_startup = 1
-
 " Git
 " Useful git help
 " Instead of reverting the cursor to the last position in the buffer, we set it to the first line when editing a git commit message
@@ -433,15 +421,6 @@ let g:indent_guides_enable_on_vim_startup = 1
 let g:NERDSpaceDelims = 1
 " Use compact syntax for prettified multi-line comments
 let g:NERDCompactSexyComs = 1
-
-" NERDTree
-let g:NERDTreeDirArrowExpandable = '▸'
-let g:NERDTreeDirArrowCollapsible = '▾'
-" How can I close vim if the only window left open is a NERDTree?
-autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
-
-" NERDTree GIT
-let g:NERDTreeShowIgnoredStatus = 1
 
 " Numbers.vim
 let g:enable_numbers = 1
