@@ -435,6 +435,9 @@ let g:deoplete#max_abbr_width = 0
 let g:deoplete#max_menu_width = 0
 let g:deoplete#omni#input_patterns = get(g:,'deoplete#omni#input_patterns',{})
 " Sources
+" PHPcd
+let g:deoplete#ignore_sources = get(g:, 'deoplete#ignore_sources', {})
+let g:deoplete#ignore_sources.php = ['omni']
 " TernJS
 let g:deoplete#sources#tss#javascript_support = 1
 let g:deoplete#sources#ternjs#docs = 1
