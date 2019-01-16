@@ -114,14 +114,14 @@ Plug 'majutsushi/tagbar'
 " For JavaScript IDE features
 " Don't forget to run 'npm install' in this extension folder to install the
 " server
-Plug 'ternjs/tern_for_vim'
+Plug 'ternjs/tern_for_vim', { 'do': 'npm install' }
 
 " VimTex
 Plug 'lervag/vimtex'
 
 " NVIM-TypeScript
 " Don't forget to do :UpdateRemotePlugins
-Plug 'mhartington/nvim-typescript', {'do': './install.sh'}
+Plug 'mhartington/nvim-typescript', { 'do': './install.sh' }
 " Syntax highlighting
 Plug 'HerringtonDarkholme/yats.vim'
 
@@ -260,8 +260,8 @@ let maplocalleader = ","
 nmap <silent> <Space><Tab> <Esc>/<++><Enter>:nohl<Enter>"_c4l
 
 " ALE
-nmap <silent> <C-k> <Plug>(ale_previous_wrap)
-nmap <silent> <C-j> <Plug>(ale_next_wrap)
+nmap <silent> <leader>ak <Plug>(ale_previous_wrap)
+nmap <silent> <leader>aj <Plug>(ale_next_wrap)
 
 " Buffer
 nmap <leader>bn :bnext<CR>
@@ -287,11 +287,11 @@ nmap <leader>gw :Gwrite<CR>
 nmap <leader>ge :Gedit<CR>
 
 " Highlight
-map <C-h> :nohl<CR>
+map <leader>nh :nohl<CR>
 
 " Numbers.vim
-nnoremap <F3> :NumbersToggle<CR>
-nnoremap <F4> :NumbersOnOff<CR>
+nmap <F3> :NumbersToggle<CR>
+nmap <F4> :NumbersOnOff<CR>
 
 " Tabular
 nmap <Leader>t& :Tabularize /&<CR>
@@ -316,10 +316,10 @@ nmap <Leader>t" :Tabularize /"<CR>
 vmap <Leader>t" :Tabularize /"<CR>
 
 " Tagbar
-map <leader>tt :TagbarToggle<CR>
+nmap <leader>tb :TagbarToggle<CR>
 
 " Undo tree
-map <Leader>u :UndotreeToggle<CR>
+nmap <Leader>ut :UndotreeToggle<CR>
 
 
 
