@@ -24,6 +24,24 @@ Plug 'Rip-Rip/clang_complete'
 " Denite for helm feature and better implementation that Unite
 Plug 'Shougo/denite.nvim'
 
+" Deoplete
+if has('nvim')
+  Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+else
+  Plug 'Shougo/deoplete.nvim'
+  Plug 'roxma/nvim-yarp'
+  Plug 'roxma/vim-hug-neovim-rpc'
+endif
+" For func argument completion
+Plug 'Shougo/neosnippet'
+Plug 'Shougo/neosnippet-snippets'
+" Go
+Plug 'zchee/deoplete-go', { 'do': 'make' }
+" JavaScript
+Plug 'carlitux/deoplete-ternjs', { 'do': 'npm install -g tern' }
+" Python
+Plug 'zchee/deoplete-jedi'
+
 " VIM-Dispatch : Useful for starting Omnisharp
 Plug 'tpope/vim-dispatch'
 
@@ -43,6 +61,9 @@ Plug 'mattn/emmet-vim'
 
 " Git
 Plug 'tpope/vim-fugitive'
+
+" GoCode
+Plug 'mdempsky/gocode', { 'rtp': 'nvim', 'do': '~/.config/nvim/plugged/gocode/nvim/symlink.sh' }
 
 " Grammalecte
 Plug 'dpelle/vim-Grammalecte'
@@ -85,7 +106,7 @@ Plug 'myusuf3/numbers.vim'
 Plug 'NLKNguyen/papercolor-theme'
 
 " PHP Autocomplete
-Plug 'shawncplus/phpcomplete.vim'
+Plug 'lvht/phpcd.vim', { 'for': 'php', 'do': 'composer install' }
 
 " Plantuml-previewer
 Plug 'weirongxu/plantuml-previewer.vim'
@@ -199,6 +220,7 @@ autocmd FileType haskell setlocal omnifunc=necoghc#omnifunc
 autocmd FileType html,markdown setlocal omnifunc=htmlcomplete#CompleteTags
 autocmd FileType java setlocal omnifunc=javacomplete#Complete
 autocmd FileType javascript setlocal omnifunc=javascriptcomplete#CompleteJS
+autocmd FileType javascript setlocal omnifunc=tern#Complete
 autocmd FileType python setlocal omnifunc=pythoncomplete#Complete
 autocmd FileType ruby setlocal omnifunc=rubycomplete#Complete
 autocmd FileType typescript setlocal omnifunc=TSComplete
@@ -403,6 +425,22 @@ call denite#custom#var('grep', 'pattern_opt', [])
 call denite#custom#var('grep', 'separator', ['--'])
 call denite#custom#var('grep', 'final_opts', [])
 
+" Deoplete
+let g:deoplete#enable_at_startup = 1
+let g:deoplete#enable_ignore_case = 1
+let g:deoplete#enable_smart_case = 1
+let g:deoplete#enable_camel_case = 1
+let g:deoplete#enable_refresh_always = 1
+let g:deoplete#max_abbr_width = 0
+let g:deoplete#max_menu_width = 0
+let g:deoplete#omni#input_patterns = get(g:,'deoplete#omni#input_patterns',{})
+" Sources
+" TernJS
+let g:deoplete#sources#tss#javascript_support = 1
+let g:deoplete#sources#ternjs#docs = 1
+let g:deoplete#sources#ternjs#types = 1
+let g:deoplete#sources#ternjs#filetypes = ['jsx', 'javascript.jsx', 'vue']
+
 " Git
 " Useful git help
 " Instead of reverting the cursor to the last position in the buffer, we set it to the first line when editing a git commit message
@@ -415,6 +453,9 @@ let g:grammalecte_cli_py='/opt/grammalecte/cli.py'
 let g:indent_guides_start_level = 2
 let g:indent_guides_guide_size = 1
 let g:indent_guides_enable_on_vim_startup = 1
+
+" Neosnippet
+let g:neosnippet#enable_completed_snippet = 1
 
 " NERDCommenter
 " Add spaces after comment delimiters by default
@@ -433,6 +474,14 @@ autocmd InsertLeave * :set relativenumber
 " vim-table-mode
 " Compatibility with markdown
 let g:table_mode_corner='|'
+
+" tern_for_vim
+let g:tern_request_timeout = 1
+let g:tern_request_timeout = 6000
+let g:tern#command = ["tern"]
+let g:tern#arguments = ["--persistent"]
+let g:tern#tern_show_argument_hints = 'on_hold'
+let g:tern#tern_show_signature_in_pum = 1
 
 " Undo tree
 let g:undotree_SetFocusWhenToggle=1
