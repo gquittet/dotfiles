@@ -352,8 +352,8 @@ nmap <Leader>ut :UndotreeToggle<CR>
 " Airline
 let g:airline_powerline_fonts = 1
 let g:airline#extensions#tabline#enabled = 1
-let g:airline#extensions#tabline#left_sep = ' '
-let g:airline#extensions#tabline#left_alt_sep = '|'
+" let g:airline#extensions#tabline#left_sep = ' '
+" let g:airline#extensions#tabline#left_alt_sep = '|'
 let g:airline#extensions#ale#enabled = 1
 
 " ALE
@@ -435,6 +435,9 @@ let g:deoplete#max_abbr_width = 0
 let g:deoplete#max_menu_width = 0
 let g:deoplete#omni#input_patterns = get(g:,'deoplete#omni#input_patterns',{})
 " Sources
+" Jedi
+let g:python_host_prog = '/usr/local/bin/python'
+let g:python3_host_prog = '/usr/local/bin/python3'
 " PHPcd
 let g:deoplete#ignore_sources = get(g:, 'deoplete#ignore_sources', {})
 let g:deoplete#ignore_sources.php = ['omni']
@@ -450,7 +453,7 @@ let g:deoplete#sources#ternjs#filetypes = ['jsx', 'javascript.jsx', 'vue']
 au FileType gitcommit au! BufEnter COMMIT_EDITMSG call setpos('.', [0, 1, 1, 0])
 
 " Grammalecte
-let g:grammalecte_cli_py='/opt/grammalecte/cli.py'
+let g:grammalecte_cli_py='/opt/grammalecte/pythonpath/grammalecte-cli.py'
 
 " Indent Guide
 let g:indent_guides_start_level = 2
