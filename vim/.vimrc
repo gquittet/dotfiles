@@ -547,6 +547,8 @@ endif
     " set termguicolors
 " endif
 
+set t_Co=256
+
 " Set the full color compatibility for vim and terminal
 syntax enable
 let g:gruvbox_italic = '1'
