@@ -258,23 +258,10 @@ set tabstop=4            " columns per tabs
 " let g:terminal_color_15 = '#e6e6e6'
 
 " Vim directories
-let parent = $HOME
-let prefix = 'vim'
-let common_dir = parent . '/.' . prefix
-let dir_list = { 'backup': 'backupdir', 'views': 'viewdir', 'swap': 'directory' }
-for [dirname, settingname] in items(dir_list)
-    let directory = common_dir . '/' . dirname . '/'
-    if !isdirectory(directory)
-        call mkdir(directory)
-    endif
-    if !isdirectory(directory)
-        echo "Warning: Unable to create backup directory: " . directory
-        echo "Try: mkdir -p " . directory
-    else
-        let directory = substitute(directory, " ", "\\\\ ", "g")
-        exec "set " . settingname . "=" . directory
-    endif
-endfor
+set backupdir=~/.local/share/nvim/backup//
+set directory=~/.local/share/nvim/swap//
+set viewdir=~/.local/share/nvim/views//
+
 
 " Wrapping
 set formatoptions-=t             " Keep my textwidth setting

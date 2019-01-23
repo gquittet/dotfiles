@@ -228,8 +228,41 @@ mode "$mode_screen_capture" {
 # ==============================================================================
 # Start i3bar to display a workspace bar (plus the system information i3status
 # finds out, if available)
-set_from_resource $fg i3wm.color7 #f0f0f0
-set_from_resource $bg i3wm.color2 #f0f0f0
+set_from_resource $fg i3wm.foreground #f0f0f0
+set_from_resource $bg i3wm.background #f0f0f0
+set_from_resource $color0 i3wm.color0 #f0f0f0
+set_from_resource $color1 i3wm.color1 #f0f0f0
+set_from_resource $color2 i3wm.color2 #f0f0f0
+set_from_resource $color3 i3wm.color3 #f0f0f0
+set_from_resource $color4 i3wm.color4 #f0f0f0
+set_from_resource $color5 i3wm.color5 #f0f0f0
+set_from_resource $color6 i3wm.color6 #f0f0f0
+set_from_resource $color7 i3wm.color7 #f0f0f0
+set_from_resource $color8 i3wm.color8 #f0f0f0
+set_from_resource $color9 i3wm.color9 #f0f0f0
+set_from_resource $color10 i3wm.color10 #f0f0f0
+set_from_resource $color11 i3wm.color11 #f0f0f0
+set_from_resource $color12 i3wm.color12 #f0f0f0
+set_from_resource $color13 i3wm.color13 #f0f0f0
+set_from_resource $color14 i3wm.color14 #f0f0f0
+set_from_resource $color15 i3wm.color15 #f0f0f0
+
+
+
+bar {
+    position top
+    status_command i3status
+    colors {
+        background $bg
+        statusline $fg
+        separator  $color7
+        #                  border   backgr. text
+        focused_workspace  $color15 $color8 $fg
+        active_workspace   $color15 $color8 $fg
+        inactive_workspace $color0  $color0 $color8
+        urgent_workspace   $color1  $color9 $bg
+    }
+}
 
 
 
@@ -237,10 +270,10 @@ set_from_resource $bg i3wm.color2 #f0f0f0
 # Colors
 # ==============================================================================
 # class                 border  backgr. text indicator child_border
-client.focused          $bg     $bg     $fg  $bg       $bg
+client.focused          $bg     $bg     $fg  $bg       $color8
 client.focused_inactive $bg     $bg     $fg  $bg       $bg
-client.unfocused        #4d4d4d #4d4d4d #bfbfbf #444475a  #4d4d4d
-client.urgent           #ff5555 #ff5555 #f8f8f2 #ff5555   #ff5555
+client.unfocused        $color8     $color8 $fg  $bg       $bg
+client.urgent           $color1 $color9 $fg  $color1   $color1
 client.placeholder      #000000 #0c0c0c #ffffff #0c0c0c   #0c0c0c
 
 client.background       $bg
@@ -337,11 +370,11 @@ bindsym XF86AudioMicMute exec --no-startup-id amixer sset Capture toggle
 # Need to kill and restart compton against invisible tabbed windows bug on refresh
 exec_always --no-startup-id killall -q compton while pgrep -x compton >/dev/null; do sleep 1; done compton -b -d :0
 exec --no-startup-id compton -b -d :0
-exec --no-startup-id $HOME/.scripts/launch_dunst.sh
-exec --no-startup-id MONITOR=eDP1 polybar -r primary
-exec --no-startup-id [ ! -s ~/.mpd/pid ] && mpd
+#exec --no-startup-id $HOME/.scripts/launch_dunst.sh
+#exec --no-startup-id MONITOR=eDP1 polybar -r primary
+exec --no-startup-id [ ! -s $XDG_DATA_HOME/mpd/pid ] && mpd
 exec --no-startup-id nm-applet &
-exec_always --no-startup-id wal -i "$HOME/Pictures/Wallpapers/wallhaven-37411.jpg" --saturate 0.8 -a "97" --iterative
+exec_always --no-startup-id feh --bg-center "$HOME/Pictures/Wallpapers/wallhaven-37411.jpg"
 exec --no-startup-id killall redshift; redshift -l 50.4:3.8
 exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
 
