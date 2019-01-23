@@ -258,9 +258,23 @@ set tabstop=4            " columns per tabs
 " let g:terminal_color_15 = '#e6e6e6'
 
 " Vim directories
-set backupdir=~/.local/share/nvim/backup//
-set directory=~/.local/share/nvim/swap//
-set viewdir=~/.local/share/nvim/views//
+let parent = $HOME
+let prefix = 'vim'
+let common_dir = parent . '/.' . prefix
+let dir_list = { 'backup': 'backupdir', 'views': 'viewdir', 'swap': 'directory' }
+for [dirname, settingname] in items(dir_list)
+    let directory = common_dir . '/' . dirname . '/'
+    if !isdirectory(directory)
+        call mkdir(directory)
+    endif
+    if !isdirectory(directory)
+        echo "Warning: Unable to create backup directory: " . directory
+        echo "Try: mkdir -p " . directory
+    else
+        let directory = substitute(directory, " ", "\\\\ ", "g")
+        exec "set " . settingname . "=" . directory
+    endif
+endfor
 
 " Wrapping
 set formatoptions-=t             " Keep my textwidth setting
@@ -436,8 +450,8 @@ let g:deoplete#max_menu_width = 0
 let g:deoplete#omni#input_patterns = get(g:,'deoplete#omni#input_patterns',{})
 " Sources
 " Jedi
-let g:python_host_prog = '/usr/local/bin/python'
-let g:python3_host_prog = '/usr/local/bin/python3'
+let g:python_host_prog = '/usr/bin/python2'
+let g:python3_host_prog = '/usr/bin/python'
 " PHPcd
 let g:deoplete#ignore_sources = get(g:, 'deoplete#ignore_sources', {})
 let g:deoplete#ignore_sources.php = ['omni']
