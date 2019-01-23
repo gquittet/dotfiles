@@ -1,0 +1,5 @@
+application/pdf; zathura %s; needsterminal
+image/*; ~/.config/mutt/scripts/muttimage.sh %s ; copiousoutput
+text/html; firefox %s >/dev/null 2>&1; needsterminal
+text/html; w3m -I %{charset} -T text/html; copiousoutput
+

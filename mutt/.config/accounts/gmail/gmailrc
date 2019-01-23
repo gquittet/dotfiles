@@ -1,0 +1,35 @@
+# Sending mail
+set realname = "Guillaume Quittet"
+set reverse_name = yes
+set from = "guillaume.quittet@gmail.com"
+set sendmail = "/usr/bin/msmtp -a gmail"
+# Signature
+set signature = "~/.config/mutt/accounts/gmail/signature"
+
+
+
+# Receive mail
+set mbox_type = Maildir
+set folder = ~/.mails/gmail
+# + use the folder variable
+set spoolfile = "+INBOX"
+set record = "+sent"
+set postponed = "+drafts"
+set trash = "+trash"
+set header_cache = ~/.cache/mutt/gmail/headers
+set message_cachedir =  ~/.cache/mutt/gmail/bodies
+
+mailboxes +INBOX
+
+
+
+# Contacts
+set alias_file = ~/.config/mutt/accounts/gmail/contacts
+source ~/.config/mutt/accounts/gmail/contacts
+
+
+
+macro index gi "<change-folder>=INBOX<enter>" "Go to inbox"
+macro index gs "<change-folder>=sent<enter>" "Go to sent mail"
+macro index gt "<change-folder>=trash<enter>" "Go to trash"
+macro index gd "<change-folder>=drafts<enter>" "Go to drafts"

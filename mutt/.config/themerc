@@ -1,0 +1,23 @@
+# Appearance
+set sort = 'threads'
+set sort_aux = 'reverse-last-date-received'
+## Colors
+mono bold bold
+mono underline underline
+mono indicator reverse
+mono error bold
+color indicator default color4
+color status default default
+color index default default '.*'
+color index_author color6 default '.*'
+color index_date color5 default
+color index_number color4 default
+color index_flags color2 default '.*'
+color index_size color7 default
+color index_subject color3 default '.*'
+color normal default default
+color header color5 default "^(Date)"
+color header color6 default "^(From)"
+color header color3 default "^(Subject)"
+color body color1 default [\-\.+_a-zA-Z0-9]+@[\-\.a-zA-Z0-9]+
+color body color6 default (https?|ftp)://[\-\.,/%~_:?&=\#a-zA-Z0-9]+

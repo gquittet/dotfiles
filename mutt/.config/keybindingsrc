@@ -1,0 +1,4 @@
+bind index g noop
+bind editor <space> noop
+bind index G last-entry
+bind index gg first-entry
