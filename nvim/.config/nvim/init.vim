@@ -341,7 +341,7 @@ call denite#custom#map(
 " -u flag to unrestrict (see ag docs)
 call denite#custom#var('file_rec', 'command', ['ag', '--follow', '--nocolor', '--nogroup', '-u', '-g', ''])
 call denite#custom#alias('source', 'file_rec/git', 'file_rec')
-call denite#custom#var('file_rec/git', 'command', ['ag', '--follow', '--nocolor', '--nogroup', '-g', ''])
+call denite#custom#var('file_rec/git', 'command', ['ag', '--follow', '--nocolor', '--nogroup', '--hidden', '-g', ''])
 " Search into files
 call denite#custom#source('grep', 'matchers', ['matcher_regexp'])
 " use ag for content search
