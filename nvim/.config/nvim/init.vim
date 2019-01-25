@@ -1,87 +1,42 @@
 " ========================================
 "       Coded by Guillaume QUITTET
-"         Date Fri. 17th Aug 2018
+"         Date Fri. 25th Jan 2019
 " ========================================
 call plug#begin('~/.local/share/nvim/plugged')
 
-" Vim-Airline
-Plug 'vim-airline/vim-airline'
-Plug 'vim-airline/vim-airline-themes'
+Plug 'vim-airline/vim-airline'                                                                   " Vim-Airline
+Plug 'vim-airline/vim-airline-themes'                                                            " Vim-Airline theme
+Plug 'w0rp/ale'                                                                                  " ALE (Asynchronous Lint Engine)
+Plug 'hsanson/vim-android'                                                                       " Vim-Android
+Plug 'jiangmiao/auto-pairs'                                                                      " Autopairs
+Plug 'itchyny/calendar.vim'                                                                      " Calendar
+Plug 'Rip-Rip/clang_complete'                                                                    " Clang-complete : for C/C++ autocomplete (need to install clang)
+Plug 'Shougo/denite.nvim'                                                                        " Denite for helm feature and better implementation that Unite
 
-" ALE (Asynchronous Lint Engine)
-Plug 'w0rp/ale'
-
-" Vim-Android
-Plug 'hsanson/vim-android'
-
-" Autopairs
-Plug 'jiangmiao/auto-pairs'
-
-" Clang-complete : for C/C++ autocomplete
-" Need to install clang
-Plug 'Rip-Rip/clang_complete'
-
-" Denite for helm feature and better implementation that Unite
-Plug 'Shougo/denite.nvim'
-
-" Deoplete
-if has('nvim')
+if has('nvim')                                                                                   " Deoplete
   Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 else
   Plug 'Shougo/deoplete.nvim'
   Plug 'roxma/nvim-yarp'
   Plug 'roxma/vim-hug-neovim-rpc'
 endif
-" For func argument completion
-Plug 'Shougo/neosnippet'
+Plug 'Shougo/neosnippet'                                                                         " For func argument completion
 Plug 'Shougo/neosnippet-snippets'
-" Go
-Plug 'zchee/deoplete-go', { 'do': 'make' }
-" JavaScript
-Plug 'carlitux/deoplete-ternjs', { 'do': 'npm install -g tern' }
-" Python
-Plug 'zchee/deoplete-jedi'
+Plug 'zchee/deoplete-go', { 'do': 'make' }                                                       " Go (don't forget to install 'go get -u github.com/mdempsky/gocode')
+Plug 'carlitux/deoplete-ternjs', { 'do': 'npm install -g tern' }                                 " JavaScript
+Plug 'zchee/deoplete-jedi'                                                                       " Python
 
-" VIM-Dispatch : Useful for starting Omnisharp
-Plug 'tpope/vim-dispatch'
+Plug 'tpope/vim-dispatch'                                                                        " VIM-Dispatch : Useful for starting Omnisharp
+Plug 'easymotion/vim-easymotion'                                                                 " Easy Motion : faster move in vim (press <Leader><Leader> and the letter that you want to go)
+Plug 'editorconfig/editorconfig-vim'                                                             " EditorConfig
+Plug 'mattn/emmet-vim'                                                                           " Emmet : new ZenCoding (<C-Y>,)
+Plug 'tpope/vim-fugitive'                                                                        " Git
+Plug 'dpelle/vim-Grammalecte'                                                                    " Grammalecte
+Plug 'morhetz/gruvbox'                                                                           " Gruvbox
+Plug 'nathanaelkane/vim-indent-guides'                                                           " Indent Guide
+Plug 'artur-shaik/vim-javacomplete2'                                                             " JavaComplete2
+Plug 'davidhalter/jedi-vim'                                                                      " Jedi vim : Python completition (don't forget to install this : sudo pip install jedi)
 
-" Dracula theme
-Plug 'dracula/vim'
-
-" Easy Motion : faster move in vim
-" Press <Leader><Leader> and the letter that you want to go
-Plug 'easymotion/vim-easymotion'
-
-" EditorConfig
-Plug 'editorconfig/editorconfig-vim'
-
-" Emmet : new ZenCoding
-" Use abreviations and then type : <C-Y>,
-Plug 'mattn/emmet-vim'
-
-" Git
-Plug 'tpope/vim-fugitive'
-
-" GoCode
-Plug 'mdempsky/gocode', { 'rtp': 'nvim', 'do': '~/.config/nvim/plugged/gocode/nvim/symlink.sh' }
-
-" Grammalecte
-Plug 'dpelle/vim-Grammalecte'
-
-" Gruvbox
-Plug 'morhetz/gruvbox'
-
-" Indent Guide
-Plug 'nathanaelkane/vim-indent-guides'
-
-" JavaComplete2
-Plug 'artur-shaik/vim-javacomplete2'
-
-" Jedi vim : Python completition
-" Don't forget to install this : sudo pip install jedi
-Plug 'davidhalter/jedi-vim'
-
-" Markdown
 function! BuildComposer(info)
   if a:info.status != 'unchanged' || a:info.force
     if has('nvim')
@@ -91,67 +46,27 @@ function! BuildComposer(info)
     endif
   endif
 endfunction
-Plug 'euclio/vim-markdown-composer', { 'do': function('BuildComposer') }
+Plug 'euclio/vim-markdown-composer', { 'do': function('BuildComposer') }                         " Markdown
 
-" Matchit : useful to switch between the start and the end of a function
-Plug 'tmhedberg/matchit'
-
-" NERDCommenter : Better comments in vim
-Plug 'scrooloose/nerdcommenter'
-
-" Numbers.vim
-Plug 'myusuf3/numbers.vim'
-
-" Paper color theme
-Plug 'NLKNguyen/papercolor-theme'
-
-" PHP Autocomplete
-Plug 'lvht/phpcd.vim', { 'for': 'php', 'do': 'composer install' }
-
-" Plantuml-previewer
-Plug 'weirongxu/plantuml-previewer.vim'
-" Plantuml-syntax
-Plug 'aklt/plantuml-syntax'
-" Dependency
-Plug 'tyru/open-browser.vim'
-
-" Projectile
-Plug 'dunstontc/projectile.nvim'
-
-" Surround
-Plug 'tpope/vim-surround'
-
-" Table mode
-Plug 'dhruvasagar/vim-table-mode'
-
-" Tabular : useful for great alignement
-Plug 'godlygeek/tabular'
-
-" TagBar
-" Install ctags before use it
-Plug 'majutsushi/tagbar'
-
-" Tern
-" For JavaScript IDE features
-" Don't forget to run 'npm install' in this extension folder to install the
-" server
-Plug 'ternjs/tern_for_vim', { 'do': 'npm install' }
-
-" VimTex
-Plug 'lervag/vimtex'
-
-" NVIM-TypeScript
-" Don't forget to do :UpdateRemotePlugins
-Plug 'mhartington/nvim-typescript', { 'do': './install.sh' }
-" Syntax highlighting
-Plug 'HerringtonDarkholme/yats.vim'
-
-" UndoTree : See all undos
-Plug 'mbbill/undotree'
-
-" VueJS
-Plug 'posva/vim-vue'
-
+Plug 'tmhedberg/matchit'                                                                         " Matchit: useful to switch between the start and the end of a function
+Plug 'scrooloose/nerdcommenter'                                                                  " NERDCommenter : Better comments in vim
+Plug 'myusuf3/numbers.vim'                                                                       " Numbers.vim
+Plug 'jceb/vim-orgmode'                                                                          " Org mode
+Plug 'NLKNguyen/papercolor-theme'                                                                " Paper color theme
+Plug 'lvht/phpcd.vim', { 'for': 'php', 'do': 'composer install' }                                " PHP Autocomplete
+Plug 'weirongxu/plantuml-previewer.vim'                                                          " Plantuml-previewer
+Plug 'tyru/open-browser.vim'                                                                     " Plantuml-previewer dependency
+Plug 'aklt/plantuml-syntax'                                                                      " Plantuml-syntax
+Plug 'tpope/vim-surround'                                                                        " Surround
+Plug 'dhruvasagar/vim-table-mode'                                                                " Table mode
+Plug 'godlygeek/tabular'                                                                         " Tabular : useful for great alignement
+Plug 'majutsushi/tagbar'                                                                         " TagBar (install ctags before use it)
+Plug 'ternjs/tern_for_vim', { 'do': 'npm install' }                                              " TernJS
+Plug 'lervag/vimtex'                                                                             " VimTex
+Plug 'mhartington/nvim-typescript', { 'do': './install.sh' }                                     " NVIM-TypeScript (don't forget to do :UpdateRemotePlugins)
+Plug 'HerringtonDarkholme/yats.vim'                                                              " TypeScript syntax highlighting
+Plug 'mbbill/undotree'                                                                           " UndoTree : See all undos
+Plug 'posva/vim-vue'                                                                             " VueJS
 
 " All of your Plugins must be added before the following line
 call plug#end()             " required
@@ -161,12 +76,12 @@ syntax enable               " required
 
 " ====================================================
 " Global configuration
-" ====================================================
+" ==============8=====================================
 
 set autowrite                       " Save automatically all the buffers in vim
 set autochdir                       " Set the working directory
 set backup
-set colorcolumn=81                  " Set the 80 character column
+set colorcolumn=81                  " Set the 80 character column (+1 if textwidth is defined else 81)
 set cursorline                      " Highlight the current line
 set encoding=utf-8
 set hidden                          " Any buffer can be hidden
@@ -279,6 +194,12 @@ set wrap linebreak               " Set wrapping with soft wrap (set wm=2 => hard
 let mapleader = ","
 let maplocalleader = ","
 
+" Disable arrow keys
+noremap <Up> <Nop>
+noremap <Right> <Nop>
+noremap <Down> <Nop>
+noremap <Left> <Nop>
+
 " Shortcuts
 nmap <silent> <Space><Tab> <Esc>/<++><Enter>:nohl<Enter>"_c4l
 
@@ -368,6 +289,11 @@ let g:ale_linters = {
 " Android
 let g:android_sdk_path = "/opt/android/sdk"
 
+" Calendar
+let g:calendar_frame = 'default'
+let g:calendar_google_calendar = 1
+let g:calendar_google_task = 1
+
 " Clang completition
 let g:clang_library_path='/usr/lib'
 " Fix conflix with autopair
@@ -437,8 +363,8 @@ let g:deoplete#max_menu_width = 0
 let g:deoplete#omni#input_patterns = get(g:,'deoplete#omni#input_patterns',{})
 " Sources
 " Jedi
-let g:python_host_prog = '/usr/bin/python2'
-let g:python3_host_prog = '/usr/bin/python'
+let g:python_host_prog = '/usr/local/bin/python'
+let g:python3_host_prog = '/usr/local/bin/python3'
 " PHPcd
 let g:deoplete#ignore_sources = get(g:, 'deoplete#ignore_sources', {})
 let g:deoplete#ignore_sources.php = ['omni']
