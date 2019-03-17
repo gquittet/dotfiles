@@ -54,12 +54,12 @@ nnoremap <silent> <space>p  :<C-u>CocListResume<CR>
 
 
 " Defx
-nnoremap <leader>tv :Defx -split=vertical -winwidth=40 -direction=topleft<CR>
+nnoremap <leader>tv :Defx -split=vertical -winwidth=40 -direction=topleft -columns=git:icons:filename:type<CR>
 autocmd FileType defx call s:defx_my_settings()
 function! s:defx_my_settings() abort
     " Define mappings
     nnoremap <silent><buffer><expr> <CR>
-                \ defx#do_action('open')
+                \ defx#do_action('drop')
     nnoremap <silent><buffer><expr> c
                 \ defx#do_action('copy')
     nnoremap <silent><buffer><expr> m
@@ -67,7 +67,7 @@ function! s:defx_my_settings() abort
     nnoremap <silent><buffer><expr> p
                 \ defx#do_action('paste')
     nnoremap <silent><buffer><expr> l
-                \ defx#do_action('open')
+                \ defx#do_action('drop')
     nnoremap <silent><buffer><expr> E
                 \ defx#do_action('open', 'vsplit')
     nnoremap <silent><buffer><expr> P

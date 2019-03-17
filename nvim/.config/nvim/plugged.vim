@@ -71,6 +71,11 @@ Plug 'sonph/onehalf', {'rtp': 'vim/'}                                   " One Ha
 Plug 'NLKNguyen/papercolor-theme'                                       " Paper color theme
 Plug 'jacoborus/tender.vim'                                             " Tender
 
+" Font icons
+Plug 'ryanoasis/vim-devicons'
+Plug 'kristijanhusak/defx-icons'
+Plug 'kristijanhusak/defx-git'
+
 " All of your Plugins must be added before the following line
 call plug#end()             " required
 syntax enable               " required

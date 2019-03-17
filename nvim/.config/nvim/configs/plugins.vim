@@ -57,6 +57,38 @@ command! -nargs=0 Format :call CocAction('format')                             "
 command! -nargs=? Fold :call     CocAction('fold', <f-args>)                   " Use `:Fold` for fold current buffer
 autocmd FileType json syntax match Comment +\/\/.\+$+                          " COC JSON - better comment rendering
 
+" Defx
+call defx#custom#column('filename', {
+            \ 'directory_icon': '⯈',
+            \ 'opened_icon': '⯆',
+            \ })
+" Git
+let g:defx_git#indicators = {
+  \ 'Modified'  : '✹',
+  \ 'Staged'    : '✚',
+  \ 'Untracked' : '✭',
+  \ 'Renamed'   : '➜',
+  \ 'Unmerged'  : '═',
+  \ 'Ignored'   : '☒',
+  \ 'Deleted'   : '✖',
+  \ 'Unknown'   : '?'
+  \ }
+let g:defx_git#column_length = 1
+let g:defx_git#show_ignored = 0
+let g:defx_git#raw_mode = 0
+" Icons
+let g:defx_icons_enable_syntax_highlight = 1
+let g:defx_icons_column_length = 2
+let g:defx_icons_directory_icon = ''
+let g:defx_icons_mark_icon = '*'
+let g:defx_icons_parent_icon = ''
+let g:defx_icons_default_icon = ''
+let g:defx_icons_directory_symlink_icon = ''
+" Options below are applicable only when using "tree" feature
+let g:defx_icons_root_opened_tree_icon = ''
+let g:defx_icons_nested_opened_tree_icon = ''
+let g:defx_icons_nested_closed_tree_icon = ''
+
 " Denite
 " Ignore files
 call denite#custom#source('file_rec', 'matchers', ['matcher_fuzzy', 'matcher_ignore_globs'])
