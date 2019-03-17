@@ -27,30 +27,30 @@ nmap <leader>bf :bfirst<CR>
 nmap <leader>bd :bdelete<CR>
 
 " COC
-inoremap <silent><expr> <c-space> coc#refresh()                      " Use <c-space> for trigger completion.
-inoremap <expr> <cr> pumvisible() ? "\<C-y>" : "\<C-g>u\<CR>"        " Use <cr> for confirm completion, <C-g>u means break undo chain at current position.
-nmap <silent> [c <Plug>(coc-diagnostic-prev)                         " Use [c and ]c for navigate diagnostics
+inoremap <silent><expr> <c-space> coc#refresh()
+inoremap <expr> <cr> pumvisible() ? "\<C-y>" : "\<C-g>u\<CR>"
+nmap <silent> [c <Plug>(coc-diagnostic-prev)
 nmap <silent> ]c <Plug>(coc-diagnostic-next)
-nmap <silent> gd <Plug>(coc-definition)                              " Remap keys for gotos
+nmap <silent> gd <Plug>(coc-definition)
 nmap <silent> gy <Plug>(coc-type-definition)
 nmap <silent> gi <Plug>(coc-implementation)
 nmap <silent> gr <Plug>(coc-references)
-nnoremap <silent> K :call <SID>show_documentation()<CR>              " Use K for show documentation in preview window
-nmap <leader>rn <Plug>(coc-rename)                                   " Remap for rename current word
-vmap <leader>f  <Plug>(coc-format-selected)                          " Remap for format selected region
+nnoremap <silent> K :call <SID>show_documentation()<CR>
+nmap <leader>rn <Plug>(coc-rename)
+vmap <leader>f  <Plug>(coc-format-selected)
 nmap <leader>f  <Plug>(coc-format-selected)
-vmap <leader>a  <Plug>(coc-codeaction-selected)                      " Remap for do codeAction of selected region, ex: `<leader>aap` for current paragraph
+vmap <leader>a  <Plug>(coc-codeaction-selected)
 nmap <leader>a  <Plug>(coc-codeaction-selected)
-nmap <leader>ac  <Plug>(coc-codeaction)                              " Remap for do codeAction of current line
-nmap <leader>qf  <Plug>(coc-fix-current)                             " Fix autofix problem of current line
-nnoremap <silent> <space>a  :<C-u>CocList diagnostics<cr>            " Show all diagnostics
-nnoremap <silent> <space>e  :<C-u>CocList extensions<cr>             " Manage extensions
-nnoremap <silent> <space>c  :<C-u>CocList commands<cr>               " Show commands
-nnoremap <silent> <space>o  :<C-u>CocList outline<cr>                " Find symbol of current document
-nnoremap <silent> <space>s  :<C-u>CocList -I symbols<cr>             " Search workspace symbols
-nnoremap <silent> <space>j  :<C-u>CocNext<CR>                        " Do default action for next item.
-nnoremap <silent> <space>k  :<C-u>CocPrev<CR>                        " Do default action for previous item.
-nnoremap <silent> <space>p  :<C-u>CocListResume<CR>                  " Resume latest coc list
+nmap <leader>ac  <Plug>(coc-codeaction)
+nmap <leader>qf  <Plug>(coc-fix-current)
+nnoremap <silent> <space>a  :<C-u>CocList diagnostics<CR>
+nnoremap <silent> <space>e  :<C-u>CocList extensions<CR>
+nnoremap <silent> <space>c  :<C-u>CocList commands<CR>
+nnoremap <silent> <space>o  :<C-u>CocList outline<CR>
+nnoremap <silent> <space>s  :<C-u>CocList -I symbols<CR>
+nnoremap <silent> <space>j  :<C-u>CocNext<CR>
+nnoremap <silent> <space>k  :<C-u>CocPrev<CR>
+nnoremap <silent> <space>p  :<C-u>CocListResume<CR>
 
 
 " Defx

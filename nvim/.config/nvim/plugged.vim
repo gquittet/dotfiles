@@ -37,18 +37,18 @@ endif
 
 Plug 'Shougo/denite.nvim'                                               " Denite for helm feature and better implementation that Unite
 
-if has('nvim')                                                          " Deoplete
-    Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
-else
-    Plug 'Shougo/deoplete.nvim'
-    Plug 'roxma/nvim-yarp'
-    Plug 'roxma/vim-hug-neovim-rpc'
-endif
-Plug 'Shougo/neosnippet'                                                " For func argument completion
-Plug 'Shougo/neosnippet-snippets'
-Plug 'zchee/deoplete-go', { 'do': 'make' }                              " Go (don't forget to install 'go get -u github.com/mdempsky/gocode')
-Plug 'carlitux/deoplete-ternjs', { 'do': 'npm install -g tern' }        " JavaScript
-Plug 'zchee/deoplete-jedi'                                              " Python
+" if has('nvim')                                                          " Deoplete
+    " Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+" else
+    " Plug 'Shougo/deoplete.nvim'
+    " Plug 'roxma/nvim-yarp'
+    " Plug 'roxma/vim-hug-neovim-rpc'
+" endif
+" Plug 'Shougo/neosnippet'                                                " For func argument completion
+" Plug 'Shougo/neosnippet-snippets'
+" Plug 'zchee/deoplete-go', { 'do': 'make' }                              " Go (don't forget to install 'go get -u github.com/mdempsky/gocode')
+" Plug 'carlitux/deoplete-ternjs', { 'do': 'npm install -g tern' }        " JavaScript
+" Plug 'zchee/deoplete-jedi'                                              " Python
 
 Plug 'tpope/vim-dispatch'                                               " VIM-Dispatch : Useful for starting Omnisharp
 Plug 'easymotion/vim-easymotion'                                        " Easy Motion : faster move in vim (press <Leader><Leader> and the letter that you want to go)
@@ -57,7 +57,7 @@ Plug 'mattn/emmet-vim'                                                  " Emmet 
 Plug 'tpope/vim-fugitive'                                               " Git
 Plug 'dpelle/vim-Grammalecte'                                           " Grammalecte
 Plug 'nathanaelkane/vim-indent-guides'                                  " Indent Guide
-Plug 'artur-shaik/vim-javacomplete2'                                    " JavaComplete2
+" Plug 'artur-shaik/vim-javacomplete2'                                    " JavaComplete2
 Plug 'davidhalter/jedi-vim'                                             " Jedi vim : Python completition (don't forget to install this : sudo pip install jedi)
 
 Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app & yarn install'  } " Markdown
@@ -74,9 +74,9 @@ Plug 'tpope/vim-surround'                                               " Surrou
 Plug 'dhruvasagar/vim-table-mode'                                       " Table mode
 Plug 'godlygeek/tabular'                                                " Tabular : useful for great alignement
 Plug 'majutsushi/tagbar'                                                " TagBar (install ctags before use it)
-Plug 'ternjs/tern_for_vim', { 'do': 'npm install' }                     " TernJS
+" Plug 'ternjs/tern_for_vim', { 'do': 'npm install' }                     " TernJS
 Plug 'lervag/vimtex'                                                    " VimTex
-Plug 'mhartington/nvim-typescript', { 'do': './install.sh' }            " NVIM-TypeScript (don't forget to do :UpdateRemotePlugins)
+" Plug 'mhartington/nvim-typescript', { 'do': './install.sh' }            " NVIM-TypeScript (don't forget to do :UpdateRemotePlugins)
 Plug 'HerringtonDarkholme/yats.vim'                                     " TypeScript syntax highlighting
 Plug 'mbbill/undotree'                                                  " UndoTree : See all undos
 Plug 'posva/vim-vue'                                                    " VueJS

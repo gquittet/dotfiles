@@ -59,12 +59,12 @@ let g:netrw_list_hide.=',\(^\|\s\s\)\zs\.\S\+'
 autocmd FileType css setlocal omnifunc=csscomplete#CompleteCSS
 autocmd FileType haskell setlocal omnifunc=necoghc#omnifunc
 autocmd FileType html,markdown setlocal omnifunc=htmlcomplete#CompleteTags
-autocmd FileType java setlocal omnifunc=javacomplete#Complete
-autocmd FileType javascript setlocal omnifunc=javascriptcomplete#CompleteJS
-autocmd FileType javascript setlocal omnifunc=tern#Complete
+" autocmd FileType java setlocal omnifunc=javacomplete#Complete
+" autocmd FileType javascript setlocal omnifunc=javascriptcomplete#CompleteJS
+" autocmd FileType javascript setlocal omnifunc=tern#Complete
 autocmd FileType python setlocal omnifunc=pythoncomplete#Complete
 autocmd FileType ruby setlocal omnifunc=rubycomplete#Complete
-autocmd FileType typescript setlocal omnifunc=TSComplete
+" autocmd FileType typescript setlocal omnifunc=TSComplete
 autocmd FileType xml setlocal omnifunc=xmlcomplete#CompleteTags
 
 " Search
