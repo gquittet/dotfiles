@@ -109,35 +109,6 @@ call denite#custom#var('grep', 'pattern_opt', [])
 call denite#custom#var('grep', 'separator', ['--'])
 call denite#custom#var('grep', 'final_opts', [])
 
-" Deoplete
-" let g:deoplete#enable_at_startup = 1
-" let g:deoplete#enable_ignore_case = 1
-" let g:deoplete#enable_smart_case = 1
-" let g:deoplete#enable_camel_case = 1
-" let g:deoplete#enable_refresh_always = 1
-" let g:deoplete#max_abbr_width = 0
-" let g:deoplete#max_menu_width = 0
-" let g:deoplete#omni#input_patterns = get(g:,'deoplete#omni#input_patterns',{})
-" " Sources
-" " Jedi
-" if has('macunix')
-    " let g:python_host_prog = '/usr/local/bin/python'
-    " let g:python3_host_prog = '/usr/local/bin/python3'
-" elseif has('unix') && !has('macunix') && !has('win32unix')
-    " let g:python_host_prog = '/usr/bin/python'
-    " let g:python3_host_prog = '/usr/bin/python3'
-" endif
-
-" " PHPcd
-" let g:deoplete#ignore_sources = get(g:, 'deoplete#ignore_sources', {})
-" let g:deoplete#ignore_sources.php = ['omni']
-" " TernJS
-" let g:deoplete#sources#tss#javascript_support = 1
-" let g:deoplete#sources#ternjs#docs = 1
-" let g:deoplete#sources#ternjs#types = 1
-" let g:deoplete#sources#ternjs#filetypes = ['jsx', 'javascript.jsx', 'vue']
-
-
 " Fugitive
 set viminfo+=!
 if !exists('g:PROJECTS')

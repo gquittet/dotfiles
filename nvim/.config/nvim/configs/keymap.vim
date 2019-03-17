@@ -177,12 +177,6 @@ vmap <Leader>t" :Tabularize /"<CR>
 " Tagbar
 nmap <leader>tb :TagbarToggle<CR>
 
-" Typescript
-nmap tsd :TSDef<CR>
-nmap tsi :TSImport<CR>
-nmap tsoi :TSImport<CR>
-
-
 " Undo tree
 nmap <Leader>ut :UndotreeToggle<CR>
 
