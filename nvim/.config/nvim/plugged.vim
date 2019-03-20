@@ -48,6 +48,7 @@ Plug 'davidhalter/jedi-vim'                                             " Jedi v
 
 Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app & yarn install'  } " Markdown
 Plug 'tmhedberg/matchit'                                                " Matchit: useful to switch between the start and the end of a function
+Plug 'terryma/vim-multiple-cursors'                                     " Multiple cursors like sublime text
 Plug 'scrooloose/nerdcommenter'                                         " NERDCommenter : Better comments in vim
 Plug 'moll/vim-node'                                                    " Vim NodeJS
 Plug 'myusuf3/numbers.vim'                                              " Numbers.vim

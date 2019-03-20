@@ -3,7 +3,7 @@
 " ====================================================
 
 " Airline
-let g:airline_powerline_fonts = 1
+" let g:airline_powerline_fonts = 1
 let g:airline#extensions#tabline#enabled = 1
 " let g:airline#extensions#tabline#left_sep = ' '
 " let g:airline#extensions#tabline#left_alt_sep = '|'
@@ -91,7 +91,7 @@ let g:defx_icons_nested_closed_tree_icon = ''
 
 " Denite
 " Ignore files
-call denite#custom#source('file_rec', 'matchers', ['matcher_fuzzy', 'matcher_ignore_globs'])
+call denite#custom#source('file/rec', 'matchers', ['matcher_fuzzy', 'matcher_ignore_globs'])
 call denite#custom#filter('matcher_ignore_globs', 'ignore_globs',
   \ [ '*~', '*.o', '*.exe', '*.bak',
   \ '.DS_Store', '*.pyc', '*.sw[po]', '*.class',
@@ -128,9 +128,9 @@ call denite#custom#map(
 " I like to have two bindings for this -- one that respects my projects .gitignore and one that does not.
 " The latter is helpful if I want to examine a built file or look at a node_module dependency while working on my js project.
 " -u flag to unrestrict (see ag docs)
-call denite#custom#var('file_rec', 'command', ['ag', '--follow', '--nocolor', '--nogroup', '-u', '-g', ''])
-call denite#custom#alias('source', 'file_rec/git', 'file_rec')
-call denite#custom#var('file_rec/git', 'command', ['ag', '--follow', '--nocolor', '--nogroup', '--hidden', '-g', ''])
+call denite#custom#var('file/rec', 'command', ['ag', '--follow', '--nocolor', '--nogroup', '-u', '-g', ''])
+call denite#custom#alias('source', 'file/rec/git', 'file/rec')
+call denite#custom#var('file/rec/git', 'command', ['ag', '--follow', '--nocolor', '--nogroup', '--hidden', '-g', ''])
 " Search into files
 call denite#custom#source('grep', 'matchers', ['matcher_regexp'])
 " use ag for content search
@@ -195,6 +195,17 @@ let g:numbers_exclude = ['unite', 'startify', 'w3m', 'vimshell', 'tagbar', 'gund
 :au FocusGained * :set relativenumber
 autocmd InsertEnter * :set number
 autocmd InsertLeave * :set relativenumber
+
+" vim-multiple-cursors
+let g:multi_cursor_use_default_mapping=1
+let g:multi_cursor_start_word_key      = '<C-n>'
+let g:multi_cursor_select_all_word_key = '<A-n>'
+let g:multi_cursor_start_key           = 'g<C-n>'
+let g:multi_cursor_select_all_key      = 'g<A-n>'
+let g:multi_cursor_next_key            = '<C-n>'
+let g:multi_cursor_prev_key            = '<C-p>'
+let g:multi_cursor_skip_key            = '<C-x>'
+let g:multi_cursor_quit_key            = '<Esc>'
 
 " vim-table-mode
 let g:table_mode_corner='|'     " Compatibility with markdown

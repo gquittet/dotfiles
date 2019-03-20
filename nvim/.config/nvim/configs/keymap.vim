@@ -122,10 +122,10 @@ function! s:defx_my_settings() abort
 endfunction
 
 " Denite file rec
-nmap <leader>p :DeniteProjectDir -buffer-name=git file_rec/git<CR>
-nmap <leader>o :DeniteProjectDir -buffer-name=files file_rec<CR>
-nmap <leader>f :DeniteProjectDir -buffer-name=grep -default-action=quickfix grep:::!<CR>
-nmap <leader>g :Denite grep<CR>
+nmap <leader>dp :DeniteProjectDir -buffer-name=git file/rec/git<CR>
+nmap <leader>do :DeniteProjectDir -buffer-name=files file/rec<CR>
+nmap <leader>df :DeniteProjectDir -buffer-name=grep -default-action=quickfix grep:::!<CR>
+nmap <leader>dg :Denite grep<CR>
 
 " Git
 nmap <leader>gs :Gstatus<CR>
@@ -134,6 +134,7 @@ nmap <leader>gc :Gcommit<CR>
 nmap <leader>gd :Gdiff<CR>
 nmap <leader>gl :Glog<CR>
 nmap <leader>gp :Gpush<CR>
+nmap <leader>gpl :Gpull<CR>
 nmap <leader>gr :Gread<CR>
 nmap <leader>gw :Gwrite<CR>
 nmap <leader>ge :Gedit<CR>
