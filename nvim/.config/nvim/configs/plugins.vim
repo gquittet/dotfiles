@@ -8,6 +8,7 @@ let g:airline#extensions#tabline#enabled = 1
 " let g:airline#extensions#tabline#left_sep = ' '
 " let g:airline#extensions#tabline#left_alt_sep = '|'
 let g:airline#extensions#ale#enabled = 1
+let g:airline#extensions#tabline#formatter = 'unique_tail'
 
 " ALE
 " Lint only when I save the file
@@ -140,33 +141,6 @@ call denite#custom#var('grep', 'recursive_opts', [])
 call denite#custom#var('grep', 'pattern_opt', [])
 call denite#custom#var('grep', 'separator', ['--'])
 call denite#custom#var('grep', 'final_opts', [])
-
-" Fugitive
-set viminfo+=!
-if !exists('g:PROJECTS')
-  let g:PROJECTS = {}
-endif
-
-augroup project_discovery
-  autocmd!
-  autocmd User Fugitive let g:PROJECTS[fnamemodify(fugitive#repo().dir(), ':h')] = 1
-augroup END
-
-command! -complete=customlist,s:project_complete -nargs=1 Project cd <args>
-
-function! s:project_complete(lead, cmdline, _) abort
-  let results = keys(get(g:, 'PROJECTS', {}))
-
-  " use projectionist if available
-  if exists('*projectionist#completion_filter')
-    return projectionist#completion_filter(results, a:lead, '/')
-  endif
-
-  " fallback to cheap fuzzy matching
-  let regex = substitute(a:lead, '.', '[&].*', 'g')
-  return filter(results, 'v:val =~ regex')
-endfunction
-
 
 " Git
 " Useful git help

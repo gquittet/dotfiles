@@ -130,6 +130,7 @@ nmap <leader>dg :Denite grep<CR>
 " Git
 nmap <leader>gs :Gstatus<CR>
 nmap <leader>ga :Git add -A<CR>
+nmap <leader>gb :Gblame<CR>
 nmap <leader>gc :Gcommit<CR>
 nmap <leader>gd :Gdiff<CR>
 nmap <leader>gl :Glog<CR>
