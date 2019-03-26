@@ -13,6 +13,7 @@ noremap <Left> <Nop>
 
 " Shortcuts
 nmap <silent> <Space><Tab> <Esc>/<++><Enter>:nohl<Enter>"_c4l
+vnoremap // y/\V<C-r>=escape(@",'/\')<CR><CR>
 
 " ALE
 nmap <silent> <leader>ak <Plug>(ale_previous_wrap)
