@@ -33,6 +33,8 @@ set wildignore+=**/dist/**
 " Folding
 " set nofoldenable                                                          " Disable folding
 set foldmethod=syntax                                                       " Fold are defined by syntax highlighting
+set foldcolumn=1                                                            " Defines 1 col at window left, to indicate folding
+let javaScript_fold=1                                                       " Activate folding by JS syntax
 
 " Indentation
 " Don't enable smarindent or cindent with filetype plugin indent on

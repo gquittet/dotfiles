@@ -126,6 +126,7 @@ nmap <leader>dp :DeniteProjectDir -buffer-name=git file/rec/git<CR>
 nmap <leader>do :DeniteProjectDir -buffer-name=files file/rec<CR>
 nmap <leader>df :DeniteProjectDir -buffer-name=grep -default-action=quickfix grep:::!<CR>
 nmap <leader>dg :Denite grep<CR>
+nmap <leader>db :Denite buffer<CR>
 
 " Git
 nmap <leader>gs :Gstatus<CR>

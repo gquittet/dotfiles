@@ -13,10 +13,6 @@ let g:airline#extensions#tabline#formatter = 'unique_tail'
 " ALE
 " Lint only when I save the file
 " let g:ale_lint_on_text_changed = 'never'
-" Linters
-let g:ale_linters = {
-\   'tex': ['chktex', 'proselint', 'write-good'],
-\}
 
 " Android
 let g:android_sdk_path = "/opt/android/sdk"
@@ -142,6 +138,9 @@ call denite#custom#var('grep', 'pattern_opt', [])
 call denite#custom#var('grep', 'separator', ['--'])
 call denite#custom#var('grep', 'final_opts', [])
 
+" Editorconfig
+let g:EditorConfig_exclude_patterns = ['fugitive://.*', 'scp://.*', 'defx://.*']
+
 " Git
 " Useful git help
 " Instead of reverting the cursor to the last position in the buffer, we set it to the first line when editing a git commit message
@@ -194,6 +193,11 @@ let g:tern#tern_show_signature_in_pum = 1
 
 " Undo tree
 let g:undotree_SetFocusWhenToggle=1
+
+" Vim JavaScript
+let g:javascript_plugin_jsdoc = 1
+let g:javascript_plugin_ngdoc = 1
+let g:javascript_plugin_flow = 1
 
 " VimTex
 let g:vimtex_view_method = 'zathura'        " View software
