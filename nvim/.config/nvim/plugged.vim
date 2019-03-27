@@ -64,6 +64,7 @@ Plug 'majutsushi/tagbar'                                                " TagBar
 Plug 'lervag/vimtex'                                                    " VimTex
 Plug 'HerringtonDarkholme/yats.vim'                                     " TypeScript syntax highlighting
 Plug 'mbbill/undotree'                                                  " UndoTree : See all undos
+Plug 'airblade/vim-gitgutter'                                           " Shows a git diff in the 'gutter' (sign column)
 Plug 'pangloss/vim-javascript'                                          " JavaScript syntax & indentation
 Plug 'posva/vim-vue'                                                    " VueJS
 

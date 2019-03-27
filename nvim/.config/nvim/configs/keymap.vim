@@ -120,6 +120,13 @@ function! s:defx_my_settings() abort
                 \ defx#do_action('print')
     nnoremap <silent><buffer><expr> cd
                 \ defx#do_action('change_vim_cwd')
+    " Mouse
+    nnoremap <silent><buffer><expr> <2-LeftMouse>
+                \ defx#do_action('open_or_close_tree')
+    nnoremap <silent><buffer><expr> <3-LeftMouse>
+                \ defx#do_action('drop')
+    nnoremap <silent><buffer><expr> <RightMouse>
+                \ defx#do_action('cd', ['..'])
 endfunction
 
 " Denite file rec
