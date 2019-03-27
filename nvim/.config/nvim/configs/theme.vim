@@ -16,11 +16,11 @@ endif
 " au ColorScheme myspecialcolors hi Normal ctermbg=red guibg=none
 
 " Use GUI colors in terminal
-" if (has("termguicolors"))
-    " let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
-    " let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
-    " set termguicolors
-" endif
+if (has("termguicolors"))
+    let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
+    let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
+    set termguicolors
+endif
 
 " Set the full color compatibility for vim and terminal
 syntax enable
@@ -35,9 +35,9 @@ syntax enable
 " colorscheme onehalflight
 " let g:airline_theme='onehalflight'
 
-colorscheme PaperColor
-set background=light
+" colorscheme PaperColor
+" set background=light
 
-" colorscheme tender
-" let g:airline_theme = 'tender'
+colorscheme tender
+let g:airline_theme = 'tender'
 
