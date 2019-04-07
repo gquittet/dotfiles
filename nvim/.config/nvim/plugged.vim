@@ -56,7 +56,6 @@ Plug 'jceb/vim-orgmode'                                                 " Org mo
 Plug 'lvht/phpcd.vim', { 'for': 'php', 'do': 'composer install' }       " PHP Autocomplete
 Plug 'weirongxu/plantuml-previewer.vim'                                 " Plantuml-previewer
 Plug 'tyru/open-browser.vim'                                            " Plantuml-previewer dependency
-Plug 'aklt/plantuml-syntax'                                             " Plantuml-syntax
 Plug 'tpope/vim-surround'                                               " Surround
 Plug 'dhruvasagar/vim-table-mode'                                       " Table mode
 Plug 'godlygeek/tabular'                                                " Tabular : useful for great alignement
@@ -65,8 +64,7 @@ Plug 'lervag/vimtex'                                                    " VimTex
 Plug 'HerringtonDarkholme/yats.vim'                                     " TypeScript syntax highlighting
 Plug 'mbbill/undotree'                                                  " UndoTree : See all undos
 Plug 'airblade/vim-gitgutter'                                           " Shows a git diff in the 'gutter' (sign column)
-Plug 'pangloss/vim-javascript'                                          " JavaScript syntax & indentation
-Plug 'posva/vim-vue'                                                    " VueJS
+Plug 'sheerun/vim-polyglot'                                             " Vim Polyglot - A collection of language packs for Vim.
 
 " Themes
 Plug 'morhetz/gruvbox'                                                  " Gruvbox

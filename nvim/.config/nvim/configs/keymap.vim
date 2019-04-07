@@ -11,6 +11,10 @@ noremap <Right> <Nop>
 noremap <Down> <Nop>
 noremap <Left> <Nop>
 
+" Save
+nmap W :w<CR>
+vmap W :w<CR>
+
 " Shortcuts
 nmap <silent> <Space><Tab> <Esc>/<++><Enter>:nohl<Enter>"_c4l
 vnoremap // y/\V<C-r>=escape(@",'/\')<CR><CR>
