@@ -2,25 +2,27 @@
 	email = guillaume.quittet@gmail.com
 	name = Guillaume Quittet
 [alias]
-    co  = checkout
-    cob = checkout -b
-    f   = fetch -p
-    c   = commit
-    ca  = commit --amend
-    cam = commit --amend -m
-    cm  = commit -m
-    cem = commit --allow-empty -m
-    p   = push
-    pl  = pull
-    pu  = push -u
-    puo = push -u origin
-    ba  = branch -a
-    bd  = branch -d
-    bD  = branch -D
-    dc  = diff --cached
+    co   = checkout
+    cob  = checkout -b
+    f    = fetch -p
+    c    = commit
+    ca   = commit --amend
+    cam  = commit --amend -m
+    cm   = commit -m
+    cem  = commit --allow-empty -m
+    p    = push
+    pl   = pull
+    pu   = push -u
+    puo  = push -u origin
+    pom  = push origin master
+    pomt = push origin master --tags
+    ba   = branch -a
+    bd   = branch -d
+    bD   = branch -D
+    dc   = diff --cached
     
     st = status -sb
-    a = add
+    a  = add
     ap = add -p
     
     plg = log --graph --pretty='format:%C(red)%d%C(reset) %C(yellow)%h%C(reset) %ar %C(green)%aN%C(reset) %s'
