@@ -2,6 +2,7 @@
 	"bootstrapped": true,
 	"in_process_packages":
 	[
+		"PlantUmlDiagrams"
 	],
 	"installed_packages":
 	[
@@ -35,6 +36,7 @@
 		"SublimeLinter-javac",
 		"SublimeLinter-php",
 		"SublimeLinter-tslint",
+		"Theme - One Dark",
 		"TypeScript",
 		"Vue Syntax Highlight",
 		"Vuetify",
