@@ -2,31 +2,43 @@
 	email = guillaume.quittet@gmail.com
 	name = Guillaume Quittet
 [alias]
-    co   = checkout
-    cob  = checkout -b
-    f    = fetch -p
-    c    = commit
-    ca   = commit --amend
-    cam  = commit --amend -m
-    cm   = commit -m
-    cem  = commit --allow-empty -m
-    p    = push
-    pl   = pull
-    pu   = push -u
-    puo  = push -u origin
-    pom  = push origin master
-    pomt = push origin master --tags
-    ba   = branch -a
-    bd   = branch -d
-    bD   = branch -D
-    dc   = diff --cached
+    b      = branch
+    ba     = branch -a
+    bd     = branch -d
+    bdm    = "!git branch --merged | grep -v '*' | xargs -n 1 git branch -d"
+    bD     = branch -D
+    co     = checkout
+    cob    = checkout -b
+    c      = commit
+    ca     = commit --amend
+    cam    = commit --amend -m
+    cm     = commit -m
+    cem    = commit --allow-empty -m
+    dc     = diff --cached
+    f      = fetch -p
+    m      = merge --no-ff
+    mf     = merge
+    mfs    = merge --squash
+    p      = push
+    pl     = pull
+    pu     = push -u
+    puo    = push -u origin
+    pom    = push origin master
+    pomt   = push origin master --tags
+    ri     = rebase -i
+    rim    = rebase -i master
+    riom   = rebase -i origin/master
     
     st = status -sb
     a  = add
     ap = add -p
     
-    plg = log --graph --pretty='format:%C(red)%d%C(reset) %C(yellow)%h%C(reset) %ar %C(green)%aN%C(reset) %s'
-    tlg = log --stat --since='1 Day Ago' --graph --pretty=oneline --abbrev-commit --date=relative
-    lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
+    adog = "log --all --decorate --oneline --graph"
+    lg   = !"git lg2"
+    lg1  = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
+    lg2  = log --graph --abbrev-commit --decorate --format=format:'%C(bold blue)%h%C(reset) - %C(bold green)(%ar)%C(reset) %C(white)%s%C(reset) %C(dim white)- %an%C(reset)%C(bold yellow)%d%C(reset)' --all
+    lg3  = log --graph --abbrev-commit --decorate --format=format:'%C(bold blue)%h%C(reset) - %C(bold cyan)%aD%C(reset) %C(bold green)(%ar)%C(reset)%C(bold yellow)%d%C(reset)%n''          %C(white)%s%C(reset) %C(dim white)- %an%C(reset)' --all
+    lg4  = log --graph --abbrev-commit --decorate --format=format:'%C(yellow)%h%C(reset)%C(auto)%d%C(reset) %C(normal)%s%C(reset) %C(dim white)%an%C(reset) %C(dim blue)(%ar)%C (reset)' --all
+    plg  = log --graph --pretty='format:%C(red)%d%C(reset) %C(yellow)%h%C(reset) %ar %C(green)%aN%C(reset) %s'
     rank = shortlog -sn --no-merges
-    bdm = "!git branch --merged | grep -v '*' | xargs -n 1 git branch -d"
+    tlg  = log --stat --since='1 Day Ago' --graph --pretty=oneline --abbrev-commit --date=relative
