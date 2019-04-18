@@ -1,6 +1,6 @@
 [
     { "keys": ["alt+d"], "command": "goto_definition" },
-    { "keys": ["ctrl+alt+a"], "command": "align_tab",
+    { "keys": ["ctrl+k", "a"], "command": "align_tab",
        "args" : {"live_preview" : true}
     },
     { "keys": ["ctrl+alt+f"], "command": "js_prettier" },
