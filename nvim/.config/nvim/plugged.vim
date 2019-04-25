@@ -10,17 +10,18 @@ Plug 'Rip-Rip/clang_complete'                                           " Clang-
 
 function! InstallDeps(info)
     if a:info.status == 'installed' || a:info.force
-        let extensions = ['coc-emmet',     \
-                          'coc-highlight', \
-                          'coc-html',      \
-                          'coc-css',       \
-                          'coc-vetur',     \
-                          'coc-java',      \
-                          'coc-yaml',      \
-                          'coc-snippets',  \
-                          'coc-tsserver',  \
-                          'coc-json'       \
-                          ]
+        let extensions = [
+            \'coc-emmet',
+            \'coc-highlight',
+            \'coc-html',
+            \'coc-css',
+            \'coc-vetur',
+            \'coc-java',
+            \'coc-yaml',
+            \'coc-snippets',
+            \'coc-tsserver',
+            \'coc-json',
+            \]
         call coc#util#install()
         call coc#util#install_extension(extensions)
     endif
