@@ -55,7 +55,7 @@ command! -nargs=? Fold :call     CocAction('fold', <f-args>)                   "
 autocmd FileType json syntax match Comment +\/\/.\+$+                          " COC JSON - better comment rendering
 
 " Defx
-call defx#custom#column('icon', {
+call defx#custom#column('filename', {
             \ 'directory_icon': '⯈',
             \ 'opened_icon': '⯆',
             \ })

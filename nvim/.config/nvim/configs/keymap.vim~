@@ -59,7 +59,7 @@ nnoremap <silent> <space>p  :<C-u>CocListResume<CR>
 
 
 " Defx
-nnoremap <silent> <leader>tv :Defx -split=vertical -winwidth=35 -direction=topleft -columns=git:indent:icon:icons:filename:type:mark<CR>
+nnoremap <leader>tv :Defx -split=vertical -winwidth=35 -direction=topleft -columns=git:indent:icon:icons:filename:type:mark<CR>
 autocmd FileType defx call s:defx_my_settings()
 function! s:defx_my_settings() abort
     " Define mappings

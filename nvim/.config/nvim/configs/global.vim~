@@ -95,8 +95,8 @@ set tabstop=4                                                               " co
 " let g:terminal_color_15 = '#e6e6e6'
 
 " Vim directories
-set backupdir=~/.local/share/nvim/backup//
-set directory=~/.local/share/nvim/swap//
+"set backupdir=~/.local/share/nvim/backup//
+" set directory=~/.local/share/nvim/swap//
 set viewdir=~/.local/share/nvim/views//
 
 

@@ -4,7 +4,7 @@
 
 " GUI settings
 if (has("gui_running"))
-    set guifont="Fira Code 10"
+    set guifont="fantasque sans mono 10"
     set guioptions-=m    " remove menu bar
     set guioptions-=T    " remove toolbar
     set guioptions-=r    " remove right-hand scroll bar
@@ -29,8 +29,8 @@ syntax enable
 " let g:gruvbox_italic = '1'
 " set background=dark
 
-" colorscheme onehalfdark
-" let g:airline_theme='onehalfdark'
+colorscheme onehalfdark
+let g:airline_theme='onehalfdark'
 
 " colorscheme onehalflight
 " let g:airline_theme='onehalflight'
@@ -38,6 +38,6 @@ syntax enable
 " colorscheme PaperColor
 " set background=light
 
-colorscheme tender
-let g:airline_theme = 'tender'
+" colorscheme tender
+" let g:airline_theme = 'tender'
 

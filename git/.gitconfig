@@ -9,6 +9,7 @@
     bD     = branch -D
     co     = checkout
     cob    = checkout -b
+    com    = checkout master
     cl     = clone
     c      = commit
     ca     = commit --amend

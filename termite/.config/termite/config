@@ -1,6 +1,6 @@
 [options]
 allow_bold = true
-font = Fira Mono 10
+font = Hack Nerd Font Mono 11
 mouse_autohide = true
 
 [colors]
