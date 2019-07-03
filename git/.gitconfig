@@ -30,11 +30,14 @@
     ri     = rebase -i
     rim    = rebase -i master
     riom   = rebase -i origin/master
-    
+    rs     = reset
+    rsh    = reset --hard
+    rshm   = reset --hard origin/master
+
     st = status -sb
     a  = add
     ap = add -p
-    
+
     adog = "log --all --decorate --oneline --graph"
     lg   = !"git lg2"
     lg1  = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
