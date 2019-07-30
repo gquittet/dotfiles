@@ -1,0 +1,2 @@
+light -I
+systemctl reboot

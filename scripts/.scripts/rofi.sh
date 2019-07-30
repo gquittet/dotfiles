@@ -9,7 +9,7 @@ case $1 in
         ;; 
 esac
 
-rofi -modi "drun,window"                                                          \
+rofi -modi "drun,window"				  			  \
     -show $showAction                                                             \
     -dpi 96                                                                       \
     -font "Fira Mono 12"                                                          \
