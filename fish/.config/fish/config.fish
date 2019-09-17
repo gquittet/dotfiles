@@ -1,37 +1,61 @@
-# pywal theme colors
-cat ~/.cache/wal/sequences &
-bass ~/.cache/wal/colors.sh
+if not functions -q fisher
+    set -q XDG_CONFIG_HOME; or set XDG_CONFIG_HOME ~/.config
+    curl https://git.io/fisher --create-dirs -sLo $XDG_CONFIG_HOME/fish/functions/fisher.fish
+    fish -c fisher
+end
 
-set -gx EDITOR nvim
-set -gx VISUAL nvim
+# Use legacy fzf keybindings
+# set -g FZF_LEGACY_KEYBINDINGS 1
 
-set PATH $HOME/.nvm/versions/node/v10.9.0/bin $PATH
+# Set the emoji width for iTerm
+set -g fish_emoji_width 2
 
-set fish_greeting
+# Hide the fish greeting
+set fish_greeting ""
 
+# Fish syntax highlighting
+set -g fish_color_autosuggestion '555'  'brblack'
+set -g fish_color_cancel -r
+set -g fish_color_command --bold
+set -g fish_color_comment red
+set -g fish_color_cwd green
+set -g fish_color_cwd_root red
+set -g fish_color_end brmagenta
+set -g fish_color_error brred
+set -g fish_color_escape 'bryellow'  '--bold'
+set -g fish_color_history_current --bold
+set -g fish_color_host normal
+set -g fish_color_match --background=brblue
+set -g fish_color_normal normal
+set -g fish_color_operator bryellow
+set -g fish_color_param cyan
+set -g fish_color_quote yellow
+set -g fish_color_redirection brblue
+set -g fish_color_search_match 'bryellow'  '--background=brblack'
+set -g fish_color_selection 'white'  '--bold'  '--background=brblack'
+set -g fish_color_user brgreen
+set -g fish_color_valid_path --underline
 
-alias fishrc="nvim ~/.config/fish/config.fish"
-alias i3config="nvim ~/.config/i3/config"
-alias r="ranger"
-alias v="nvim"
-alias vim="nvim"
-alias vimrc="nvim ~/.config/nvim/init.vim"
-alias sudo="sudo "
-# Git
-abbr -a ga "git add"
-abbr -a gb 'git branch'
-abbr -a gbd "git branch -D"
-abbr -a gs "git status"
-abbr -a gcm "git commit -m"
-abbr -a gco 'git checkout'
-abbr -a gl "git log"
-abbr -a glg 'git lg'
-abbr -a gbl 'git blame'
-abbr -a gcp 'git cherry-pick'
-abbr -a gd 'git diff'
-abbr -a gf 'git fetch'
-abbr -a gm 'git merge'
-abbr -a gph 'git push origin'
-abbr -a gpl 'git pull'
-abbr -a gr 'git remote'
-abbr -a gst 'git stash'
+bind \el 'ls -lh'
+
+# Preferred editor for local and remote sessions
+if test -n "$SSH_CONNECTION"
+    set -gx EDITOR vim
+else
+    set -gx EDITOR nvim
+end
+set GIT_EDITOR $EDITOR
+set -gx VISUAL $EDITOR
+
+# Qualifio
+## Scripts
+### Gitlab
+alias qualifio_gitlab_oauth "$HOME/.scripts/qualifio_gitlab_generate_oauth_token.sh guillaume.quittet@qualifio.com"
+
+alias cat bat
+alias ls exa
+abbr -a -- - 'cd -'
+
+set PATH /Volumes/Storage/flutter/bin $PATH
+
+eval (starship init fish)
