@@ -1,5 +1,12 @@
 call plug#begin('~/.local/share/nvim/plugged')
 
+" Auto install vim-plug
+if empty(glob('~/.local/share/nvim/site/autoload/plug.vim'))
+  silent !curl -fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs
+    \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+  autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
+endif
+
 Plug 'vim-airline/vim-airline'                                          " Vim-Airline
 Plug 'vim-airline/vim-airline-themes'                                   " Vim-Airline theme
 Plug 'w0rp/ale'                                                         " ALE (Asynchronous Lint Engine)
@@ -68,6 +75,7 @@ Plug 'airblade/vim-gitgutter'                                           " Shows 
 Plug 'sheerun/vim-polyglot'                                             " Vim Polyglot - A collection of language packs for Vim.
 
 " Themes
+Plug 'ayu-theme/ayu-vim'                                                " Ayu
 Plug 'morhetz/gruvbox'                                                  " Gruvbox
 Plug 'sonph/onehalf', {'rtp': 'vim/'}                                   " One Half
 Plug 'NLKNguyen/papercolor-theme'                                       " Paper color theme

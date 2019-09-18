@@ -144,6 +144,7 @@ let g:EditorConfig_exclude_patterns = ['fugitive://.*', 'scp://.*', 'defx://.*']
 " Git
 " Useful git help
 " Instead of reverting the cursor to the last position in the buffer, we set it to the first line when editing a git commit message
+autocmd Filetype gitcommit setlocal spell textwidth=72
 au FileType gitcommit au! BufEnter COMMIT_EDITMSG call setpos('.', [0, 1, 1, 0])
 
 " Grammalecte

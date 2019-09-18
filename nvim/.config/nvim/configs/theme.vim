@@ -29,8 +29,11 @@ syntax enable
 " let g:gruvbox_italic = '1'
 " set background=dark
 
-colorscheme onehalfdark
-let g:airline_theme='onehalfdark'
+" colorscheme onehalfdark
+" let g:airline_theme='onehalfdark'
+
+let ayucolor="mirage" " for mirage version of theme
+colorscheme ayu
 
 " colorscheme onehalflight
 " let g:airline_theme='onehalflight'
