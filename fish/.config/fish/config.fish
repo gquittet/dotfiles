@@ -54,7 +54,6 @@ alias qualifio_gitlab_oauth "$HOME/.scripts/qualifio_gitlab_generate_oauth_token
 
 alias cat bat
 alias ls exa
-abbr -a -- - 'cd -'
 
 set PATH /Volumes/Storage/flutter/bin $PATH
 
