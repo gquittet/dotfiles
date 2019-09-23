@@ -47,6 +47,10 @@ end
 set GIT_EDITOR $EDITOR
 set -gx VISUAL $EDITOR
 
+set -gx MANPAGER "sh -c 'col -bx | bat -l man -p'"
+# Fix formatting problems
+set -gx MANROFFOPT "-c"
+
 # Qualifio
 ## Scripts
 ### Gitlab
