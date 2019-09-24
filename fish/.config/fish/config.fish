@@ -60,5 +60,6 @@ alias cat bat
 alias ls exa
 
 set PATH /Volumes/Storage/flutter/bin $PATH
+set PATH $HOME/.idea $PATH
 
 eval (starship init fish)
