@@ -50,8 +50,10 @@ abbr -a gpomt git push origin master --tags
 abbr -a gpu git push -u
 abbr -a gpuo git push -u origin
 abbr -a grank git shortlog -sn --no-merges
+abbr -a grba git rebase --abort
+abbr -a grbc git rebase --continue
+abbr -a grbi git rebase -i
 abbr -a grh git reset HEAD
-abbr -a gri git rebase -i
 abbr -a grs git reset
 abbr -a grsh git reset --hard
 abbr -a grshm git reset --hard master
