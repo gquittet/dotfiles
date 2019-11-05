@@ -5,6 +5,20 @@ end
 # cd
 abbr -a -- - 'cd -'
 
+# Docker
+abbr -a de docker exec
+abbr -a deit docker exec -it
+abbr -a dka 'docker kill (docker ps -q)'
+abbr -a dil docker image list
+abbr -a dip docker image prune
+abbr -a dps docker ps
+abbr -a dpsa docker ps -a
+abbr -a drm docker rm
+abbr -a drmi docker rmi
+abbr -a drun docker run
+abbr -a drunn docker run --name
+abbr -a dsa 'docker stop (docker ps -q)'
+
 # Git
 abbr -a g git
 abbr -a ga git add
@@ -38,6 +52,7 @@ abbr -a gicm "git commit --allow-empty -m 'Initial commit.'"
 abbr -a glcbc 'git log --oneline --color | emojify | less -r'
 abbr -a glg "git log --graph --abbrev-commit --decorate --pretty=format:'%C(bold blue)%h%C(reset) - %C(bold green)(%ar)%C(reset) %C(white)%s%C(reset) %C(dim white)- %an%C(reset)%C(bold yellow)%d%C(reset)' --all"
 abbr -a glog git log
+abbr -a glr git ls-remote
 abbr -a gm git merge --no-ff
 abbr -a gmf git merge
 abbr -a gmfs git merge --squash
@@ -64,6 +79,7 @@ abbr -a gst git stash
 abbr -a gsta git stash apply
 abbr -a gstd git stash drop
 abbr -a gstl git stash list
+abbr -a gstp git stash pop
 
 # Kubectl
 abbr -a ksa kubectl sso auth
@@ -103,4 +119,5 @@ abbr -a yvmi yarn version --minor
 
 # software
 abbr -a v nvim
+abbr -a vd nvim -d
 

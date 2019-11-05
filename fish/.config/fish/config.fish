@@ -40,26 +40,30 @@ bind \el 'ls -lh'
 
 # Preferred editor for local and remote sessions
 if test -n "$SSH_CONNECTION"
-    set -gx EDITOR vim
+    set -x EDITOR vim
 else
-    set -gx EDITOR nvim
+    set -x EDITOR nvim
 end
 set GIT_EDITOR $EDITOR
-set -gx VISUAL $EDITOR
+set -x VISUAL $EDITOR
 
-set -gx MANPAGER "sh -c 'col -bx | bat -l man -p'"
+set -x MANPAGER "sh -c 'col -bx | bat -l man -p'"
 # Fix formatting problems
-set -gx MANROFFOPT "-c"
+set -x MANROFFOPT "-c"
 
 # Qualifio
 ## Scripts
 ### Gitlab
 alias qualifio_gitlab_oauth "$HOME/.scripts/qualifio_gitlab_generate_oauth_token.sh guillaume.quittet@qualifio.com"
 
+set FISH_KUBECTL_COMPLETION_TIMEOUT 1s
+
 alias cat bat
 alias ls exa
 
-set PATH /Volumes/Storage/flutter/bin $PATH
-set PATH $HOME/.idea $PATH
+set -x GOPATH $HOME/Documents/Projets/go
+set -x FLUTTERPATH $HOME/Library/flutter
 
-eval (starship init fish)
+set PATH $FLUTTERPATH/bin $GOPATH/bin $PATH
+
+starship init fish | source
