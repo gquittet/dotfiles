@@ -1,5 +1,5 @@
-.DS_Store
-Thumbs.db
-[Dd]esktop.ini
 NetrwTreeListing\ 2
 .netrwhist
+
+# fish
+fish/.config/fish/completions/kubectl.fish
