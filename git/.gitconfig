@@ -19,6 +19,7 @@
 
 [core]
     ignorecase = false
+    excludesfile = ~/.config/git/gitignore
     pager = diff-so-fancy | less --tabs=4 -RFX
 [color]
     ui = true
@@ -35,4 +36,4 @@
     new = green bold
     whitespace = red reverse
 [commit]
-    template = /Users/gquittet/.gitmessage
+    template = ~/.config/git/gitmessage
