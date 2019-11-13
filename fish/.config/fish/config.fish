@@ -61,8 +61,9 @@ set FISH_KUBECTL_COMPLETION_TIMEOUT 1s
 alias cat bat
 alias ls exa
 
-set -x GOPATH $HOME/Documents/Projets/go
 set -x FLUTTERPATH $HOME/Library/flutter
+set -x GOPATH $HOME/Documents/Projets/go
+set -x JAVA_HOME /Library/Java/JavaVirtualMachines/adoptopenjdk-13.jdk/Contents/Home
 
 set PATH $FLUTTERPATH/bin $GOPATH/bin $PATH
 
