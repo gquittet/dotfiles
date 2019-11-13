@@ -46,7 +46,7 @@ nmap <leader>ge :Gedit<CR>
 map <C-h> :nohl<CR>
 
 " Nerdtree
-map <C-n> :NERDTreeToggle<CR>
+map <leader>tv :NERDTreeToggle<CR>
 
 " Numbers.vim
 nmap <F3> :NumbersToggle<CR>
@@ -82,7 +82,7 @@ nmap <Leader>t" :Tabularize /"<CR>
 vmap <Leader>t" :Tabularize /"<CR>
 
 " Tagbar
-nmap <leader>tb :Vista<CR>
+nmap <leader>tb :Vista coc<CR>
 
 " Undo tree
 nmap <Leader>ut :UndotreeToggle<CR>
