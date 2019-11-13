@@ -1,7 +1,3 @@
-" ====================================================
-" Global configuration
-" ====================================================
-
 set autowrite                                                               " Save automatically all the buffers in vim
 set autochdir!                                                              " Set the working directory
 set backspace=indent,eol,start                                              " Make backspace work like most other programs
@@ -30,10 +26,6 @@ set wildignore+=**/.git/**
 set wildignore+=**/build/**
 set wildignore+=**/dist/**
 
-" Folding
-" set nofoldenable                                                          " Disable folding
-set foldmethod=syntax                                                       " Fold are defined by syntax highlighting
-
 " Indentation
 " Don't enable smarindent or cindent with filetype plugin indent on
 filetype plugin indent on                                                   " Indentation based on filetype
@@ -45,15 +37,6 @@ set listchars=tab:»\ ,trail:•,nbsp:~                                        "
 
 " Mouse
 set mouse=a
-
-" Netrw
-let g:netrw_banner=0                                                        " Disable banner
-let g:netrw_browse_split = 4                                                " Open in prior window
-let g:netrw_altv = 1                                                        " Open split to the right
-let g:netrw_liststyle = 3                                                   " Tree view
-let g:netrw_winsize = 20
-let g:netrw_list_hide=netrw_gitignore#Hide()
-let g:netrw_list_hide.=',\(^\|\s\s\)\zs\.\S\+'
 
 " Omni Completiton
 autocmd FileType css setlocal omnifunc=csscomplete#CompleteCSS
@@ -75,30 +58,13 @@ set shiftwidth=0                                                            " co
 set softtabstop=4                                                           " spaces per tab
 set tabstop=4                                                               " columns per tabs
 
-" Terminal
-" Color palette
-" let g:terminal_color_0 = '#000000'
-" let g:terminal_color_1 = '#ff5555'
-" let g:terminal_color_2 = '#50fa7b'
-" let g:terminal_color_3 = '#f1fa8c'
-" let g:terminal_color_4 = '#bd93f9'
-" let g:terminal_color_5 = '#ff79c6'
-" let g:terminal_color_6 = '#8be9fd'
-" let g:terminal_color_7 = '#bfbfbf'
-" let g:terminal_color_8 = '#4d4d4d'
-" let g:terminal_color_9 = '#ff6e67'
-" let g:terminal_color_10 = '#5af78e'
-" let g:terminal_color_11 = '#f4f99d'
-" let g:terminal_color_12 = '#caa9fa'
-" let g:terminal_color_13 = '#ff92d0'
-" let g:terminal_color_14 = '#9aedfe'
-" let g:terminal_color_15 = '#e6e6e6'
-
 " Vim directories
-"set backupdir=~/.local/share/nvim/backup//
-" set directory=~/.local/share/nvim/swap//
+set backupdir=~/.local/share/nvim/backup//
+set directory=~/.local/share/nvim/swap//
 set viewdir=~/.local/share/nvim/views//
-
+silent !mkdir ~/.local/share/nvim/backup/ > /dev/null 2>&1
+silent !mkdir ~/.local/share/nvim/swap// > /dev/null 2>&1
+silent !mkdir ~/.local/share/nvim/views// > /dev/null 2>&1
 
 " Wrapping
 set formatoptions-=t                                                        " Keep my textwidth setting
@@ -106,4 +72,5 @@ set textwidth=0                                                             " Wo
 set wrapmargin=0                                                            " Word wrap without line break
 set whichwrap=b,s,h,l,<,>,[,]                                               " Backspace and cursor keys wrap too
 set wrap linebreak                                                          " Set wrapping with soft wrap (set wm=2 => hard wrap)
+
 

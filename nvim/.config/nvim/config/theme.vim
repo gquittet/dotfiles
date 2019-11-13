@@ -1,8 +1,3 @@
-"=====================================================
-" Theme
-"=====================================================
-
-" GUI settings
 if (has("gui_running"))
     set guifont="fantasque sans mono 10"
     set guioptions-=m    " remove menu bar
@@ -43,4 +38,5 @@ colorscheme ayu
 
 " colorscheme tender
 " let g:airline_theme = 'tender'
+
 
