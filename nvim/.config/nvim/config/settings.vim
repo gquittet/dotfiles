@@ -1,8 +1,9 @@
 set autowrite                                                               " Save automatically all the buffers in vim
-set autochdir!                                                              " Set the working directory
+"set autochdir!                                                              " Set the working directory
 set backspace=indent,eol,start                                              " Make backspace work like most other programs
 set backup
 set colorcolumn=81                                                          " Set the 80 character column (+1 if textwidth is defined else 81)
+set clipboard+=unnamedplus
 set cursorline                                                              " Highlight the current line
 set encoding=utf-8
 set hidden                                                                  " Any buffer can be hidden
@@ -17,6 +18,10 @@ set showmatch                                                               " Sh
 set splitbelow                                                              " Puts new split windows to the bottom of the current
 set splitright                                                              " Puts new vsplit windows to the right of the current
 set winminheight=0                                                          " Windows can be 0 line height
+
+" Folding
+set foldmethod=syntax
+set nofoldenable
 
 " Fuzzy matching
 set path+=**                                                                " fuzzy matching with :find *.ext*

@@ -15,6 +15,7 @@ let g:coc_global_extensions = [
             \ 'coc-angular',
             \ 'coc-css',
             \ 'coc-emmet',
+            \ 'coc-eslint',
             \ 'coc-flow',
             \ 'coc-flutter',
             \ 'coc-git',
@@ -38,6 +39,7 @@ let g:coc_global_extensions = [
             \ 'coc-tabnine',
             \ 'coc-tailwindcss',
             \ 'coc-texlab',
+            \ 'coc-tslint',
             \ 'coc-tsserver',
             \ 'coc-vetur',
             \ 'coc-vimlsp',
@@ -51,6 +53,7 @@ Plug 'ctrlpvim/ctrlp.vim'
 
 Plug '/usr/local/opt/fzf'
 Plug 'junegunn/fzf.vim'
+Plug 'christoomey/vim-tmux-navigator'
 
 Plug 'easymotion/vim-easymotion'
 Plug 'editorconfig/editorconfig-vim'
@@ -79,6 +82,8 @@ Plug 'sheerun/vim-polyglot'                                             " Vim Po
 " instruction
 Plug 'liuchengxu/vista.vim'
 
+Plug 'liuchengxu/vim-which-key', { 'on': ['WhichKey', 'WhichKey!'] }
+
 " Themes
 Plug 'ayu-theme/ayu-vim'                                                " Ayu
 Plug 'morhetz/gruvbox'                                                  " Gruvbox
@@ -93,6 +98,4 @@ Plug 'ryanoasis/vim-devicons'
 call plug#end()             " required
 syntax enable               " required
 
-runtime plugins/coc.vim
 runtime plugins/markdown-preview.vim
-"runtime plugins/vista.vim
