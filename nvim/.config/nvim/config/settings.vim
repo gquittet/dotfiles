@@ -60,8 +60,8 @@ set smartcase                                                               " Ca
 " Tabulation and spaces
 set expandtab                                                               " Show spaces instead of tabs
 set shiftwidth=0                                                            " columns per <<
-set softtabstop=4                                                           " spaces per tab
-set tabstop=4                                                               " columns per tabs
+" set softtabstop=4                                                           " spaces per tab
+" set tabstop=4                                                               " columns per tabs
 
 " Vim directories
 set backupdir=~/.local/share/nvim/backup//

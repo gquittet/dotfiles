@@ -1,5 +1,4 @@
 {
-    "coc.preferences.minTriggerInputLength": 2,
     "prettier.requireConfig": true,
     "eslint.autoFixOnSave": true,
     "tslint.autoFixOnSave": true

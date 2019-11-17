@@ -1,10 +1,20 @@
-call plug#begin('~/.local/share/nvim/plugged')
-
 " Auto install vim-plug
-if empty(glob('~/.local/share/nvim/site/autoload/plug.vim'))
-  silent !curl -fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs
-    \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
-  autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
+if has('nvim')
+    call plug#begin('~/.local/share/nvim/plugged')
+    if empty(glob('~/.local/share/nvim/site/autoload/plug.vim'))
+        silent !curl -fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs
+                    \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+        autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
+    endif
+endif
+
+if has('vim')
+    call plug#begin('~/.vim/autoload/plug.vim')
+    if empty(glob('~/.vim/autoload/plug.vim'))
+        silent !curl -fLo ~/.vim/autoload/plug.vim --create-dirs
+                    \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+        autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
+    endif
 endif
 
 Plug 'vim-airline/vim-airline'                                          " Vim-Airline
@@ -28,6 +38,7 @@ let g:coc_global_extensions = [
             \ 'coc-omnisharp',
             \ 'coc-phpls',
             \ 'coc-powershell',
+            \ 'coc-prettier',
             \ 'coc-pyright',
             \ 'coc-python',
             \ 'coc-reason',
@@ -39,7 +50,7 @@ let g:coc_global_extensions = [
             \ 'coc-tabnine',
             \ 'coc-tailwindcss',
             \ 'coc-texlab',
-            \ 'coc-tslint',
+            \ 'coc-tslint-plugin',
             \ 'coc-tsserver',
             \ 'coc-vetur',
             \ 'coc-vimlsp',
@@ -49,18 +60,15 @@ let g:coc_global_extensions = [
             \ ]
 Plug 'neoclide/coc.nvim', {'branch': 'release', 'do': { -> coc#util#install()}}
 
-Plug 'ctrlpvim/ctrlp.vim'
-
 Plug '/usr/local/opt/fzf'
 Plug 'junegunn/fzf.vim'
 Plug 'christoomey/vim-tmux-navigator'
 
 Plug 'easymotion/vim-easymotion'
-Plug 'editorconfig/editorconfig-vim'
 Plug 'tpope/vim-fugitive'
 Plug 'airblade/vim-gitgutter'
 Plug 'dpelle/vim-Grammalecte'                                           " Grammalecte
-Plug 'nathanaelkane/vim-indent-guides'                                  " Indent Guide
+Plug 'Yggdroot/indentLine'
 
 Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() } }
 Plug 'adelarsq/vim-matchit'

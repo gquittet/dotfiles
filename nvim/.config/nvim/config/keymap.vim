@@ -32,12 +32,15 @@ vnoremap <leader>x "+x
 " Global search
 nmap <silent> <leader>ff :Ag<CR>
 
-nnoremap <silent><leader>fp :CtrlP<CR>
+nnoremap <silent><leader>fp :Files<CR>
+nnoremap <silent><leader>fg :GFiles<CR>
 nnoremap <silent><leader>fo :CocList outline<CR>
 
 " Save
 noremap <silent> <leader>w :w<CR>
 noremap <silent> <leader>W :w!<CR>
+noremap <silent> <leader>wq :wq<CR>
+noremap <silent> <leader>Wq :wq!<CR>
 
 " Quit
 noremap <silent> <leader>q :q<CR>
@@ -48,8 +51,8 @@ nmap <silent> <Space><Tab> <Esc>/<++><Enter>:nohl<Enter>"_c4l
 vnoremap // y/\V<C-r>=escape(@",'/\')<CR><CR>
 
 " ALE
-nmap <silent> <C-k> <Plug>(ale_previous_wrap)
-nmap <silent> <C-j> <Plug>(ale_next_wrap)
+nmap <silent> <leader>ap <Plug>(ale_previous_wrap)
+nmap <silent> <leader>an <Plug>(ale_next_wrap)
 
 " Buffer
 nnoremap <A-Right> :bnext<CR>
@@ -81,13 +84,6 @@ map <leader>te :NERDTreeToggle<CR>
 " Numbers.vim
 nmap <F3> :NumbersToggle<CR>
 nmap <F4> :NumbersOnOff<CR>
-
-" Split
-" To use `ALT+{h,j,k,l}` to navigate windows from any mode
-nnoremap <A-h> <C-w>h
-nnoremap <A-j> <C-w>j
-nnoremap <A-k> <C-w>k
-nnoremap <A-l> <C-w>l
 
 " Tabular
 nmap <leader>t& :Tabularize /&<CR>

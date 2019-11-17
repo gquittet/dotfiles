@@ -3,16 +3,16 @@ let $FZF_DEFAULT_OPTS = '--layout=reverse'
 let g:fzf_layout = { 'window': 'call OpenFloatingWin()' }
 
 function! OpenFloatingWin()
-    let height = &lines - 3
-    let width = float2nr(&columns - (&columns * 2 / 10))
+    let height = &lines - 4
+    let width = float2nr(&columns - (&columns * 2 / 20))
     let col = float2nr((&columns - width) / 2)
 
     let opts = {
                 \ 'relative': 'editor',
-                \ 'row': height * 0.3,
+                \ 'row': 2,
                 \ 'col': col,
                 \ 'width': width,
-                \ 'height': height
+                \ 'height': height * 19 / 20
                 \ }
 
     let buf = nvim_create_buf(v:false, v:true)
