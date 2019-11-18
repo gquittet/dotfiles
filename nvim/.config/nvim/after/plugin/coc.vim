@@ -94,8 +94,8 @@ omap if <Plug>(coc-funcobj-i)
 omap af <Plug>(coc-funcobj-a)
 
 " Use <C-d> for select selections ranges, needs server support, like: coc-tsserver, coc-python
-nmap <silent> <C-d> <Plug>(coc-range-select)
-xmap <silent> <C-d> <Plug>(coc-range-select)
+"nmap <silent> <C-d> <Plug>(coc-range-select)
+"xmap <silent> <C-d> <Plug>(coc-range-select)
 
 " Use `:Format` to format current buffer
 command! -nargs=0 Format :call CocAction('format')
@@ -135,4 +135,13 @@ command! -nargs=0 Prettier :CocCommand prettier.formatFile
 vmap <leader>f  <Plug>(coc-format-selected)
 
 vmap <leader>a  <Plug>(coc-codeaction-selected)
+
+nmap <silent> <leader>sn <Plug>(coc-range-select)
+xmap <silent> <leader>sn <Plug>(coc-range-select)
+nmap <silent> <leader>sp <Plug>(coc-range-select-backward)
+xmap <silent> <leader>sp <Plug>(coc-range-select-backward)
+
+" unset tab/space size settings
+set softtabstop&
+set tabstop&
 
