@@ -92,6 +92,8 @@ Plug 'liuchengxu/vista.vim'
 
 Plug 'liuchengxu/vim-which-key', { 'on': ['WhichKey', 'WhichKey!'] }
 
+Plug 'psliwka/vim-smoothie'
+
 " Themes
 Plug 'ayu-theme/ayu-vim'                                                " Ayu
 Plug 'morhetz/gruvbox'                                                  " Gruvbox
