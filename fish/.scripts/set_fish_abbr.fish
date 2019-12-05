@@ -28,8 +28,8 @@ abbr -a gadog git
 abbr -a gb git branch
 abbr -a gbd git branch -d
 abbr -a gbD git branch -D
+abbr -a gbdm "git branch --merged | grep -v '*' | xargs -n 1 git branch -d"
 abbr -a gbl git blame
-abbr -a gbm "git branch --merged | grep -v '*' | xargs -n 1 git branch -d"
 abbr -a gc git commit
 abbr -a gca git commit --amend
 abbr -a gcae git commit --allow-empty

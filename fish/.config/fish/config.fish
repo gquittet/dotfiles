@@ -51,6 +51,9 @@ set -x MANPAGER "sh -c 'col -bx | bat -l man -p'"
 # Fix formatting problems
 set -x MANROFFOPT "-c"
 
+# True color support for *nix system
+set -x TERM xterm-256color
+
 # Qualifio
 ## Scripts
 ### Gitlab
@@ -58,12 +61,13 @@ alias qualifio_gitlab_oauth "$HOME/.scripts/qualifio_gitlab_generate_oauth_token
 
 set FISH_KUBECTL_COMPLETION_TIMEOUT 1s
 
-alias cat bat
+alias cat 'bat --theme=base16'
 alias ls exa
 
+set -g fish_user_paths /usr/local/opt/node@12/bin $fish_user_paths
 set -x FLUTTERPATH $HOME/Library/flutter
 set -x GOPATH $HOME/Documents/Projets/go
-set -x JAVA_HOME /Library/Java/JavaVirtualMachines/adoptopenjdk-13.jdk/Contents/Home
+set -x JAVA_HOME /Library/Java/JavaVirtualMachines/adoptopenjdk-13.0.1.jdk/Contents/Home
 
 set PATH $FLUTTERPATH/bin $GOPATH/bin $PATH
 
