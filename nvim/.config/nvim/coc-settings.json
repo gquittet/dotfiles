@@ -1,5 +1,12 @@
 {
-    "prettier.requireConfig": true,
     "eslint.autoFixOnSave": true,
+    "list.source.files.command": "rg",
+    "list.source.files.args": ["--no-ignore", "--files", "--glob", "!.git"],
+    "list.source.grep.command": "rg",
+    "list.source.grep.args": ["--hidden", "--vimgrep", "--heading", "-S"],
+    "list.source.mru.excludePatterns": ["**/.git/*", "/tmp/*", "node_modules/", "build/", "dist/", ".idea/", "rabbit_topology/"],
+    "prettier.requireConfig": true,
+    "suggest.echodocSupport": true,
+    "suggest.maxCompleteItemCount": 20,
     "tslint.autoFixOnSave": true
 }

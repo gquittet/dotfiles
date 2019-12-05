@@ -9,32 +9,15 @@ noremap <Right> <Nop>
 noremap <Down> <Nop>
 noremap <Left> <Nop>
 
-noremap c "_c
-noremap d "_d
-noremap dd "_dd
-noremap D "_D
-noremap x "_x
+nnoremap <leader>c "_c
+nnoremap <leader>d "_d
+nnoremap <leader>dd "_dd
+nnoremap <leader>D "_D
+nnoremap <leader>x "_x
 
-vnoremap c "_c
-vnoremap d "_d
-vnoremap x "_x
-
-nnoremap <leader>c "+c
-nnoremap <leader>d "+d
-nnoremap <leader>dd "+dd
-nnoremap <leader>D "+D
-nnoremap <leader>x "+x
-
-vnoremap <leader>c "+c
-vnoremap <leader>d "+d
-vnoremap <leader>x "+x
-
-" Global search
-nmap <silent> <leader>ff :Ag<CR>
-
-nnoremap <silent><leader>fp :Files<CR>
-nnoremap <silent><leader>fg :GFiles<CR>
-nnoremap <silent><leader>fo :CocList outline<CR>
+vnoremap <leader>c "_c
+vnoremap <leader>d "_d
+vnoremap <leader>x "_x
 
 " Save
 noremap <silent> <leader>w :w<CR>
@@ -44,15 +27,15 @@ noremap <silent> <leader>Wq :wq!<CR>
 
 " Quit
 noremap <silent> <leader>q :q<CR>
-noremap <silent> <leader>Q :q!<CR>
+noremap <silent> <leader>qq :q!<CR>
 
 " Shortcuts
 nmap <silent> <Space><Tab> <Esc>/<++><Enter>:nohl<Enter>"_c4l
 vnoremap // y/\V<C-r>=escape(@",'/\')<CR><CR>
 
 " ALE
-nmap <silent> <leader>ap <Plug>(ale_previous_wrap)
-nmap <silent> <leader>an <Plug>(ale_next_wrap)
+nmap <silent> [g <Plug>(ale_previous_wrap)
+nmap <silent> ]g <Plug>(ale_next_wrap)
 
 " Buffer
 nnoremap <A-Right> :bnext<CR>
@@ -60,7 +43,9 @@ nnoremap <A-Left> :bprevious<CR>
 nmap <leader>bn :bnext<CR>
 nmap <leader>bp :bprevious<CR>
 nmap <leader>bf :bfirst<CR>
+nmap <leader>bl :blast<CR>
 nmap <leader>bd :bdelete<CR>
+nmap <leader>bdd :bdelete!<CR>
 
 " Git
 nmap <leader>gs :Gstatus<CR>
@@ -84,6 +69,10 @@ map <leader>te :NERDTreeToggle<CR>
 " Numbers.vim
 nmap <F3> :NumbersToggle<CR>
 nmap <F4> :NumbersOnOff<CR>
+
+" Settings
+" Reload settings
+nnoremap <leader>sr :source ~/.config/nvim/init.vim<CR>
 
 " Tabular
 nmap <leader>t& :Tabularize /&<CR>

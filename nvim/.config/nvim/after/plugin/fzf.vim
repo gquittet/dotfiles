@@ -31,4 +31,20 @@ endfunction
 
 
 " Ignore files that are in .gitignore
-let $FZF_DEFAULT_COMMAND = 'ag -g ""'
+let $FZF_DEFAULT_COMMAND = 'ag -l --nogroup  --nocolor --hidden -g ""'
+
+
+" search project files
+"nnoremap <leader>ff :FZF<CR>
+"nnoremap <leader>fg :GFiles<CR>
+"search project files by lines of code
+nnoremap <leader>fl :Lines<CR>
+"search all open files/buffers
+"nnoremap <leader>fb :Buffers<CR>
+
+" search in project
+"nnoremap <leader>fp :Ag<CR>
+"start a search query by pressing \
+nnoremap \  :Ag<space>
+"search for word under cursor by pressing |
+nnoremap \| :Ag <C-R><C-W><CR>:cw<CR>

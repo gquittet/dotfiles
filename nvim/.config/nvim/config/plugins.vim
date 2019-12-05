@@ -25,10 +25,12 @@ let g:coc_global_extensions = [
             \ 'coc-angular',
             \ 'coc-css',
             \ 'coc-emmet',
+            \ 'coc-emoji',
             \ 'coc-eslint',
             \ 'coc-flow',
             \ 'coc-flutter',
             \ 'coc-git',
+            \ 'coc-gocode',
             \ 'coc-highlight',
             \ 'coc-html',
             \ 'coc-java',
@@ -36,6 +38,7 @@ let g:coc_global_extensions = [
             \ 'coc-lists',
             \ 'coc-markdownlint',
             \ 'coc-omnisharp',
+            \ 'coc-pairs',
             \ 'coc-phpls',
             \ 'coc-powershell',
             \ 'coc-prettier',
@@ -43,6 +46,7 @@ let g:coc_global_extensions = [
             \ 'coc-python',
             \ 'coc-reason',
             \ 'coc-rls',
+            \ 'coc-syntax',
             \ 'coc-snippets',
             \ 'coc-solargraph',
             \ 'coc-svelte',
@@ -66,8 +70,8 @@ Plug 'christoomey/vim-tmux-navigator'
 
 Plug 'easymotion/vim-easymotion'
 Plug 'tpope/vim-fugitive'
-Plug 'airblade/vim-gitgutter'
 Plug 'dpelle/vim-Grammalecte'                                           " Grammalecte
+" Displaying thin vertical lines at each indentation level for code indented with spaces
 Plug 'Yggdroot/indentLine'
 
 Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() } }
@@ -86,20 +90,46 @@ Plug 'dhruvasagar/vim-table-mode'                                       " Table 
 Plug 'godlygeek/tabular'                                                " Tabular : useful for great alignement
 Plug 'mbbill/undotree'                                                  " UndoTree : See all undos
 Plug 'sheerun/vim-polyglot'                                             " Vim Polyglot - A collection of language packs for Vim.
+Plug 'kkoomen/vim-doge'                                                 " Vim doge - Documentation generator for code
 " See https://github.com/liuchengxu/vista.vim for dependencies installation
 " instruction
 Plug 'liuchengxu/vista.vim'
 
 Plug 'liuchengxu/vim-which-key', { 'on': ['WhichKey', 'WhichKey!'] }
 
-Plug 'psliwka/vim-smoothie'
+" Detect indent automatically
+Plug 'tpope/vim-sleuth'
+
+" Snippets
+Plug 'honza/vim-snippets'
+
+" Coldfusion
+Plug 'ernstvanderlinden/vim-coldfusion'
+
+" Todo management
+Plug 'wsdjeg/vim-todo'
+
+Plug 'Shougo/echodoc.vim'
+
+" Better whitespace management for Vim
+Plug 'ntpeters/vim-better-whitespace'
 
 " Themes
 Plug 'ayu-theme/ayu-vim'                                                " Ayu
 Plug 'morhetz/gruvbox'                                                  " Gruvbox
+Plug 'arcticicestudio/nord-vim'
 Plug 'sonph/onehalf', {'rtp': 'vim/'}                                   " One Half
 Plug 'NLKNguyen/papercolor-theme'                                       " Paper color theme
 Plug 'jacoborus/tender.vim'                                             " Tender
+Plug 'hzchirs/vim-material'
+Plug 'mhartington/oceanic-next'
+
+if has('nvim') || has('patch-8.0.902')
+  Plug 'mhinz/vim-signify'
+else
+  Plug 'mhinz/vim-signify', { 'branch': 'legacy' }
+endif
+set updatetime=100
 
 " Font icons
 Plug 'ryanoasis/vim-devicons'
