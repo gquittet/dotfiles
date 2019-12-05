@@ -243,6 +243,10 @@ tags
 # Ignore all local history of files
 .history
 
+# Env file
+.env
+.env.bak
+.env.old
 
 # FISH
 run.fish
