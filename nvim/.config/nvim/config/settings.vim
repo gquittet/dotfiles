@@ -39,7 +39,7 @@ set autoindent                                                              " Do
 
 " Invisible characters
 set list
-set listchars=tab:\|\ ,trail:•,nbsp:~                                        " Display invisible characters
+set listchars=tab:\¦\ ,trail:•,nbsp:~                                        " Display invisible characters
 
 " Mouse
 set mouse=a

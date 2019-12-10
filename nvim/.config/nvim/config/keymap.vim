@@ -27,7 +27,6 @@ noremap <silent> <leader>Wq :wq!<CR>
 
 " Quit
 noremap <silent> <leader>q :q<CR>
-noremap <silent> <leader>qq :q!<CR>
 
 " Shortcuts
 nmap <silent> <Space><Tab> <Esc>/<++><Enter>:nohl<Enter>"_c4l
@@ -50,7 +49,7 @@ nmap <leader>bdd :bdelete!<CR>
 " Git
 nmap <leader>gs :Gstatus<CR>
 nmap <leader>ga :Git add -A<CR>
-nmap <leader>gb :Gblame<CR>
+nmap <leader>gbl :Gblame<CR>
 nmap <leader>gc :Gcommit<CR>
 nmap <leader>gd :Gdiff<CR>
 nmap <leader>gl :Glog<CR>
@@ -97,7 +96,7 @@ nmap <leader>t" :Tabularize /"<CR>
 vmap <leader>t" :Tabularize /"<CR>
 
 " Tagbar
-nmap <leader>to :Vista coc<CR>
+nmap <leader>to :Vista!!<CR>
 
 " Undo tree
 nmap <Leader>tu :UndotreeToggle<CR>

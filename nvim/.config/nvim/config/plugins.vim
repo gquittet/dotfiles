@@ -51,7 +51,6 @@ let g:coc_global_extensions = [
             \ 'coc-solargraph',
             \ 'coc-svelte',
             \ 'coc-svg',
-            \ 'coc-tabnine',
             \ 'coc-tailwindcss',
             \ 'coc-texlab',
             \ 'coc-tslint-plugin',
@@ -138,4 +137,5 @@ Plug 'ryanoasis/vim-devicons'
 call plug#end()             " required
 syntax enable               " required
 
-runtime plugins/markdown-preview.vim
+" Enable vim indent guide on startup
+let g:indent_guides_enable_on_vim_startup = 1
