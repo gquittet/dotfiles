@@ -69,6 +69,7 @@ Plug 'christoomey/vim-tmux-navigator'
 
 Plug 'easymotion/vim-easymotion'
 Plug 'tpope/vim-fugitive'
+Plug 'rhysd/git-messenger.vim'                                          " VSCode: GitLens feature
 Plug 'dpelle/vim-Grammalecte'                                           " Grammalecte
 " Displaying thin vertical lines at each indentation level for code indented with spaces
 Plug 'Yggdroot/indentLine'

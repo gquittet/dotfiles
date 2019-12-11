@@ -53,8 +53,8 @@ nmap <leader>gbl :Gblame<CR>
 nmap <leader>gc :Gcommit<CR>
 nmap <leader>gd :Gdiff<CR>
 nmap <leader>gl :Glog<CR>
-nmap <leader>gp :Gpush<CR>
-nmap <leader>gpl :Gpull<CR>
+nmap <leader>gP :Gpush<CR>
+nmap <leader>gp :Gpull<CR>
 nmap <leader>gr :Gread<CR>
 nmap <leader>gw :Gwrite<CR>
 nmap <leader>ge :Gedit<CR>

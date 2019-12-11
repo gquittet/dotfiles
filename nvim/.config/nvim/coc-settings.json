@@ -8,5 +8,6 @@
     "prettier.requireConfig": true,
     "suggest.echodocSupport": true,
     "suggest.maxCompleteItemCount": 20,
-    "tslint.autoFixOnSave": true
+    "tslint.autoFixOnSave": true,
+    "tsserver.trace.server": "verbose"
 }
