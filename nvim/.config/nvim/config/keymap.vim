@@ -22,11 +22,6 @@ vnoremap <leader>x "_x
 " Save
 noremap <silent> <leader>w :w<CR>
 noremap <silent> <leader>W :w!<CR>
-noremap <silent> <leader>wq :wq<CR>
-noremap <silent> <leader>Wq :wq!<CR>
-
-" Quit
-noremap <silent> <leader>q :q<CR>
 
 " Shortcuts
 nmap <silent> <Space><Tab> <Esc>/<++><Enter>:nohl<Enter>"_c4l
