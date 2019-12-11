@@ -59,7 +59,7 @@ set -x TERM xterm-256color
 ### Gitlab
 alias qualifio_gitlab_oauth "$HOME/.scripts/qualifio_gitlab_generate_oauth_token.sh guillaume.quittet@qualifio.com"
 
-set FISH_KUBECTL_COMPLETION_TIMEOUT 1s
+set FISH_KUBECTL_COMPLETION_TIMEOUT 0.5s
 
 alias cat 'bat --theme=base16'
 alias ls exa

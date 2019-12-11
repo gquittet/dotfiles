@@ -58,12 +58,14 @@ abbr -a gmf git merge
 abbr -a gmfs git merge --squash
 abbr -a gmlcbc "git log --oneline --color --author=\"`git config user.name`\" | emojify | less -r"
 abbr -a gmm git merge master
-abbr -a gp git push
-abbr -a gpl git pull
-abbr -a gpo git push origin
-abbr -a gpomt git push origin master --tags
-abbr -a gpu git push -u
-abbr -a gpuo git push -u origin
+abbr -a gP git push
+abbr -a gp git pull
+abbr -a gPd git push -d
+abbr -a gPdo git push -d origin
+abbr -a gPo git push origin
+abbr -a gPomt git push origin master --tags
+abbr -a gPu git push -u
+abbr -a gPuo git push -u origin
 abbr -a grank git shortlog -sn --no-merges
 abbr -a grba git rebase --abort
 abbr -a grbc git rebase --continue
