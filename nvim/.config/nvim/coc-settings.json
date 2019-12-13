@@ -1,4 +1,5 @@
 {
+    "coc.preferences.rootPatterns": [".git"],
     "eslint.autoFixOnSave": true,
     "list.source.files.command": "rg",
     "list.source.files.args": ["--hidden", "--no-ignore", "--files", "--glob", "!.git/*", "--glob", "!node_modules/*", "--glob", "!build/*", "--glob", "!dist/*"],
@@ -8,6 +9,5 @@
     "prettier.requireConfig": true,
     "suggest.echodocSupport": true,
     "suggest.maxCompleteItemCount": 20,
-    "tslint.autoFixOnSave": true,
-    "tsserver.trace.server": "verbose"
+    "tslint.autoFixOnSave": true
 }

@@ -9,7 +9,7 @@ set nowritebackup
 set cmdheight=2
 
 " You will have bad experience for diagnostic messages when it's default 4000.
-set updatetime=300
+" set updatetime=300
 
 " don't give |ins-completion-menu| messages.
 set shortmess+=c
@@ -127,6 +127,7 @@ nnoremap <silent> <space>cp  :<C-u>CocListResume<CR>
 
 " Custom
 nnoremap <silent> <space>ll  :<C-u>CocList locationlist<CR>
+nnoremap <silent> <space>lr  :<C-u>CocList mru<CR>
 " Prettier
 command! -nargs=0 Prettier :CocCommand prettier.formatFile
 vmap <leader>f  <Plug>(coc-format-selected)
@@ -147,6 +148,9 @@ nnoremap <leader>fl :CocList lines<CR>
 nnoremap <leader>fp :CocList grep<CR>
 nnoremap <leader>fcw :exe 'CocList -I --normal --input='.expand('<cword>').' words'<CR>
 
+" Remap for format selected region
+xmap <leader>F  <Plug>(coc-format-selected)
+nmap <leader>F  <Plug>(coc-format-selected)
 
 " Snippets
 inoremap <silent><expr> <TAB>
@@ -159,10 +163,6 @@ function! s:check_back_space() abort
   let col = col('.') - 1
   return !col || getline('.')[col - 1]  =~# '\s'
 endfunction
-
-" Remap for format selected region
-xmap <leader>F  <Plug>(coc-format-selected)
-nmap <leader>F  <Plug>(coc-format-selected)
 
 let g:coc_snippet_next = '<tab>'
 

@@ -129,7 +129,6 @@ if has('nvim') || has('patch-8.0.902')
 else
   Plug 'mhinz/vim-signify', { 'branch': 'legacy' }
 endif
-set updatetime=100
 
 " Font icons
 Plug 'ryanoasis/vim-devicons'
@@ -138,5 +137,5 @@ Plug 'ryanoasis/vim-devicons'
 call plug#end()             " required
 syntax enable               " required
 
-" Enable vim indent guide on startup
-let g:indent_guides_enable_on_vim_startup = 1
+" dev-icons enable folders open/close icons
+let g:DevIconsEnableFoldersOpenClose = 1

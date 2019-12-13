@@ -1,5 +1,3 @@
-runtime keymap/markdown-preview.vim
-
 let mapleader = " "
 let maplocalleader = " "
 
@@ -47,6 +45,7 @@ nmap <leader>ga :Git add -A<CR>
 nmap <leader>gbl :Gblame<CR>
 nmap <leader>gc :Gcommit<CR>
 nmap <leader>gd :Gdiff<CR>
+nmap <leader>gfc :Gvdiffsplit!<CR>
 nmap <leader>gl :Glog<CR>
 nmap <leader>gP :Gpush<CR>
 nmap <leader>gp :Gpull<CR>

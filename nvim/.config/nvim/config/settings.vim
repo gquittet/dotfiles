@@ -1,4 +1,13 @@
 set autoread                                                                " Auto reload file if it has been changed outside of vim
+" Triger `autoread` when files changes on disk
+" https://unix.stackexchange.com/questions/149209/refresh-changed-content-of-file-opened-in-vim/383044#383044
+" https://vi.stackexchange.com/questions/13692/prevent-focusgained-autocmd-running-in-command-line-editing-mode
+autocmd FocusGained,BufEnter,CursorHold,CursorHoldI * if mode() != 'c' | checktime | endif
+" Notification after file change
+" https://vi.stackexchange.com/questions/13091/autocmd-event-for-autoread
+autocmd FileChangedShellPost *
+  \ echohl WarningMsg | echo "File changed on disk. Buffer reloaded." | echohl None
+
 set autowrite                                                               " Save automatically all the buffers in vim
 "set autochdir!                                                             " Set the working directory
 set backspace=indent,eol,start                                              " Make backspace work like most other programs
@@ -18,6 +27,7 @@ set scrolloff=3                                                             " Mi
 set showmatch                                                               " Show current brackets
 set splitbelow                                                              " Puts new split windows to the bottom of the current
 set splitright                                                              " Puts new vsplit windows to the right of the current
+set updatetime=100                                                          " vim-signify and coc need this settings
 set winminheight=0                                                          " Windows can be 0 line height
 
 " Folding
