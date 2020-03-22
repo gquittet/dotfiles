@@ -9,7 +9,7 @@ case $1 in
         ;; 
 esac
 
-rofi -modi "drun,window" 	\
-    -show $showAction		\
-    -show-icons
+rofi	-modi "" 		\
+	-show $showAction	\
+	-show-icons
 
