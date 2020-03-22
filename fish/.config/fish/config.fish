@@ -47,9 +47,9 @@ end
 set GIT_EDITOR $EDITOR
 set -x VISUAL $EDITOR
 
-set -x MANPAGER "sh -c 'col -bx | bat -l man -p'"
-# Fix formatting problems
-set -x MANROFFOPT "-c"
+# set -x MANPAGER "sh -c 'col -bx | bat -l man -p'"
+# # Fix formatting problems
+# set -x MANROFFOPT "-c"
 
 # True color support for *nix system
 set -x TERM xterm-256color
@@ -67,7 +67,7 @@ alias ls exa
 set -g fish_user_paths /usr/local/opt/node@12/bin $fish_user_paths
 set -x FLUTTERPATH $HOME/Library/flutter
 set -x GOPATH $HOME/Documents/Projets/go
-set -x JAVA_HOME /Library/Java/JavaVirtualMachines/adoptopenjdk-13.0.1.jdk/Contents/Home
+set -x JAVA_HOME /Library/Java/JavaVirtualMachines/adoptopenjdk-13.0.2.jdk/Contents/Home
 
 set PATH $FLUTTERPATH/bin $GOPATH/bin $PATH
 

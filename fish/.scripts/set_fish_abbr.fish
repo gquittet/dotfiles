@@ -30,6 +30,7 @@ abbr -a gbd git branch -d
 abbr -a gbD git branch -D
 abbr -a gbdm "git branch --merged | grep -v '*' | xargs -n 1 git branch -d"
 abbr -a gbl git blame
+abbr -a gblL git blame -L
 abbr -a gc git commit
 abbr -a gca git commit --amend
 abbr -a gcae git commit --allow-empty
@@ -39,6 +40,7 @@ abbr -a gco git checkout
 abbr -a gcob git checkout -b
 abbr -a gcof git checkout -f
 abbr -a gcom git checkout master
+abbr -a gcop git checkout --patch
 abbr -a gd git diff
 abbr -a gdc git diff --cached
 abbr -a gdf git diff --diff-filter
@@ -49,17 +51,22 @@ abbr -a gdnof git diff --name-only --diff-filter
 abbr -a gf git fetch -p
 abbr -a gfo git fetch -p origin
 abbr -a gicm "git commit --allow-empty -m 'Initial commit.'"
-abbr -a glcbc 'git log --oneline --color | emojify | less -r'
+# abbr -a glcbc 'git log --oneline --color | emojify | less -r'
+abbr -a glcbc "git log --first-parent --abbrev-commit --pretty=format:'%C(dim white)- %C(reset)%C(yellow)[%h]%C(reset) %C(white)%s%C(reset)'"
+abbr -a glf git log --follow
+abbr -a glfp git log --follow -p
 abbr -a glg "git log --graph --abbrev-commit --decorate --pretty=format:'%C(bold blue)%h%C(reset) - %C(bold green)(%ar)%C(reset) %C(white)%s%C(reset) %C(dim white)- %an%C(reset)%C(bold yellow)%d%C(reset)' --all"
 abbr -a glog git log
+abbr -a glp git log -p
 abbr -a glr git ls-remote
 abbr -a gm git merge --no-ff
 abbr -a gmf git merge
 abbr -a gmfs git merge --squash
 abbr -a gmlcbc "git log --oneline --color --author=\"`git config user.name`\" | emojify | less -r"
 abbr -a gmm git merge master
-abbr -a gP git push
 abbr -a gp git pull
+abbr -a gpr git pull --rebase
+abbr -a gP git push
 abbr -a gPd git push -d
 abbr -a gPdo git push -d origin
 abbr -a gPo git push origin
@@ -70,6 +77,7 @@ abbr -a grank git shortlog -sn --no-merges
 abbr -a grba git rebase --abort
 abbr -a grbc git rebase --continue
 abbr -a grbi git rebase -i
+abbr -a grbm git rebase master
 abbr -a grh git reset HEAD
 abbr -a grs git reset
 abbr -a grsh git reset --hard
@@ -82,6 +90,7 @@ abbr -a gsta git stash apply
 abbr -a gstd git stash drop
 abbr -a gstl git stash list
 abbr -a gstp git stash pop
+abbr -a gulb 'git stash && git pull --rebase && git stash pop'
 
 # Kubectl
 abbr -a ksa kubectl sso auth
