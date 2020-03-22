@@ -11,11 +11,11 @@ inoremap <Right> <Nop>
 inoremap <Down> <Nop>
 inoremap <Left> <Nop>
 
-" Disable backspace
-noremap <BS> <Nop>
-inoremap <BS> <Nop>
-noremap <Del> <Nop>
-inoremap <Del> <Nop>
+"" Disable backspace
+" noremap <BS> <Nop>
+" inoremap <BS> <Nop>
+" noremap <Del> <Nop>
+" inoremap <Del> <Nop>
 
 nnoremap <leader>c "_c
 nnoremap <leader>d "_d
