@@ -1,7 +1,7 @@
 configuration {
 	dpi: 96;
 	font: "Roboto 11";
-	theme: "ArcDark";
+	theme: "oceanic-slate";
 	location: 0;
 	lines: 10;
 	hide-scrollbar: true;
