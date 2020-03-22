@@ -14,9 +14,11 @@ autostart_systemd () {
 
 autostart picom "picom --config=$HOME/.config/picom/picom.conf"
 autostart dunst dunst
+autostart lxpolkit /usr/bin/lxpolkit
 autostart nm-applet nm-applet
 autostart blueman-tray blueman-tray
 autostart redshift "redshift -l 50.4:3.8"
-autostart lxpolkit /usr/bin/lxpolkit
 autostart greenclip "greenclip daemon"
+autostart kdeconnectd "/usr/lib/kdeconnectd"
+autostart kdeconnect- "kdeconnect-indicator"
 
