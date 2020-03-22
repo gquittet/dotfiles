@@ -212,6 +212,8 @@ set $mode_screen_capture capture
 set $screen_capture_command maim -f png -m 10 ~/$(date '+%Y-%m-%d-%H%M%S').png
 set $put_to_clipboard | xclip -selection clipboard -t image/png
 mode "$mode_screen_capture" {
+    bindsym --release d exec --no-startup-id deepin-screenshot, mode "default"
+    bindsym --release p exec --no-startup-id deepin-picker, mode "default"
     bindsym --release s exec --no-startup-id $screen_capture_command $put_to_clipboard, mode "default"
     bindsym --release Shift+s exec --no-startup-id $screen_capture_command -s $put_to_clipboard, mode "default"
     bindsym --release w exec --no-startup-id $screen_capture_command -st 9999999 $put_to_clipboard, mode "default"
@@ -330,7 +332,7 @@ workspace_layout tabbed
 # Focus urgent workspace
 bindsym $mod+u [urgent=latest] focus
 # Show window on all desktops
-bindsym Shift+$mod+w sticky toggle
+bindsym $mod+Shift+w sticky toggle
 # Function keys
 bindsym F1 exec --no-startup-id echo "I don't need help" > /dev/null
 bindsym F11 fullscreen toggle
