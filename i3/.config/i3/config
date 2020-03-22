@@ -319,6 +319,8 @@ for_window [class="Nm-connection-editor"] floating enable
 for_window [class="Pcmanfm"] floating enable
 for_window [title="QEMU/KVM Connection Details"] floating enable
 for_window [title="ranger"] floating enable
+for_window [title="Calculator"] floating enable
+for_window [class="Evolution-alarm-notify"] floating enable
 # for_window [class="Franz"] move container to workspace 10
 
 # Workspace
@@ -338,7 +340,7 @@ bindsym F1 exec --no-startup-id echo "I don't need help" > /dev/null
 bindsym F11 fullscreen toggle
 # Emoji
 bindsym $mod+Shift+e exec --no-startup-id rofimoji
-bindsym $mod+Shift+c exec --no-startup-id $XDG_DATA_HOME/scripts/rofi_clipboard.sh
+bindsym $mod+Shift+v exec --no-startup-id $XDG_DATA_HOME/scripts/rofi_clipboard.sh
 
 # Modes
 bindsym $mod+r mode "$mode_resize"
@@ -357,9 +359,8 @@ bindsym $mod+f exec --no-startup-id pcmanfm
 bindsym $mod+p exec --no-startup-id $term -e "ncmpcpp"
 
 # Sreen brightness controls
-set $refresh_i3status killall -SIGUSR1 i3status
-bindsym XF86MonBrightnessUp exec --no-startup-id xbacklight -inc 5 && xbacklight | cut -d. -f1 > $HOME/.cache/brightness && $refresh_i3status
-bindsym XF86MonBrightnessDown exec --no-startup-id xbacklight -dec 5 && xbacklight | cut -d. -f1 > $HOME/.cache/brightness && $refresh_i3status
+bindsym XF86MonBrightnessUp exec --no-startup-id $XDG_DATA_HOME/scripts/brightness.sh -inc
+bindsym XF86MonBrightnessDown exec --no-startup-id $XDG_DATA_HOME/scripts/brightness.sh -dec
 
 # Sound controls
 bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume 0 +5%
