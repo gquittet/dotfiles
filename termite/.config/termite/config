@@ -1,44 +1,44 @@
 [options]
 allow_bold = true
-font = Hack Nerd Font Mono 11
+font = Cascadia Code 10
 mouse_autohide = true
 
 [colors]
-# hard contrast: background = #1d2021
-background = #282828
-#background      = rgba(40, 42, 54, 0.95)
-# soft contrast: background = #32302f
-foreground = #ebdbb2
-foreground_bold = #ebdbb2
+# hard contrast: background = #1B2B34
+background = #1B2B34
+#background      = rgba(27, 43, 52, 0.95)
+# soft contrast: background = #4F5B66
+foreground = #D8DEE9
+foreground_bold = #D8DEE9
 
 # dark0 + gray
-color0 = #282828
-color8 = #928374
+color0 = #343D46
+color8 = #65737E
 
 # neutral_red + bright_red
-color1 = #cc241d
-color9 = #fb4934
+color1 = #EC5f67
+color9 = #EC5f67
 
 # neutral_green + bright_green
-color2 = #98971a
-color10 = #b8bb26
+color2 = #99C794
+color10 = #99C794
 
 # neutral_yellow + bright_yellow
-color3 = #d79921
-color11 = #fabd2f
+color3 = #FAC863
+color11 = #FAC863
 
 # neutral_blue + bright_blue
-color4 = #458588
-color12 = #83a598
+color4 = #6699CC
+color12 = #6699CC
 
 # neutral_purple + bright_purple
-color5 = #b16286
-color13 = #d3869b
+color5 = #C594C5
+color13 = #C594C5
 
 # neutral_aqua + faded_aqua
-color6 = #689d6a
-color14 = #8ec07c
+color6 = #5FB3B3
+color14 = #5FB3B3
 
 # light4 + light1
-color7 = #a89984
-color15 = #ebdbb2
+color7 = #CDD3DE
+color15 = #D8DEE9
