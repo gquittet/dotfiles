@@ -7,62 +7,69 @@
 # If the above line is not correctly displayed, fix your editor first!
 
 general {
-    colors         = true
-    interval       = 5
-    color_good     = "#ffffff"
-    color_bad      = "#ff5555"
-    color_degraded = "#f1fa8c"
+	colors         = true
+	interval       = 5
+	color_good     = "#D8DEE9"
+	color_bad      = "#EC5f67"
+	color_degraded = "#FAC863"
 }
 
 order += "ipv6"
 order += "wireless _first_"
 order += "ethernet _first_"
+order += "read_file brightness"
 order += "volume master"
 order += "battery all"
 order += "tztime date"
 order += "tztime hour"
 
 battery all {
-    format                        = "%status %percentage %remaining"
-    status_bat                    = ""
-    status_chr                    = ""
-    status_full                   = ""
-    status_unk                    = ""
-    low_threshold                 = 30
-    threshold_type                = percentage
-    hide_seconds                  = true
-    # Show percentage as interger
-    integer_battery_capacity      = true
+	format                        = "%status %percentage %remaining"
+	status_bat                    = "🔋"
+	status_chr                    = "🔌"
+	status_full                   = "🔌"
+	status_unk                    = "❓"
+	low_threshold                 = 30
+	threshold_type                = percentage
+	hide_seconds                  = true
+	# Show percentage as interger
+	integer_battery_capacity      = true
 }
 
 ethernet _first_ {
-    # if you use %speed, i3status requires root privileges
-    format_up   = " %ip (%speed)"
-    format_down = ""
+	# if you use %speed, i3status requires root privileges
+	format_up   = "🔗 %ip (%speed)"
+	format_down = ""
 }
 
 ipv6 {
-    format_up   = "%ip"
-    format_down = ""
+	format_up   = "%ip"
+	format_down = ""
 }
 
 tztime date {
-    format                = "%a, %d %b %Y"
-    separator             = false
-    separator_block_width = 5
+	format                = "%a, %d %b %Y"
+	separator             = false
+	separator_block_width = 5
 }
 
 tztime hour {
-    format = "%H:%M"
+	format = "%H:%M"
 }
 
 volume master {
-   format       = " %volume"
-   format_muted = " Muted (%volume)"
-   device       = "pulse:0"
+	format       = "🔊 %volume"
+	format_muted = "🔇 Muted (%volume)"
+	device       = "pulse:0"
 }
 
 wireless _first_ {
-    format_up   = " %essid (%quality) %ip"
-    format_down = ""
+	format_up   = "📡 %essid (%quality) %ip"
+	format_down = ""
+}
+
+read_file brightness {
+	format = "💡 %content%"
+	path = "/home/gquittet/.cache/brightness"
+	max_characters = 3
 }
