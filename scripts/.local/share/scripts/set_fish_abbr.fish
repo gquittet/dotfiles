@@ -1,0 +1,1 @@
+/home/gquittet/.dotfiles/fish/.scripts/set_fish_abbr.fish
