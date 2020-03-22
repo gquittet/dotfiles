@@ -18,5 +18,5 @@ autostart nm-applet nm-applet
 autostart blueman-tray blueman-tray
 autostart redshift "redshift -l 50.4:3.8"
 autostart lxpolkit /usr/bin/lxpolkit
-autostart_systemd greenclip
+autostart greenclip "greenclip daemon"
 
