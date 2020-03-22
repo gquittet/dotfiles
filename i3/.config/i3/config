@@ -102,7 +102,7 @@ bindsym $mod+a focus parent
 set $primary eDP1
 set $secondary DP1
 
-set $workspace1 "1"
+set $workspace1	"1"
 set $workspace2 "2"
 set $workspace3 "3"
 set $workspace4 "4"
@@ -113,16 +113,16 @@ set $workspace8 "8"
 set $workspace9 "9"
 set $workspace10 "10"
 
-workspace $workspace1 output $primary
-workspace $workspace2 output $primary
-workspace $workspace3 output $primary
-workspace $workspace4 output $primary
-workspace $workspace5 output $primary
-workspace $workspace6 output $secondary
-workspace $workspace7 output $secondary
-workspace $workspace8 output $secondary
-workspace $workspace9 output $secondary
-workspace $workspace10 output $secondary
+workspace	$workspace1	output	$primary
+workspace 	$workspace2 	output 	$primary
+workspace 	$workspace3 	output 	$primary
+workspace 	$workspace4 	output 	$primary
+workspace 	$workspace5 	output 	$primary
+workspace 	$workspace6 	output 	$secondary
+workspace 	$workspace7 	output 	$secondary
+workspace 	$workspace8 	output 	$secondary
+workspace 	$workspace9 	output 	$secondary
+workspace	$workspace10	output 	$secondary
 
 # switch to workspace
 bindsym $mod+1 workspace $workspace1
@@ -161,50 +161,50 @@ bindsym $mod+Shift+r restart
 # resize window (you can also use the mouse for that)
 set $mode_resize resize
 mode "$mode_resize" {
-        # These bindings trigger as soon as you enter the resize mode
+	# These bindings trigger as soon as you enter the resize mode
 
-        # Pressing left will shrink the window’s width.
-        # Pressing right will grow the window’s width.
-        # Pressing up will shrink the window’s height.
-        # Pressing down will grow the window’s height.
-        bindsym h resize shrink width 10 px or 10 ppt
-        bindsym j resize grow height 10 px or 10 ppt
-        bindsym k resize shrink height 10 px or 10 ppt
-        bindsym l resize grow width 10 px or 10 ppt
-        bindsym Shift+h resize shrink width 50 px or 50 ppt
-        bindsym Shift+j resize grow height 50 px or 50 ppt
-        bindsym Shift+k resize shrink height 50 px or 50 ppt
-        bindsym Shift+l resize grow width 50 px or 50 ppt
+	# Pressing left will shrink the window’s width.
+	# Pressing right will grow the window’s width.
+	# Pressing up will shrink the window’s height.
+	# Pressing down will grow the window’s height.
+	bindsym h resize shrink width 10 px or 10 ppt
+	bindsym j resize grow height 10 px or 10 ppt
+	bindsym k resize shrink height 10 px or 10 ppt
+	bindsym l resize grow width 10 px or 10 ppt
+	bindsym Shift+h resize shrink width 50 px or 50 ppt
+	bindsym Shift+j resize grow height 50 px or 50 ppt
+	bindsym Shift+k resize shrink height 50 px or 50 ppt
+	bindsym Shift+l resize grow width 50 px or 50 ppt
 
-        # same bindings, but for the arrow keys
-        bindsym Left resize shrink width 10 px or 10 ppt
-        bindsym Down resize grow height 10 px or 10 ppt
-        bindsym Up resize shrink height 10 px or 10 ppt
-        bindsym Right resize grow width 10 px or 10 ppt
-        bindsym Shift+Left resize shrink width 50 px or 50 ppt
-        bindsym Shift+Down resize grow height 50 px or 50 ppt
-        bindsym Shift+Up resize shrink height 50 px or 50 ppt
-        bindsym Shift+Right resize grow width 50 px or 50 ppt
+	# same bindings, but for the arrow keys
+	bindsym Left resize shrink width 10 px or 10 ppt
+	bindsym Down resize grow height 10 px or 10 ppt
+	bindsym Up resize shrink height 10 px or 10 ppt
+	bindsym Right resize grow width 10 px or 10 ppt
+	bindsym Shift+Left resize shrink width 50 px or 50 ppt
+	bindsym Shift+Down resize grow height 50 px or 50 ppt
+	bindsym Shift+Up resize shrink height 50 px or 50 ppt
+	bindsym Shift+Right resize grow width 50 px or 50 ppt
 
-        # back to normal: Enter or Escape
-        bindsym Return mode "default"
-        bindsym Escape mode "default"
+	# back to normal: Enter or Escape
+	bindsym Return mode "default"
+	bindsym Escape mode "default"
 }
 
 # Mode System
 set $locker xtrlock -b && sleep 1
 set $mode_system system
 mode "$mode_system" {
-    bindsym e exec --no-startup-id i3-msg exit, mode "default"
-    bindsym l exec --no-startup-id $locker, mode "default"
-    bindsym r exec --no-startup-id i3-msg reload
-    bindsym s exec --no-startup-id $locker && systemctl suspend, mode "default"
-    bindsym Shift+s exec --no-startup-id systemctl poweroff -i, mode "default"
-    bindsym Shift+r exec --no-startup-id systemctl reboot, mode "default"
+	bindsym e exec --no-startup-id i3-msg exit, mode "default"
+	bindsym l exec --no-startup-id $locker, mode "default"
+	bindsym r exec --no-startup-id i3-msg reload
+	bindsym s exec --no-startup-id $locker && systemctl suspend, mode "default"
+	bindsym Shift+s exec --no-startup-id systemctl poweroff -i, mode "default"
+	bindsym Shift+r exec --no-startup-id systemctl reboot, mode "default"
 
-    # back to normal: Enter or Escape
-    bindsym Return mode "default"
-    bindsym Escape mode "default"
+	# back to normal: Enter or Escape
+	bindsym Return mode "default"
+	bindsym Escape mode "default"
 }
 
 # Mode screen capture
@@ -212,15 +212,15 @@ set $mode_screen_capture capture
 set $screen_capture_command maim -f png -m 10 ~/$(date '+%Y-%m-%d-%H%M%S').png
 set $put_to_clipboard | xclip -selection clipboard -t image/png
 mode "$mode_screen_capture" {
-    bindsym --release d exec --no-startup-id deepin-screenshot, mode "default"
-    bindsym --release p exec --no-startup-id deepin-picker, mode "default"
-    bindsym --release s exec --no-startup-id $screen_capture_command $put_to_clipboard, mode "default"
-    bindsym --release Shift+s exec --no-startup-id $screen_capture_command -s $put_to_clipboard, mode "default"
-    bindsym --release w exec --no-startup-id $screen_capture_command -st 9999999 $put_to_clipboard, mode "default"
+	bindsym --release d exec --no-startup-id deepin-screenshot, mode "default"
+	bindsym --release p exec --no-startup-id deepin-picker, mode "default"
+	bindsym --release s exec --no-startup-id $screen_capture_command $put_to_clipboard, mode "default"
+	bindsym --release Shift+s exec --no-startup-id $screen_capture_command -s $put_to_clipboard, mode "default"
+	bindsym --release w exec --no-startup-id $screen_capture_command -st 9999999 $put_to_clipboard, mode "default"
 
-    # back to normal: Enter or Escape
-    bindsym Return mode "default"
-    bindsym Escape mode "default"
+	# back to normal: Enter or Escape
+	bindsym Return mode "default"
+	bindsym Escape mode "default"
 }
 
 
@@ -252,18 +252,18 @@ set_from_resource 	$color15 	i3wm.color15 	#f0f0f0
 
 
 bar {
-    position top
-    status_command i3status
-    colors {
-        background $bg
-        statusline $fg
-        separator  $color7
-        #                  border   backgr. text
-        focused_workspace  $color15 $color8 $fg
-        active_workspace   $color15 $color8 $fg
-        inactive_workspace $color0  $color0 $color8
-        urgent_workspace   $color1  $color9 $bg
-    }
+	position top
+	status_command i3status
+	colors {
+		background $bg
+		statusline $fg
+		separator  $color7
+		#                  border   backgr. text
+		focused_workspace  $color15 $color8 $fg
+		active_workspace   $color15 $color8 $fg
+		inactive_workspace $color0  $color0 $color8
+		urgent_workspace   $color1  $color9 $bg
+	}
 }
 
 
