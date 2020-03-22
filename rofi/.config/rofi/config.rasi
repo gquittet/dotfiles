@@ -1,0 +1,9 @@
+configuration {
+	dpi: 96;
+	font: "Roboto 11";
+	theme: "ArcDark";
+	location: 0;
+	lines: 10;
+	hide-scrollbar: true;
+	sidebar-mode: true;
+}
