@@ -1,6 +1,6 @@
 [user]
-    email = guillaume.quittet@gmail.com
-    name  = Guillaume Quittet
+	email = guillaume.quittet@gmail.com
+	name = Guillaume Quittet
 
 [alias]
     cad   = "!f() { git log --pretty='format:%C(yellow)%h %aD%Cred%d %Creset%s%C(cyan) [%cn]' --decorate --after=\"$1 0:00\" --before=\"$1 23:59\"; }; f"
@@ -37,3 +37,8 @@
     whitespace = red reverse
 [commit]
     template = ~/.config/git/gitmessage
+[filter "lfs"]
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true
