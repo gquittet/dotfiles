@@ -12,13 +12,13 @@ autostart_systemd () {
 	systemctl --user start "$1.service"
 }
 
-autostart picom "picom --config=$HOME/.config/picom/picom.conf"
-autostart dunst dunst
-autostart lxpolkit /usr/bin/lxpolkit
-autostart nm-applet nm-applet
-autostart blueman-tray blueman-tray
-autostart redshift "redshift -l 50.4:3.8"
-autostart greenclip "greenclip daemon"
-autostart kdeconnectd "/usr/lib/kdeconnectd"
-autostart kdeconnect- "kdeconnect-indicator"
+autostart picom 'picom -bc -d :0 --config=$HOME/.config/picom/picom.conf'
+autostart dunst 'dunst'
+autostart lxpolkit '/usr/bin/lxpolkit'
+autostart nm-applet 'nm-applet'
+autostart blueman-tray 'blueman-tray'
+autostart redshift 'redshift -l 50.4:3.8'
+autostart greenclip 'greenclip daemon'
+autostart kdeconnectd '/usr/lib/kdeconnectd'
+autostart kdeconnect- 'kdeconnect-indicator'
 
