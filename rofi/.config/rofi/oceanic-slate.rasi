@@ -2,9 +2,17 @@
   background-color: #1B2B34;
   border-color: #343D46;
   text-color: #D8DEE9;
+  light-gray: #65737E;
   spacing: 0;
   width: 42%;
 }
+
+/*
+window {
+  border: 6px;
+  border-color: @light-gray;
+}
+*/
 
 inputbar {
   border: 0 0 1px 0;
@@ -17,10 +25,15 @@ prompt {
 }
 
 textbox {
-  background-color: #343D46;
+  background-color: @background-color;
   border: 0 0 1px 0;
-  border-color: #1B2B34;
+  border-color: @border-color;
   padding: 8px 16px;
+}
+
+button {
+  color: @background-color;
+  padding: -100% 0px;
 }
 
 entry {
@@ -39,5 +52,5 @@ element {
 }
 
 element selected {
-  background-color: #343D46;
+  background-color: @border-color;
 }
