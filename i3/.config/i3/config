@@ -273,7 +273,7 @@ bar {
 # ==============================================================================
 # class			border	backgr.	text	indicator	child_border
 client.focused		$bg	$bg	$fg	$bg		$bg
-client.focused_inactive	$bg	$color7	$bg	$bg		$color7
+client.focused_inactive	$bg	$bg	$fg	$bg		$bg
 client.unfocused	$bg	$color8	$fg	$bg		$color8
 client.urgent		$color1 $color9	$fg	$color1		$color1
 client.placeholder	#000000	#0c0c0c #ffffff #0c0c0c   #0c0c0c
