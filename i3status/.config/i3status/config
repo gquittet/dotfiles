@@ -29,7 +29,7 @@ battery all {
 	status_chr                    = "🔌"
 	status_full                   = "🔌"
 	status_unk                    = "❓"
-	low_threshold                 = 30
+	low_threshold                 = 25
 	threshold_type                = percentage
 	hide_seconds                  = true
 	# Show percentage as interger
