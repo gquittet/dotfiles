@@ -272,9 +272,9 @@ bar {
 # Colors
 # ==============================================================================
 # class			border	backgr.	text	indicator	child_border
-client.focused		$bg	$bg	$fg	$bg		$bg
-client.focused_inactive	$bg	$bg	$fg	$bg		$bg
-client.unfocused	$bg	$color8	$fg	$bg		$color8
+client.focused		$bg	$bg	$fg	$bg		$color0
+client.focused_inactive	$bg	$bg	$fg	$bg		$color8
+client.unfocused	$bg	$color8	$fg	$bg		$bg
 client.urgent		$color1 $color9	$fg	$color1		$color1
 client.placeholder	#000000	#0c0c0c #ffffff #0c0c0c   #0c0c0c
 
@@ -375,6 +375,6 @@ bindsym XF86AudioMicMute exec --no-startup-id amixer sset Capture toggle
 # ==============================================================================
 # Startup applications
 # ==============================================================================
-exec_always --no-startup-id feh --bg-center "$HOME/Pictures/Wallpapers/wallhaven-37411.jpg"
+exec_always --no-startup-id feh --bg-center "$HOME/Pictures/Wallpapers/wallhaven-37411.jpg" "$HOME/Pictures/Wallpapers/wallhaven-q6eg5r.jpg"
 exec --no-startup-id $XDG_DATA_HOME/scripts/autostart.sh
 
