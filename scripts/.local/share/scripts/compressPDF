@@ -1,0 +1,19 @@
+#!/bin/bash
+if [ -n "$1"  ]; then
+    if [ "$1" == "-h" ] || [ "$1" == "--help" ]; then
+        echo -e "compressPDF is a shortcut command for gs to compress pdf\n\n[Usage]:\ncompressPDF inputFile.pdf outputFile.pdf"
+        exit
+    else
+        inputDocument=$1
+        if [ -n "$2"  ]; then
+            outputDocument=$2
+            gs -sDEVICE=pdfwrite -dCompatibilityLevel=1.4 -dPDFSETTINGS=/screen -dNOPAUSE -dBATCH -dQUIET -sOutputFile=$2 $1
+        else
+            echo "Please enter an output PDF document name"
+            exit
+        fi
+    fi
+else
+    echo "Please enter an input and output PDF document name."
+    exit
+fi

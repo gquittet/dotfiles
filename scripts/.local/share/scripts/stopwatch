@@ -1,0 +1,9 @@
+#!/bin/bash
+clear
+dateBefore=`date +%s`
+while true
+do
+    clear
+    echo "$(date -u --date @$((`date +%s` - $dateBefore)) +%T)"
+    sleep 1s
+done

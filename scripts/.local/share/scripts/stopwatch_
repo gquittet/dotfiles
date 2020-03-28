@@ -1,0 +1,44 @@
+#!/bin/bash
+
+hours=0
+minutes=0
+seconds=0
+
+hoursString="0"
+minutesString="0"
+secondsString="0"
+
+function renderTime {
+    if [ $1 -lt 10 ]
+    then
+        echo "0$1"
+    else
+        echo "$1"
+    fi
+}
+
+while :
+do
+    seconds=$(($seconds+1))
+    # Compute time
+    if [ $seconds -ge 60 ]
+    then
+        seconds=0
+        minutes=$(($minutes+1))
+    fi
+    if [ $minutes -ge 60 ]
+    then
+        seconds=0
+        minutes=0
+        hours=$(($hours+1))
+    fi
+    
+    # Render time
+    hoursString=$(renderTime $hours)
+    minutesString=$(renderTime $minutes)
+    secondsString=$(renderTime $seconds)
+    clear
+    echo "$hoursString:$minutesString:$secondsString"
+    sleep 1s
+done
+

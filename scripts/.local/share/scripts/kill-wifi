@@ -1,0 +1,11 @@
+#!/bin/bash
+echo 'Would you like to kill the Wi-Fi? [y/N]'
+read -rn 1 answer
+case $answer in
+    [yY]|[oO])
+        echo ""
+        sudo kill -15 $(pgrep wpa_supplicant)
+        sudo dhcpcd -k
+        ;;
+esac
+echo ""

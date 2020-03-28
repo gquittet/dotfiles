@@ -1,0 +1,57 @@
+#!/bin/bash
+# Created by Guillaume Quittet 01-28-2017
+# gqumount is useful to umount partition
+#
+# Copyright (C) 2017  Guillaume Quittet
+# This program is free software: you can redistribute it and/or modify
+# it under the terms of the GNU General Public License as published by
+# the Free Software Foundation, either version 3 of the License, or
+# (at your option) any later version.
+#
+# This program is distributed in the hope that it will be useful,
+# but WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+# GNU General Public License for more details.
+#
+# You should have received a copy of the GNU General Public License
+# along with this program.  If not, see <http://www.gnu.org/licenses/>.
+
+# Detect if the first argument after the command is non-nul
+if [ -n "$1"  ]; then
+    # Show help when the options are -h or --help
+    if [ "$1" == "-h" ] || [ "$1" == "--help" ]; then
+	echo -e "\n gqumount -- Tool to umount partition\n\n [HELP]:\n gqumount partitionName\n\n [EXEMPLE]:\n gqumount /dev/sdb1\n"
+	exit
+    else
+	# Save the partition name ex: sda2
+	partitionName=$(echo $1 | cut -d "/" -f 3)
+	# if the argument haven't "dev" return error
+        if [ "$(echo $1 | cut -d "/" -f 2)" == "dev" ]; then
+	    if [ "$(lsblk -i -o name | grep $partitionName | cut -d "-" -f 2)" != "$partitionName" ]; then
+		echo "$1 is an incorrect partition name".
+		exit
+	    fi
+	else
+	    echo "$1 is an incorrect partition name".
+	    exit
+	fi
+	# Detect if the partition is mounted
+	isMounted=$(mount | grep $1 | awk '{print $1}')
+	if [ "$isMounted" != "$1" ]; then
+	    echo "$1 is already umounted."
+	    exit
+	fi
+	# Save the username
+	username=$(whoami)
+	# Get the mount point
+	mountFolder="$(lsblk $1 -o mountpoint | head -n2 | tail -n1)"
+	# Umount the partition and if it succefull, remove the folder
+	sudo umount "$mountFolder" && sudo rm -r "$mountFolder"
+	# If the /mnt/username is empty, delete it
+	if [ -z "$(ls /mnt/$username)" ]; then
+	    sudo rm -r "/mnt/$username"
+	fi
+    fi
+else
+    echo "Please enter the partition name."
+fi

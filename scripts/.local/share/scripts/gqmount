@@ -1,0 +1,84 @@
+#!/bin/bash
+# Created by Guillaume Quittet 01-28-2017
+# gqmount is useful to mount partition
+#
+# Copyright (C) 2017  Guillaume Quittet
+# This program is free software: you can redistribute it and/or modify
+# it under the terms of the GNU General Public License as published by
+# the Free Software Foundation, either version 3 of the License, or
+# (at your option) any later version.
+#
+# This program is distributed in the hope that it will be useful,
+# but WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+# GNU General Public License for more details.
+#
+# You should have received a copy of the GNU General Public License
+# along with this program.  If not, see <http://www.gnu.org/licenses/>.
+
+# Detect if the first argument after the command is non-null
+if [ -n "$1"  ]; then
+    # Show help when the options are -h or --help
+    if [ "$1" == "-h" ] || [ "$1" == "--help" ]; then
+	echo -e "\n gqmount -- Tool to mount partition\n\n [HELP]:\n gqmount partitionName\n\n [EXEMPLE]:\n gqmount /dev/sdb1\n"
+	exit
+    else
+	# Save the partition name ex: sda2
+	partitionName=$(echo $1 | cut -d "/" -f 3)
+	# if the argument haven't "dev" return error
+	if [ "$(echo $1 | cut -d "/" -f 2)" == "dev" ]; then
+	    # if the partition name isn't in the lsblk result, return error
+	    if [ "$(lsblk -i -o name | grep $partitionName | cut -d "-" -f 2)" != "$partitionName" ]; then
+		echo "$1 is an incorrect partition name".
+		exit
+	    fi
+	else
+	    echo "$1 is an incorrect partition name".
+	    exit
+	fi
+	# Detect if the partition is mounted
+	isMounted=$(mount | grep $1 | awk '{print $1}')
+	if [ "$isMounted" == "$1" ]; then
+	    echo "$1 is already mounted in $(sudo mount | grep $1 | awk '{print $3}')"
+	    exit
+	fi
+	# Save the username
+	username=$(whoami)
+	# Save the partition label
+	partitionLabel="$(lsblk $1 -o label | head -n2 | tail -n1)"
+	# if the partition label is null set a new one
+	if [ -n "$(ls /mnt | grep $username)" ]; then
+	    folderList=$(ls -1 /mnt/$username)
+	    for i in $folderList; do
+		if [ "$i" == "$partitionLabel" ]; then
+		    # Save the UUID of the partition
+		    uuid=$(sudo blkid $1 | awk '{ print $3 }' | cut -d "\"" -f 2)
+		    # If the UUID is null set the partition name as partition label. Else, set it as a partition label.
+		    if [ -n "uuid" ]; then
+			$partitionLabel=$uuid
+		    else
+			$partitionLabel=$partitionName
+		    fi
+		fi
+	    done
+	fi
+	if [ -z "$partitionLabel" ]; then
+	    # Save the UUID of the partition
+	    uuid=$(sudo blkid $1 | awk '{ print $3 }' | cut -d "\"" -f 2)
+	    # If the UUID is null set the partition name as partition label. Else, set it as a partition label.
+	    if [ -n "uuid" ]; then
+		$partitionLabel=$uuid
+	    else
+		$partitionLabel=$partitionName
+	    fi
+	fi
+	mountFolder="/mnt/$username/$partitionLabel"
+	if [ -z "$(ls /mnt | grep $username)" ]; then
+	    sudo mkdir "/mnt/$username"
+	fi
+	sudo mkdir "/mnt/$username/$partitionLabel"
+	sudo mount $1 "$mountFolder"
+    fi
+else
+    echo "Please enter the partition name."
+fi
