@@ -28,7 +28,7 @@ battery all {
 	status_bat                    = "🔋"
 	status_chr                    = "🔌"
 	status_full                   = "🔌"
-	status_unk                    = "❓"
+	status_unk                    = "♻"
 	low_threshold                 = 25
 	threshold_type                = percentage
 	hide_seconds                  = true
