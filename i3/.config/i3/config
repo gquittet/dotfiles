@@ -46,8 +46,8 @@ bindsym $mod+Shift+q kill
 # shipping a .desktop file. It is a wrapper around dmenu, so you need that
 # installed.
 #bindsym $mod+d exec --no-startup-id i3-dmenu-desktop
-bindsym $mod+d exec --no-startup-id $XDG_DATA_HOME/scripts/rofi.sh -d
-bindsym Mod1+Tab exec --no-startup-id $XDG_DATA_HOME/scripts/rofi.sh -w
+bindsym $mod+d exec --no-startup-id rofi-custom -d
+bindsym Mod1+Tab exec --no-startup-id rofi-custom -w
 
 # change focus
 bindsym $mod+h focus left
@@ -340,7 +340,7 @@ bindsym F1 exec --no-startup-id echo "I don't need help" > /dev/null
 bindsym F11 fullscreen toggle
 # Emoji
 bindsym $mod+Shift+e exec --no-startup-id rofimoji
-bindsym $mod+Shift+v exec --no-startup-id $XDG_DATA_HOME/scripts/rofi_clipboard.sh
+bindsym $mod+Shift+v exec --no-startup-id rofi_clipboard
 
 # Modes
 bindsym $mod+r mode "$mode_resize"
@@ -359,10 +359,10 @@ bindsym $mod+f exec --no-startup-id pcmanfm
 bindsym $mod+p exec --no-startup-id $term -e "ncmpcpp"
 
 # Sreen brightness controls
-bindsym XF86MonBrightnessUp exec --no-startup-id $XDG_DATA_HOME/scripts/brightness.sh -inc
-bindsym XF86MonBrightnessDown exec --no-startup-id $XDG_DATA_HOME/scripts/brightness.sh -dec
-bindsym Shift+XF86MonBrightnessUp exec --no-startup-id $XDG_DATA_HOME/scripts/brightness.sh -inc 1
-bindsym Shift+XF86MonBrightnessDown exec --no-startup-id $XDG_DATA_HOME/scripts/brightness.sh -dec 1
+bindsym XF86MonBrightnessUp exec --no-startup-id brightness -inc
+bindsym XF86MonBrightnessDown exec --no-startup-id brightness -dec
+bindsym Shift+XF86MonBrightnessUp exec --no-startup-id brightness -inc 1
+bindsym Shift+XF86MonBrightnessDown exec --no-startup-id brightness -dec 1
 
 # Sound controls
 bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume 0 +5%
@@ -378,5 +378,5 @@ bindsym XF86AudioMicMute exec --no-startup-id amixer sset Capture toggle
 # Startup applications
 # ==============================================================================
 exec_always --no-startup-id feh --bg-center "$HOME/Pictures/Wallpapers/wallhaven-37411.jpg" "$HOME/Pictures/Wallpapers/wallhaven-q6eg5r.jpg"
-exec --no-startup-id $XDG_DATA_HOME/scripts/autostart.sh
+exec --no-startup-id autostart
 
