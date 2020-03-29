@@ -76,6 +76,7 @@ abbr -a gPomt git push origin master --tags
 abbr -a gPu git push -u
 abbr -a gPuo git push -u origin
 abbr -a grank git shortlog -sn --no-merges
+abbr -a grb git rebase
 abbr -a grba git rebase --abort
 abbr -a grbc git rebase --continue
 abbr -a grbi git rebase -i
