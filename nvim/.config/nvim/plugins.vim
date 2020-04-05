@@ -94,8 +94,6 @@ Plug 'ernstvanderlinden/vim-coldfusion'
 " Better whitespace management for Vim
 Plug 'ntpeters/vim-better-whitespace'
 
-Plug 'HerringtonDarkholme/yats.vim'
-
 " Themes
 Plug 'ayu-theme/ayu-vim'                                                " Ayu
 Plug 'morhetz/gruvbox'                                                  " Gruvbox
