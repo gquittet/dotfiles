@@ -6,13 +6,15 @@ FILE="$HOME/.cache/brightness"
 
 LEVEL="${2:-5}"
 
+COMMAND="xbacklight -time 0"
+
 update_brightness () {
 	xbacklight | cut -d. -f1 > $FILE
 }
 
 case "$1" in
-	-inc) xbacklight -inc $LEVEL && update_brightness ;;
-	-dec) xbacklight -dec $LEVEL && update_brightness ;;
+	-inc) $COMMAND -inc $LEVEL && update_brightness ;;
+	-dec) $COMMAND -dec $LEVEL && update_brightness ;;
 esac > /dev/null
 
 killall -SIGUSR1 i3status
