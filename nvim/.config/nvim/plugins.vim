@@ -20,58 +20,42 @@ endif
 Plug 'vim-airline/vim-airline'                                          " Vim-Airline
 Plug 'vim-airline/vim-airline-themes'                                   " Vim-Airline theme
 Plug 'w0rp/ale'                                                         " ALE (Asynchronous Lint Engine)
+Plug 'jiangmiao/auto-pairs'
 
 let g:coc_global_extensions = [
-            \ 'coc-angular',
             \ 'coc-css',
             \ 'coc-emmet',
-            \ 'coc-emoji',
             \ 'coc-eslint',
-            \ 'coc-flow',
-            \ 'coc-flutter',
             \ 'coc-git',
-            \ 'coc-gocode',
-            \ 'coc-highlight',
             \ 'coc-html',
-            \ 'coc-java',
             \ 'coc-json',
             \ 'coc-lists',
             \ 'coc-markdownlint',
-            \ 'coc-omnisharp',
-            \ 'coc-pairs',
-            \ 'coc-phpls',
-            \ 'coc-powershell',
             \ 'coc-prettier',
-            \ 'coc-pyright',
             \ 'coc-python',
             \ 'coc-reason',
-            \ 'coc-rls',
             \ 'coc-syntax',
             \ 'coc-snippets',
-            \ 'coc-solargraph',
-            \ 'coc-svelte',
-            \ 'coc-svg',
-            \ 'coc-tailwindcss',
             \ 'coc-texlab',
             \ 'coc-tslint-plugin',
             \ 'coc-tsserver',
             \ 'coc-vetur',
-            \ 'coc-vimlsp',
             \ 'coc-xml',
             \ 'coc-yaml',
             \ 'coc-yank'
             \ ]
 Plug 'neoclide/coc.nvim', {'branch': 'release', 'do': { -> coc#util#install()}}
 
-Plug '/usr/local/opt/fzf'
+Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 Plug 'christoomey/vim-tmux-navigator'
 
 Plug 'easymotion/vim-easymotion'
+Plug 'editorconfig/editorconfig-vim'
 Plug 'tpope/vim-fugitive'
-Plug 'segeljakt/vim-isotope'
 Plug 'rhysd/git-messenger.vim'                                          " VSCode: GitLens feature
 Plug 'dpelle/vim-Grammalecte'                                           " Grammalecte
+Plug 'airblade/vim-gitgutter'
 " Displaying thin vertical lines at each indentation level for code indented with spaces
 Plug 'Yggdroot/indentLine'
 
@@ -107,13 +91,10 @@ Plug 'honza/vim-snippets'
 " Coldfusion
 Plug 'ernstvanderlinden/vim-coldfusion'
 
-" Todo management
-Plug 'wsdjeg/vim-todo'
-
-Plug 'Shougo/echodoc.vim'
-
 " Better whitespace management for Vim
 Plug 'ntpeters/vim-better-whitespace'
+
+Plug 'HerringtonDarkholme/yats.vim'
 
 " Themes
 Plug 'ayu-theme/ayu-vim'                                                " Ayu
@@ -124,12 +105,6 @@ Plug 'NLKNguyen/papercolor-theme'                                       " Paper 
 Plug 'jacoborus/tender.vim'                                             " Tender
 Plug 'hzchirs/vim-material'
 Plug 'mhartington/oceanic-next'
-
-if has('nvim') || has('patch-8.0.902')
-  Plug 'mhinz/vim-signify'
-else
-  Plug 'mhinz/vim-signify', { 'branch': 'legacy' }
-endif
 
 " Font icons
 Plug 'ryanoasis/vim-devicons'

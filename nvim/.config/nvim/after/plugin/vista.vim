@@ -37,4 +37,4 @@ let g:vista#renderer#icons = {
 \  }
 
 " Automaticaly close nvim if NERDTree is only thing left open
-autocmd bufenter * if (winnr("$") == 1 && vista#sidebar#IsVisible()) | q | endif
+autocmd bufenter * if winnr("$") == 1 && vista#sidebar#IsOpen() | execute "normal! :q!\<CR>" | endif

@@ -3,9 +3,9 @@
 "         Date Fri. 13th Nov 2019
 " ========================================
 
-runtime config/plugins.vim
-runtime config/settings.vim
-runtime config/keymap.vim
-runtime config/spell.vim
-runtime config/theme.vim
+runtime plugins.vim
+runtime settings.vim
+runtime keymap.vim
+runtime spell.vim
+runtime theme.vim
 
