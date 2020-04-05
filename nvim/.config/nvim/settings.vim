@@ -54,14 +54,6 @@ set listchars=tab:\¦\ ,trail:•,nbsp:~                                        
 " Mouse
 set mouse=a
 
-" Omni Completiton
-autocmd FileType css setlocal omnifunc=csscomplete#CompleteCSS
-autocmd FileType haskell setlocal omnifunc=necoghc#omnifunc
-autocmd FileType html,markdown setlocal omnifunc=htmlcomplete#CompleteTags
-autocmd FileType python setlocal omnifunc=pythoncomplete#Complete
-autocmd FileType ruby setlocal omnifunc=rubycomplete#Complete
-autocmd FileType xml setlocal omnifunc=xmlcomplete#CompleteTags
-
 " Search
 set hlsearch                                                                " highlight the search result
 set ignorecase                                                              " Case insensitive search
@@ -78,9 +70,15 @@ set tabstop=4                                                               " co
 set backupdir=~/.local/share/nvim/backup//
 set directory=~/.local/share/nvim/swap//
 set viewdir=~/.local/share/nvim/views//
-silent !mkdir ~/.local/share/nvim/backup/ > /dev/null 2>&1
-silent !mkdir ~/.local/share/nvim/swap// > /dev/null 2>&1
-silent !mkdir ~/.local/share/nvim/views// > /dev/null 2>&1
+
+let folders = ["backup", "swap", "views"]
+for folder in folders
+  let folderPath = $XDG_DATA_HOME.'/nvim/'.folder
+  if !isdirectory(folderPath)
+    silent call mkdir (folderPath, 'p')
+  endif
+endfor
+
 if has('persistent_undo')
   set undofile
   set undolevels=3000
