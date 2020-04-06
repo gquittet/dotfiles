@@ -65,11 +65,29 @@ alias cat 'bat --theme=base16'
 alias ls exa
 
 if test (uname) = "Darwin"
+    set -x XDG_CACHE_HOME $HOME/.cache
+    set -x XDG_CONFIG_HOME $HOME/.config
+    set -x XDG_DATA_HOME $HOME/.local/share
+    set PATH $HOME/.local/bin $PATH
+
+    set -x FNM_DIR $XDG_DATA_HOME/fnm
+    set -x NVM_DIR $XDG_DATA_HOME/nvm
     set -g fish_user_paths /usr/local/opt/node@12/bin $fish_user_paths
     set -x FLUTTERPATH $HOME/Library/flutter
     set -x GOPATH $HOME/Documents/Projets/go
-    set -x JAVA_HOME /Library/Java/JavaVirtualMachines/adoptopenjdk-13.0.2.jdk/Contents/Home
+    set -x JAVA_HOME /Library/Java/JavaVirtualMachines/adoptopenjdk-14/Contents/Home
     set PATH $FLUTTERPATH/bin $GOPATH/bin $PATH
 end
 
-starship init fish | source
+# Tools
+## fnm - Fast Node version Manager
+alias update_fnm "curl -fsSL https://github.com/Schniz/fnm/raw/master/.ci/install.sh | bash -s -- --install-dir $HOME/.local/bin --skip-shell"
+if type -q fnm
+    fnm env --multi | source
+end
+## nvm - Node Version Manager
+alias update_nvm "curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.35.3/install.sh | bash"
+
+if type -q starship
+    starship init fish | source
+end

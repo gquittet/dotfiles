@@ -10,6 +10,7 @@ export PATH=$PATH:$HOME/.local/bin
 export GTK2_RC_FILES="$XDG_CONFIG_HOME/gtk-2.0/gtkrc"
 export GNUPGHOME="$XDG_DATA_HOME/gnupg"
 export LESSHISTFILE=-
+export FNM_DIR="$XDG_DATA_HOME/fnm"
 export NVM_DIR="$XDG_DATA_HOME/nvm"
 export NPM_CONFIG_USERCONFIG=$XDG_CONFIG_HOME/npm/npmrc
 

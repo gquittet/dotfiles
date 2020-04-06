@@ -20,6 +20,17 @@ abbr -a drmi docker rmi
 abbr -a drun docker run
 abbr -a drunn docker run --name
 abbr -a dsa 'docker stop (docker ps -q)'
+# Docker Compose
+abbr -a dcd docker-compose down
+abbr -a dck docker-compose kill
+abbr -a dcl docker-compose logs
+abbr -a dclf docker-compose logs -f
+abbr -a dclft docker-compose logs -f --tail
+abbr -a dclt docker-compose logs --tail
+abbr -a dcs docker-compose stop
+abbr -a dcu docker-compose up
+abbr -a dcud docker-compose up -d
+abbr -a dcuf docker-compose up -f
 
 # Git
 abbr -a g git
@@ -36,7 +47,9 @@ abbr -a gblL git blame -L
 abbr -a gc git commit
 abbr -a gca git commit --amend
 abbr -a gcae git commit --allow-empty
+abbr -a gcaem git commit --allow-empty -m
 abbr -a gcl git clone
+abbr -a gcm git commit -m
 abbr -a gcp git cherry-pick
 abbr -a gco git checkout
 abbr -a gcob git checkout -b
