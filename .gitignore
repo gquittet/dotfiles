@@ -4,3 +4,6 @@ NetrwTreeListing\ 2
 # fish
 fish/.config/fish/completions/kubectl.fish
 fish/.config/fish/fish_variables
+
+# Script to avoid
+scripts/.local/bin/fnm
