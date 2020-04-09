@@ -82,12 +82,12 @@ end
 # Tools
 ## fnm - Fast Node version Manager
 alias update_fnm "curl -fsSL https://github.com/Schniz/fnm/raw/master/.ci/install.sh | bash -s -- --install-dir $HOME/.local/bin --skip-shell"
-if type -q fnm
+if command -q fnm
     fnm env --multi | source
 end
 ## nvm - Node Version Manager
 alias update_nvm "curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.35.3/install.sh | bash"
 
-if type -q starship
+if command -q starship
     starship init fish | source
 end
