@@ -1,6 +1,10 @@
-#!/bin/sh
+#!/usr/bin/env sh
 
-rofi -modi "clipboard:greenclip print"         \
-    -show clipboard                            \
-    -run-command '{cmd}'
+COMMAND="rofi -modi 'clipboard:greenclip print' -show clipboard -run-command '{cmd}'"
 
+PASTE_ADDON='xdotool type --clearmodifiers --delay 0 $(xclip -o -selection clipboard)'
+
+case $1 in
+    --show | -s) eval "$COMMAND" ;;
+    --paste | -p) eval "$COMMAND && $PASTE_ADDON" ;;
+esac > /dev/null
