@@ -5,9 +5,10 @@ if [ -n "$1"  ]; then
         exit
     else
         inputDocument=$1
+        ! [ -f "$1" ] && echo "The PDF file doesn't exist." && exit
         if [ -n "$2"  ]; then
             outputDocument=$2
-            gs -sDEVICE=pdfwrite -dCompatibilityLevel=1.4 -dPDFSETTINGS=/screen -dNOPAUSE -dBATCH -dQUIET -sOutputFile=$2 $1
+            gs -sDEVICE=pdfwrite -dCompatibilityLevel=1.4 -dPDFSETTINGS=/screen -dNOPAUSE -dBATCH -dQUIET -sOutputFile="$2" "$1"
         else
             echo "Please enter an output PDF document name"
             exit
