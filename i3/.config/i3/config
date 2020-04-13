@@ -13,7 +13,7 @@ set $mod Mod4
 
 set $gapsValueInner 10
 set $gapsValueOuter 0
-set $term termite
+set $term alacritty
 
 # Font for window titles. Will also be used by the bar unless a different font
 # is used in the bar {} block below.
@@ -197,6 +197,7 @@ set $mode_system system
 mode "$mode_system" {
 	bindsym e exec --no-startup-id i3-msg exit, mode "default"
 	bindsym l exec --no-startup-id $locker, mode "default"
+	bindsym Shift+l exec --no-startup-id xtrlock && sleep 1, mode "default"
 	bindsym r exec --no-startup-id i3-msg reload
 	bindsym s exec --no-startup-id $locker && systemctl suspend, mode "default"
 	bindsym Shift+s exec --no-startup-id systemctl poweroff -i, mode "default"
