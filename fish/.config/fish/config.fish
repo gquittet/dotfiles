@@ -54,15 +54,7 @@ set -x VISUAL $EDITOR
 # True color support for *nix system
 set -x TERM xterm-256color
 
-# Qualifio
-## Scripts
-### Gitlab
-alias qualifio_gitlab_oauth "$XDG_DATA_HOME/scripts/qualifio_gitlab_generate_oauth_token.sh guillaume.quittet@qualifio.com"
-
 set FISH_KUBECTL_COMPLETION_TIMEOUT 0.5s
-
-alias cat 'bat --theme=base16'
-alias ls exa
 
 if test (uname) = "Darwin"
     set -x XDG_CACHE_HOME $HOME/.cache
@@ -79,14 +71,15 @@ if test (uname) = "Darwin"
     set PATH $FLUTTERPATH/bin $GOPATH/bin $PATH
 end
 
+if test -e $XDG_CONFIG_HOME/fish/aliases.fish
+    source $XDG_CONFIG_HOME/fish/aliases.fish
+end
+
 # Tools
-## fnm - Fast Node version Manager
-alias update_fnm "curl -fsSL https://github.com/Schniz/fnm/raw/master/.ci/install.sh | bash -s -- --install-dir $HOME/.local/bin --skip-shell"
 if command -q fnm
     fnm env --multi | source
 end
-## nvm - Node Version Manager
-alias update_nvm "curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.35.3/install.sh | bash"
+
 
 if command -q starship
     starship init fish | source
