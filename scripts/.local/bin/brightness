@@ -6,7 +6,7 @@ FILE="$HOME/.cache/brightness"
 
 LEVEL="${2:-5}"
 
-COMMAND="xbacklight -time 0"
+COMMAND="xbacklight -time 0 -steps 1"
 
 update_brightness () {
 	xbacklight | cut -d. -f1 > $FILE
