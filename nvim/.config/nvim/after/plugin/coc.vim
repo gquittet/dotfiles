@@ -128,6 +128,8 @@ nnoremap <silent> <space>cp  :<C-u>CocListResume<CR>
 " Custom
 nnoremap <silent> <space>ll  :<C-u>CocList locationlist<CR>
 nnoremap <silent> <space>lr  :<C-u>CocList mru<CR>
+nnoremap <silent> <leader>lb :<C-u>CocList buffers<CR>
+nnoremap <silent> <leader>lc :<C-u>CocList colors<CR>
 " Prettier
 command! -nargs=0 Prettier :CocCommand prettier.formatFile
 vmap <leader>f  <Plug>(coc-format-selected)

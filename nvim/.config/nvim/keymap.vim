@@ -27,10 +27,6 @@ vnoremap <leader>c "_c
 vnoremap <leader>d "_d
 vnoremap <leader>x "_x
 
-" Save
-noremap <silent> <leader>w :w<CR>
-noremap <silent> <leader>W :w!<CR>
-
 " Shortcuts
 nmap <silent> <Space><Tab> <Esc>/<++><Enter>:nohl<Enter>"_c4l
 vnoremap // y/\V<C-r>=escape(@",'/\')<CR><CR>

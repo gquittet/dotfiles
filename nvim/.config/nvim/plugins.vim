@@ -56,9 +56,6 @@ Plug 'tpope/vim-fugitive'
 Plug 'rhysd/git-messenger.vim'                                          " VSCode: GitLens feature
 Plug 'dpelle/vim-Grammalecte'                                           " Grammalecte
 Plug 'airblade/vim-gitgutter'
-" Displaying thin vertical lines at each indentation level for code indented with spaces
-Plug 'Yggdroot/indentLine'
-
 Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() } }
 Plug 'adelarsq/vim-matchit'
 
@@ -74,11 +71,13 @@ Plug 'tpope/vim-surround'                                               " Surrou
 Plug 'dhruvasagar/vim-table-mode'                                       " Table mode
 Plug 'godlygeek/tabular'                                                " Tabular : useful for great alignement
 Plug 'mbbill/undotree'                                                  " UndoTree : See all undos
-Plug 'sheerun/vim-polyglot'                                             " Vim Polyglot - A collection of language packs for Vim.
+"Plug 'sheerun/vim-polyglot'                                             " Vim Polyglot - A collection of language packs for Vim. Don't enable it because it's just FUCKNING slow.
 Plug 'kkoomen/vim-doge'                                                 " Vim doge - Documentation generator for code
 " See https://github.com/liuchengxu/vista.vim for dependencies installation
 " instruction
 Plug 'liuchengxu/vista.vim'
+
+Plug 'nathanaelkane/vim-indent-guides'
 
 Plug 'liuchengxu/vim-which-key', { 'on': ['WhichKey', 'WhichKey!'] }
 
