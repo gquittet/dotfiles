@@ -25,10 +25,12 @@ set relativenumber                                                          " se
 set scrolljump=5                                                            " Lines to scroll when cursor leaves screen
 set scrolloff=3                                                             " Minimum lines to keep above and below cursor
 set showmatch                                                               " Show current brackets
-set splitbelow                                                              " Puts new split windows to the bottom of the current
-set splitright                                                              " Puts new vsplit windows to the right of the current
 set updatetime=100                                                          " vim-signify and coc need this settings
 set winminheight=0                                                          " Windows can be 0 line height
+
+" Improve the way Vim split
+set splitbelow                                                              " Puts new split windows to the bottom of the current
+set splitright                                                              " Puts new vsplit windows to the right of the current
 
 " Folding
 set foldmethod=syntax

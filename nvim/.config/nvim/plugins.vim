@@ -48,7 +48,6 @@ Plug 'neoclide/coc.nvim', {'branch': 'release', 'do': { -> coc#util#install()}}
 
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
-Plug 'christoomey/vim-tmux-navigator'
 
 Plug 'easymotion/vim-easymotion'
 Plug 'editorconfig/editorconfig-vim'

@@ -11,11 +11,11 @@ inoremap <Right> <Nop>
 inoremap <Down> <Nop>
 inoremap <Left> <Nop>
 
-"" Disable backspace
-" noremap <BS> <Nop>
-" inoremap <BS> <Nop>
-" noremap <Del> <Nop>
-" inoremap <Del> <Nop>
+" Disable backspace
+noremap <BS> <Nop>
+inoremap <BS> <Nop>
+noremap <Del> <Nop>
+inoremap <Del> <Nop>
 
 nnoremap <leader>c "_c
 nnoremap <leader>d "_d
@@ -26,6 +26,9 @@ nnoremap <leader>x "_x
 vnoremap <leader>c "_c
 vnoremap <leader>d "_d
 vnoremap <leader>x "_x
+
+" Background color
+nmap <silent> <Leader>tbg :let &background = ( &background == "dark"? "light" : "dark" )<CR>
 
 " Shortcuts
 nmap <silent> <Space><Tab> <Esc>/<++><Enter>:nohl<Enter>"_c4l
