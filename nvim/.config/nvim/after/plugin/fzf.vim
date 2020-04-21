@@ -15,6 +15,10 @@ nnoremap <leader>fbl :BLines!<CR>
 nnoremap <leader>fc :Commit!<CR>
 nnoremap <leader>fbc :BCommit!<CR>
 
+" find tags
+nnoremap <leader>ft :Tags!<CR>
+nnoremap <leader>fbt :BTags!<CR>
+
 " List
 nnoremap <leader>lb :Buffers!<CR>
 nnoremap <leader>lc :Colors!<CR>
@@ -25,9 +29,9 @@ nnoremap <leader>lr :History!<CR>
 " search in project
 "nnoremap <leader>fp :Ag<CR>
 "start a search query by pressing \
-nnoremap \  :Rg<space>
+nnoremap <Bslash>  :Rg<space>
 "search for word under cursor by pressing |
-nnoremap \| :Rg <C-R><C-W><CR>:cw<CR>
+nnoremap <Bar> :Rg <C-R><C-W><CR>:cw<CR>
 
 
 " Options

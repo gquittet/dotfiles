@@ -1,6 +1,6 @@
 " ========================================
 "       Coded by Guillaume QUITTET
-"         Date Fri. 13th Nov 2019
+"         Date Tue. 21th Apr 2020
 " ========================================
 
 runtime plugins.vim

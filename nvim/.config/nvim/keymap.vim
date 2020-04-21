@@ -12,10 +12,10 @@ inoremap <Down> <Nop>
 inoremap <Left> <Nop>
 
 " Disable backspace
-noremap <BS> <Nop>
-inoremap <BS> <Nop>
-noremap <Del> <Nop>
-inoremap <Del> <Nop>
+"noremap <BS> <Nop>
+"inoremap <BS> <Nop>
+"noremap <Del> <Nop>
+"inoremap <Del> <Nop>
 
 nnoremap <leader>c "_c
 nnoremap <leader>d "_d
@@ -67,6 +67,7 @@ map <leader>h :nohl<CR>
 
 " Nerdtree
 map <leader>te :NERDTreeToggle<CR>
+map <leader>fte :NERDTreeFind<CR>
 
 " Numbers.vim
 nmap <F3> :NumbersToggle<CR>

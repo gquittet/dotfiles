@@ -148,6 +148,7 @@ nnoremap <leader>ff :CocList files<CR>
 nnoremap <leader>fg :CocList gfiles<CR>
 nnoremap <leader>fl :CocList lines<CR>
 nnoremap <leader>fp :CocList grep<CR>
+nnoremap <leader>fy :CocList yank<CR>
 nnoremap <leader>fcw :exe 'CocList -I --normal --input='.expand('<cword>').' words'<CR>
 
 " Remap for format selected region

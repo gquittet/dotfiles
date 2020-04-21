@@ -20,13 +20,11 @@ endif
 Plug 'vim-airline/vim-airline'                                          " Vim-Airline
 Plug 'vim-airline/vim-airline-themes'                                   " Vim-Airline theme
 Plug 'w0rp/ale'                                                         " ALE (Asynchronous Lint Engine)
-Plug 'jiangmiao/auto-pairs'
 
 let g:coc_global_extensions = [
             \ 'coc-css',
             \ 'coc-emmet',
             \ 'coc-eslint',
-            \ 'coc-git',
             \ 'coc-html',
             \ 'coc-json',
             \ 'coc-lists',
@@ -35,7 +33,6 @@ let g:coc_global_extensions = [
             \ 'coc-python',
             \ 'coc-reason',
             \ 'coc-syntax',
-            \ 'coc-snippets',
             \ 'coc-texlab',
             \ 'coc-tslint-plugin',
             \ 'coc-tsserver',
