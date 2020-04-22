@@ -1,0 +1,46 @@
+#!/usr/bin/env sh
+
+MODE=${1:-day}
+
+function update_alacritty {
+    if [ "$1" == 'light' ]; then
+        sed -i "s/^colors: \*dark$/colors: \*light/" $XDG_CONFIG_HOME/alacritty/alacritty.yml
+    elif [ "$1" == 'dark' ]; then
+        sed -i "s/^colors: \*light$/colors: \*dark/" $XDG_CONFIG_HOME/alacritty/alacritty.yml
+    fi
+}
+
+function update_bat {
+    if [ "$1" == 'light' ]; then
+        sed -i "s/Solarized (dark)/Solarized (light)/" $XDG_CONFIG_HOME/bat/config
+    elif [ "$1" == 'dark' ]; then
+        sed -i "s/Solarized (light)/Solarized (dark)/" $XDG_CONFIG_HOME/bat/config
+    fi
+}
+
+function update_nvim {
+    if [ "$1" == 'light' ]; then
+        sed -i "s/^set background=dark$/set background=light/" $XDG_CONFIG_HOME/nvim/theme.vim
+    elif [ "$1" == 'dark' ]; then
+        sed -i "s/^set background=light$/set background=dark/" $XDG_CONFIG_HOME/nvim/theme.vim
+    fi
+
+    JOBS=0
+    MAX_JOBS=10
+    for nvim_inst in $(nvr --serverlist)
+    do
+        ((JOBS=JOBS%MAX_JOBS)); ((JOBS++==0)) && wait
+        nvr --servername $nvim_inst --remote-send '<Esc><space>sr' &
+    done
+}
+
+function change_theme {
+    update_alacritty $1
+    update_bat $1
+    update_nvim $1
+}
+
+case $MODE in
+    day) change_theme light ;;
+    night) change_theme dark ;;
+esac
