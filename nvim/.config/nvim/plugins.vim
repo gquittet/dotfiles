@@ -91,6 +91,7 @@ Plug 'ntpeters/vim-better-whitespace'
 
 " Themes
 Plug 'ayu-theme/ayu-vim'                                                " Ayu
+Plug 'icymind/NeoSolarized'
 Plug 'morhetz/gruvbox'                                                  " Gruvbox
 Plug 'arcticicestudio/nord-vim'
 Plug 'sonph/onehalf', {'rtp': 'vim/'}                                   " One Half
