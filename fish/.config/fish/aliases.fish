@@ -6,6 +6,10 @@ if command -q exa
     alias ls exa
 end
 
+if command -q tmux
+    alias tmux "tmux -f $XDG_CONFIG_HOME/tmux/tmux.conf"
+end
+
 if test (uname) = "Linux"
     if command -q java
         set _JAVA_OPTIONS "-Dsun.java2d.opengl=true -Dawt.useSystemAAFontSettings=on -Dswing.aatext=true -Dswing.defaultlaf=com.sun.java.swing.plaf.gtk.GTKLookAndFeel"
