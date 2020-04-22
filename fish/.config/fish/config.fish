@@ -13,6 +13,10 @@ set -g fish_emoji_width 2
 # Hide the fish greeting
 set fish_greeting ""
 
+# Vim mode
+# to get the default mode remove this line or add (fish_default_key_bindings)
+fish_vi_key_bindings
+
 # Fish syntax highlighting
 set -g fish_color_autosuggestion '555' 'brblack'
 set -g fish_color_cancel -r
