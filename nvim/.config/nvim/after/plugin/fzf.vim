@@ -1,7 +1,7 @@
-let $FZF_DEFAULT_OPTS = '--layout=reverse'
+let $FZF_DEFAULT_OPTS = '--layout=reverse --info=inline'
 
 " Ignore files that are in .gitignore
-let $FZF_DEFAULT_COMMAND = 'rg --files --no-ignore-vcs --hidden'
+let $FZF_DEFAULT_COMMAND = 'rg --files --hidden --no-ignore-vcs --glob !.git --glob !node_modules --glob !build --glob !dist'
 
 " find project files
 nnoremap <leader>ff :Files!<CR>
@@ -29,9 +29,9 @@ nnoremap <leader>lr :History!<CR>
 " search in project
 "nnoremap <leader>fp :Ag<CR>
 "start a search query by pressing \
-nnoremap <Bslash>  :Rg<space>
+nnoremap <Bslash> :Rg!<space>
 "search for word under cursor by pressing |
-nnoremap <Bar> :Rg <C-R><C-W><CR>:cw<CR>
+nnoremap <Bar> :Rg! <C-R><C-W><CR>:cw<CR>
 
 
 " Options
@@ -46,3 +46,21 @@ let g:fzf_tags_command = 'ctags -R'
 
 " [Commands] --expect expression for directly executing the command
 let g:fzf_commands_expect = 'alt-enter,ctrl-x'
+
+
+" Set colors to match with the current colorscheme
+let g:fzf_colors = {
+  \ 'fg':           ['fg', 'Normal'],
+  \ 'bg':           ['bg', 'Normal'],
+  \ 'hl':           ['fg', 'Comment'],
+  \ 'fg+':          ['fg', 'CursorLine', 'CursorColumn', 'Normal'],
+  \ 'bg+':          ['bg', 'CursorLine', 'CursorColumn'],
+  \ 'hl+':          ['fg', 'Statement'],
+  \ 'info':         ['fg', 'PreProc'],
+  \ 'border':       ['fg', 'Ignore'],
+  \ 'prompt':       ['fg', 'Conditional'],
+  \ 'pointer':      ['fg', 'Exception'],
+  \ 'marker':       ['fg', 'Keyword'],
+  \ 'spinner':      ['fg', 'Label'],
+  \ 'header':       ['fg', 'Comment']
+  \ }

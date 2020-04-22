@@ -18,7 +18,7 @@ set cursorline                                                              " Hi
 set encoding=utf-8
 set hidden                                                                  " Any buffer can be hidden
 set history=1000                                                            " Set a huge history
-set lazyredraw                                                              " Render window only after the end of a macro
+set lazyredraw                                                              " Render window only after the end of a macro (big improvement of speed)
 set linespace=0                                                             " No extra spaces between rows
 set nojoinspaces                                                            " Prevents inserting two spaces after punctuation on a join (J)
 set relativenumber                                                          " set the number in vim

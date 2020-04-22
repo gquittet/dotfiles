@@ -27,8 +27,8 @@ syntax enable
 "colorscheme onehalfdark
 "let g:airline_theme='onehalfdark'
 
-"let ayucolor="mirage" " for mirage version of theme
-"colorscheme ayu
+let ayucolor="light" " for mirage version of theme
+colorscheme ayu
 "colorscheme nord
 
 " colorscheme onehalflight
@@ -46,8 +46,8 @@ syntax enable
 "colorscheme vim-material
 "let g:airline_theme='material'
 
-colorscheme OceanicNext
-let g:oceanic_next_terminal_bold = 1
-let g:oceanic_next_terminal_italic = 1
+" colorscheme OceanicNext
+" let g:oceanic_next_terminal_bold = 1
+" let g:oceanic_next_terminal_italic = 1
 
-let g:airline_theme='space'
+"let g:airline_theme='space'

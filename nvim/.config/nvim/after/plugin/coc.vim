@@ -141,13 +141,12 @@ xmap <silent> <leader>sn <Plug>(coc-range-select)
 nmap <silent> <leader>sp <Plug>(coc-range-select-backward)
 xmap <silent> <leader>sp <Plug>(coc-range-select-backward)
 
-nnoremap <leader>sc :CocList colors<CR>
-
-nnoremap <leader>fb :CocList buffers<CR>
-nnoremap <leader>ff :CocList files<CR>
-nnoremap <leader>fg :CocList gfiles<CR>
-nnoremap <leader>fl :CocList lines<CR>
-nnoremap <leader>fp :CocList grep<CR>
+"nnoremap <leader>fb :CocList buffers<CR>
+"nnoremap <leader>sc :CocList colors<CR>
+"nnoremap <leader>ff :CocList files<CR>
+"nnoremap <leader>fg :CocList gfiles<CR>
+"nnoremap <leader>fl :CocList lines<CR>
+"nnoremap <leader>fp :CocList grep<CR>
 nnoremap <leader>fy :CocList yank<CR>
 nnoremap <leader>fcw :exe 'CocList -I --normal --input='.expand('<cword>').' words'<CR>
 
