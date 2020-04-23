@@ -51,9 +51,9 @@ end
 set GIT_EDITOR $EDITOR
 set -x VISUAL $EDITOR
 
-# set -x MANPAGER "sh -c 'col -bx | bat -l man -p'"
-# # Fix formatting problems
-# set -x MANROFFOPT "-c"
+set -x MANPAGER "sh -c 'col -bx | bat -l man -p'"
+# Fix formatting problems
+set -x MANROFFOPT "-c"
 
 # True color support for *nix system
 set -x TERM xterm-256color
