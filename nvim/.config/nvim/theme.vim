@@ -1,5 +1,9 @@
 if (has("gui_running"))
-    set guifont="fantasque sans mono 10"
+    if g:os == "Darwin" || g:os == "Windows"
+        set guifont="CaskaydiaCove Nerd Font Mono:h10"
+    elseif g:os == "Linux"
+        set guifont="CaskaydiaCove Nerd Font Mono 10"
+    endif
     set guioptions-=m    " remove menu bar
     set guioptions-=T    " remove toolbar
     set guioptions-=r    " remove right-hand scroll bar
