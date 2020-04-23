@@ -1,0 +1,13 @@
+[Unit]
+Description=Put my terminal in day mode at 7 o'clock every day
+RefuseManualStart=no
+RefuseManualStop=no
+
+[Timer]
+Persistent=true
+OnCalendar=*-*-* 7:00:00
+Unit=terminal_day.service
+
+[Install]
+WantedBy=timers.target
+

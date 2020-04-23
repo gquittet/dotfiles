@@ -1,0 +1,13 @@
+[Unit]
+Description=Put my terminal in night mode at 20 o'clock every day
+RefuseManualStart=no
+RefuseManualStop=no
+
+[Timer]
+Persistent=true
+OnCalendar=*-*-* 20:00:00
+Unit=terminal_night.service
+
+[Install]
+WantedBy=timers.target
+

@@ -1,0 +1,10 @@
+[Unit]
+Description=Put my terminal in day mode
+
+[Service]
+Type=simple
+Environment=XDG_CONFIG_HOME=%h/.config
+ExecStart=%h/.local/bin/toggle_colorscheme day
+
+[Install]
+WantedBy=default.target
