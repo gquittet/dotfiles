@@ -8,27 +8,35 @@ NVIM_THEME_CONFIG="$XDG_CONFIG_HOME/nvim/theme.vim"
 TERMITE_CONFIG="$XDG_CONFIG_HOME/termite/config"
 TERMITE_FOLDER="$XDG_CONFIG_HOME/termite"
 
+function replace {
+    if [ "$(uname)" == "Linux" ]; then
+        command sed -i "$@"
+    elif [ "$(uname)" == "Darwin" ]; then
+        command sed -i '' "$@"
+    fi
+}
+
 function update_alacritty {
     if [ "$1" == 'light' ]; then
-        sed -i "s/^colors: \*dark$/colors: \*light/" $ALACRITTY_CONFIG
+        replace "s/^colors: \*dark$/colors: \*light/" $ALACRITTY_CONFIG
     elif [ "$1" == 'dark' ]; then
-        sed -i "s/^colors: \*light$/colors: \*dark/" $ALACRITTY_CONFIG
+        replace "s/^colors: \*light$/colors: \*dark/" $ALACRITTY_CONFIG
     fi
 }
 
 function update_bat {
     if [ "$1" == 'light' ]; then
-        sed -i "s/Solarized (dark)/Solarized (light)/" $BAT_CONFIG
+        replace "s/Solarized (dark)/Solarized (light)/" $BAT_CONFIG
     elif [ "$1" == 'dark' ]; then
-        sed -i "s/Solarized (light)/Solarized (dark)/" $BAT_CONFIG
+        replace "s/Solarized (light)/Solarized (dark)/" $BAT_CONFIG
     fi
 }
 
 function update_nvim {
     if [ "$1" == 'light' ]; then
-        sed -i "s/^set background=dark$/set background=light/" $NVIM_THEME_CONFIG
+        replace "s/^set background=dark$/set background=light/" $NVIM_THEME_CONFIG
     elif [ "$1" == 'dark' ]; then
-        sed -i "s/^set background=light$/set background=dark/" $NVIM_THEME_CONFIG
+        replace "s/^set background=light$/set background=dark/" $NVIM_THEME_CONFIG
     fi
 
     local JOBS=0
@@ -56,9 +64,12 @@ function update_termite {
 
 function change_theme {
     [ -f "$ALACRITTY_CONFIG" ] && update_alacritty $1
-    [ -d "$TERMITE_FOLDER" ] && update_termite $1
     [ -f "$BAT_CONFIG" ] && update_bat $1
     [ -f "$NVIM_THEME_CONFIG" ] && update_nvim $1
+
+    if [ "$(uname)" == "Linux" ]; then
+        [ -d "$TERMITE_FOLDER" ] && update_termite $1
+    fi
 }
 
 function show_help {
