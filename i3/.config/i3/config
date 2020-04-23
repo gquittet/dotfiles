@@ -341,8 +341,7 @@ bindsym F1 exec --no-startup-id echo "I don't need help" > /dev/null
 bindsym F11 fullscreen toggle
 # Emoji
 bindsym $mod+Shift+e exec --no-startup-id rofimoji
-bindsym $mod+Shift+c exec --no-startup-id rofi_clipboard -s
-bindsym $mod+Shift+v exec --no-startup-id rofi_clipboard -p
+bindsym $mod+Shift+v exec --no-startup-id rofi_clipboard -s
 
 # Modes
 bindsym $mod+r mode "$mode_resize"
