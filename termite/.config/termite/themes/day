@@ -1,8 +1,3 @@
-[options]
-allow_bold = true
-font = CaskaydiaCove Nerd Font Mono 10
-mouse_autohide = true
-
 [colors]
 # special
 foreground      = #586e75

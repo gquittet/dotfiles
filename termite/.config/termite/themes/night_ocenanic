@@ -1,0 +1,39 @@
+[colors]
+# hard contrast: background = #1B2B34
+background = #1B2B34
+#background      = rgba(27, 43, 52, 0.95)
+# soft contrast: background = #4F5B66
+foreground = #D8DEE9
+foreground_bold = #D8DEE9
+
+# dark0 + gray
+color0 = #343D46
+color8 = #65737E
+
+# neutral_red + bright_red
+color1 = #EC5f67
+color9 = #EC5f67
+
+# neutral_green + bright_green
+color2 = #99C794
+color10 = #99C794
+
+# neutral_yellow + bright_yellow
+color3 = #FAC863
+color11 = #FAC863
+
+# neutral_blue + bright_blue
+color4 = #6699CC
+color12 = #6699CC
+
+# neutral_purple + bright_purple
+color5 = #C594C5
+color13 = #C594C5
+
+# neutral_aqua + faded_aqua
+color6 = #5FB3B3
+color14 = #5FB3B3
+
+# light4 + light1
+color7 = #CDD3DE
+color15 = #D8DEE9

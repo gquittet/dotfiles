@@ -1,32 +1,38 @@
 #!/usr/bin/env sh
 
-MODE=${1:-day}
+MODE=${1:-help}
+
+ALACRITTY_CONFIG="$XDG_CONFIG_HOME/alacritty/alacritty.yml"
+BAT_CONFIG="$XDG_CONFIG_HOME/bat/config"
+NVIM_THEME_CONFIG="$XDG_CONFIG_HOME/nvim/theme.vim"
+TERMITE_CONFIG="$XDG_CONFIG_HOME/termite/config"
+TERMITE_FOLDER="$XDG_CONFIG_HOME/termite"
 
 function update_alacritty {
     if [ "$1" == 'light' ]; then
-        sed -i "s/^colors: \*dark$/colors: \*light/" $XDG_CONFIG_HOME/alacritty/alacritty.yml
+        sed -i "s/^colors: \*dark$/colors: \*light/" $ALACRITTY_CONFIG
     elif [ "$1" == 'dark' ]; then
-        sed -i "s/^colors: \*light$/colors: \*dark/" $XDG_CONFIG_HOME/alacritty/alacritty.yml
+        sed -i "s/^colors: \*light$/colors: \*dark/" $ALACRITTY_CONFIG
     fi
 }
 
 function update_bat {
     if [ "$1" == 'light' ]; then
-        sed -i "s/Solarized (dark)/Solarized (light)/" $XDG_CONFIG_HOME/bat/config
+        sed -i "s/Solarized (dark)/Solarized (light)/" $BAT_CONFIG
     elif [ "$1" == 'dark' ]; then
-        sed -i "s/Solarized (light)/Solarized (dark)/" $XDG_CONFIG_HOME/bat/config
+        sed -i "s/Solarized (light)/Solarized (dark)/" $BAT_CONFIG
     fi
 }
 
 function update_nvim {
     if [ "$1" == 'light' ]; then
-        sed -i "s/^set background=dark$/set background=light/" $XDG_CONFIG_HOME/nvim/theme.vim
+        sed -i "s/^set background=dark$/set background=light/" $NVIM_THEME_CONFIG
     elif [ "$1" == 'dark' ]; then
-        sed -i "s/^set background=light$/set background=dark/" $XDG_CONFIG_HOME/nvim/theme.vim
+        sed -i "s/^set background=light$/set background=dark/" $NVIM_THEME_CONFIG
     fi
 
-    JOBS=0
-    MAX_JOBS=10
+    local JOBS=0
+    local MAX_JOBS=10
     for nvim_inst in $(nvr --serverlist)
     do
         ((JOBS=JOBS%MAX_JOBS)); ((JOBS++==0)) && wait
@@ -34,13 +40,39 @@ function update_nvim {
     done
 }
 
+function update_termite {
+    local TERMITE_THEMES="$TERMITE_FOLDER/themes"
+
+    cp "$TERMITE_FOLDER/options" "$TERMITE_CONFIG"
+    if [ "$1" == 'light' ]; then
+        cat "$TERMITE_THEMES/day" >> "$TERMITE_CONFIG"
+    elif [ "$1" == 'dark' ]; then
+        cat "$TERMITE_THEMES/night" >> "$TERMITE_CONFIG"
+    fi
+
+    # Reload all termite instance
+    killall -USR1 termite
+}
+
 function change_theme {
-    update_alacritty $1
-    update_bat $1
-    update_nvim $1
+    [ -f "$ALACRITTY_CONFIG" ] && update_alacritty $1
+    [ -d "$TERMITE_FOLDER" ] && update_termite $1
+    [ -f "$BAT_CONFIG" ] && update_bat $1
+    [ -f "$NVIM_THEME_CONFIG" ] && update_nvim $1
+}
+
+function show_help {
+    echo "
+Color scheme switcher v1.0
+Author: https://github.com/gquittet
+
+day               :: Switch to the day mode
+night             :: Switch to the night mode
+help / -h /--help :: Get help"
 }
 
 case $MODE in
     day) change_theme light ;;
     night) change_theme dark ;;
+    help|-h|--help) show_help ;;
 esac
