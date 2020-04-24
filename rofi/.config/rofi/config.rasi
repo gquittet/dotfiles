@@ -1,9 +1,13 @@
 configuration {
 	dpi: 96;
-	font: "Roboto 11";
+	font: "RobotoMono Nerd Font 11";
 	theme: "oceanic-slate";
 	location: 0;
 	lines: 8;
 	hide-scrollbar: true;
 	sidebar-mode: true;
+    drun-display-format: "{icon} {name}";
+    display-run: " ";
+    display-drun: " ";
+    display-window: " ";
 }
