@@ -70,6 +70,7 @@ function change_theme {
     if [ "$(uname)" == "Linux" ]; then
         [ -d "$TERMITE_FOLDER" ] && update_termite $1
     fi
+    wait
 }
 
 function show_help {
