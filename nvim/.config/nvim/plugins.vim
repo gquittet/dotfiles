@@ -33,6 +33,7 @@ let g:coc_global_extensions = [
             \ 'coc-prettier',
             \ 'coc-python',
             \ 'coc-reason',
+            \ 'coc-rls',
             \ 'coc-syntax',
             \ 'coc-texlab',
             \ 'coc-tslint-plugin',
