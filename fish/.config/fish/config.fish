@@ -60,6 +60,13 @@ set -x TERM xterm-256color
 
 set FISH_KUBECTL_COMPLETION_TIMEOUT 0.5s
 
+# FZF
+set -U FZF_DEFAULT_OPTS "--layout=reverse --info=inline --color bw"
+set -U FZF_FIND_FILE_COMMAND "rg --files --hidden --no-ignore-vcs --follow --glob !.git --glob !node_modules --glob !build --glob !dist"
+set -U FZF_PREVIEW_FILE_CMD "bat --style=numbers --color=always"
+set -U FZF_TMUX 1
+set -U FZF_ENABLE_OPEN_PREVIEW 1
+
 if test (uname) = "Darwin"
     set -x XDG_CACHE_HOME $HOME/.cache
     set -x XDG_CONFIG_HOME $HOME/.config

@@ -3,4 +3,5 @@ jorgebucaran/fish-bax
 brgmnn/fish-docker-compose
 evanlucas/fish-kubectl-completions
 rbenv/fish-rbenv
+jethrokuan/fzf
 jethrokuan/z
