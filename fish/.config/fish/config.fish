@@ -5,7 +5,7 @@ if not functions -q fisher
 end
 
 # Use legacy fzf keybindings
-# set -g FZF_LEGACY_KEYBINDINGS 1
+set -U FZF_LEGACY_KEYBINDINGS 0
 
 # Set the emoji width for iTerm
 set -g fish_emoji_width 2
@@ -61,8 +61,9 @@ set -x TERM xterm-256color
 set FISH_KUBECTL_COMPLETION_TIMEOUT 0.5s
 
 # FZF
+set -gx FZF_DEFAULT_COMMAND 'rg --files --hidden --no-ignore-vcs --glob "!{.git,node_modules,build,dist}"'
 set -U FZF_DEFAULT_OPTS "--layout=reverse --info=inline --color bw"
-set -U FZF_FIND_FILE_COMMAND "rg --files --hidden --no-ignore-vcs --follow --glob !.git --glob !node_modules --glob !build --glob !dist"
+set -U FZF_FIND_FILE_COMMAND "$FZF_DEFAULT_COMMAND"
 set -U FZF_PREVIEW_FILE_CMD "bat --style=numbers --color=always"
 set -U FZF_TMUX 1
 set -U FZF_ENABLE_OPEN_PREVIEW 1
