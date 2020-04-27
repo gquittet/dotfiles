@@ -21,29 +21,16 @@ Plug 'vim-airline/vim-airline'                                          " Vim-Ai
 Plug 'vim-airline/vim-airline-themes'                                   " Vim-Airline theme
 Plug 'w0rp/ale'                                                         " ALE (Asynchronous Lint Engine)
 
-let g:coc_global_extensions = [
-            \ 'coc-css',
-            \ 'coc-emmet',
-            \ 'coc-eslint',
-            \ 'coc-html',
-            \ 'coc-json',
-            \ 'coc-lists',
-            \ 'coc-markdownlint',
-            \ 'coc-pairs',
-            \ 'coc-prettier',
-            \ 'coc-python',
-            \ 'coc-reason',
-            \ 'coc-rls',
-            \ 'coc-syntax',
-            \ 'coc-texlab',
-            \ 'coc-tslint-plugin',
-            \ 'coc-tsserver',
-            \ 'coc-vetur',
-            \ 'coc-xml',
-            \ 'coc-yaml',
-            \ 'coc-yank'
-            \ ]
-Plug 'neoclide/coc.nvim', {'branch': 'release', 'do': { -> coc#util#install()}}
+" LSP
+Plug 'prabirshrestha/async.vim'
+Plug 'prabirshrestha/vim-lsp'
+Plug 'prabirshrestha/asyncomplete.vim'
+Plug 'prabirshrestha/asyncomplete-lsp.vim'
+Plug 'mattn/vim-lsp-settings' " easy lsp server install
+Plug 'SirVer/ultisnips'
+Plug 'honza/vim-snippets'
+Plug 'thomasfaingnaert/vim-lsp-snippets'
+Plug 'thomasfaingnaert/vim-lsp-ultisnips'
 
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
