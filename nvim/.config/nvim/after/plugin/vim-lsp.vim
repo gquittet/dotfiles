@@ -47,8 +47,8 @@ function! s:on_lsp_buffer_enabled() abort
     nmap <buffer> <leader>fwo <plug>(lsp-workspace-symbol)
     nmap <buffer> <leader>rn <plug>(lsp-rename)
     nmap <buffer> <leader>ld <plug>(lsp-document-diagnostics)
-    nmap <buffer> [g <plug>(lsp-previous-diagnostic)
-    nmap <buffer> ]g <plug>(lsp-next-diagnostic)
+    " nmap <buffer> [g <plug>(lsp-previous-diagnostic)
+    " nmap <buffer> ]g <plug>(lsp-next-diagnostic)
     nmap <buffer> <leader>f <plug>(lsp-document-format)
     vmap <buffer> <leader>f <plug>(lsp-document-range-format)
     nmap <buffer> K <plug>(lsp-hover)
@@ -68,4 +68,4 @@ augroup lsp_install
 augroup END
 
 " Turn off diagnostic (use ALE instead)
-" let g:lsp_diagnostics_enabled = 0
+let g:lsp_diagnostics_enabled = 0
