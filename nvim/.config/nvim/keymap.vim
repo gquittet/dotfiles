@@ -63,7 +63,7 @@ nmap <leader>gw :Gwrite<CR>
 nmap <leader>ge :Gedit<CR>
 
 " Highlight
-map <leader>h :nohl<CR>
+map <silent> <leader>h :nohl <bar> :let @/ = ""<CR>
 
 " Nerdtree
 map <leader>te :NERDTreeToggle<CR>
