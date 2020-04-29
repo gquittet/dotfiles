@@ -82,7 +82,6 @@ Plug 'ntpeters/vim-better-whitespace'
 Plug 'ayu-theme/ayu-vim'                                                " Ayu
 Plug 'icymind/NeoSolarized'
 Plug 'morhetz/gruvbox'                                                  " Gruvbox
-Plug 'arcticicestudio/nord-vim'
 Plug 'sonph/onehalf', {'rtp': 'vim/'}                                   " One Half
 Plug 'NLKNguyen/papercolor-theme'                                       " Paper color theme
 Plug 'jacoborus/tender.vim'                                             " Tender

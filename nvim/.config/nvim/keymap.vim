@@ -75,7 +75,7 @@ nmap <F4> :NumbersOnOff<CR>
 
 " Settings
 " Reload settings
-nnoremap <leader>sr :source ~/.config/nvim/init.vim<CR>
+nnoremap <leader>sr :source ~/.config/nvim/init.vim <bar> :call webdevicons#refresh()<CR>
 
 " Tabular
 nmap <leader>t& :Tabularize /&<CR>
