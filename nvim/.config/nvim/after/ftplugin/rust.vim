@@ -1,1 +1,1 @@
-" let b:ale_linters = ['rls']
+let b:ale_linters = ['rls', 'cargo', 'rustc']
