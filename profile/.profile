@@ -31,3 +31,5 @@ if [ -x "$(command -v ruby)" ]; then
 fi
 export GOPATH="$HOME/Documents/Projets/go"
 export PATH="$PATH:$GOPATH/bin:$CARGO_HOME/bin:$npm_config_prefix/bin"
+export PATH="$XDG_DATA_HOME/cargo/bin:$PATH"
+
