@@ -46,10 +46,10 @@ syntax enable
 " let g:airline_theme = 'tender'
 
 " Material oceanic
-"let g:material_style='oceanic'
-"set background=dark
-"colorscheme vim-material
-"let g:airline_theme='material'
+let g:material_style='oceanic'
+set background=dark
+colorscheme vim-material
+let g:airline_theme='material'
 
 " colorscheme OceanicNext
 " let g:oceanic_next_terminal_bold = 1
@@ -57,5 +57,5 @@ syntax enable
 "let g:airline_theme='space'
 
 " Solarized
-colorscheme NeoSolarized
-set background=dark
+" colorscheme NeoSolarized
+" set background=dark
