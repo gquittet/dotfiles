@@ -15,12 +15,41 @@ if executable('rls')
         \ })
 endif
 if executable('typescript-language-server')
+  if !empty(glob(lsp#utils#find_nearest_parent_file_directory(lsp#utils#get_buffer_path(), 'tsconfig.json')))
     au User lsp_setup call lsp#register_server({
         \ 'name': 'typescript-language-server',
         \ 'cmd': {server_info->[&shell, &shellcmdflag, 'typescript-language-server --stdio']},
         \ 'root_uri':{server_info->lsp#utils#path_to_uri(lsp#utils#find_nearest_parent_file_directory(lsp#utils#get_buffer_path(), 'tsconfig.json'))},
         \ 'whitelist': ['typescript', 'typescript.tsx'],
         \ })
+  elseif !empty(glob(lsp#utils#find_nearest_parent_file_directory(lsp#utils#get_buffer_path(), 'package.json')))
+    au User lsp_setup call lsp#register_server({
+        \ 'name': 'typescript-language-server',
+        \ 'cmd': {server_info->[&shell, &shellcmdflag, 'typescript-language-server --stdio']},
+        \ 'root_uri':{server_info->lsp#utils#path_to_uri(lsp#utils#find_nearest_parent_file_directory(lsp#utils#get_buffer_path(), 'package.json'))},
+        \ 'whitelist': ['javascript', 'javascript.jsx', 'javascriptreact'],
+        \ })
+  endif
+endif
+if executable('yaml-language-server')
+  augroup LspYaml
+   autocmd!
+   autocmd User lsp_setup call lsp#register_server({
+       \ 'name': 'yaml-language-server',
+       \ 'cmd': {server_info->['yaml-language-server', '--stdio']},
+       \ 'whitelist': ['yaml', 'yaml.ansible'],
+       \ 'workspace_config': {
+       \   'yaml': {
+       \     'validate': v:true,
+       \     'hover': v:true,
+       \     'completion': v:true,
+       \     'customTags': [],
+       \     'schemas': {},
+       \     'schemaStore': { 'enable': v:true },
+       \   }
+       \ }
+       \})
+  augroup END
 endif
 
 function! s:on_lsp_buffer_enabled() abort
