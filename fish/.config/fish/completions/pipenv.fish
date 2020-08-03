@@ -1,0 +1,1 @@
+pipenv --completion | source
