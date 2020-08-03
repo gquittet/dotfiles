@@ -1,5 +1,28 @@
+if test (uname) = "Darwin"
+    set -x XDG_CACHE_HOME $HOME/.cache
+    set -x XDG_CONFIG_HOME $HOME/.config
+    set -x XDG_DATA_HOME $HOME/.local/share
+    if not string match -q -- "*$HOME/.local/bin*" $PATH
+        set PATH $PATH $HOME/.local/bin
+    end
+
+    set -x PYENV_ROOT $XDG_DATA_HOME/pyenv
+    set -g fish_user_paths $PYENV_ROOT/bin $fish_user_paths
+    set -x FNM_DIR $XDG_DATA_HOME/fnm
+    set -x NVM_DIR $XDG_DATA_HOME/nvm
+    set -g fish_user_paths /usr/local/opt/node@12/bin $fish_user_paths
+    set -x FLUTTERPATH $HOME/Library/flutter
+    set -x GOPATH $HOME/Documents/Projets/go
+    set -x JAVA_HOME /Library/Java/JavaVirtualMachines/adoptopenjdk-14/Contents/Home
+    if not string match -q -- "*$FLUTTERPATH/bin*" $PATH
+        set PATH $PATH $FLUTTERPATH/bin
+    end
+    if not string match -q -- "*$GOPATH/bin*" $PATH
+        set PATH $PATH $GOPATH/bin
+    end
+end
+
 if not functions -q fisher
-    set -q XDG_CONFIG_HOME; or set XDG_CONFIG_HOME ~/.config
     curl https://git.io/fisher --create-dirs -sLo $XDG_CONFIG_HOME/fish/functions/fisher.fish
     fish -c fisher
 end
@@ -69,21 +92,6 @@ set -U FZF_PREVIEW_FILE_CMD "bat --style=numbers --color=always"
 set -U FZF_TMUX 1
 set -U FZF_ENABLE_OPEN_PREVIEW 1
 
-if test (uname) = "Darwin"
-    set -x XDG_CACHE_HOME $HOME/.cache
-    set -x XDG_CONFIG_HOME $HOME/.config
-    set -x XDG_DATA_HOME $HOME/.local/share
-    set PATH $HOME/.local/bin $PATH
-
-    set -x FNM_DIR $XDG_DATA_HOME/fnm
-    set -x NVM_DIR $XDG_DATA_HOME/nvm
-    set -g fish_user_paths /usr/local/opt/node@12/bin $fish_user_paths
-    set -x FLUTTERPATH $HOME/Library/flutter
-    set -x GOPATH $HOME/Documents/Projets/go
-    set -x JAVA_HOME /Library/Java/JavaVirtualMachines/adoptopenjdk-14/Contents/Home
-    set PATH $FLUTTERPATH/bin $GOPATH/bin $PATH
-end
-
 if test -e $XDG_CONFIG_HOME/fish/aliases.fish
     source $XDG_CONFIG_HOME/fish/aliases.fish
 end
@@ -92,6 +100,11 @@ end
 if command -q fnm
     fnm env --multi | source
 end
+
+# Python
+#if command -q pyenv-virtualenv-init
+#    pyenv virtualenv-init - | source
+#end
 
 
 if command -q starship
