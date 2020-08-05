@@ -16,6 +16,7 @@ export NPM_CONFIG_USERCONFIG=$XDG_CONFIG_HOME/npm/npmrc
 export npm_config_prefix=$XDG_DATA_HOME/npm/node_modules
 export CARGO_HOME="$XDG_DATA_HOME"/cargo
 export RUSTUP_HOME="$XDG_DATA_HOME"/rustup
+export STACK_ROOT="$XDG_DATA_HOME"/stack
 
 export QT_AUTO_SCREEN_SCALE_FACTOR=0
 if [ -x "$(command -v qt5ct)" ]; then
