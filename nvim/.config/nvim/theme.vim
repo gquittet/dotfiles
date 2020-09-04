@@ -39,22 +39,22 @@ syntax enable
 " colorscheme onehalflight
 " let g:airline_theme='onehalflight'
 
-" colorscheme PaperColor
-" set background=light
+colorscheme PaperColor
+set background=light
 
 " colorscheme tender
 " let g:airline_theme = 'tender'
 
 " Material oceanic
-let g:material_style='oceanic'
-set background=dark
-colorscheme vim-material
-let g:airline_theme='material'
+" let g:material_style='oceanic'
+" set background=dark
+" colorscheme vim-material
+" let g:airline_theme='material'
 
 " colorscheme OceanicNext
 " let g:oceanic_next_terminal_bold = 1
 " let g:oceanic_next_terminal_italic = 1
-"let g:airline_theme='space'
+" let g:airline_theme='space'
 
 " Solarized
 " colorscheme NeoSolarized
