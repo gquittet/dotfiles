@@ -7,12 +7,18 @@ if test (uname) = "Darwin"
     end
 
     set -x PYENV_ROOT $XDG_DATA_HOME/pyenv
+    set -x PIPENV_VERBOSITY -1
     set -g fish_user_paths $PYENV_ROOT/bin $fish_user_paths
     set -x FNM_DIR $XDG_DATA_HOME/fnm
     set -x NVM_DIR $XDG_DATA_HOME/nvm
     set -x STACK_ROOT $XDG_DATA_HOME/stack
+    set -q GHCUP_INSTALL_BASE_PREFIX[1]; or set GHCUP_INSTALL_BASE_PREFIX $HOME
+    if not string match -q -- "*$GHCUP_INSTALL_BASE_PREFIX/.ghcup/bin*" $PATH
+        test -f $GHCUP_INSTALL_BASE_PREFIX/.ghcup/env; and set PATH $HOME/.cabal/bin $GHCUP_INSTALL_BASE_PREFIX/.ghcup/bin $PATH
+    end
     set -g fish_user_paths /usr/local/opt/node@12/bin $fish_user_paths
     set -x FLUTTERPATH $HOME/Library/flutter
+    set -x ANDROID_SDK_ROOT $HOME/Library/Android/sdk
     set -x GOPATH $HOME/Documents/Projets/go
     set -x JAVA_HOME /Library/Java/JavaVirtualMachines/adoptopenjdk-14/Contents/Home
     if not string match -q -- "*$FLUTTERPATH/bin*" $PATH
@@ -20,6 +26,11 @@ if test (uname) = "Darwin"
     end
     if not string match -q -- "*$GOPATH/bin*" $PATH
         set PATH $PATH $GOPATH/bin
+    end
+    set -x CARGO_HOME $XDG_DATA_HOME/cargo
+    set -x RUSTUP_HOME $XDG_DATA_HOME/rustup
+    if not string match -q -- "*$CARGO_HOME/bin*" $PATH
+        set PATH $PATH $CARGO_HOME/bin
     end
 end
 
