@@ -39,6 +39,9 @@
 	new = green bold
 	whitespace = red reverse
 
+[pull]
+	rebase = true
+
 [commit]
 	template = ~/.config/git/gitmessage
 
