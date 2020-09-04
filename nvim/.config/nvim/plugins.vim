@@ -22,18 +22,30 @@ Plug 'vim-airline/vim-airline-themes'                                   " Vim-Ai
 Plug 'w0rp/ale'                                                         " ALE (Asynchronous Lint Engine)
 
 " LSP
-Plug 'prabirshrestha/async.vim'
-Plug 'prabirshrestha/vim-lsp'
-Plug 'prabirshrestha/asyncomplete.vim'
-Plug 'prabirshrestha/asyncomplete-lsp.vim'
-" Snippets + LSP integration
-Plug 'SirVer/ultisnips'
-Plug 'honza/vim-snippets'
-Plug 'thomasfaingnaert/vim-lsp-snippets'
-Plug 'thomasfaingnaert/vim-lsp-ultisnips'
-" Tags
-Plug 'ludovicchabant/vim-gutentags'
-Plug 'prabirshrestha/asyncomplete-tags.vim'
+let g:coc_global_extensions = [
+    \ 'coc-css',
+    \ 'coc-emmet',
+    \ 'coc-eslint',
+    \ 'coc-highlight',
+    \ 'coc-html',
+    \ 'coc-json',
+    \ 'coc-lists',
+    \ 'coc-markdownlint',
+    \ 'coc-pairs',
+    \ 'coc-prettier',
+    \ 'coc-python',
+    \ 'coc-rust-analyzer',
+    \ 'coc-snippets',
+    \ 'coc-syntax',
+    \ 'coc-texlab',
+    \ 'coc-tslint-plugin',
+    \ 'coc-tsserver',
+    \ 'coc-vetur',
+    \ 'coc-xml',
+    \ 'coc-yaml',
+    \ 'coc-yank'
+    \ ]
+Plug 'neoclide/coc.nvim', {'branch': 'release', 'do': { -> coc#add_extension() }}
 
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
@@ -52,14 +64,13 @@ Plug 'scrooloose/nerdcommenter'                                         " NERDCo
 Plug 'scrooloose/nerdtree'
 Plug 'Xuyuanp/nerdtree-git-plugin'
 Plug 'myusuf3/numbers.vim'                                              " Numbers.vim
-Plug 'jceb/vim-orgmode'                                                 " Org mode
 Plug 'weirongxu/plantuml-previewer.vim'                                 " Plantuml-previewer
 Plug 'tyru/open-browser.vim'                                            " Plantuml-previewer dependency
+Plug 'luochen1990/rainbow'
 Plug 'tpope/vim-surround'                                               " Surround
 Plug 'dhruvasagar/vim-table-mode'                                       " Table mode
 Plug 'godlygeek/tabular'                                                " Tabular : useful for great alignement
 Plug 'mbbill/undotree'                                                  " UndoTree : See all undos
-"Plug 'sheerun/vim-polyglot'                                             " Vim Polyglot - A collection of language packs for Vim. Don't enable it because it's just FUCKNING slow.
 Plug 'kkoomen/vim-doge'                                                 " Vim doge - Documentation generator for code
 " See https://github.com/liuchengxu/vista.vim for dependencies installation
 " instruction
@@ -75,11 +86,15 @@ Plug 'tpope/vim-sleuth'
 " Snippets
 Plug 'honza/vim-snippets'
 
-" Coldfusion
-Plug 'ernstvanderlinden/vim-coldfusion'
-
 " Better whitespace management for Vim
 Plug 'ntpeters/vim-better-whitespace'
+
+" Languages
+Plug 'ernstvanderlinden/vim-coldfusion'
+Plug 'davejlong/cf-utils.vim'
+Plug 'Stautob/vim-fish'
+Plug 'jceb/vim-orgmode'
+Plug 'posva/vim-vue'
 
 " Themes
 Plug 'ayu-theme/ayu-vim'                                                " Ayu
@@ -100,3 +115,6 @@ syntax enable               " required
 
 " dev-icons enable folders open/close icons
 let g:DevIconsEnableFoldersOpenClose = 1
+
+" Enable rainbow
+let g:rainbow_active = 1

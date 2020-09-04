@@ -1,7 +1,7 @@
 let $FZF_DEFAULT_OPTS = '--layout=reverse --info=inline'
 
 " Ignore files that are in .gitignore
-let $FZF_DEFAULT_COMMAND = 'rg --files --hidden --no-ignore-vcs --follow --glob "!{.git,node_modules,build,dist}"'
+let $FZF_DEFAULT_COMMAND = 'rg --files --hidden --no-ignore-vcs --follow --glob "!{.git,node_modules,build,dist,.idea,.cache}"'
 
 " find project files
 nnoremap <leader>ff :Files!<CR>

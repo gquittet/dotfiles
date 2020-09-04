@@ -73,6 +73,9 @@ map <leader>fte :NERDTreeFind<CR>
 nmap <F3> :NumbersToggle<CR>
 nmap <F4> :NumbersOnOff<CR>
 
+" Rainbow
+nmap <leader>tr :RainbowToggle<CR>
+
 " Settings
 " Reload settings
 nnoremap <leader>sr :source ~/.config/nvim/init.vim <bar> :call webdevicons#refresh()<CR>
