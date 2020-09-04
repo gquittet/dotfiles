@@ -86,6 +86,7 @@ abbr -a gpr git pull --rebase
 abbr -a gP git push
 abbr -a gPd git push -d
 abbr -a gPdo git push -d origin
+abbr -a gPf git push --force
 abbr -a gPo git push origin
 abbr -a gPomt git push origin master --tags
 abbr -a gPu git push -u
@@ -104,6 +105,7 @@ abbr -a gs git status -sb
 abbr -a gsh git show
 abbr -a gss git status
 abbr -a gst git stash
+abbr -a gsw 'git switch'
 abbr -a gsta git stash apply
 abbr -a gstd git stash drop
 abbr -a gstl git stash list
