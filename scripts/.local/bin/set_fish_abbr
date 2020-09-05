@@ -101,6 +101,8 @@ abbr -a grh git reset HEAD
 abbr -a grs git reset
 abbr -a grsh git reset --hard
 abbr -a grshm git reset --hard master
+abbr -a grst git restore
+abbr -a grsts git restore --staged
 abbr -a gs git status -sb
 abbr -a gsh git show
 abbr -a gss git status
