@@ -65,9 +65,8 @@ nmap <leader>ge :Gedit<CR>
 " Highlight
 map <silent> <leader>h :nohl <bar> :let @/ = ""<CR>
 
-" Nerdtree
-map <leader>te :NERDTreeToggle<CR>
-map <leader>fte :NERDTreeFind<CR>
+" Explorer Tree view
+map <leader>te :CocCommand explorer<CR>
 
 " Numbers.vim
 nmap <F3> :NumbersToggle<CR>

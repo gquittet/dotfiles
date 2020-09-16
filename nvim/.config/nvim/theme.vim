@@ -24,9 +24,9 @@ endif
 " Set the full color compatibility for vim and terminal
 syntax enable
 
-" colorscheme gruvbox
-" let g:gruvbox_italic = '1'
-" set background=dark
+colorscheme gruvbox
+let g:gruvbox_italic = '1'
+set background=dark
 
 "colorscheme onehalfdark
 "let g:airline_theme='onehalfdark'
@@ -39,8 +39,8 @@ syntax enable
 " colorscheme onehalflight
 " let g:airline_theme='onehalflight'
 
-colorscheme PaperColor
-set background=light
+" colorscheme PaperColor
+" set background=light
 
 " colorscheme tender
 " let g:airline_theme = 'tender'

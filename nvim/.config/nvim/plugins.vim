@@ -25,12 +25,15 @@ Plug 'w0rp/ale'                                                         " ALE (A
 let g:coc_global_extensions = [
     \ 'coc-css',
     \ 'coc-emmet',
+    \ 'coc-emoji',
     \ 'coc-eslint',
+    \ 'coc-explorer',
     \ 'coc-highlight',
     \ 'coc-html',
     \ 'coc-json',
     \ 'coc-lists',
     \ 'coc-markdownlint',
+    \ 'coc-marketplace',
     \ 'coc-pairs',
     \ 'coc-prettier',
     \ 'coc-python',
@@ -50,24 +53,30 @@ Plug 'neoclide/coc.nvim', {'branch': 'release', 'do': { -> coc#add_extension() }
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 
+" Git
+Plug 'tpope/vim-fugitive'
+Plug 'junegunn/gv.vim'                                                  " A Git commit browser
+Plug 'rhysd/git-messenger.vim'                                          " VSCode: GitLens feature
+Plug 'tpope/vim-rhubarb'                                                " Open file remotely, show related issue, etc
+Plug 'mhinz/vim-signify'
+
+" Comment line
+Plug 'preservim/nerdcommenter'
+
+" Change brackets around text
+Plug 'tpope/vim-surround'
+
 Plug 'easymotion/vim-easymotion'
 Plug 'editorconfig/editorconfig-vim'
-Plug 'tpope/vim-fugitive'
-Plug 'rhysd/git-messenger.vim'                                          " VSCode: GitLens feature
 Plug 'dpelle/vim-Grammalecte'                                           " Grammalecte
-Plug 'airblade/vim-gitgutter'
 Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() } }
 Plug 'adelarsq/vim-matchit'
 
 Plug 'terryma/vim-multiple-cursors'                                     " Multiple cursors like sublime text
-Plug 'scrooloose/nerdcommenter'                                         " NERDCommenter : Better comments in vim
-Plug 'scrooloose/nerdtree'
-Plug 'Xuyuanp/nerdtree-git-plugin'
 Plug 'myusuf3/numbers.vim'                                              " Numbers.vim
 Plug 'weirongxu/plantuml-previewer.vim'                                 " Plantuml-previewer
 Plug 'tyru/open-browser.vim'                                            " Plantuml-previewer dependency
 Plug 'luochen1990/rainbow'
-Plug 'tpope/vim-surround'                                               " Surround
 Plug 'dhruvasagar/vim-table-mode'                                       " Table mode
 Plug 'godlygeek/tabular'                                                " Tabular : useful for great alignement
 Plug 'mbbill/undotree'                                                  " UndoTree : See all undos
@@ -82,9 +91,6 @@ Plug 'liuchengxu/vim-which-key', { 'on': ['WhichKey', 'WhichKey!'] }
 
 " Detect indent automatically
 Plug 'tpope/vim-sleuth'
-
-" Snippets
-Plug 'honza/vim-snippets'
 
 " Better whitespace management for Vim
 Plug 'ntpeters/vim-better-whitespace'
