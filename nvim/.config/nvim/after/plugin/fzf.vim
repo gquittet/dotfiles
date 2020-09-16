@@ -4,8 +4,8 @@ let $FZF_DEFAULT_OPTS = '--layout=reverse --info=inline'
 let $FZF_DEFAULT_COMMAND = 'rg --files --hidden --no-ignore-vcs --follow --glob "!{.git,node_modules,build,dist,.idea,.cache}"'
 
 " find project files
-nnoremap <leader>ff :Files!<CR>
-nnoremap <leader>fg :GFiles!<CR>
+nnoremap <space>ff :Files!<CR>
+nnoremap <space>fg :GFiles!<CR>
 
 " find project files by lines of code
 nnoremap <leader>fl :Lines!<CR>
@@ -27,7 +27,7 @@ nnoremap <leader>lc :Colors!<CR>
 nnoremap <leader>lr :History!<CR>
 
 " search in project
-"nnoremap <leader>fp :Ag<CR>
+"nnoremap <space>fp :Ag<CR>
 "start a search query by pressing \
 nnoremap <Bslash> :Rg!<space>
 "search for word under cursor by pressing |

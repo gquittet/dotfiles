@@ -6,14 +6,14 @@ let g:vista_icon_indent = ["╰─▸ ", "├─▸ "]
 
 " Executive used when opening vista sidebar without specifying it.
 " See all the avaliable executives via `:echo g:vista#executives`.
-let g:vista_default_executive = 'coc'
+let g:vista_default_executive = 'ale'
 
 " Set the executive for some filetypes explicitly. Use the explicit executive
 " instead of the default one for these filetypes when using `:Vista` without
 " specifying the executive.
 let g:vista_executive_for = {
-  \ 'cpp': 'coc',
-  \ 'php': 'coc',
+  \ 'cpp': 'ale',
+  \ 'php': 'ale',
   \ }
 
 " Declare the command including the executable andoptions used to generate ctags output
@@ -36,7 +36,7 @@ let g:vista#renderer#icons = {
 \   "variable": "\uf71b",
 \  }
 
-" nmap <silent> <leader>fo :Vista finder<CR>
+" nmap <silent> <space>fo :Vista finder<CR>
 
 " Automaticaly close nvim if NERDTree is only thing left open
 autocmd bufenter * if winnr("$") == 1 && vista#sidebar#IsOpen() | execute "normal! :q!\<CR>" | endif
