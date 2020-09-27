@@ -18,7 +18,6 @@ if test (uname) = "Darwin"
     end
     set -g fish_user_paths /usr/local/opt/node@12/bin $fish_user_paths
     set -x FLUTTERPATH $HOME/Library/flutter
-    set -x ANDROID_SDK_ROOT $HOME/Library/Android/sdk
     set -x GOPATH $HOME/Documents/Projets/go
     set -x JAVA_HOME /Library/Java/JavaVirtualMachines/adoptopenjdk-14/Contents/Home
     if not string match -q -- "*$FLUTTERPATH/bin*" $PATH
@@ -31,6 +30,12 @@ if test (uname) = "Darwin"
     set -x RUSTUP_HOME $XDG_DATA_HOME/rustup
     if not string match -q -- "*$CARGO_HOME/bin*" $PATH
         set PATH $PATH $CARGO_HOME/bin
+    end
+
+    # Android
+    set -x ANDROID_SDK_ROOT $HOME/Library/Android/sdk
+    if not string match -q -- "*$ANDROID_SDK_ROOT/platform-tools*" $PATH
+        set PATH $PATH "$ANDROID_SDK_ROOT/platform-tools"
     end
 end
 
