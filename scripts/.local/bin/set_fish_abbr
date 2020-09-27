@@ -76,6 +76,7 @@ abbr -a glg "git log --graph --abbrev-commit --decorate --pretty=format:'%C(bold
 abbr -a glog git log
 abbr -a glp git log -p
 abbr -a glr git ls-remote
+abbr -a glt git describe --tags --abbrev=0
 abbr -a gm git merge --no-ff
 abbr -a gmf git merge
 abbr -a gmfs git merge --squash
