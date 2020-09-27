@@ -28,7 +28,8 @@ abbr -a dcl docker-compose logs
 abbr -a dclf docker-compose logs -f
 abbr -a dclft docker-compose logs -f --tail
 abbr -a dclt docker-compose logs --tail
-abbr -a dcs docker-compose stop
+abbr -a dcS docker-compose stop
+abbr -a dcs docker-compose start
 abbr -a dcu docker-compose up
 abbr -a dcud docker-compose up -d
 abbr -a dcuf docker-compose up -f
