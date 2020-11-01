@@ -6,6 +6,9 @@ if test (uname) = "Darwin"
         set PATH $PATH $HOME/.local/bin
     end
 
+    # Homebrew
+    set -g fish_user_paths /usr/local/sbin $fish_user_paths
+
     set -x PYENV_ROOT $XDG_DATA_HOME/pyenv
     set -x PIPENV_VERBOSITY -1
     set -g fish_user_paths $PYENV_ROOT/bin $fish_user_paths
