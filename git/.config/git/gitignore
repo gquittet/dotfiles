@@ -285,4 +285,9 @@ GitHub.sublime-settings
 # FISH
 run.fish
 
+# Emacs
+.log/
+todo.org
+
 # End of https://www.gitignore.io/api/linux,macos,windows
+
