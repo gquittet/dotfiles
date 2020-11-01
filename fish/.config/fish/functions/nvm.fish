@@ -34,9 +34,11 @@ function nvm-fast
 				set new_path $brigand_nvm_fish_path/$matched_version/bin $new_path
 			end
 			set -gx PATH $new_path
+			set -gx NVM_BIN (which node)
 		end
 	else
 		bash -c "source $NVM_DIR/nvm.sh --no-use; nvm $argv"
+		set -gx NVM_BIN (which node)
 	end
 end
 
