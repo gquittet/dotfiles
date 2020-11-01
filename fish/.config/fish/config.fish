@@ -114,8 +114,11 @@ if test -e $XDG_CONFIG_HOME/fish/aliases.fish
 end
 
 # Tools
-if command -q fnm
+if type -q fnm
     fnm env --multi | source
+end
+if type -q nvm
+    nvm use stable
 end
 
 # Python
@@ -124,6 +127,6 @@ end
 #end
 
 
-if command -q starship
+if type -q starship
     starship init fish | source
 end
