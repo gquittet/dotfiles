@@ -1,0 +1,12 @@
+{
+    "coc.source.emoji.filetypes": ["markdown"],
+    "eslint.autoFixOnSave": true,
+    "explorer.width": 30,
+    "explorer.icon.enableNerdfont": true,
+    "explorer.previewAction.onHover": false,
+    "explorer.keyMappings": {
+        "<cr>": ["expandable?", "expand", "open"],
+        "v": "open:vsplit"
+    },
+    "smartf.timeout": 5000
+}

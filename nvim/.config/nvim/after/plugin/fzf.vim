@@ -31,7 +31,7 @@ nnoremap <leader>lr :History!<CR>
 "start a search query by pressing \
 nnoremap <Bslash> :Rg!<space>
 "search for word under cursor by pressing |
-nnoremap <Bar> :Rg! <C-R><C-W><CR>:cw<CR>
+nnoremap <Bar> :Rg! <C-R><C-W><CR>
 
 
 " Options

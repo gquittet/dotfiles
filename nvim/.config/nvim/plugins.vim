@@ -23,23 +23,47 @@ Plug 'w0rp/ale'                                                         " ALE (A
 
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
+Plug 'stsewd/fzf-checkout.vim' " Checkout branch feature
 
-" Completion
-if has('nvim')
-  Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
-else
-  Plug 'Shougo/deoplete.nvim'
-  Plug 'roxma/nvim-yarp'
-  Plug 'roxma/vim-hug-neovim-rpc'
-endif
-let g:deoplete#enable_at_startup = 1
+" Use release branch (recommend)
+" coc.vim
+let g:coc_global_extensions = [
+    \ 'coc-angular',
+    \ 'coc-css',
+    \ 'coc-emmet',
+    \ 'coc-emoji',
+    \ 'coc-eslint',
+    \ 'coc-explorer',
+    \ 'coc-git',
+    \ 'coc-highlight',
+    \ 'coc-html',
+    \ 'coc-json',
+    \ 'coc-lists',
+    \ 'coc-markdownlint',
+    \ 'coc-marketplace',
+    \ 'coc-pairs',
+    \ 'coc-prettier',
+    \ 'coc-python',
+    \ 'coc-rust-analyzer',
+    \ 'coc-smartf',
+    \ 'coc-snippets',
+    \ 'coc-syntax',
+    \ 'coc-texlab',
+    \ 'coc-tailwindcss',
+    \ 'coc-tslint-plugin',
+    \ 'coc-tsserver',
+    \ 'coc-vetur',
+    \ 'coc-xml',
+    \ 'coc-yaml',
+    \ 'coc-yank'
+    \ ]
+Plug 'neoclide/coc.nvim', {'branch': 'release', 'do': { -> coc#add_extension() }}
 
 " Git
 Plug 'tpope/vim-fugitive'
 Plug 'junegunn/gv.vim'                                                  " A Git commit browser
 Plug 'rhysd/git-messenger.vim'                                          " VSCode: GitLens feature
 Plug 'tpope/vim-rhubarb'                                                " Open file remotely, show related issue, etc
-Plug 'airblade/vim-gitgutter'
 
 " Comment line (support vuejs and other complex formats)
 Plug 'tomtom/tcomment_vim'
@@ -47,13 +71,9 @@ Plug 'tomtom/tcomment_vim'
 " Tree view
 Plug 'preservim/nerdtree'
 
-" Autopair
-Plug 'jiangmiao/auto-pairs'
-
 " Change brackets around text
 Plug 'tpope/vim-surround'
 
-Plug 'easymotion/vim-easymotion'
 Plug 'editorconfig/editorconfig-vim'
 Plug 'dpelle/vim-Grammalecte'                                           " Grammalecte
 Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() } }
@@ -79,11 +99,11 @@ Plug 'liuchengxu/vim-which-key', { 'on': ['WhichKey', 'WhichKey!'] }
 " Detect indent automatically
 Plug 'tpope/vim-sleuth'
 
+" Highlights patterns and ranges
+Plug 'markonm/traces.vim'
+
 " Better whitespace management for Vim
 Plug 'ntpeters/vim-better-whitespace'
-
-" Lint and format
-Plug 'prettier/vim-prettier', { 'do': 'yarn install' }
 
 " Virutal env
 Plug 'PieterjanMontens/vim-pipenv'
@@ -93,11 +113,7 @@ Plug 'plytophogy/vim-virtualenv'
 Plug 'ernstvanderlinden/vim-coldfusion'
 Plug 'davejlong/cf-utils.vim'
 Plug 'Stautob/vim-fish'
-Plug 'yuezk/vim-js'
-Plug 'maxmellon/vim-jsx-pretty'
 Plug 'jceb/vim-orgmode'
-Plug 'posva/vim-vue'
-Plug 'HerringtonDarkholme/yats.vim'
 
 " Snippets
 Plug 'SirVer/ultisnips'   " Engine
@@ -112,6 +128,9 @@ Plug 'NLKNguyen/papercolor-theme'                                       " Paper 
 Plug 'jacoborus/tender.vim'                                             " Tender
 Plug 'hzchirs/vim-material'
 Plug 'mhartington/oceanic-next'
+Plug 'karoliskoncevicius/moonshine-vim'
+Plug 'Brettm12345/moonlight.vim'
+Plug 'ghifarit53/tokyonight-vim'
 
 " Font icons
 Plug 'ryanoasis/vim-devicons'

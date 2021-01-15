@@ -3,15 +3,15 @@ let maplocalleader = ","
 
 " Disable
 " Arrow keys
-noremap <Up> <Nop>
-noremap <Right> <Nop>
-noremap <Down> <Nop>
-noremap <Left> <Nop>
-inoremap <Up> <Nop>
-inoremap <Right> <Nop>
-inoremap <Down> <Nop>
-inoremap <Left> <Nop>
-" Help
+" noremap <Up> <Nop>
+" noremap <Right> <Nop>
+" noremap <Down> <Nop>
+" noremap <Left> <Nop>
+" inoremap <Up> <Nop>
+" inoremap <Right> <Nop>
+" inoremap <Down> <Nop>
+" inoremap <Left> <Nop>
+" Disable Help
 map <F1> <Nop>
 
 
@@ -98,6 +98,8 @@ nmap <space>w_ <C-w>_
 " File
 nmap <space>fs :w<CR>
 nmap <space>fS :w!<CR>
+nmap <space>fw :noa w<CR>
+nmap <space>fW :noa w!<CR>
 nnoremap <space>ff :Files!<CR>
 nnoremap <space>fg :GFiles!<CR>
 
@@ -114,6 +116,7 @@ nmap <space>gs :Gstatus<CR>
 nmap <space>ga :Git add -A<CR>
 nmap <space>gbl :Gblame<CR>
 nmap <space>gc :Gcommit<CR>
+nmap <space>gco :GBranches<CR>
 nmap <space>gd :Gdiff<CR>
 nmap <space>gfc :Gvdiffsplit!<CR>
 nmap <space>gl :Glog<CR>
@@ -127,7 +130,7 @@ nmap <space>ge :Gedit<CR>
 map <silent> <space>nh :nohl <bar> :let @/ = ""<CR>
 
 " Toggle
-map <space>te :NERDTreeToggle<CR>
+map <space>te :CocCommand explorer<CR>
 nmap <F3> :NumbersToggle<CR>
 nmap <space>tr :RainbowToggle<CR>
 nmap <space>to :Vista!!<CR>

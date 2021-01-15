@@ -1,3 +1,4 @@
+nnoremap <silent> <space> :WhichKey '<Space>'<CR>
 nnoremap <silent> <leader> :WhichKey ','<CR>
 nnoremap <silent> <ESC> <ESC>
 

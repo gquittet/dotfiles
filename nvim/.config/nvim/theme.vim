@@ -24,15 +24,17 @@ endif
 " Set the full color compatibility for vim and terminal
 syntax enable
 
-colorscheme gruvbox
-let g:gruvbox_italic = '1'
-set background=dark
+"colorscheme gruvbox
+"let g:gruvbox_italic = '1'
+"set background=dark
 
 "colorscheme onehalfdark
 "let g:airline_theme='onehalfdark'
 
 "let ayucolor="light" " for mirage version of theme
 "colorscheme ayu
+
+"colorscheme moonshine
 
 "colorscheme nord
 
@@ -46,10 +48,19 @@ set background=dark
 " let g:airline_theme = 'tender'
 
 " Material oceanic
-" let g:material_style='oceanic'
+let g:material_style='palenight'
+set background=dark
+colorscheme vim-material
+let g:airline_theme='material'
+
 " set background=dark
-" colorscheme vim-material
-" let g:airline_theme='material'
+" colorscheme moonlight
+" let g:moonlight_terminal_italics=1
+
+" let g:tokyonight_style = 'storm' " available: night, storm
+" let g:tokyonight_enable_italic = 1
+" colorscheme tokyonight
+" let g:airline_theme = "tokyonight"
 
 " colorscheme OceanicNext
 " let g:oceanic_next_terminal_bold = 1
