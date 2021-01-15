@@ -4,9 +4,13 @@
     "explorer.width": 30,
     "explorer.icon.enableNerdfont": true,
     "explorer.previewAction.onHover": false,
-    "explorer.keyMappings": {
+    "explorer.keyMappings.global": {
         "<cr>": ["expandable?", "expand", "open"],
         "v": "open:vsplit"
     },
+    "list.source.files.command": "rg",
+    "list.source.files.args": ["--files", "--hidden", "--no-ignore-vcs", "--follow", "--glob", "!{.git,node_modules,build,dist,.idea,.vscode,.cache}"],
+    "list.source.grep.args": ["--hidden", "--ignore-case"],
+    "list.source.grep.excludePatterns": ["**/.git/**", "**/node_modules/**", "**/build/**", "**/dist/**", "**/.vscode/**", "**/.idea/**", "**/.cache/**"],
     "smartf.timeout": 5000
 }

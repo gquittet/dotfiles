@@ -136,15 +136,16 @@ set statusline^=%{coc#status()}%{get(b:,'coc_current_function','')}
 
 " Using CocList
 " Show all diagnostics
-nnoremap <silent> <space>cd  :<C-u>CocList diagnostics<cr>
+nnoremap <silent> <space>fd  :<C-u>CocList diagnostics<cr>
+nnoremap <silent> <space>ld  :<C-u>CocList diagnostics --current-buf<cr>
 " Manage extensions
-nnoremap <silent> <space>ce  :<C-u>CocList extensions<cr>
+nnoremap <silent> <space>le  :<C-u>CocList extensions<cr>
 " Show commands
 nnoremap <silent> <space>cc  :<C-u>CocList commands<cr>
 " Find symbol of current document
-nnoremap <silent> <space>sds  :<C-u>CocList outline<cr>
+nnoremap <silent> <space>lo  :<C-u>CocList outline<cr>
 " Search workspace symbols
-nnoremap <silent> <space>sws  :<C-u>CocList -I symbols<cr>
+nnoremap <silent> <space>ls  :<C-u>CocList -I symbols<cr>
 " Do default action for next item.
 nnoremap <silent> <space>cj  :<C-u>CocNext<CR>
 " Do default action for previous item.
@@ -152,17 +153,31 @@ nnoremap <silent> <space>ck  :<C-u>CocPrev<CR>
 " Resume latest coc list
 nnoremap <silent> <space>cp  :<C-u>CocListResume<CR>
 
-
-" Custom
+nnoremap <silent> <space>ff  :<C-u>CocList files<CR>
+nnoremap <silent> <space>fg  :<C-u>CocList gfiles<CR>
 nnoremap <silent> <space>ll  :<C-u>CocList lines<CR>
+nnoremap <silent> <BSlash> :<C-u>CocList grep<CR>
+nnoremap <silent> <Bar> :exe 'CocList -A --normal --input='.expand('<cword>').' grep'<CR>
 nnoremap <silent> <space>lll  :<C-u>CocList locationlist<CR>
 nnoremap <silent> <space>lr  :<C-u>CocList mru<CR>
-nnoremap <silent> <leader>lb :<C-u>CocList buffers<CR>
-nnoremap <silent> <leader>lc :<C-u>CocList colors<CR>
-nnoremap <silent> <leader>lw :<C-u>CocList words<CR>
+nnoremap <silent> <space>li  :<C-u>CocList issues<CR>
+nnoremap <silent> <space>lb :<C-u>CocList -A --normal buffers<CR>
+nnoremap <silent> <space>lc :<C-u>CocList colors<CR>
+nnoremap <silent> <space>gb  :<C-u>CocList branches<CR>
+nnoremap <silent> <space>gc :<C-u>CocList commits<CR>
+nnoremap <silent> <space>lc :<C-u>CocList bcommits<CR>
+nnoremap <silent> <C-p>  :<C-u>CocList gfiles<CR>
+nnoremap <silent> <space>lsp :<C-u>CocList snippets<CR>
+nnoremap <silent> <space>lq :<C-u>CocList quickfix<CR>
+nnoremap <silent> <space>lw :<C-u>CocList words<CR>
+nnoremap <silent> <space>fw  :exe 'CocList -I --normal --input='.expand('<cword>').' words'<CR>
+nnoremap <silent> <space>ly :<C-u>CocList -A --normal yank<CR>
+
 " Prettier
 command! -nargs=0 Prettier :CocCommand prettier.formatFile
-vmap <leader>f  <Plug>(coc-format-selected)
+nmap <leader>F  <Plug>(coc-format-selected)
+vmap <leader>F  <Plug>(coc-format-selected)
+xmap <leader>F  <Plug>(coc-format-selected)
 
 vmap <leader>a  <Plug>(coc-codeaction-selected)
 
@@ -170,19 +185,6 @@ nmap <silent> <leader>sn <Plug>(coc-range-select)
 xmap <silent> <leader>sn <Plug>(coc-range-select)
 nmap <silent> <leader>sp <Plug>(coc-range-select-backward)
 xmap <silent> <leader>sp <Plug>(coc-range-select-backward)
-
-"nnoremap <leader>fb :CocList buffers<CR>
-"nnoremap <leader>sc :CocList colors<CR>
-"nnoremap <leader>ff :CocList files<CR>
-"nnoremap <leader>fg :CocList gfiles<CR>
-"nnoremap <leader>fl :CocList lines<CR>
-"nnoremap <leader>fp :CocList grep<CR>
-nnoremap <leader>fy :CocList yank<CR>
-nnoremap <leader>fcw :exe 'CocList -I --normal --input='.expand('<cword>').' words'<CR>
-
-" Remap for format selected region
-xmap <leader>F  <Plug>(coc-format-selected)
-nmap <leader>F  <Plug>(coc-format-selected)
 
 " Snippets
 inoremap <silent><expr> <TAB>

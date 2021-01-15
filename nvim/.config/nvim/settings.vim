@@ -14,6 +14,7 @@ set backspace=indent,eol,start                                              " Ma
 set backup
 set colorcolumn=81                                                          " Set the 80 character column (+1 if textwidth is defined else 81)
 " set clipboard+=unnamedplus
+set conceallevel=0
 set cursorline                                                              " Highlight the current line
 set encoding=utf-8
 set hidden                                                                  " Any buffer can be hidden
