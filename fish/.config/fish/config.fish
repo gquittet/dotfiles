@@ -9,30 +9,9 @@ if test (uname) = "Darwin"
     # Homebrew
     set -g fish_user_paths /usr/local/sbin $fish_user_paths
 
-    set -x PYENV_ROOT $XDG_DATA_HOME/pyenv
-    set -x PIPENV_VERBOSITY -1
-    set -g fish_user_paths $PYENV_ROOT/bin $fish_user_paths
-    set -x FNM_DIR $XDG_DATA_HOME/fnm
-    set -x NVM_DIR $XDG_DATA_HOME/nvm
-    set -x STACK_ROOT $XDG_DATA_HOME/stack
-    set -q GHCUP_INSTALL_BASE_PREFIX[1]; or set GHCUP_INSTALL_BASE_PREFIX $HOME
-    if not string match -q -- "*$GHCUP_INSTALL_BASE_PREFIX/.ghcup/bin*" $PATH
-        test -f $GHCUP_INSTALL_BASE_PREFIX/.ghcup/env; and set PATH $HOME/.cabal/bin $GHCUP_INSTALL_BASE_PREFIX/.ghcup/bin $PATH
-    end
-    set -g fish_user_paths /usr/local/opt/node@12/bin $fish_user_paths
-    set -x FLUTTERPATH $HOME/Library/flutter
-    set -x GOPATH $HOME/Documents/Projets/go
-    set -x JAVA_HOME /Library/Java/JavaVirtualMachines/adoptopenjdk-14/Contents/Home
-    if not string match -q -- "*$FLUTTERPATH/bin*" $PATH
-        set PATH $PATH $FLUTTERPATH/bin
-    end
-    if not string match -q -- "*$GOPATH/bin*" $PATH
-        set PATH $PATH $GOPATH/bin
-    end
-    set -x CARGO_HOME $XDG_DATA_HOME/cargo
-    set -x RUSTUP_HOME $XDG_DATA_HOME/rustup
-    if not string match -q -- "*$CARGO_HOME/bin*" $PATH
-        set PATH $PATH $CARGO_HOME/bin
+    # iTerm2
+    if test $ITERM_SESSION_ID
+        set -x ITERM_ENABLE_SHELL_INTEGRATION_WITH_TMUX YES
     end
 
     # Android
@@ -40,6 +19,44 @@ if test (uname) = "Darwin"
     if not string match -q -- "*$ANDROID_SDK_ROOT/platform-tools*" $PATH
         set PATH $PATH "$ANDROID_SDK_ROOT/platform-tools"
     end
+
+    # Flutter
+    set -x FLUTTERPATH $HOME/Library/flutter
+    if not string match -q -- "*$FLUTTERPATH/bin*" $PATH
+        set PATH $PATH $FLUTTERPATH/bin
+    end
+
+    # Go
+    set -x GOPATH $HOME/Documents/Projets/go
+    if not string match -q -- "*$GOPATH/bin*" $PATH
+        set PATH $PATH $GOPATH/bin
+    end
+
+    # Haskell
+    set -x STACK_ROOT $XDG_DATA_HOME/stack
+    set -q GHCUP_INSTALL_BASE_PREFIX[1]; or set GHCUP_INSTALL_BASE_PREFIX $HOME
+    if not string match -q -- "*$GHCUP_INSTALL_BASE_PREFIX/.ghcup/bin*" $PATH
+        test -f $GHCUP_INSTALL_BASE_PREFIX/.ghcup/env; and set PATH $HOME/.cabal/bin $GHCUP_INSTALL_BASE_PREFIX/.ghcup/bin $PATH
+    end
+
+    # Java
+    set -x JAVA_HOME /Library/Java/JavaVirtualMachines/adoptopenjdk-14/Contents/Home
+
+    # Python
+    set -x PYENV_ROOT $XDG_DATA_HOME/pyenv
+    set -x PIPENV_VERBOSITY -1
+    set -g fish_user_paths $PYENV_ROOT/bin $fish_user_paths
+
+    # Rust
+    set -x CARGO_HOME $XDG_DATA_HOME/cargo
+    set -x RUSTUP_HOME $XDG_DATA_HOME/rustup
+    if not string match -q -- "*$CARGO_HOME/bin*" $PATH
+        set PATH $PATH $CARGO_HOME/bin
+    end
+
+    # Version manager
+    set -x FNM_DIR $XDG_DATA_HOME/fnm
+    set -x NVM_DIR $XDG_DATA_HOME/nvm
 end
 
 if not functions -q fisher
@@ -90,14 +107,19 @@ bind \el 'ls -lh'
 if test -n "$SSH_CONNECTION"
     set -x EDITOR vim
 else
-    set -x EDITOR code --wait
+    # set -x EDITOR subl -n -w
+    set -x EDITOR nvim
 end
 set GIT_EDITOR $EDITOR
 set -x VISUAL $EDITOR
 
-set -x MANPAGER "sh -c 'col -bx | bat -l man -p'"
-# Fix formatting problems
-set -x MANROFFOPT "-c"
+# MANPAGES/Less colors
+set -xU LESS_TERMCAP_md (printf "\e[01;31m")
+set -xU LESS_TERMCAP_me (printf "\e[0m")
+set -xU LESS_TERMCAP_se (printf "\e[0m")
+set -xU LESS_TERMCAP_so (printf "\e[01;44;33m")
+set -xU LESS_TERMCAP_ue (printf "\e[0m")
+set -xU LESS_TERMCAP_us (printf "\e[01;32m")
 
 # True color support for *nix system
 set -x TERM xterm-256color
@@ -118,11 +140,11 @@ end
 
 # Tools
 if type -q fnm
-    fnm env --multi | source
+    fnm env --use-on-cd | source
 end
-if type -q nvm
-    nvm use stable
-end
+#if type -q nvm
+    #nvm use stable
+#end
 
 # Python
 #if command -q pyenv-virtualenv-init

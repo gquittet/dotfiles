@@ -1,7 +1,3 @@
-if command -q bat
-    alias cat bat
-end
-
 if command -q exa
     alias ls exa
 end
