@@ -173,6 +173,23 @@ nnoremap <silent> <space>lw :<C-u>CocList words<CR>
 nnoremap <silent> <space>fw  :exe 'CocList -I --normal --input='.expand('<cword>').' words'<CR>
 nnoremap <silent> <space>ly :<C-u>CocList -A --normal yank<CR>
 
+" Git
+" navigate conflicts of current buffer
+nmap [c <Plug>(coc-git-prevconflict)
+nmap ]c <Plug>(coc-git-nextconflict)
+" navigate chunks of current buffer
+nmap <space>gk <Plug>(coc-git-prevchunk)
+nmap <space>gj <Plug>(coc-git-nextchunk)
+" show chunk diff at current position
+nmap <space>gi <Plug>(coc-git-chunkinfo)
+" show commit contains current position
+nmap <space>gK <Plug>(coc-git-commit)
+" create text object for git chunks
+omap ig <Plug>(coc-git-chunk-inner)
+xmap ig <Plug>(coc-git-chunk-inner)
+omap ag <Plug>(coc-git-chunk-outer)
+xmap ag <Plug>(coc-git-chunk-outer)
+
 " Prettier
 command! -nargs=0 Prettier :CocCommand prettier.formatFile
 nmap <leader>F  <Plug>(coc-format-selected)
