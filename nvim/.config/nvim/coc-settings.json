@@ -9,8 +9,8 @@
         "v": "open:vsplit"
     },
     "list.source.files.command": "rg",
-    "list.source.files.args": ["--files", "--hidden", "--no-ignore-vcs", "--follow", "--glob", "!{.git,node_modules,build,dist,.idea,.vscode,.cache}"],
-    "list.source.grep.args": ["--hidden", "--ignore-case"],
-    "list.source.grep.excludePatterns": ["**/.git/**", "**/node_modules/**", "**/build/**", "**/dist/**", "**/.vscode/**", "**/.idea/**", "**/.cache/**"],
+    "list.source.files.args": ["--files", "--hidden", "--no-ignore-vcs", "--follow", "--glob", "!{.git}"],
+    "list.source.grep.command": "rg",
+    "list.source.grep.args": ["--hidden", "--ignore-case", "--no-ignore-vcs", "--follow", "--glob", "!{.git}"],
     "smartf.timeout": 5000
 }
