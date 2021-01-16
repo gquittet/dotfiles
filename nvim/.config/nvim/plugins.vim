@@ -64,6 +64,7 @@ Plug 'tpope/vim-fugitive'
 Plug 'junegunn/gv.vim'                                                  " A Git commit browser
 Plug 'rhysd/git-messenger.vim'                                          " VSCode: GitLens feature
 Plug 'tpope/vim-rhubarb'                                                " Open file remotely, show related issue, etc
+Plug 'jreybert/vimagit'
 
 " Comment line (support vuejs and other complex formats)
 Plug 'tomtom/tcomment_vim'

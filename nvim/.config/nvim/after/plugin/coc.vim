@@ -166,7 +166,6 @@ nnoremap <silent> <space>lc :<C-u>CocList colors<CR>
 nnoremap <silent> <space>gb  :<C-u>CocList branches<CR>
 nnoremap <silent> <space>gc :<C-u>CocList commits<CR>
 nnoremap <silent> <space>lc :<C-u>CocList bcommits<CR>
-nnoremap <silent> <C-p>  :<C-u>CocList gfiles<CR>
 nnoremap <silent> <space>lsp :<C-u>CocList snippets<CR>
 nnoremap <silent> <space>lq :<C-u>CocList quickfix<CR>
 nnoremap <silent> <space>lw :<C-u>CocList words<CR>
@@ -183,7 +182,9 @@ nmap <space>gj <Plug>(coc-git-nextchunk)
 " show chunk diff at current position
 nmap <space>gi <Plug>(coc-git-chunkinfo)
 " show commit contains current position
-nmap <space>gK <Plug>(coc-git-commit)
+nmap <leader>gK <Plug>(coc-git-commit)
+nmap <silent> <space>guo :CocCommand git.browserOpen<CR>
+nmap <silent> <space>guy :CocCommand git.copyUrl<CR>
 " create text object for git chunks
 omap ig <Plug>(coc-git-chunk-inner)
 xmap ig <Plug>(coc-git-chunk-inner)
