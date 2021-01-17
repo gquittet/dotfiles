@@ -19,7 +19,6 @@ endif
 
 Plug 'vim-airline/vim-airline'                                          " Vim-Airline
 Plug 'vim-airline/vim-airline-themes'                                   " Vim-Airline theme
-Plug 'w0rp/ale'                                                         " ALE (Asynchronous Lint Engine)
 
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
@@ -68,9 +67,6 @@ Plug 'jreybert/vimagit'
 
 " Comment line (support vuejs and other complex formats)
 Plug 'tomtom/tcomment_vim'
-
-" Tree view
-Plug 'preservim/nerdtree'
 
 " Change brackets around text
 Plug 'tpope/vim-surround'

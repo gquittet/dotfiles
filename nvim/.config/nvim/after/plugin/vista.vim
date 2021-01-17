@@ -38,5 +38,5 @@ let g:vista#renderer#icons = {
 
 " nmap <silent> <space>fo :Vista finder<CR>
 
-" Automaticaly close nvim if NERDTree is only thing left open
+" Automaticaly close nvim if Vista is only thing left open
 autocmd bufenter * if winnr("$") == 1 && vista#sidebar#IsOpen() | execute "normal! :q!\<CR>" | endif

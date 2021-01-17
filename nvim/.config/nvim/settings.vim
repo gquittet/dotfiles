@@ -97,6 +97,10 @@ set wrapmargin=0                                                            " Wo
 set whichwrap=b,s,h,l,<,>,[,]                                               " Backspace and cursor keys wrap too
 set wrap linebreak                                                          " Set wrapping with soft wrap (set wm=2 => hard wrap)
 
+" ALE
+" Before plugins are loaded
+let g:ale_disable_lsp = 1
+
 " Indent guides
 let g:indent_guides_enable_on_vim_startup = 1
 let g:indent_guides_guide_size = 1
