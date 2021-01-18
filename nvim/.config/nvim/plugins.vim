@@ -20,10 +20,6 @@ endif
 Plug 'vim-airline/vim-airline'                                          " Vim-Airline
 Plug 'vim-airline/vim-airline-themes'                                   " Vim-Airline theme
 
-Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
-Plug 'junegunn/fzf.vim'
-Plug 'stsewd/fzf-checkout.vim' " Checkout branch feature
-
 " Use release branch (recommend)
 " coc.vim
 let g:coc_global_extensions = [
