@@ -36,7 +36,7 @@ let g:vista#renderer#icons = {
 \   "variable": "\uf71b",
 \  }
 
-" nmap <silent> <space>fo :Vista finder<CR>
+" nmap <silent> <leader>fo :Vista finder<CR>
 
 " Automaticaly close nvim if Vista is only thing left open
 autocmd bufenter * if winnr("$") == 1 && vista#sidebar#IsOpen() | execute "normal! :q!\<CR>" | endif

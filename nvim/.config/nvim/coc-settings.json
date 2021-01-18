@@ -2,6 +2,7 @@
     "coc.source.emoji.filetypes": ["markdown"],
     "eslint.autoFixOnSave": true,
     "explorer.width": 30,
+    "explorer.file.showHiddenFiles": true,
     "explorer.icon.enableNerdfont": true,
     "explorer.previewAction.onHover": false,
     "explorer.keyMappings.global": {
@@ -12,5 +13,6 @@
     "list.source.files.args": ["--files", "--hidden", "--no-ignore-vcs", "--follow", "--glob", "!{.git}"],
     "list.source.grep.command": "rg",
     "list.source.grep.args": ["--hidden", "--ignore-case", "--no-ignore-vcs", "--follow", "--glob", "!{.git}"],
-    "smartf.timeout": 5000
+    "smartf.timeout": 5000,
+    "git.enableGutters": true
 }

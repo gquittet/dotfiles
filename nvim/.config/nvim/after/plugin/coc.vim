@@ -80,7 +80,7 @@ endfunction
 autocmd CursorHold * silent call CocActionAsync('highlight')
 
 " Symbol renaming.
-nmap <space>rn <Plug>(coc-rename)
+nmap <leader>rn <Plug>(coc-rename)
 
 augroup mygroup
   autocmd!
@@ -92,13 +92,13 @@ augroup end
 
 " Applying codeAction to the selected region.
 " Example: `<leader>aap` for current paragraph
-xmap <space>ca  <Plug>(coc-codeaction-selected)
-nmap <space>ca  <Plug>(coc-codeaction-selected)
+xmap <leader>ca <Plug>(coc-codeaction-selected)
+nmap <leader>ca <Plug>(coc-codeaction-selected)
 
 " Remap keys for applying codeAction to the current buffer.
-nmap <space>ca  <Plug>(coc-codeaction)
+nmap <leader>ca <Plug>(coc-codeaction)
 " Apply AutoFix to problem on the current line.
-nmap <space>qf  <Plug>(coc-fix-current)
+nmap <leader>qf <Plug>(coc-fix-current)
 
 " Map function and class text objects
 " NOTE: Requires 'textDocument.documentSymbol' support from the language server.
@@ -132,55 +132,55 @@ set statusline^=%{coc#status()}%{get(b:,'coc_current_function','')}
 
 " Using CocList
 " Show all diagnostics
-nnoremap <silent> <space>fd  :<C-u>CocList diagnostics<cr>
-nnoremap <silent> <space>ld  :<C-u>CocList diagnostics --current-buf<cr>
+nnoremap <silent> <leader>ld  :<C-u>CocList diagnostics<cr>
+nnoremap <silent> <leader>lbd  :<C-u>CocList diagnostics --current-buf<cr>
 " Manage extensions
-nnoremap <silent> <space>le  :<C-u>CocList extensions<cr>
+nnoremap <silent> <leader>le  :<C-u>CocList extensions<cr>
 " Show commands
-nnoremap <silent> <space>cc  :<C-u>CocList commands<cr>
+nnoremap <silent> <leader>cc  :<C-u>CocList commands<cr>
 " Find symbol of current document
-nnoremap <silent> <space>lo  :<C-u>CocList outline<cr>
-" Search workspace symbols
-nnoremap <silent> <space>ls  :<C-u>CocList -I symbols<cr>
+nnoremap <silent> <leader>lo  :<C-u>CocList outline<cr>
+" Search leader symbols
+nnoremap <silent> <leader>ls  :<C-u>CocList -I symbols<cr>
 " Do default action for next item.
-nnoremap <silent> <space>cj  :<C-u>CocNext<CR>
+nnoremap <silent> <leader>cj  :<C-u>CocNext<CR>
 " Do default action for previous item.
-nnoremap <silent> <space>ck  :<C-u>CocPrev<CR>
+nnoremap <silent> <leader>ck  :<C-u>CocPrev<CR>
 " Resume latest coc list
-nnoremap <silent> <space>cp  :<C-u>CocListResume<CR>
+nnoremap <silent> <leader>cp  :<C-u>CocListResume<CR>
 
-nnoremap <silent> <space>ff  :<C-u>CocList files<CR>
-nnoremap <silent> <space>fg  :<C-u>CocList gfiles<CR>
-nnoremap <silent> <space>ll  :<C-u>CocList lines<CR>
+nnoremap <silent> <leader>ff  :<C-u>CocList files<CR>
+nnoremap <silent> <leader>fg  :<C-u>CocList gfiles<CR>
+nnoremap <silent> <leader>ll  :<C-u>CocList lines<CR>
 nnoremap <silent> <BSlash> :<C-u>CocList grep<CR>
 nnoremap <silent> <Bar> :exe 'CocList -A --normal --input='.expand('<cword>').' grep'<CR>
-nnoremap <silent> <space>lll  :<C-u>CocList locationlist<CR>
-nnoremap <silent> <space>lr  :<C-u>CocList mru<CR>
-nnoremap <silent> <space>li  :<C-u>CocList issues<CR>
-nnoremap <silent> <space>lb :<C-u>CocList -A --normal buffers<CR>
-nnoremap <silent> <space>lc :<C-u>CocList colors<CR>
-nnoremap <silent> <space>gb  :<C-u>CocList branches<CR>
-nnoremap <silent> <space>gc :<C-u>CocList commits<CR>
-nnoremap <silent> <space>lc :<C-u>CocList bcommits<CR>
-nnoremap <silent> <space>lsp :<C-u>CocList snippets<CR>
-nnoremap <silent> <space>lq :<C-u>CocList quickfix<CR>
-nnoremap <silent> <space>lw :<C-u>CocList words<CR>
-nnoremap <silent> <space>fw  :exe 'CocList -I --normal --input='.expand('<cword>').' words'<CR>
-nnoremap <silent> <space>ly :<C-u>CocList -A --normal yank<CR>
+nnoremap <silent> <leader>lL  :<C-u>CocList locationlist<CR>
+nnoremap <silent> <leader>lr  :<C-u>CocList mru<CR>
+nnoremap <silent> <leader>li  :<C-u>CocList issues<CR>
+nnoremap <silent> <leader>lB :<C-u>CocList -A --normal buffers<CR>
+nnoremap <silent> <leader>Sc :<C-u>CocList colors<CR>
+nnoremap <silent> <leader>gb  :<C-u>CocList branches<CR>
+nnoremap <silent> <leader>lc :<C-u>CocList commits<CR>
+nnoremap <silent> <leader>lbc :<C-u>CocList bcommits<CR>
+nnoremap <silent> <leader>lsp :<C-u>CocList snippets<CR>
+nnoremap <silent> <leader>lq :<C-u>CocList quickfix<CR>
+nnoremap <silent> <leader>lbw :<C-u>CocList words<CR>
+nnoremap <silent> <leader>sw  :exe 'CocList -I --normal --input='.expand('<cword>').' words'<CR>
+nnoremap <silent> <leader>ly :<C-u>CocList -A --normal yank<CR>
 
 " Git
 " navigate conflicts of current buffer
 nmap [c <Plug>(coc-git-prevconflict)
 nmap ]c <Plug>(coc-git-nextconflict)
 " navigate chunks of current buffer
-nmap <space>gk <Plug>(coc-git-prevchunk)
-nmap <space>gj <Plug>(coc-git-nextchunk)
+nmap <leader>ghk <Plug>(coc-git-prevchunk)
+nmap <leader>ghj <Plug>(coc-git-nextchunk)
 " show chunk diff at current position
-nmap <space>gi <Plug>(coc-git-chunkinfo)
+nmap <leader>ghi <Plug>(coc-git-chunkinfo)
 " show commit contains current position
-nmap <leader>gK <Plug>(coc-git-commit)
-nmap <silent> <space>guo :CocCommand git.browserOpen<CR>
-nmap <silent> <space>guy :CocCommand git.copyUrl<CR>
+nmap <leader>ghK <Plug>(coc-git-commit)
+nmap <silent> <leader>guo :CocCommand git.browserOpen<CR>
+nmap <silent> <leader>guy :CocCommand git.copyUrl<CR>
 " create text object for git chunks
 omap ig <Plug>(coc-git-chunk-inner)
 xmap ig <Plug>(coc-git-chunk-inner)
@@ -189,16 +189,16 @@ xmap ag <Plug>(coc-git-chunk-outer)
 
 " Prettier
 command! -nargs=0 Prettier :CocCommand prettier.formatFile
-nmap <leader>F  <Plug>(coc-format-selected)
-vmap <leader>F  <Plug>(coc-format-selected)
-xmap <leader>F  <Plug>(coc-format-selected)
+nmap <localleader>F <Plug>(coc-format-selected)
+vmap <localleader>F <Plug>(coc-format-selected)
+xmap <localleader>F <Plug>(coc-format-selected)
 
-vmap <leader>a  <Plug>(coc-codeaction-selected)
+vmap <localleader>a <Plug>(coc-codeaction-selected)
 
-nmap <silent> <leader>sn <Plug>(coc-range-select)
-xmap <silent> <leader>sn <Plug>(coc-range-select)
-nmap <silent> <leader>sp <Plug>(coc-range-select-backward)
-xmap <silent> <leader>sp <Plug>(coc-range-select-backward)
+nmap <silent> <localleader>sn <Plug>(coc-range-select)
+xmap <silent> <localleader>sn <Plug>(coc-range-select)
+nmap <silent> <localleader>sp <Plug>(coc-range-select-backward)
+xmap <silent> <localleader>sp <Plug>(coc-range-select-backward)
 
 " Snippets
 inoremap <silent><expr> <TAB>
@@ -227,3 +227,4 @@ augroup end
 
 " Coc Explorer
 autocmd BufEnter * if (winnr("$") == 1 && &filetype == 'coc-explorer') | q | endif
+nmap <silent> <leader>tgg :<C-u>CocCommand git.toggleGutters<CR>

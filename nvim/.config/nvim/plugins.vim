@@ -52,6 +52,7 @@ let g:coc_global_extensions = [
     \ 'coc-tslint-plugin',
     \ 'coc-tsserver',
     \ 'coc-vetur',
+    \ 'coc-vimlsp',
     \ 'coc-xml',
     \ 'coc-yaml',
     \ 'coc-yank'
@@ -64,6 +65,7 @@ Plug 'junegunn/gv.vim'                                                  " A Git 
 Plug 'rhysd/git-messenger.vim'                                          " VSCode: GitLens feature
 Plug 'tpope/vim-rhubarb'                                                " Open file remotely, show related issue, etc
 Plug 'jreybert/vimagit'
+Plug 'lambdalisue/gina.vim'
 
 " Comment line (support vuejs and other complex formats)
 Plug 'tomtom/tcomment_vim'
@@ -88,6 +90,9 @@ Plug 'kkoomen/vim-doge'                                                 " Vim do
 " See https://github.com/liuchengxu/vista.vim for dependencies installation
 " instruction
 Plug 'liuchengxu/vista.vim'
+
+" Vim Repeat for all commands (not only the native commands)
+Plug 'tpope/vim-repeat'
 
 Plug 'nathanaelkane/vim-indent-guides'
 

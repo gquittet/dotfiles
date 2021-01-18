@@ -4,34 +4,34 @@ let $FZF_DEFAULT_OPTS = '--layout=reverse --info=inline'
 let $FZF_DEFAULT_COMMAND = 'rg --files --hidden --no-ignore-vcs --follow --glob "!{.git,node_modules,build,dist,.idea,.cache}"'
 
 " find project files
-nnoremap <leader>ff :Files!<CR>
-nnoremap <leader>fg :GFiles!<CR>
+nnoremap <localleader>ff :<C-u>Files!<CR>
+nnoremap <localleader>fg :<C-u>GFiles!<CR>
 
 " find project files by lines of code
-nnoremap <leader>fl :Lines!<CR>
-nnoremap <leader>ll :BLines!<CR>
+nnoremap <localleader>fl :<C-u>Lines!<CR>
+nnoremap <localleader>ll :<C-u>BLines!<CR>
 
 " find commit
-nnoremap <leader>lc :BCommit!<CR>
-nnoremap <leader>gc :Commit!<CR>
+nnoremap <localleader>lc :<C-u>BCommit!<CR>
+nnoremap <localleader>gc :<C-u>Commit!<CR>
 
 " find tags
-nnoremap <leader>gt :Tags!<CR>
-nnoremap <leader>lt :BTags!<CR>
+nnoremap <localleader>gt :<C-u>Tags!<CR>
+nnoremap <localleader>lt :<C-u>BTags!<CR>
 
 " List
-nnoremap <leader>lb :Buffers!<CR>
-nnoremap <leader>lC :Colors!<CR>
+nnoremap <localleader>lb :<C-u>Buffers!<CR>
+nnoremap <localleader>lC :<C-u>Colors!<CR>
 
 " MRU
-nnoremap <leader>lr :History!<CR>
+nnoremap <localleader>lr :<C-u>History!<CR>
 
 " search in project
-"nnoremap <space>fp :Ag<CR>
+"nnoremap <leader>fp :<C-u>Ag<CR>
 "start a search query by pressing \
-" nnoremap <Bslash> :Rg!<space>
+" nnoremap <Bslash> :<C-u>Rg!<space>
 "search for word under cursor by pressing |
-" nnoremap <Bar> :Rg! <C-R><C-W><CR>
+" nnoremap <Bar> :<C-u>Rg! <C-R><C-W><CR>
 
 
 " Options
