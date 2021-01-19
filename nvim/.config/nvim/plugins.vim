@@ -63,6 +63,9 @@ Plug 'tpope/vim-rhubarb'                                                " Open f
 Plug 'jreybert/vimagit'
 Plug 'lambdalisue/gina.vim'
 
+" Vim HTTP (handle http files that respect RFC 2616)
+Plug 'nicwest/vim-http'
+
 " Comment line (support vuejs and other complex formats)
 Plug 'tomtom/tcomment_vim'
 
