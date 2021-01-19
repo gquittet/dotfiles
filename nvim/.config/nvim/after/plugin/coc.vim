@@ -227,4 +227,4 @@ augroup end
 
 " Coc Explorer
 autocmd BufEnter * if (winnr("$") == 1 && &filetype == 'coc-explorer') | q | endif
-nmap <silent> <leader>Tgg :<C-u>CocCommand git.toggleGutters<CR>
+nmap <silent> <leader>tgg :<C-u>CocCommand git.toggleGutters<CR>

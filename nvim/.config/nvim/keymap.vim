@@ -112,36 +112,36 @@ nnoremap <leader>ff :<C-u>Files!<CR>
 nnoremap <leader>fg :<C-u>GFiles!<CR>
 
 " Git
-nmap <leader>gs :<C-u>Gstatus<CR>
-nmap <leader>ga. :<C-u>Git add .<CR>
-nmap <leader>gaa :<C-u>Git add -A<CR>
-nmap <leader>gb :<C-u>GBranches<CR>
-nmap <leader>gbl :<C-u>Gblame<CR>
-nmap <leader>gc :<C-u>Gcommit<CR>
-nmap <leader>gdd :<C-u>Gdiff<CR>
-nmap <leader>gdv :<C-u>Gvdiffsplit!<CR>
-nmap <leader>gl :<C-u>Glog<CR>
-nmap <leader>gP :<C-u>Gpush<CR>
-nmap <leader>gp :<C-u>Gpull<CR>
-nmap <leader>gr :<C-u>Gread<CR>
-nmap <leader>gw :<C-u>Gwrite<CR>
-nmap <leader>ge :<C-u>Gedit<CR>
+nmap <silent> <leader>gs :<C-u>Gstatus<CR>
+nmap <silent> <leader>ga. :<C-u>Git add .<CR>
+nmap <silent> <leader>gaa :<C-u>Git add -A<CR>
+nmap <silent> <leader>gb :<C-u>GBranches<CR>
+nmap <silent> <leader>gbl :<C-u>Gblame<CR>
+nmap <silent> <leader>gc :<C-u>Gcommit<CR>
+nmap <silent> <leader>gdd :<C-u>Gdiff<CR>
+nmap <silent> <leader>gdv :<C-u>Gvdiffsplit!<CR>
+nmap <silent> <leader>gl :<C-u>Glog<CR>
+nmap <silent> <leader>gP :<C-u>Gpush<CR>
+nmap <silent> <leader>gp :<C-u>Gpull<CR>
+nmap <silent> <leader>gr :<C-u>Gread<CR>
+nmap <silent> <leader>gw :<C-u>Gwrite<CR>
+nmap <silent> <leader>ge :<C-u>Gedit<CR>
 
 " Highlight
 map <silent> <leader>nh :<C-u>nohl <bar> :let @/ = ""<CR>
 
 " Toggle
-nmap <silent> <leader>Tc :<C-u>let &background = ( &background == "dark"? "light" : "dark" )<CR>
-nmap <silent> <leader>Te :<C-u>CocCommand explorer<CR>
-nmap <silent> <leader>Ti :<C-u>IndentGuidesToggle<CR>
-nmap <silent> <leader>Tn :<C-u>NumbersOnOff<CR>
-nmap <silent> <leader>Tr :<C-u>RainbowToggle<CR>
-nmap <silent> <leader>To :<C-u>Vista!!<CR>
-nmap <silent> <leader>Tu :<C-u>UndotreeToggle<CR>
+nmap <silent> <leader>tc :<C-u>let &background = ( &background == "dark"? "light" : "dark" )<CR>
+nmap <silent> <leader>te :<C-u>CocCommand explorer<CR>
+nmap <silent> <leader>ti :<C-u>IndentGuidesToggle<CR>
+nmap <silent> <leader>tn :<C-u>NumbersOnOff<CR>
+nmap <silent> <leader>tr :<C-u>RainbowToggle<CR>
+nmap <silent> <leader>to :<C-u>Vista!!<CR>
+nmap <silent> <leader>tu :<C-u>UndotreeToggle<CR>
 
 " Settings
 " Reload settings
-nnoremap <leader>Sr :<C-u>source ~/.config/nvim/init.vim <bar> :call webdevicons#refresh()<CR>
+nnoremap <silent> <leader>Sr :<C-u>source ~/.config/nvim/init.vim <bar> :call webdevicons#refresh() <bar> :echo "Settings refreshed!"<CR>
 
 " Tabular
 nmap <silent> <leader>ri& :<C-u>Tabularize /&<CR>

@@ -1,6 +1,9 @@
 nnoremap <silent> <leader> :<C-u>WhichKey '<space>'<CR>
+vnoremap <silent> <leader> :<C-u>WhichKey '<space>'<CR>
 nnoremap <silent> <localleader> :<C-u>WhichKey ','<CR>
+vnoremap <silent> <localleader> :<C-u>WhichKey ','<CR>
 nnoremap <silent> <ESC> <ESC>
+vnoremap <silent> <ESC> <ESC>
 
 " Define prefix dictionary
 let g:which_key_map_leader =  {}
@@ -125,7 +128,7 @@ let g:which_key_map_leader.s = {
       \ 'w' : 'words',
       \ }
 
-let g:which_key_map_leader.t = {
+let g:which_key_map_leader.T = {
       \ 'name' : '+tabs' ,
       \ 'D' : 'delete-force',
       \ 'c' : 'create',
@@ -139,7 +142,7 @@ let g:which_key_map_leader.t = {
       \ 'r' : 'rewind',
       \ }
 
-let g:which_key_map_leader.T = {
+let g:which_key_map_leader.t = {
       \ 'name' : '+toggle' ,
       \ 'c' : 'color',
       \ 'e' : 'explorer',
