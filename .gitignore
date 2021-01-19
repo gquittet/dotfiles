@@ -8,3 +8,4 @@ fish/.config/fish/fishd.tmp*
 
 # Script to avoid
 scripts/.local/bin/fnm
+scripts/.local/bin/rust-analyzer-mac
