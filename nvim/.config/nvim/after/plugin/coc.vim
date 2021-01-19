@@ -170,8 +170,8 @@ nnoremap <silent> <leader>ly :<C-u>CocList -A --normal yank<CR>
 
 " Git
 " navigate conflicts of current buffer
-nmap [c <Plug>(coc-git-prevconflict)
-nmap ]c <Plug>(coc-git-nextconflict)
+nmap [C <Plug>(coc-git-prevconflict)
+nmap ]C <Plug>(coc-git-nextconflict)
 " navigate chunks of current buffer
 nmap <leader>ghk <Plug>(coc-git-prevchunk)
 nmap <leader>ghj <Plug>(coc-git-nextchunk)
