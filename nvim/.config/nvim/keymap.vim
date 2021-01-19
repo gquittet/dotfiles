@@ -20,6 +20,14 @@ nmap <F1> <Nop>
 imap <F1> <Nop>
 xmap <F1> <Nop>
 vmap <F1> <Nop>
+nmap <M-F1> <Nop>
+imap <M-F1> <Nop>
+xmap <M-F1> <Nop>
+vmap <M-F1> <Nop>
+nmap <M-F1> <Nop>
+imap <M-F1> <Nop>
+xmap <M-F1> <Nop>
+vmap <M-F1> <Nop>
 
 
 " Disable backspace
