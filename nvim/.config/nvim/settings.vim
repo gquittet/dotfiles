@@ -101,6 +101,9 @@ set wrap linebreak                                                          " Se
 " Before plugins are loaded
 let g:ale_disable_lsp = 1
 
+" Grammalecte
+let g:grammalecte_cli_py='~/Downloads/Grammalecte-fr-v2.0.0/grammalecte-cli.py'
+
 " Indent guides
 let g:indent_guides_enable_on_vim_startup = 0
 let g:indent_guides_guide_size = 1

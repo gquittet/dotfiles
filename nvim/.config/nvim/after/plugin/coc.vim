@@ -173,8 +173,8 @@ nnoremap <silent> <leader>ly :<C-u>CocList yank<CR>
 nmap [C <Plug>(coc-git-prevconflict)
 nmap ]C <Plug>(coc-git-nextconflict)
 " navigate chunks of current buffer
-nmap <leader>ghk <Plug>(coc-git-prevchunk)
-nmap <leader>ghj <Plug>(coc-git-nextchunk)
+nmap <leader>ghp <Plug>(coc-git-prevchunk)
+nmap <leader>ghn <Plug>(coc-git-nextchunk)
 " show chunk diff at current position
 nmap <leader>ghi <Plug>(coc-git-chunkinfo)
 " show commit contains current position

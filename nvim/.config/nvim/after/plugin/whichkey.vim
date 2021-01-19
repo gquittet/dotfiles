@@ -58,8 +58,8 @@ let g:which_key_map_leader.g = {
       \ 'h' : {
           \ 'name': '+hunk',
           \ 'i': 'info',
-          \ 'j': 'previous',
-          \ 'k': 'next',
+          \ 'p': 'previous',
+          \ 'n': 'next',
           \ 'K': 'commit',
           \ },
       \ 'l' : 'log',

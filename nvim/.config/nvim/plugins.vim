@@ -68,6 +68,8 @@ Plug 'tomtom/tcomment_vim'
 
 " Change brackets around text
 Plug 'tpope/vim-surround'
+" Vim Repeat for all commands (not only the native commands)
+Plug 'tpope/vim-repeat'
 
 Plug 'editorconfig/editorconfig-vim'
 Plug 'dpelle/vim-Grammalecte'                                           " Grammalecte
@@ -86,9 +88,6 @@ Plug 'kkoomen/vim-doge'                                                 " Vim do
 " See https://github.com/liuchengxu/vista.vim for dependencies installation
 " instruction
 Plug 'liuchengxu/vista.vim'
-
-" Vim Repeat for all commands (not only the native commands)
-Plug 'tpope/vim-repeat'
 
 Plug 'nathanaelkane/vim-indent-guides'
 
