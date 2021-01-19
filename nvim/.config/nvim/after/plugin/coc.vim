@@ -123,7 +123,7 @@ command! -nargs=0 Format :call CocAction('format')
 command! -nargs=? Fold :call     CocAction('fold', <f-args>)
 
 " Add `:OR` command for organize imports of the current buffer.
-command! -nargs=0 OR   :call     CocAction('runCommand', 'editor.action.organizeImport')
+command! -nargs=0 OR :call     CocAction('runCommand', 'editor.action.organizeImport')
 
 " Add (Neo)Vim's native statusline support.
 " NOTE: Please see `:h coc-status` for integrations with external plugins that
@@ -132,41 +132,41 @@ set statusline^=%{coc#status()}%{get(b:,'coc_current_function','')}
 
 " Using CocList
 " Show all diagnostics
-nnoremap <silent> <leader>ld  :<C-u>CocList diagnostics<cr>
-nnoremap <silent> <leader>lbd  :<C-u>CocList diagnostics --current-buf<cr>
+nnoremap <silent> <leader>ld :<C-u>CocList diagnostics<cr>
+nnoremap <silent> <leader>lbd :<C-u>CocList diagnostics --current-buf<cr>
 " Manage extensions
-nnoremap <silent> <leader>le  :<C-u>CocList extensions<cr>
+nnoremap <silent> <leader>le :<C-u>CocList extensions<cr>
 " Show commands
-nnoremap <silent> <leader>cc  :<C-u>CocList commands<cr>
+nnoremap <silent> <leader>cc :<C-u>CocList commands<cr>
 " Find symbol of current document
-nnoremap <silent> <leader>lo  :<C-u>CocList outline<cr>
+nnoremap <silent> <leader>lo :<C-u>CocList outline<cr>
 " Search leader symbols
-nnoremap <silent> <leader>ls  :<C-u>CocList -I symbols<cr>
+nnoremap <silent> <leader>ls :<C-u>CocList -I symbols<cr>
 " Do default action for next item.
-nnoremap <silent> <leader>cj  :<C-u>CocNext<CR>
+nnoremap <silent> <leader>cj :<C-u>CocNext<CR>
 " Do default action for previous item.
-nnoremap <silent> <leader>ck  :<C-u>CocPrev<CR>
+nnoremap <silent> <leader>ck :<C-u>CocPrev<CR>
 " Resume latest coc list
-nnoremap <silent> <leader>cp  :<C-u>CocListResume<CR>
+nnoremap <silent> <leader>cp :<C-u>CocListResume<CR>
 
-nnoremap <silent> <leader>ff  :<C-u>CocList files<CR>
-nnoremap <silent> <leader>fg  :<C-u>CocList gfiles<CR>
-nnoremap <silent> <leader>ll  :<C-u>CocList lines<CR>
+nnoremap <silent> <leader>ff :<C-u>CocList files<CR>
+nnoremap <silent> <leader>fg :<C-u>CocList gfiles<CR>
+nnoremap <silent> <leader>ll :<C-u>CocList lines<CR>
 nnoremap <silent> <BSlash> :<C-u>CocList grep<CR>
-nnoremap <silent> <Bar> :exe 'CocList -A --normal --input='.expand('<cword>').' grep'<CR>
-nnoremap <silent> <leader>lL  :<C-u>CocList locationlist<CR>
-nnoremap <silent> <leader>lr  :<C-u>CocList mru<CR>
-nnoremap <silent> <leader>li  :<C-u>CocList issues<CR>
-nnoremap <silent> <leader>lB :<C-u>CocList -A --normal buffers<CR>
+nnoremap <silent> <Bar> :exe 'CocList --input='.expand('<cword>').' grep'<CR>
+nnoremap <silent> <leader>lL :<C-u>CocList locationlist<CR>
+nnoremap <silent> <leader>lr :<C-u>CocList mru<CR>
+nnoremap <silent> <leader>li :<C-u>CocList issues<CR>
+nnoremap <silent> <leader>lB :<C-u>CocList buffers<CR>
 nnoremap <silent> <leader>Sc :<C-u>CocList colors<CR>
-nnoremap <silent> <leader>gb  :<C-u>CocList branches<CR>
+nnoremap <silent> <leader>gb :<C-u>CocList branches<CR>
 nnoremap <silent> <leader>lc :<C-u>CocList commits<CR>
 nnoremap <silent> <leader>lbc :<C-u>CocList bcommits<CR>
 nnoremap <silent> <leader>lsp :<C-u>CocList snippets<CR>
 nnoremap <silent> <leader>lq :<C-u>CocList quickfix<CR>
 nnoremap <silent> <leader>lbw :<C-u>CocList words<CR>
-nnoremap <silent> <leader>sw  :exe 'CocList -I --normal --input='.expand('<cword>').' words'<CR>
-nnoremap <silent> <leader>ly :<C-u>CocList -A --normal yank<CR>
+nnoremap <silent> <leader>sw :exe 'CocList --input='.expand('<cword>').' words'<CR>
+nnoremap <silent> <leader>ly :<C-u>CocList yank<CR>
 
 " Git
 " navigate conflicts of current buffer
@@ -227,4 +227,4 @@ augroup end
 
 " Coc Explorer
 autocmd BufEnter * if (winnr("$") == 1 && &filetype == 'coc-explorer') | q | endif
-nmap <silent> <leader>tgg :<C-u>CocCommand git.toggleGutters<CR>
+nmap <silent> <leader>Tgg :<C-u>CocCommand git.toggleGutters<CR>

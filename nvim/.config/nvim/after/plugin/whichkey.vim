@@ -8,26 +8,35 @@ let g:which_key_map_localleader =  {}
 
 let g:which_key_map_leader.m = { 'name' : '+major' }
 
+let g:which_key_map_leader.b = {
+      \ 'name' : '+buffer' ,
+      \ 'D' : 'delete-force',
+      \ 'd' : 'delete',
+      \ 'f' : 'first',
+      \ 'l' : 'last',
+      \ 'n' : 'next',
+      \ 'p' : 'previous',
+      \ }
+
 let g:which_key_map_leader.c = {
       \ 'name' : '+coc' ,
       \ 'c' : 'commands',
       \ 'j' : 'previous',
       \ 'k' : 'next',
       \ 'p' : 'resume',
-      \ '' : 'save-force-without-format'
       \ }
 
 let g:which_key_map_leader.f = {
       \ 'name' : '+files' ,
+      \ 'S' : 'save-force',
+      \ 'W' : 'save-force-without-format',
       \ 'f' : 'fuzzy-finder',
       \ 'g' : 'git-files',
       \ 's' : 'save',
-      \ 'S' : 'save-force',
       \ 'w' : 'save-without-formatting',
-      \ 'W' : 'save-force-without-format',
       \ }
 
-let which_key_map_leader.g = {
+let g:which_key_map_leader.g = {
       \ 'name' : '+git',
       \ 's' : 'status',
       \ 'a' : {
@@ -66,11 +75,17 @@ let which_key_map_leader.g = {
 
 let g:which_key_map_leader.l = {
       \ 'name' : '+list' ,
+      \ 'B' : 'buffer',
+      \ 'L' : 'location',
       \ 'c' : 'commit',
       \ 'd' : 'diagnostics',
       \ 'e' : 'extensions',
+      \ 'l' : 'lines',
+      \ 'o' : 'outline',
+      \ 'r' : 'recent',
+      \ 's' : 'symbols',
       \ 't' : 'tags',
-      \ 'B' : 'buffer',
+      \ 'y' : 'yank',
       \ 'b' : {
           \ 'name': '+buffer',
           \ 'c': 'commit',
@@ -78,53 +93,65 @@ let g:which_key_map_leader.l = {
           \ 'l': 'list',
           \ 'w': 'words'
           \ },
-      \ 'l' : 'lines',
-      \ 'L' : 'location',
-      \ 'o' : 'outline',
-      \ 'r' : 'recent',
-      \ 's' : 'symbols',
-      \ 'y' : 'yank',
-      \ }
-
-let g:which_key_map_leader.t = {
-      \ 'name' : '+toggle' ,
-      \ 'c' : 'color',
-      \ 'e' : 'explorer',
-      \ 'i' : 'indent-guide',
-      \ 'n' : 'line-number',
-      \ 'r' : 'rainbow-mode',
-      \ 'o' : 'outline',
-      \ 'u' : 'undo-tree',
       \ }
 
 let g:which_key_map_leader.r = {
       \ 'name' : '+refactoring' ,
       \ 'i' : {
             \ 'name' : '+indent' ,
+            \ '"' : '"',
             \ '&' : '&',
-            \ '-' : '-',
-            \ '=' : '=',
-            \ '=>' : '=>',
-            \ ':' : ':',
-            \ '::' : '::',
             \ ',' : ',',
             \ ',,' : ',,',
+            \ '-' : '-',
             \ '/' : '/',
+            \ ':' : ':',
+            \ '::' : '::',
+            \ '=' : '=',
+            \ '=>' : '=>',
             \ '\\' : '\\',
-            \ '"' : '"',
           \},
       \ 'n' : 'rename',
       \ }
 
 let g:which_key_map_leader.S = {
       \ 'name' : '+settings' ,
-      \ 'r' : 'reload',
       \ 'c' : 'colors',
+      \ 'r' : 'reload',
       \ }
 
 let g:which_key_map_leader.s = {
       \ 'name' : '+search' ,
       \ 'w' : 'words',
+      \ }
+
+let g:which_key_map_leader.t = {
+      \ 'name' : '+tabs' ,
+      \ 'D' : 'delete-force',
+      \ 'c' : 'create',
+      \ 'd' : 'delete',
+      \ 'e' : 'edit',
+      \ 'f' : 'first',
+      \ 'l' : 'last',
+      \ 'n' : 'next',
+      \ 'o' : 'only',
+      \ 'p' : 'previous',
+      \ 'r' : 'rewind',
+      \ }
+
+let g:which_key_map_leader.T = {
+      \ 'name' : '+toggle' ,
+      \ 'c' : 'color',
+      \ 'e' : 'explorer',
+      \ 'i' : 'indent-guide',
+      \ 'n' : 'line-number',
+      \ 'o' : 'outline',
+      \ 'r' : 'rainbow-mode',
+      \ 'u' : 'undo-tree',
+      \ 'g' : {
+        \ 'name' : '+git',
+        \ 'g' : 'gutters',
+        \}
       \ }
 
 let g:which_key_map_leader.x = 'delete'

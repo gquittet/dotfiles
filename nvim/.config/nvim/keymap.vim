@@ -47,17 +47,24 @@ nmap <silent> <space><Tab> <Esc>/<++><Enter>:nohl<Enter>"_c4l
 vnoremap // y/\V<C-r>=escape(@",'/\')<CR><CR>
 
 " Buffer
-nnoremap <A-Right> :<C-u>bnext<CR>
-nnoremap <A-Left> :<C-u>bprevious<CR>
-nmap <leader>bn :<C-u>bnext<CR>
-nmap <leader>bp :<C-u>bprevious<CR>
-nmap <leader>bf :<C-u>bfirst<CR>
-nmap <leader>bl :<C-u>blast<CR>
-nmap <leader>bd :<C-u>bdelete<CR>
-nmap <leader>bD :<C-u>bdelete!<CR>
-nnoremap <leader>lbc :<C-u>BCommit!<CR>
-nnoremap <leader>bt :<C-u>BTags!<CR>
-nnoremap <leader>bll :<C-u>BLines!<CR>
+nmap <silent> <leader>bD :<C-u>bdelete!<CR>
+nmap <silent> <leader>bd :<C-u>bdelete<CR>
+nmap <silent> <leader>bf :<C-u>bfirst<CR>
+nmap <silent> <leader>bl :<C-u>blast<CR>
+nmap <silent> <leader>bn :<C-u>bnext<CR>
+nmap <silent> <leader>bp :<C-u>bprevious<CR>
+
+" Tabs
+nmap <silent> <leader>tD :<C-u>tabclose!<CR>
+nmap <silent> <leader>tc :<C-u>tabnew<CR>
+nmap <silent> <leader>td :<C-u>tabclose<CR>
+nmap <silent> <leader>te :<C-u>tabedit<CR>
+nmap <silent> <leader>tf :<C-u>tabfirst<CR>
+nmap <silent> <leader>tl :<C-u>tablast<CR>
+nmap <silent> <leader>tn :<C-u>tabnext<CR>
+nmap <silent> <leader>to :<C-u>tabonly<CR>
+nmap <silent> <leader>tp :<C-u>tabprevious<CR>
+nmap <silent> <leader>tr :<C-u>tabrewind<CR>
 
 " Window
 nmap <leader>wq <C-w>q
@@ -124,13 +131,13 @@ nmap <leader>ge :<C-u>Gedit<CR>
 map <silent> <leader>nh :<C-u>nohl <bar> :let @/ = ""<CR>
 
 " Toggle
-nmap <silent> <leader>tc :<C-u>let &background = ( &background == "dark"? "light" : "dark" )<CR>
-nmap <silent> <leader>te :<C-u>CocCommand explorer<CR>
-nmap <silent> <leader>ti :<C-u>IndentGuidesToggle<CR>
-nmap <silent> <leader>tn :<C-u>NumbersOnOff<CR>
-nmap <silent> <leader>tr :<C-u>RainbowToggle<CR>
-nmap <silent> <leader>to :<C-u>Vista!!<CR>
-nmap <silent> <leader>tu :<C-u>UndotreeToggle<CR>
+nmap <silent> <leader>Tc :<C-u>let &background = ( &background == "dark"? "light" : "dark" )<CR>
+nmap <silent> <leader>Te :<C-u>CocCommand explorer<CR>
+nmap <silent> <leader>Ti :<C-u>IndentGuidesToggle<CR>
+nmap <silent> <leader>Tn :<C-u>NumbersOnOff<CR>
+nmap <silent> <leader>Tr :<C-u>RainbowToggle<CR>
+nmap <silent> <leader>To :<C-u>Vista!!<CR>
+nmap <silent> <leader>Tu :<C-u>UndotreeToggle<CR>
 
 " Settings
 " Reload settings
