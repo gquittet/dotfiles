@@ -20,8 +20,6 @@ let g:which_key_map_leader._.dd = 'cut-line'
 let g:which_key_map_leader._.D = 'cut-from-cursor'
 let g:which_key_map_leader._.x = 'delete'
 let g:which_key_map_leader.y = 'yank-to-clipboard'
-let g:which_key_map_leader.i = {}
-let g:which_key_map_leader.i.g = 'which_key_ignore'
 
 let g:which_key_map_leader.m = { 'name' : '+major' }
 
@@ -224,12 +222,6 @@ let g:which_key_map_localleader.s = {
 let g:which_key_map_key_g = {
       \ 'name' : "+goto",
       \ '%' : 'matchit-bracket-backward',
-      \ '<' : 'which_key_ignore',
-      \ '<C-N>' : 'which_key_ignore',
-      \ '<M-n>' : 'which_key_ignore',
-      \ '<b' : 'which_key_ignore',
-      \ '>' : 'which_key_ignore',
-      \ '>b' : 'which_key_ignore',
       \ 'T' : 'tab-previous',
       \ 'c' : 'comment',
       \ 'c3c' : 'which_key_ignore',
@@ -242,6 +234,22 @@ let g:which_key_map_key_g = {
       \ 'x' : 'which_key_ignore',
       \ 'y' : 'type-definition',
       \ }
+
+" Ignore tComment leader shortcut
+let g:which_key_map_leader._._ = 'which_key_ignore'
+let g:which_key_map_leader._.a = 'which_key_ignore'
+let g:which_key_map_leader._.b = 'which_key_ignore'
+let g:which_key_map_leader._.n = 'which_key_ignore'
+let g:which_key_map_leader._.p = 'which_key_ignore'
+let g:which_key_map_leader._.r = 'which_key_ignore'
+let g:which_key_map_leader._.s = 'which_key_ignore'
+let g:which_key_map_leader._[' '] = 'which_key_ignore'
+let g:which_key_map_key_g['<'] = 'which_key_ignore'
+let g:which_key_map_key_g['<C-N>'] = 'which_key_ignore'
+let g:which_key_map_key_g['<M-n>'] = 'which_key_ignore'
+let g:which_key_map_key_g['<b'] = 'which_key_ignore'
+let g:which_key_map_key_g['>'] = 'which_key_ignore'
+let g:which_key_map_key_g['>b'] = 'which_key_ignore'
 
 
 " By default timeoutlen is 1000 ms
