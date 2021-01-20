@@ -92,7 +92,7 @@ Plug 'liuchengxu/vista.vim'
 
 Plug 'nathanaelkane/vim-indent-guides'
 
-Plug 'liuchengxu/vim-which-key', { 'on': ['WhichKey', 'WhichKey!'] }
+Plug 'liuchengxu/vim-which-key'
 
 " Detect indent automatically
 Plug 'tpope/vim-sleuth'

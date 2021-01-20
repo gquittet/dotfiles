@@ -1,13 +1,25 @@
+nnoremap <silent> g :<C-u>WhichKey 'g'<CR>
+call which_key#register('g', "g:which_key_map_key_g")
 nnoremap <silent> <leader> :<C-u>WhichKey '<space>'<CR>
 vnoremap <silent> <leader> :<C-u>WhichKey '<space>'<CR>
+call which_key#register('<space>', "g:which_key_map_leader")
 nnoremap <silent> <localleader> :<C-u>WhichKey ','<CR>
 vnoremap <silent> <localleader> :<C-u>WhichKey ','<CR>
+call which_key#register(',', "g:which_key_map_localleader")
 nnoremap <silent> <ESC> <ESC>
 vnoremap <silent> <ESC> <ESC>
 
 " Define prefix dictionary
 let g:which_key_map_leader =  {}
 let g:which_key_map_localleader =  {}
+
+let g:which_key_map_leader._ = { 'name': 'underscore' }
+let g:which_key_map_leader._.c = 'change'
+let g:which_key_map_leader._.d = 'cut'
+let g:which_key_map_leader._.dd = 'cut-line'
+let g:which_key_map_leader._.D = 'cut-from-cursor'
+let g:which_key_map_leader._.x = 'delete'
+let g:which_key_map_leader.y = 'yank-to-clipboard'
 
 let g:which_key_map_leader.m = { 'name' : '+major' }
 
@@ -24,9 +36,9 @@ let g:which_key_map_leader.b = {
 let g:which_key_map_leader.c = {
       \ 'name' : '+coc' ,
       \ 'c' : 'commands',
-      \ 'j' : 'previous',
-      \ 'k' : 'next',
-      \ 'p' : 'resume',
+      \ 'n' : 'next',
+      \ 'p' : 'previous',
+      \ 'r' : 'resume',
       \ }
 
 let g:which_key_map_leader.f = {
@@ -103,7 +115,7 @@ let g:which_key_map_leader.l = {
       \ }
 
 let g:which_key_map_leader.r = {
-      \ 'name' : '+refactoring' ,
+      \ 'name' : '+refactor' ,
       \ 'i' : {
             \ 'name' : '+indent' ,
             \ '"' : '"',
@@ -119,6 +131,8 @@ let g:which_key_map_leader.r = {
             \ '\\' : '\\',
           \},
       \ 'n' : 'rename',
+      \ 'w' : 'clean-whitespace',
+      \ 'w ' : 'clean-whitespace',
       \ }
 
 let g:which_key_map_leader.S = {
@@ -161,14 +175,68 @@ let g:which_key_map_leader.t = {
         \}
       \ }
 
-let g:which_key_map_leader.x = 'delete'
-let g:which_key_map_leader.y = 'yank-to-clipboard'
+let g:which_key_map_leader.w = {
+      \ 'name' : '+window' ,
+      \ '+' : 'increase-height',
+      \ '-' : 'decrease-height',
+      \ '<' : 'increase-width',
+      \ '=' : 'equalize-size',
+      \ '>' : 'decrease-width',
+      \ 'H' : 'move-left',
+      \ 'J' : 'move-down',
+      \ 'K' : 'move-up',
+      \ 'L' : 'move-right',
+      \ 'Q' : 'force-quit',
+      \ 'T' : 'move-new-tab',
+      \ '_' : 'zoom-vertical',
+      \ 'b' : 'bottom',
+      \ 'c' : 'close',
+      \ 'f' : 'open-cursor-path',
+      \ 'h' : 'left',
+      \ 'i' : 'open-current-file',
+      \ 'j' : 'down',
+      \ 'k' : 'up',
+      \ 'l' : 'right',
+      \ 'n' : 'new-file',
+      \ 'o' : 'only',
+      \ 'q' : 'quit',
+      \ 'r' : 'rotate-right',
+      \ 's' : 'split-horizontal',
+      \ 't' : 'select-top',
+      \ 'v' : 'split-vertical',
+      \ 'w' : 'next-window',
+      \ 'x' : 'rotate-left',
+      \ 'z' : 'zoom',
+      \ '|' : 'zoom-horizontal',
+      \ }
 
 let g:which_key_map_localleader.F = 'format'
 let g:which_key_map_localleader.s = {
       \ 'name' : '+select' ,
       \ 'n' : 'next',
       \ 'p' : 'previous',
+      \ }
+
+let g:which_key_map_key_g = {
+      \ 'name' : "+goto",
+      \ '%' : 'matchit-bracket-backward',
+      \ '<' : 'which_key_ignore',
+      \ '<C-N>' : 'which_key_ignore',
+      \ '<M-n>' : 'which_key_ignore',
+      \ '<b' : 'which_key_ignore',
+      \ '>' : 'which_key_ignore',
+      \ '>b' : 'which_key_ignore',
+      \ 'T' : 'tab-previous',
+      \ 'c' : 'comment',
+      \ 'c3c' : 'which_key_ignore',
+      \ 'd' : 'definition',
+      \ 'f' : 'path',
+      \ 'g' : 'top',
+      \ 'i' : 'implementation',
+      \ 'r' : 'references',
+      \ 't' : 'tab-next',
+      \ 'x' : 'which_key_ignore',
+      \ 'y' : 'type-definition',
       \ }
 
 
@@ -181,6 +249,4 @@ autocmd! FileType which_key
 autocmd  FileType which_key set laststatus=0 noshowmode noruler
   \| autocmd BufLeave <buffer> set laststatus=2 showmode ruler
 
-au! User vim-which-key call which_key#register(',', "g:which_key_map_localleader")
-au! User vim-which-key call which_key#register('<space>', "g:which_key_map_leader")
 

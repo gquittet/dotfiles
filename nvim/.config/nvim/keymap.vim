@@ -36,15 +36,19 @@ vmap <M-F1> <Nop>
 "noremap <Del> <Nop>
 "inoremap <Del> <Nop>
 
-nnoremap <silent> <leader>c "_c
-nnoremap <silent> <leader>d "_d
-nnoremap <silent> <leader>dd "_dd
-nnoremap <silent> <leader>D "_D
-nnoremap <silent> <leader>x "_x
+" Navigation
+nnoremap <silent> gg gg
 
-vnoremap <silent> <leader>c "_c
-vnoremap <silent> <leader>d "_d
-vnoremap <silent> <leader>x "_x
+
+nnoremap <silent> <leader>_c "_c
+nnoremap <silent> <leader>_d "_d
+nnoremap <silent> <leader>_dd "_dd
+nnoremap <silent> <leader>_D "_D
+nnoremap <silent> <leader>_x "_x
+
+vnoremap <silent> <leader>_c "_c
+vnoremap <silent> <leader>_d "_d
+vnoremap <silent> <leader>_x "_x
 
 nnoremap <silent> <leader>y "+y
 vnoremap <silent> <leader>y "+y
@@ -77,10 +81,16 @@ nmap <silent> <leader>Tr :<C-u>tabrewind<CR>
 " Window
 nmap <leader>wq <C-w>q
 nmap <leader>wQ :<C-u>q!<CR>
+" Focus window
 nmap <leader>wh <C-w>h
 nmap <leader>wj <C-w>j
 nmap <leader>wk <C-w>k
 nmap <leader>wl <C-w>l
+" Move window
+nmap <leader>wH <C-w>H
+nmap <leader>wJ <C-w>J
+nmap <leader>wK <C-w>K
+nmap <leader>wL <C-w>L
 " Select bottom window
 nmap <leader>wb <C-w>b
 " Close window
@@ -105,11 +115,18 @@ nmap <leader>wv <C-w>v
 nmap <leader>ww <C-w>w
 " Swap windows
 nmap <leader>wx <C-w>x
+" Move window to a new tab
+nmap <leader>wT <C-w>T
+" Change height
 nmap <leader>w+ <C-w>+
 nmap <leader>w- <C-w>-
+" Change width
+nmap <leader>w< <C-w><
+nmap <leader>w> <C-w>>
 nmap <leader>w= <C-w>=
-nmap <leader>w<Bar> <C-w><Bar>
+nmap <leader>w<bar> <C-w><bar>
 nmap <leader>w_ <C-w>_
+nmap <leader>wz <C-w><bar><C-w>_
 
 " File
 nmap <leader>fs :<C-u>w<CR>
@@ -184,8 +201,8 @@ nmap <silent> <leader>ri, :<C-u>Tabularize /,<CR>
 vmap <silent> <leader>ri, :<C-u>Tabularize /,<CR>
 nmap <silent> <leader>ri,, :<C-u>Tabularize /,\zs<CR>
 vmap <silent> <leader>ri,, :<C-u>Tabularize /,\zs<CR>
-nmap <silent> <leader>ri<Bar> :<C-u>Tabularize /<Bar><CR>
-vmap <silent> <leader>ri<Bar> :<C-u>Tabularize /<Bar><CR>
+nmap <silent> <leader>ri<bar> :<C-u>Tabularize /<bar><CR>
+vmap <silent> <leader>ri<bar> :<C-u>Tabularize /<bar><CR>
 nmap <silent> <leader>ri\ :<C-u>Tabularize /\\<CR>
 vmap <silent> <leader>ri\ :<C-u>Tabularize /\\<CR>
 nmap <silent> <leader>ri" :<C-u>Tabularize /"<CR>
