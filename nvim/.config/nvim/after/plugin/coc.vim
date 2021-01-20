@@ -160,7 +160,7 @@ nnoremap <silent> <leader>li :<C-u>CocList issues<CR>
 nnoremap <silent> <leader>lbl :<C-u>CocList buffers<CR>
 nnoremap <silent> <leader>lB :<C-u>CocList buffers<CR>
 nnoremap <silent> <leader>Sc :<C-u>CocList colors<CR>
-nnoremap <silent> <leader>gb :<C-u>CocList branches<CR>
+nnoremap <silent> <leader>gb :<C-u>CocList branches --all<CR>
 nnoremap <silent> <leader>lc :<C-u>CocList commits<CR>
 nnoremap <silent> <leader>lbc :<C-u>CocList bcommits<CR>
 nnoremap <silent> <leader>lsp :<C-u>CocList snippets<CR>
