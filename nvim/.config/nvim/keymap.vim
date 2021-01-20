@@ -141,14 +141,29 @@ nmap <silent> <leader>ge :<C-u>Gedit<CR>
 " Highlight
 map <silent> <leader>nh :<C-u>nohl <bar> :let @/ = ""<CR>
 
+
 " Toggle
 nmap <silent> <leader>tc :<C-u>let &background = ( &background == "dark"? "light" : "dark" )<CR>
 nmap <silent> <leader>te :<C-u>CocCommand explorer<CR>
 nmap <silent> <leader>ti :<C-u>IndentGuidesToggle<CR>
-nmap <silent> <leader>tn :<C-u>NumbersOnOff<CR>
+nmap <silent> <leader>tn :<C-u>call ToggleNumber()<CR>
 nmap <silent> <leader>tr :<C-u>RainbowToggle<CR>
 nmap <silent> <leader>to :<C-u>Vista!!<CR>
 nmap <silent> <leader>tu :<C-u>UndotreeToggle<CR>
+
+function! ToggleNumber()
+    if g:enable_numbers
+        set nonumber
+        set norelativenumber
+        call NumbersDisable()
+        let g:number_status = 'off'
+    else
+        set number
+        set relativenumber
+        call NumbersEnable()
+        let g:number_status = 'on'
+    endif
+endfunction
 
 " Settings
 " Reload settings
