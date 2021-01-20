@@ -63,16 +63,16 @@ nmap <silent> <leader>bn :<C-u>bnext<CR>
 nmap <silent> <leader>bp :<C-u>bprevious<CR>
 
 " Tabs
-nmap <silent> <leader>tD :<C-u>tabclose!<CR>
-nmap <silent> <leader>tc :<C-u>tabnew<CR>
-nmap <silent> <leader>td :<C-u>tabclose<CR>
-nmap <silent> <leader>te :<C-u>tabedit<CR>
-nmap <silent> <leader>tf :<C-u>tabfirst<CR>
-nmap <silent> <leader>tl :<C-u>tablast<CR>
-nmap <silent> <leader>tn :<C-u>tabnext<CR>
-nmap <silent> <leader>to :<C-u>tabonly<CR>
-nmap <silent> <leader>tp :<C-u>tabprevious<CR>
-nmap <silent> <leader>tr :<C-u>tabrewind<CR>
+nmap <silent> <leader>TD :<C-u>tabclose!<CR>
+nmap <silent> <leader>Tc :<C-u>tabnew<CR>
+nmap <silent> <leader>Td :<C-u>tabclose<CR>
+nmap <silent> <leader>Te :<C-u>tabedit<CR>
+nmap <silent> <leader>Tf :<C-u>tabfirst<CR>
+nmap <silent> <leader>Tl :<C-u>tablast<CR>
+nmap <silent> <leader>Tn :<C-u>tabnext<CR>
+nmap <silent> <leader>To :<C-u>tabonly<CR>
+nmap <silent> <leader>Tp :<C-u>tabprevious<CR>
+nmap <silent> <leader>Tr :<C-u>tabrewind<CR>
 
 " Window
 nmap <leader>wq <C-w>q

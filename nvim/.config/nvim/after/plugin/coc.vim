@@ -157,6 +157,7 @@ nnoremap <silent> <Bar> :exe 'CocList --input='.expand('<cword>').' grep'<CR>
 nnoremap <silent> <leader>lL :<C-u>CocList locationlist<CR>
 nnoremap <silent> <leader>lr :<C-u>CocList mru<CR>
 nnoremap <silent> <leader>li :<C-u>CocList issues<CR>
+nnoremap <silent> <leader>lbl :<C-u>CocList buffers<CR>
 nnoremap <silent> <leader>lB :<C-u>CocList buffers<CR>
 nnoremap <silent> <leader>Sc :<C-u>CocList colors<CR>
 nnoremap <silent> <leader>gb :<C-u>CocList branches<CR>
