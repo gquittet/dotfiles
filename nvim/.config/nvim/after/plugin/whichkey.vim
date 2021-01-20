@@ -86,6 +86,7 @@ let g:which_key_map_leader.l = {
       \ 'c' : 'commit',
       \ 'd' : 'diagnostics',
       \ 'e' : 'extensions',
+      \ 'ft' : 'filetypes',
       \ 'l' : 'lines',
       \ 'o' : 'outline',
       \ 'r' : 'recent',
