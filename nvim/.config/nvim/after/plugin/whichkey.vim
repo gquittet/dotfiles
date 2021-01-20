@@ -20,6 +20,8 @@ let g:which_key_map_leader._.dd = 'cut-line'
 let g:which_key_map_leader._.D = 'cut-from-cursor'
 let g:which_key_map_leader._.x = 'delete'
 let g:which_key_map_leader.y = 'yank-to-clipboard'
+let g:which_key_map_leader.i = {}
+let g:which_key_map_leader.i.g = 'which_key_ignore'
 
 let g:which_key_map_leader.m = { 'name' : '+major' }
 
@@ -116,6 +118,8 @@ let g:which_key_map_leader.l = {
 
 let g:which_key_map_leader.r = {
       \ 'name' : '+refactor' ,
+      \ 'a' : 'run-code-action',
+      \ 'f' : 'fix',
       \ 'i' : {
             \ 'name' : '+indent' ,
             \ '"' : '"',
