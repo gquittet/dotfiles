@@ -109,6 +109,9 @@ let g:indent_guides_enable_on_vim_startup = 0
 let g:indent_guides_guide_size = 1
 let g:indent_guides_exclude_filetypes = ['help', 'nerdtree', 'fzf']
 
+" Better whitespace
+let g:better_whitespace_operator='<leader>rw'
+
 " Reload icons after init source
 if exists('g:loaded_webdevicons')
   call webdevicons#refresh()
