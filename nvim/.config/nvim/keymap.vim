@@ -116,8 +116,6 @@ nmap <leader>fs :<C-u>w<CR>
 nmap <leader>fS :<C-u>w!<CR>
 nmap <leader>fw :<C-u>noa w<CR>
 nmap <leader>fW :<C-u>noa w!<CR>
-nnoremap <leader>ff :<C-u>Files!<CR>
-nnoremap <leader>fg :<C-u>GFiles!<CR>
 
 " Git
 nmap <silent> <leader>gs :<C-u>Gstatus<CR>
@@ -139,7 +137,7 @@ nmap <silent> <leader>gW :<C-u>Gwrite!<CR>
 nmap <silent> <leader>ge :<C-u>Gedit<CR>
 
 " Highlight
-map <silent> <leader>nh :<C-u>nohl <bar> :let @/ = ""<CR>
+map <silent> <leader>nh :<C-u>nohl <bar> :let @/ = "" <bar> echo ':nohl'<CR>
 
 
 " Toggle
