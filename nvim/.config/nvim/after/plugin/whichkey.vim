@@ -53,7 +53,9 @@ let g:which_key_map_leader.g = {
       \ 'd' : {
           \ 'name': '+diff',
           \ 'd': 'diff',
-          \ 'v': 'diff-split'
+          \ 'v': 'diff-split',
+          \ 'a': 'get-left',
+          \ ';': 'get-right'
           \ },
       \ 'h' : {
           \ 'name': '+hunk',
@@ -68,6 +70,7 @@ let g:which_key_map_leader.g = {
       \ 'p' : 'pull',
       \ 'r' : 'read',
       \ 'w' : 'write',
+      \ 'W' : 'write-force',
       \ 'e' : 'edit',
       \ 'u' : {
           \ 'name': '+urls',
@@ -169,7 +172,8 @@ let g:which_key_map_localleader.s = {
 
 
 " By default timeoutlen is 1000 ms
-set timeoutlen=100
+" 200ms is the minimum if you want vim fugitive working well
+set timeoutlen=200
 
 " Hide status bar when which key is showing
 autocmd! FileType which_key
