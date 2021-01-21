@@ -94,6 +94,7 @@ augroup end
 " Example: `<leader>aap` for current paragraph
 xmap <leader>ra <Plug>(coc-codeaction-selected)
 nmap <leader>ra <Plug>(coc-codeaction-selected)
+vmap <leader>ra <Plug>(coc-codeaction-selected)
 
 " Remap keys for applying codeAction to the current buffer.
 nmap <leader>ra <Plug>(coc-codeaction)
@@ -179,6 +180,7 @@ nmap <leader>ghp <Plug>(coc-git-prevchunk)
 nmap <leader>ghn <Plug>(coc-git-nextchunk)
 " show chunk diff at current position
 nmap <leader>ghi <Plug>(coc-git-chunkinfo)
+nmap <silent> <leader>ghu :<C-u>CocCommand git.chunkUndo<CR>
 " show commit contains current position
 nmap <leader>ghK <Plug>(coc-git-commit)
 nmap <silent> <leader>guo :CocCommand git.browserOpen<CR>
@@ -194,8 +196,6 @@ command! -nargs=0 Prettier :CocCommand prettier.formatFile
 nmap <localleader>F <Plug>(coc-format-selected)
 vmap <localleader>F <Plug>(coc-format-selected)
 xmap <localleader>F <Plug>(coc-format-selected)
-
-vmap <localleader>a <Plug>(coc-codeaction-selected)
 
 nmap <silent> <localleader>sn <Plug>(coc-range-select)
 xmap <silent> <localleader>sn <Plug>(coc-range-select)
