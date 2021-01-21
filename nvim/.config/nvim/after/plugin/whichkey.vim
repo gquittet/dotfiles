@@ -1,5 +1,3 @@
-nnoremap <silent> g :<C-u>WhichKey 'g'<CR>
-call which_key#register('g', "g:which_key_map_key_g")
 nnoremap <silent> <leader> :<C-u>WhichKey '<space>'<CR>
 vnoremap <silent> <leader> :<C-u>WhichKey '<space>'<CR>
 call which_key#register('<space>', "g:which_key_map_leader")
@@ -219,22 +217,6 @@ let g:which_key_map_localleader.s = {
       \ 'p' : 'previous',
       \ }
 
-let g:which_key_map_key_g = {
-      \ 'name' : "+goto",
-      \ '%' : 'matchit-bracket-backward',
-      \ 'T' : 'tab-previous',
-      \ 'c' : 'comment',
-      \ 'c3c' : 'which_key_ignore',
-      \ 'd' : 'definition',
-      \ 'f' : 'path',
-      \ 'g' : 'top',
-      \ 'i' : 'implementation',
-      \ 'r' : 'references',
-      \ 't' : 'tab-next',
-      \ 'x' : 'which_key_ignore',
-      \ 'y' : 'type-definition',
-      \ }
-
 " Ignore tComment leader shortcut
 let g:which_key_map_leader._._ = 'which_key_ignore'
 let g:which_key_map_leader._.a = 'which_key_ignore'
@@ -244,13 +226,6 @@ let g:which_key_map_leader._.p = 'which_key_ignore'
 let g:which_key_map_leader._.r = 'which_key_ignore'
 let g:which_key_map_leader._.s = 'which_key_ignore'
 let g:which_key_map_leader._[' '] = 'which_key_ignore'
-let g:which_key_map_key_g['<'] = 'which_key_ignore'
-let g:which_key_map_key_g['<C-N>'] = 'which_key_ignore'
-let g:which_key_map_key_g['<M-n>'] = 'which_key_ignore'
-let g:which_key_map_key_g['<b'] = 'which_key_ignore'
-let g:which_key_map_key_g['>'] = 'which_key_ignore'
-let g:which_key_map_key_g['>b'] = 'which_key_ignore'
-
 
 " By default timeoutlen is 1000 ms
 " 200ms is the minimum if you want vim fugitive working well
