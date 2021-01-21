@@ -10,5 +10,5 @@ autocmd BufEnter *.md let g:which_key_map_leader.m = {
       \ 'name' : '+major' ,
       \ 'p' : 'preview',
       \ 'k' : 'stop',
-      \ } | au! User vim-which-key call which_key#register('<space>', "g:which_key_map_leader")
+      \ }
 autocmd BufLeave *.md let g:which_key_map_leader.m = { 'name' : '+major' }

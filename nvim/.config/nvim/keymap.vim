@@ -36,6 +36,11 @@ vmap <M-F1> <Nop>
 "noremap <Del> <Nop>
 "inoremap <Del> <Nop>
 
+" Navigation
+map <silent> gg gg
+map <silent> gt gt
+map <silent> gT gT
+
 nnoremap <silent> <leader>_c "_c
 nnoremap <silent> <leader>_d "_d
 nnoremap <silent> <leader>_dd "_dd

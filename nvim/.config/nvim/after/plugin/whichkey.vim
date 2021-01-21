@@ -4,6 +4,9 @@ call which_key#register('<space>', "g:which_key_map_leader")
 nnoremap <silent> <localleader> :<C-u>WhichKey ','<CR>
 vnoremap <silent> <localleader> :<C-u>WhichKey ','<CR>
 call which_key#register(',', "g:which_key_map_localleader")
+nnoremap <silent> g :<C-u>WhichKey 'g'<CR>
+vnoremap <silent> g :<C-u>WhichKey 'g'<CR>
+call which_key#register('g', "g:which_key_map_key_g")
 nnoremap <silent> <ESC> <ESC>
 vnoremap <silent> <ESC> <ESC>
 
@@ -217,23 +220,49 @@ let g:which_key_map_localleader.s = {
       \ 'p' : 'previous',
       \ }
 
+let g:which_key_map_key_g = {
+      \ 'name' : "+goto",
+      \ '%' : 'matchit-bracket-backward',
+      \ 'T' : 'tab-previous',
+      \ 'c' : 'comment',
+      \ 'd' : 'definition',
+      \ 'f' : 'path',
+      \ 'g' : 'top',
+      \ 'i' : 'implementation',
+      \ 'r' : 'references',
+      \ 't' : 'tab-next',
+      \ 'x' : 'which_key_ignore',
+      \ 'y' : 'type-definition',
+      \ }
+
+
 " Ignore tComment leader shortcut
-let g:which_key_map_leader._._ = 'which_key_ignore'
-let g:which_key_map_leader._.a = 'which_key_ignore'
-let g:which_key_map_leader._.b = 'which_key_ignore'
-let g:which_key_map_leader._.n = 'which_key_ignore'
-let g:which_key_map_leader._.p = 'which_key_ignore'
-let g:which_key_map_leader._.r = 'which_key_ignore'
-let g:which_key_map_leader._.s = 'which_key_ignore'
-let g:which_key_map_leader._[' '] = 'which_key_ignore'
+let g:which_key_map_leader._._     = 'which_key_ignore'
+let g:which_key_map_leader._.a     = 'which_key_ignore'
+let g:which_key_map_leader._.b     = 'which_key_ignore'
+let g:which_key_map_leader._.n     = 'which_key_ignore'
+let g:which_key_map_leader._.p     = 'which_key_ignore'
+let g:which_key_map_leader._.r     = 'which_key_ignore'
+let g:which_key_map_leader._.s     = 'which_key_ignore'
+let g:which_key_map_leader._[' ']  = 'which_key_ignore'
+let g:which_key_map_key_g['<']     = 'which_key_ignore'
+let g:which_key_map_key_g['<C-N>'] = 'which_key_ignore'
+let g:which_key_map_key_g['<M-n>'] = 'which_key_ignore'
+let g:which_key_map_key_g['<b']    = 'which_key_ignore'
+let g:which_key_map_key_g['>']     = 'which_key_ignore'
+let g:which_key_map_key_g['>b']    = 'which_key_ignore'
+let g:which_key_map_key_g['c3c']   = 'which_key_ignore'
 
 " By default timeoutlen is 1000 ms
 " 200ms is the minimum if you want vim fugitive working well
-set timeoutlen=200
-
-" Hide status bar when which key is showing
-autocmd! FileType which_key
-autocmd  FileType which_key set laststatus=0 noshowmode noruler
-  \| autocmd BufLeave <buffer> set laststatus=2 showmode ruler
+let g:which_key_timeout=100
+" Executes native commands if keymap is not defined.
+" For example, you can use `:WhichKey 'g'` and get `gg` work correct:
+let g:which_key_fallback_to_native_key = 1
+" Use neovim floating window
+let g:which_key_use_floating_win = 1
+" Update mapping on the fly
+let g:which_key_run_map_on_popup = 1
+let g:which_key_exit = ["\<C-G>", "\<C-C>", "\<C-[>", "\<Esc>"]
 
 
