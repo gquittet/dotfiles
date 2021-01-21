@@ -134,6 +134,10 @@ let g:which_key_map_leader.r = {
             \ '\\' : '\\',
           \},
       \ 'n' : 'rename',
+      \ 's' : {
+            \ 'name': '+sort',
+            \ 'j': 'json',
+      \ },
       \ 'w' : 'clean-whitespace',
       \ 'w ' : 'clean-whitespace',
       \ }
@@ -255,7 +259,6 @@ let g:which_key_map_key_g['c3c']   = 'which_key_ignore'
 
 " By default timeoutlen is 1000 ms
 " 200ms is the minimum if you want vim fugitive working well
-let g:which_key_timeout=100
 " Executes native commands if keymap is not defined.
 " For example, you can use `:WhichKey 'g'` and get `gg` work correct:
 let g:which_key_fallback_to_native_key = 1

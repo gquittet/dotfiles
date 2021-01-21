@@ -38,6 +38,7 @@ vmap <M-F1> <Nop>
 
 " Navigation
 map <silent> gg gg
+map <silent> gf gf
 map <silent> gt gt
 map <silent> gT gT
 
@@ -184,6 +185,10 @@ endfunction
 " Settings
 " Reload settings
 nnoremap <silent> <leader>Sr :<C-u>source ~/.config/nvim/init.vim <bar> :call webdevicons#refresh() <bar> :echo "Settings refreshed!"<CR>
+
+" Sort
+" JSON
+map <silent> <leader>rsj :<C-u>%!python -m json.tool<CR>
 
 " Tabular
 nmap <silent> <leader>ri& :<C-u>Tabularize /&<CR>

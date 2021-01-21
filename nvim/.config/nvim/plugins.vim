@@ -110,6 +110,7 @@ Plug 'plytophogy/vim-virtualenv'
 " Languages
 Plug 'ernstvanderlinden/vim-coldfusion'
 Plug 'davejlong/cf-utils.vim'
+Plug 'tpope/vim-jdaddy' " JSON
 Plug 'Stautob/vim-fish'
 Plug 'jceb/vim-orgmode'
 
