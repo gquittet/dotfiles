@@ -25,6 +25,7 @@ Plug 'vim-airline/vim-airline-themes'                                   " Vim-Ai
 let g:coc_global_extensions = [
     \ 'coc-angular',
     \ 'coc-css',
+    \ 'coc-docker',
     \ 'coc-emmet',
     \ 'coc-emoji',
     \ 'coc-eslint',
