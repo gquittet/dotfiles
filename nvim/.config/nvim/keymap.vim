@@ -142,6 +142,7 @@ nmap <silent> <leader>ga. :<C-u>Git add .<CR>
 nmap <silent> <leader>gaa :<C-u>Git add -A<CR>
 nmap <silent> <leader>gb :<C-u>GBranches<CR>
 nmap <silent> <leader>gbl :<C-u>Gblame<CR>
+vmap <silent> <leader>gbl :Gblame<CR>
 nmap <silent> <leader>gc :<C-u>Gcommit<CR>
 nmap <silent> <leader>gdd :<C-u>Gdiff<CR>
 nmap <silent> <leader>gdv :<C-u>Gvdiffsplit!<CR>
