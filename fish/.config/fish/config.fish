@@ -1,4 +1,4 @@
-if test (uname) = "Darwin"
+if test (uname) = Darwin
     set -x XDG_CACHE_HOME $HOME/.cache
     set -x XDG_CONFIG_HOME $HOME/.config
     set -x XDG_DATA_HOME $HOME/.local/share
@@ -42,6 +42,9 @@ if test (uname) = "Darwin"
     # Java
     set -x JAVA_HOME /Library/Java/JavaVirtualMachines/adoptopenjdk-14/Contents/Home
 
+    # Pass
+    set -x PASSWORD_STORE_DIR "$HOME/Library/Mobile Documents/com~apple~CloudDocs/pass"
+
     # Python
     set -x PYENV_ROOT $XDG_DATA_HOME/pyenv
     set -x PIPENV_VERBOSITY -1
@@ -79,7 +82,7 @@ fish_default_key_bindings
 # fish_vi_key_bindings
 
 # Fish syntax highlighting
-set -g fish_color_autosuggestion '555' 'brblack'
+set -g fish_color_autosuggestion 555 brblack
 set -g fish_color_cancel -r
 set -g fish_color_command --bold
 set -g fish_color_comment red
@@ -87,7 +90,7 @@ set -g fish_color_cwd green
 set -g fish_color_cwd_root red
 set -g fish_color_end brmagenta
 set -g fish_color_error brred
-set -g fish_color_escape 'bryellow' '--bold'
+set -g fish_color_escape bryellow --bold
 set -g fish_color_history_current --bold
 set -g fish_color_host normal
 set -g fish_color_match --background=brblue
@@ -96,8 +99,8 @@ set -g fish_color_operator bryellow
 set -g fish_color_param cyan
 set -g fish_color_quote yellow
 set -g fish_color_redirection brblue
-set -g fish_color_search_match 'bryellow' '--background=brblack'
-set -g fish_color_selection 'white' '--bold' '--background=brblack'
+set -g fish_color_search_match bryellow '--background=brblack'
+set -g fish_color_selection white --bold '--background=brblack'
 set -g fish_color_user brgreen
 set -g fish_color_valid_path --underline
 
@@ -143,13 +146,14 @@ if type -q fnm
     fnm env --use-on-cd | source
 end
 #if type -q nvm
-    #nvm use stable
+#nvm use stable
 #end
 
 # Python
-#if command -q pyenv-virtualenv-init
-#    pyenv virtualenv-init - | source
-#end
+# if command -q pyenv-virtualenv-init
+#     pyenv init - | source
+#     pyenv virtualenv-init - | source
+# end
 
 
 if type -q starship
