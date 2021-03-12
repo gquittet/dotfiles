@@ -101,6 +101,9 @@ set wrap linebreak                                                          " Se
 " Before plugins are loaded
 let g:ale_disable_lsp = 1
 
+" Coldfusion
+au BufNewFile,BufRead *.cfm,*.cfc setf cfml
+
 " Grammalecte
 let g:grammalecte_cli_py='~/Downloads/Grammalecte-fr-v2.0.0/grammalecte-cli.py'
 
