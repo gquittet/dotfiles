@@ -98,6 +98,7 @@ abbr -a gPdo git push -d origin
 abbr -a gPf git push --force
 abbr -a gPo git push origin
 abbr -a gPomt git push origin master --tags
+abbr -a gPoMt git push origin main --tags
 abbr -a gPu git push -u
 abbr -a gPuo git push -u origin
 abbr -a grank git shortlog -sn --no-merges
