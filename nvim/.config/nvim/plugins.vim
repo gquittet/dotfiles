@@ -39,7 +39,7 @@ let g:coc_global_extensions = [
     \ 'coc-marketplace',
     \ 'coc-pairs',
     \ 'coc-prettier',
-    \ 'coc-python',
+    \ 'coc-pyright',
     \ 'coc-rust-analyzer',
     \ 'coc-smartf',
     \ 'coc-snippets',
@@ -82,7 +82,6 @@ Plug 'terryma/vim-multiple-cursors'                                     " Multip
 Plug 'myusuf3/numbers.vim'                                              " Numbers.vim
 Plug 'weirongxu/plantuml-previewer.vim'                                 " Plantuml-previewer
 Plug 'tyru/open-browser.vim'                                            " Plantuml-previewer dependency
-Plug 'luochen1990/rainbow'
 Plug 'dhruvasagar/vim-table-mode'                                       " Table mode
 Plug 'godlygeek/tabular'                                                " Tabular : useful for great alignement
 Plug 'mbbill/undotree'                                                  " UndoTree : See all undos
@@ -92,6 +91,12 @@ Plug 'kkoomen/vim-doge'                                                 " Vim do
 Plug 'liuchengxu/vista.vim'
 
 Plug 'nathanaelkane/vim-indent-guides'
+
+" Database management features
+Plug 'tpope/vim-dadbod'
+Plug 'kristijanhusak/vim-dadbod-ui'
+
+Plug 'pechorin/any-jump.vim'
 
 Plug 'liuchengxu/vim-which-key'
 
@@ -104,7 +109,7 @@ Plug 'markonm/traces.vim'
 " Better whitespace management for Vim
 Plug 'ntpeters/vim-better-whitespace'
 
-" Virutal env
+" Virtual env
 Plug 'PieterjanMontens/vim-pipenv'
 Plug 'plytophogy/vim-virtualenv'
 
@@ -114,6 +119,7 @@ Plug 'davejlong/cf-utils.vim'
 Plug 'tpope/vim-jdaddy' " JSON
 Plug 'Stautob/vim-fish'
 Plug 'jceb/vim-orgmode'
+Plug 'kkvh/vim-docker-tools'
 
 " Snippets
 Plug 'SirVer/ultisnips'   " Engine
@@ -141,6 +147,3 @@ syntax enable               " required
 
 " dev-icons enable folders open/close icons
 let g:DevIconsEnableFoldersOpenClose = 1
-
-" Enable rainbow
-let g:rainbow_active = 1
