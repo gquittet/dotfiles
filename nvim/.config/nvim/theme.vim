@@ -34,24 +34,24 @@ syntax enable
 "let ayucolor="light" " for mirage version of theme
 "colorscheme ayu
 
-"colorscheme moonshine
+" colorscheme moonshine
 
 "colorscheme nord
 
 " colorscheme onehalflight
-" let g:airline_theme='onehalflight'
+let g:airline_theme='onehalflight'
 
-" colorscheme PaperColor
-" set background=light
+colorscheme PaperColor
+set background=light
 
 " colorscheme tender
 " let g:airline_theme = 'tender'
 
 " Material oceanic
-let g:material_style='palenight'
-set background=dark
-colorscheme vim-material
-let g:airline_theme='material'
+" let g:material_style='palenight'
+" set background=dark
+" colorscheme vim-material
+" let g:airline_theme='material'
 
 " set background=dark
 " colorscheme moonlight
