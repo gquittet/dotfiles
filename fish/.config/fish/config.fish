@@ -20,6 +20,9 @@ if test (uname) = Darwin
         set PATH $PATH "$ANDROID_SDK_ROOT/platform-tools"
     end
 
+    # Elixir
+    set -x MIX_HOME $XDG_DATA_HOME/mix
+
     # Flutter
     set -x FLUTTERPATH $HOME/Library/flutter
     if not string match -q -- "*$FLUTTERPATH/bin*" $PATH
