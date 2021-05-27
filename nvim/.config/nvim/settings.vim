@@ -117,6 +117,10 @@ let g:indent_guides_exclude_filetypes = ['help', 'nerdtree', 'fzf']
 " Better whitespace
 let g:better_whitespace_operator='<leader>rw'
 
+" JavaScript + TypeScript syntax highlighting optimization for large files
+autocmd BufEnter *.{js,jsx,ts,tsx} :syntax sync fromstart
+autocmd BufLeave *.{js,jsx,ts,tsx} :syntax sync clear
+
 " Reload icons after init source
 if exists('g:loaded_webdevicons')
   call webdevicons#refresh()

@@ -120,6 +120,11 @@ Plug 'tpope/vim-jdaddy' " JSON
 Plug 'Stautob/vim-fish'
 Plug 'jceb/vim-orgmode'
 Plug 'kkvh/vim-docker-tools'
+" TypeScript
+Plug 'leafgarland/typescript-vim'
+" React
+Plug 'peitalin/vim-jsx-typescript'
+Plug 'jparise/vim-graphql'
 
 " Snippets
 Plug 'SirVer/ultisnips'   " Engine
