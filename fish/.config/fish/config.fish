@@ -43,7 +43,7 @@ if test (uname) = Darwin
     end
 
     # Java
-    set -x JAVA_HOME /Library/Java/JavaVirtualMachines/adoptopenjdk-8.jdk/Contents/Home
+    set -x JAVA_HOME /Library/Java/JavaVirtualMachines/adoptopenjdk-14/Contents/Home
 
     # Pass
     set -x PASSWORD_STORE_DIR "$HOME/Library/Mobile Documents/com~apple~CloudDocs/pass"
@@ -114,7 +114,7 @@ if test -n "$SSH_CONNECTION"
     set -x EDITOR vim
 else
     # set -x EDITOR subl -n -w
-    set -x EDITOR nvim
+    set -x EDITOR vim
 end
 set GIT_EDITOR $EDITOR
 set -x VISUAL $EDITOR
