@@ -2,9 +2,32 @@ NetrwTreeListing\ 2
 .netrwhist
 
 # fish
-fish/.config/fish/completions/kubectl.fish
 fish/.config/fish/fish_variables
 fish/.config/fish/fishd.tmp*
+
+fish/.config/fish/completions/*
+fish/.config/fish/completions/.*
+
+fish/.config/fish/conf.d/*
+fish/.config/fish/conf.d/.*
+
+fish/.config/fish/functions/*
+fish/.config/fish/functions/.*
+
+!fish/.config/fish/functions/ksa.fish
+!fish/.config/fish/functions/l.fish
+!fish/.config/fish/functions/la.fish
+!fish/.config/fish/functions/lg.fish
+!fish/.config/fish/functions/lga.fish
+!fish/.config/fish/functions/lh.fish
+!fish/.config/fish/functions/lha.fish
+!fish/.config/fish/functions/lla.fish
+!fish/.config/fish/functions/lt.fish
+!fish/.config/fish/functions/lta.fish
+!fish/.config/fish/functions/nvim.fish
+!fish/.config/fish/functions/nvm.fish
+!fish/.config/fish/functions/unset.fish
+!fish/.config/fish/functions/v.fish
 
 # Script to avoid
 scripts/.local/bin/fnm

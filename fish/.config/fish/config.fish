@@ -1,11 +1,64 @@
-if test (uname) = Darwin
-    set -x XDG_CACHE_HOME $HOME/.cache
-    set -x XDG_CONFIG_HOME $HOME/.config
-    set -x XDG_DATA_HOME $HOME/.local/share
-    if not string match -q -- "*$HOME/.local/bin*" $PATH
-        set PATH $PATH $HOME/.local/bin
-    end
+# Auto install fisher (aka plugin manager)
+# https://github.com/jorgebucaran/fisher/issues/644
+if status is-interactive && ! functions -q fisher
+    curl -sL https://git.io/fisher | source && fisher install jorgebucaran/fisher && fisher update
+end
 
+# -----------------------------------------------------------------------------
+# Environment variables and PATH
+# -----------------------------------------------------------------------------
+
+# Global env var
+set -x XDG_CACHE_HOME $HOME/.cache
+set -x XDG_CONFIG_HOME $HOME/.config
+set -x XDG_DATA_HOME $HOME/.local/share
+fish_add_path $HOME/.local/bin
+
+# Editor for local and remote sessions
+if test -n "$SSH_CONNECTION"
+    set -x EDITOR vim
+else
+    # set -x EDITOR subl -n -w
+    set -x EDITOR vim
+end
+set GIT_EDITOR $EDITOR
+set -x VISUAL $EDITOR
+
+# MANPAGES/Less colors
+set -x LESS_TERMCAP_md (printf "\e[01;31m")
+set -x LESS_TERMCAP_me (printf "\e[0m")
+set -x LESS_TERMCAP_se (printf "\e[0m")
+set -x LESS_TERMCAP_so (printf "\e[01;44;33m")
+set -x LESS_TERMCAP_ue (printf "\e[0m")
+set -x LESS_TERMCAP_us (printf "\e[01;32m")
+
+# True color support for *nix system
+set -x TERM xterm-256color
+
+# Elixir
+set -x MIX_HOME $XDG_DATA_HOME/mix
+
+# Go
+set -x GOPATH $HOME/Documents/Projets/go
+fish_add_path $GOPATH/bin
+
+# Haskell
+set -x STACK_ROOT $XDG_DATA_HOME/stack
+set -q GHCUP_INSTALL_BASE_PREFIX[1]; or set GHCUP_INSTALL_BASE_PREFIX $HOME
+if not string match -q -- "*$GHCUP_INSTALL_BASE_PREFIX/.ghcup/bin*" $PATH
+    test -f $GHCUP_INSTALL_BASE_PREFIX/.ghcup/env; and fish_add_path $HOME/.cabal/bin $GHCUP_INSTALL_BASE_PREFIX/.ghcup/bin
+end
+
+# Node
+set -x NVM_DIR $XDG_DATA_HOME/nvm
+set -x NPM_CONFIG_USERCONFIG $XDG_CONFIG_HOME/npm/npmrc
+
+# Rust
+set -x CARGO_HOME $XDG_DATA_HOME/cargo
+set -x RUSTUP_HOME $XDG_DATA_HOME/rustup
+fish_add_path $CARGO_HOME/bin
+
+if test (uname) = Darwin
     # Homebrew
     set -g fish_user_paths /usr/local/sbin $fish_user_paths
 
@@ -16,62 +69,25 @@ if test (uname) = Darwin
 
     # Android
     set -x ANDROID_SDK_ROOT $HOME/Library/Android/sdk
-    if not string match -q -- "*$ANDROID_SDK_ROOT/platform-tools*" $PATH
-        set PATH $PATH "$ANDROID_SDK_ROOT/platform-tools"
-    end
-
-    # Elixir
-    set -x MIX_HOME $XDG_DATA_HOME/mix
+    fish_add_path "$ANDROID_SDK_ROOT/platform-tools"
 
     # Flutter
     set -x FLUTTERPATH $HOME/Library/flutter
-    if not string match -q -- "*$FLUTTERPATH/bin*" $PATH
-        set PATH $PATH $FLUTTERPATH/bin
-    end
-
-    # Go
-    set -x GOPATH $HOME/Documents/Projets/go
-    if not string match -q -- "*$GOPATH/bin*" $PATH
-        set PATH $PATH $GOPATH/bin
-    end
-
-    # Haskell
-    set -x STACK_ROOT $XDG_DATA_HOME/stack
-    set -q GHCUP_INSTALL_BASE_PREFIX[1]; or set GHCUP_INSTALL_BASE_PREFIX $HOME
-    if not string match -q -- "*$GHCUP_INSTALL_BASE_PREFIX/.ghcup/bin*" $PATH
-        test -f $GHCUP_INSTALL_BASE_PREFIX/.ghcup/env; and set PATH $HOME/.cabal/bin $GHCUP_INSTALL_BASE_PREFIX/.ghcup/bin $PATH
-    end
+    fish_add_path $FLUTTERPATH/bin
 
     # Java
     set -x JAVA_HOME /Library/Java/JavaVirtualMachines/adoptopenjdk-14/Contents/Home
 
+    # Node
+    set -x NVM_DIR (brew --prefix nvm)
+
     # Pass
     set -x PASSWORD_STORE_DIR "$HOME/Library/Mobile Documents/com~apple~CloudDocs/pass"
-
-    # Python
-    set -x PYENV_ROOT $XDG_DATA_HOME/pyenv
-    set -x PIPENV_VERBOSITY -1
-    set -g fish_user_paths $PYENV_ROOT/bin $fish_user_paths
-
-    # Rust
-    set -x CARGO_HOME $XDG_DATA_HOME/cargo
-    set -x RUSTUP_HOME $XDG_DATA_HOME/rustup
-    if not string match -q -- "*$CARGO_HOME/bin*" $PATH
-        set PATH $PATH $CARGO_HOME/bin
-    end
-
-    # Version manager
-    set -x FNM_DIR $XDG_DATA_HOME/fnm
-    set -x NVM_DIR $XDG_DATA_HOME/nvm
 end
 
-if not functions -q fisher
-    curl https://git.io/fisher --create-dirs -sLo $XDG_CONFIG_HOME/fish/functions/fisher.fish
-    fish -c fisher
-end
-
-# Use legacy fzf keybindings
-set -U FZF_LEGACY_KEYBINDINGS 0
+# -----------------------------------------------------------------------------
+# Fish settings
+# -----------------------------------------------------------------------------
 
 # Set the emoji width for iTerm
 set -g fish_emoji_width 2
@@ -109,56 +125,33 @@ set -g fish_color_valid_path --underline
 
 bind \el 'ls -lh'
 
-# Preferred editor for local and remote sessions
-if test -n "$SSH_CONNECTION"
-    set -x EDITOR vim
-else
-    # set -x EDITOR subl -n -w
-    set -x EDITOR vim
+# -----------------------------------------------------------------------------
+# Plugins settings
+# -----------------------------------------------------------------------------
+
+# Kubectl
+if test -e $XDG_CONFIG_HOME/fish/completions/kubectl.fish
+    set FISH_KUBECTL_COMPLETION_TIMEOUT 0.5s
 end
-set GIT_EDITOR $EDITOR
-set -x VISUAL $EDITOR
-
-# MANPAGES/Less colors
-set -xU LESS_TERMCAP_md (printf "\e[01;31m")
-set -xU LESS_TERMCAP_me (printf "\e[0m")
-set -xU LESS_TERMCAP_se (printf "\e[0m")
-set -xU LESS_TERMCAP_so (printf "\e[01;44;33m")
-set -xU LESS_TERMCAP_ue (printf "\e[0m")
-set -xU LESS_TERMCAP_us (printf "\e[01;32m")
-
-# True color support for *nix system
-set -x TERM xterm-256color
-
-set FISH_KUBECTL_COMPLETION_TIMEOUT 0.5s
 
 # FZF
-set -gx FZF_DEFAULT_COMMAND 'rg --files --hidden --no-ignore-vcs --glob "!{.git,node_modules,build,dist}"'
-set -U FZF_DEFAULT_OPTS "--layout=reverse --info=inline --color bw"
-set -U FZF_FIND_FILE_COMMAND "$FZF_DEFAULT_COMMAND"
-set -U FZF_PREVIEW_FILE_CMD "bat --style=numbers --color=always"
-set -U FZF_TMUX 1
-set -U FZF_ENABLE_OPEN_PREVIEW 1
+if functions -q fzf
+    if ! command -q fzf
+        echo Please install the dependencies: https://github.com/PatrickF1/fzf.fish#installation
+    end
 
+    set fzf_fd_opts --hidden --exclude=.git,node_modules,build,dist
+end
+
+# -----------------------------------------------------------------------------
+# Aliases settings
+# -----------------------------------------------------------------------------
+
+# Enable aliasses
 if test -e $XDG_CONFIG_HOME/fish/aliases.fish
     source $XDG_CONFIG_HOME/fish/aliases.fish
 end
 
-# Tools
-if type -q fnm
-    fnm env --use-on-cd | source
-end
-#if type -q nvm
-#nvm use stable
-#end
-
-# Python
-# if command -q pyenv-virtualenv-init
-#     pyenv init - | source
-#     pyenv virtualenv-init - | source
-# end
-
-
-if type -q starship
+if command -q starship
     starship init fish | source
 end
