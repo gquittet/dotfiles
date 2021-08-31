@@ -28,6 +28,9 @@
 [commit]
 	template = ~/.config/git/gitmessage
 
+[credential]
+	helper = store
+
 [color]
 	ui = true
 [color "diff-highlight"]
