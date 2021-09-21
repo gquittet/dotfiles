@@ -32,3 +32,4 @@ fish/.config/fish/functions/.*
 # Script to avoid
 scripts/.local/bin/fnm
 scripts/.local/bin/rust-analyzer-mac
+scripts/.local/bin/fd
