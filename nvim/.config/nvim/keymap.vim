@@ -42,6 +42,20 @@ map <silent> gf gf
 map <silent> gt gt
 map <silent> gT gT
 
+" Cursor in the middle of the screen
+nnoremap <C-U> 11kzz
+nnoremap <C-D> 11jzz
+nnoremap j jzz
+nnoremap k kzz
+nnoremap # #zz
+nnoremap * *zz
+nnoremap n nzz
+nnoremap N Nzz
+nnoremap gg ggzz
+nnoremap G Gzz
+nnoremap gj gjzz
+nnoremap gk gkzz
+
 nnoremap <silent> <leader>_c "_c
 nnoremap <silent> <leader>_d "_d
 nnoremap <silent> <leader>_dd "_dd
