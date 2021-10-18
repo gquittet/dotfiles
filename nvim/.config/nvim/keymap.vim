@@ -151,20 +151,19 @@ nmap <leader>fw :<C-u>noa w<CR>
 nmap <leader>fW :<C-u>noa w!<CR>
 
 " Git
-nmap <silent> <leader>gs :<C-u>Gstatus<CR>
+nmap <silent> <leader>gs :<C-u>Git<CR>
 nmap <silent> <leader>ga. :<C-u>Git add .<CR>
 nmap <silent> <leader>gaa :<C-u>Git add -A<CR>
 nmap <silent> <leader>gb :<C-u>GBranches<CR>
-nmap <silent> <leader>gbl :<C-u>Gblame<CR>
-vmap <silent> <leader>gbl :Gblame<CR>
-nmap <silent> <leader>gc :<C-u>Gcommit<CR>
+nmap <silent> <leader>gbl :<C-u>Git blame<CR>
+nmap <silent> <leader>gc :<C-u>Git commit<CR>
 nmap <silent> <leader>gdd :<C-u>Gdiff<CR>
 nmap <silent> <leader>gdv :<C-u>Gvdiffsplit!<CR>
 nmap <silent> <leader>gda :<C-u>diffget //2<CR>
 nmap <silent> <leader>gd; :<C-u>diffget //3<CR>
-nmap <silent> <leader>gl :<C-u>Glog<CR>
-nmap <silent> <leader>gP :<C-u>Gpush<CR>
-nmap <silent> <leader>gp :<C-u>Gpull<CR>
+nmap <silent> <leader>gl :<C-u>Gclog<CR>
+nmap <silent> <leader>gP :<C-u>Git push<CR>
+nmap <silent> <leader>gp :<C-u>Git pull<CR>
 nmap <silent> <leader>gr :<C-u>Gread<CR>
 nmap <silent> <leader>gw :<C-u>Gwrite<CR>
 nmap <silent> <leader>gW :<C-u>Gwrite!<CR>
