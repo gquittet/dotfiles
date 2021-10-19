@@ -49,6 +49,13 @@ nnoremap n nzz
 nnoremap N Nzz
 nnoremap J Jzz
 
+" Undo breakpoints (to avoid to delete all changes)
+inoremap , ,<C-g>u
+inoremap . .<C-g>u
+inoremap :: ::<C-g>u
+inoremap ? ?<C-g>u
+inoremap ! !<C-g>u
+
 " Moving text
 vnoremap <C-j> :m '>+1<CR>gv=gv
 vnoremap <C-k> :m '<-2<CR>gv=gv
