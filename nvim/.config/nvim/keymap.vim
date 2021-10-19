@@ -49,6 +49,10 @@ nnoremap n nzz
 nnoremap N Nzz
 nnoremap J Jzz
 
+" Moving text
+vnoremap <C-j> :m '>+1<CR>gv=gv
+vnoremap <C-k> :m '<-2<CR>gv=gv
+
 nnoremap <silent> <leader>_c "_c
 nnoremap <silent> <leader>_d "_d
 nnoremap <silent> <leader>_dd "_dd
