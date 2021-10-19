@@ -133,7 +133,7 @@ Plug 'morhetz/gruvbox'                                                  " Gruvbo
 Plug 'sonph/onehalf', {'rtp': 'vim/'}                                   " One Half
 Plug 'NLKNguyen/papercolor-theme'                                       " Paper color theme
 Plug 'jacoborus/tender.vim'                                             " Tender
-Plug 'hzchirs/vim-material'
+Plug 'kaicataldo/material.vim'
 Plug 'mhartington/oceanic-next'
 Plug 'karoliskoncevicius/moonshine-vim'
 Plug 'Brettm12345/moonlight.vim'

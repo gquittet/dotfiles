@@ -39,19 +39,20 @@ syntax enable
 "colorscheme nord
 
 " colorscheme onehalflight
-let g:airline_theme='onehalflight'
-
-colorscheme PaperColor
-set background=light
-
+" let g:airline_theme='onehalflight'
+"
+" colorscheme PaperColor
+" set background=light
+"
 " colorscheme tender
 " let g:airline_theme = 'tender'
 
 " Material oceanic
-" let g:material_style='palenight'
-" set background=dark
-" colorscheme vim-material
-" let g:airline_theme='material'
+set background=dark
+let g:material_terminal_italics = 1
+let g:material_theme_style = 'palenight'
+colorscheme material
+let g:airline_theme='material'
 
 " set background=dark
 " colorscheme moonlight
