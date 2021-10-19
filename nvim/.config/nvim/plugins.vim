@@ -109,10 +109,6 @@ Plug 'markonm/traces.vim'
 " Better whitespace management for Vim
 Plug 'ntpeters/vim-better-whitespace'
 
-" Virtual env
-Plug 'PieterjanMontens/vim-pipenv'
-Plug 'plytophogy/vim-virtualenv'
-
 " Languages
 Plug 'ernstvanderlinden/vim-coldfusion'
 Plug 'davejlong/cf-utils.vim'
