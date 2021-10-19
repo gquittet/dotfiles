@@ -139,6 +139,9 @@ Plug 'karoliskoncevicius/moonshine-vim'
 Plug 'Brettm12345/moonlight.vim'
 Plug 'ghifarit53/tokyonight-vim'
 
+" Debug startup time
+Plug 'dstein64/vim-startuptime'
+
 " Font icons
 Plug 'ryanoasis/vim-devicons'
 
