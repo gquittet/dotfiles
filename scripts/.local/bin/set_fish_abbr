@@ -14,6 +14,8 @@ abbr -a dka 'docker kill (docker ps -q)'
 abbr -a dil docker image list
 abbr -a dip docker image prune
 abbr -a dipa docker image prune -a
+abbr -a dlg docker logs
+abbr -a dlgf docker logs -f
 abbr -a dps docker ps
 abbr -a dpsa docker ps -a
 abbr -a drm docker rm
