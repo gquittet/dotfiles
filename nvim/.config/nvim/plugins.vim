@@ -48,6 +48,7 @@ let g:coc_global_extensions = [
     \ 'coc-syntax',
     \ 'coc-texlab',
     \ 'coc-tailwindcss',
+    \ 'coc-toml',
     \ 'coc-tslint-plugin',
     \ 'coc-tsserver',
     \ 'coc-vetur',
