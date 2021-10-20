@@ -171,6 +171,7 @@ nmap <silent> <leader>gda :<C-u>diffget //2<CR>
 nmap <silent> <leader>gd; :<C-u>diffget //3<CR>
 nmap <silent> <leader>gl :<C-u>Gclog<CR>
 nmap <silent> <leader>gP :<C-u>Git push<CR>
+nmap <silent> <leader>gPf :<C-u>Git push --force<CR>
 nmap <silent> <leader>gp :<C-u>Git pull<CR>
 nmap <silent> <leader>gr :<C-u>Gread<CR>
 nmap <silent> <leader>gw :<C-u>Gwrite<CR>

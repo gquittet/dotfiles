@@ -108,6 +108,7 @@ let g:which_key_map_leader.g = {
       \ 'l' : 'log',
       \ 'm' : 'line-commit',
       \ 'P' : 'push',
+      \ 'Pf' : 'push-force',
       \ 'p' : 'pull',
       \ 'r' : 'read',
       \ 'w' : 'write',
