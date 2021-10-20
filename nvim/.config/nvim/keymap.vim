@@ -148,6 +148,10 @@ nmap <leader>w<bar> <C-w><bar>
 nmap <leader>w_ <C-w>_
 nmap <leader>wz <C-w><bar><C-w>_
 
+" Doge (documentation)
+let g:doge_enable_mappings=0
+let g:doge_mapping='<leader>rd'
+
 " File
 nmap <leader>fs :<C-u>w<CR>
 nmap <leader>fS :<C-u>w!<CR>

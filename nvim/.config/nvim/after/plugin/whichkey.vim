@@ -146,6 +146,7 @@ let g:which_key_map_leader.l = {
 let g:which_key_map_leader.r = {
       \ 'name' : '+refactor' ,
       \ 'a' : 'run-code-action',
+      \ 'd': 'documentation',
       \ 'f' : 'fix',
       \ 'i' : {
             \ 'name' : '+indent' ,
