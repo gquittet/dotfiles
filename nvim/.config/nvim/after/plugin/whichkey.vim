@@ -245,7 +245,7 @@ let g:which_key_map_leader.w = {
       \ '|' : 'zoom-horizontal',
       \ }
 
-let g:which_key_map_localleader.F = 'format'
+let g:which_key_map_localleader.f = 'format'
 let g:which_key_map_localleader.s = {
       \ 'name' : '+select' ,
       \ 'n' : 'next',

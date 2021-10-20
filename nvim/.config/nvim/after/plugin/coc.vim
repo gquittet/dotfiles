@@ -196,9 +196,9 @@ xmap ag <Plug>(coc-git-chunk-outer)
 
 " Prettier
 command! -nargs=0 Prettier :CocCommand prettier.formatFile
-nmap <localleader>F <Plug>(coc-format-selected)
-vmap <localleader>F <Plug>(coc-format-selected)
-xmap <localleader>F <Plug>(coc-format-selected)
+nmap <localleader>f <Plug>(coc-format-selected)
+vmap <localleader>f <Plug>(coc-format-selected)
+xmap <localleader>f <Plug>(coc-format-selected)
 
 nmap <silent> <localleader>sn <Plug>(coc-range-select)
 xmap <silent> <localleader>sn <Plug>(coc-range-select)
