@@ -11,7 +11,8 @@ if (has("gui_running"))
 endif
 
 " Transparent background
-" au ColorScheme * hi Normal ctermbg=none guibg=none
+au ColorScheme * hi Normal ctermbg=none guibg=none
+au ColorScheme * hi NonText ctermbg=none guibg=none
 " au ColorScheme myspecialcolors hi Normal ctermbg=red guibg=none
 
 " Use GUI colors in terminal
