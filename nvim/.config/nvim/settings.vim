@@ -97,6 +97,15 @@ set wrapmargin=0                                                            " Wo
 set whichwrap=b,s,h,l,<,>,[,]                                               " Backspace and cursor keys wrap too
 set wrap linebreak                                                          " Set wrapping with soft wrap (set wm=2 => hard wrap)
 
+" WSL copy clipboard support
+let s:clip = '/mnt/c/Windows/System32/clip.exe'  " change this path according to your mount point
+if executable(s:clip)
+    augroup WSLYank
+        autocmd!
+        autocmd TextYankPost * if v:event.operator ==# 'y' | call system(s:clip, @0) | endif
+    augroup END
+endif
+
 " ALE
 " Before plugins are loaded
 let g:ale_disable_lsp = 1
