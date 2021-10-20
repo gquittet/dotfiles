@@ -51,7 +51,7 @@ syntax enable
 " Material oceanic
 set background=dark
 let g:material_terminal_italics = 1
-let g:material_theme_style = 'darker'
+let g:material_theme_style = 'oceanic'
 colorscheme material
 let g:airline_theme='material'
 
