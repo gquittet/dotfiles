@@ -42,6 +42,33 @@ let g:which_key_map_leader.c = {
       \ 'r' : 'resume',
       \ }
 
+let g:which_key_map_leader.d = {
+      \ 'name' : '+debugger' ,
+      \ 'b': {
+            \ 'name': '+breakpoint',
+            \ 'c': 'conditional',
+            \ 't': 'toggle',
+            \ },
+      \ 'c' : 'continue',
+      \ 'd' : 'debug',
+      \ 'i' : 'inspect',
+      \ 'j': 'step-over',
+      \ 'k': 'step-out',
+      \ 'l': 'step-into',
+      \ 'q': 'quit',
+      \ 'r' : 'run-to-cursor',
+      \ 'w': {
+            \ 'name': '+window',
+            \ 'c': 'code',
+            \ 'o': 'output',
+            \ 's': 'stack-traces',
+            \ 't': 'tag-page',
+            \ 'v': 'variables',
+            \ 'w': 'watches',
+            \ },
+      \ 'x': 'restart',
+      \ }
+
 let g:which_key_map_leader.f = {
       \ 'name' : '+files' ,
       \ 'S' : 'save-force',
