@@ -44,6 +44,7 @@ let g:coc_global_extensions = [
     \ 'coc-rust-analyzer',
     \ 'coc-smartf',
     \ 'coc-snippets',
+    \ 'coc-sql',
     \ 'coc-syntax',
     \ 'coc-texlab',
     \ 'coc-tailwindcss',
