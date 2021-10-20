@@ -31,6 +31,7 @@ let g:coc_global_extensions = [
     \ 'coc-eslint',
     \ 'coc-explorer',
     \ 'coc-git',
+    \ 'coc-graphql',
     \ 'coc-highlight',
     \ 'coc-html',
     \ 'coc-json',
