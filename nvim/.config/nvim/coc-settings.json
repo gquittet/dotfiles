@@ -2,8 +2,12 @@
   "coc.preferences.formatOnSaveFiletypes": [
     "javascript",
     "javascriptreact",
+    "json",
+    "python",
+    "sh",
     "typescript",
-    "typescriptreact"
+    "typescriptreact",
+    "vue"
   ],
   "tsserver.formatOnType": true,
   "coc.preferences.formatOnType": true,
