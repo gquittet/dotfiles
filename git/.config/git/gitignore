@@ -231,6 +231,9 @@ tags
 # Persistent undo
 [._]*.un~
 
+# Debugger
+.vimspector.json
+
 ### VisualStudioCode ###
 .vscode
 .vscode/*
