@@ -43,7 +43,6 @@ let g:coc_global_extensions = [
     \ 'coc-pyright',
     \ 'coc-rust-analyzer',
     \ 'coc-sh',
-    \ 'coc-smartf',
     \ 'coc-snippets',
     \ 'coc-sql',
     \ 'coc-syntax',
@@ -109,6 +108,9 @@ Plug 'tpope/vim-sleuth'
 
 " Highlights patterns and ranges
 Plug 'markonm/traces.vim'
+
+" Go to the good location
+Plug 'justinmk/vim-sneak'
 
 " Better whitespace management for Vim
 Plug 'ntpeters/vim-better-whitespace'

@@ -35,6 +35,5 @@
     "--glob",
     "!{.git}"
   ],
-  "smartf.timeout": 5000,
   "git.enableGutters": true
 }
