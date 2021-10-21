@@ -122,7 +122,7 @@ nmap <leader>wi <C-w>i
 " Open new empty window in new split
 nmap <leader>wn <C-w>n
 " Fullscreen current window
-nmap <leader>wo <C-w>o
+nmap <leader>wo <cmd>MaximizerToggle<cr>
 " Swap windows and move the cursor
 nmap <leader>wr <C-w>r
 " Split horizontally window

@@ -110,6 +110,9 @@ Plug 'tpope/vim-sleuth'
 " Highlights patterns and ranges
 Plug 'markonm/traces.vim'
 
+" Maximize window and restore them
+Plug 'szw/vim-maximizer'
+
 " Go to the good location
 Plug 'justinmk/vim-sneak'
 
