@@ -42,6 +42,10 @@ map <silent> gf gf
 map <silent> gt gt
 map <silent> gT gT
 
+" Insert mode mapping
+imap <C-a> <C-o>0
+imap <C-e> <C-o>$
+
 " Cursor in the middle of the screen
 nnoremap # #zz
 nnoremap * *zz
