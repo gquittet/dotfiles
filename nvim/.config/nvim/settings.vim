@@ -39,6 +39,7 @@ set nofoldenable
 set path+=**                                                                " fuzzy matching with :find *.ext*
 set wildmenu                                                                " Show list instead of just completing
 set wildignore+=**/node_modules/**                                          " Ignore some folders
+set wildignore+=**/__pycache__/**                                          " Ignore some folders
 set wildignore+=**/.git/**
 set wildignore+=**/build/**
 set wildignore+=**/dist/**
