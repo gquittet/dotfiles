@@ -13,6 +13,10 @@
   "coc.preferences.formatOnType": true,
   "coc.source.emoji.filetypes": ["markdown"],
   "codeLens.enable": true,
+  "diagnostic-languageserver.filetypes": {
+    "markdown": ["write-good", "markdownlint"],
+    "sh": "shellcheck"
+  },
   "diagnostic.messageTarget": "echo",
   "diagnostic.virtualText": true,
   "eslint.autoFixOnSave": true,
