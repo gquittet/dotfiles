@@ -96,6 +96,11 @@ Plug 'liuchengxu/vista.vim'
 
 Plug 'nathanaelkane/vim-indent-guides'
 
+if has('nvim')
+    " Better syntax highlighting
+    Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
+endif
+
 " Database management features
 Plug 'tpope/vim-dadbod'
 Plug 'kristijanhusak/vim-dadbod-ui'
