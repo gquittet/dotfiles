@@ -12,7 +12,6 @@ set autowrite                                                               " Sa
 "set autochdir!                                                             " Set the working directory
 set backspace=indent,eol,start                                              " Make backspace work like most other programs
 set backup
-set colorcolumn=81                                                          " Set the 80 character column (+1 if textwidth is defined else 81)
 " set clipboard+=unnamedplus
 set conceallevel=0
 set cursorline                                                              " Highlight the current line
@@ -92,7 +91,7 @@ set noswapfile
 
 " Wrapping
 set formatoptions-=t                                                        " Keep my textwidth setting
-set textwidth=0                                                             " Word wrap without line break
+set textwidth=80                                                             " Word wrap without line break
 set wrapmargin=0                                                            " Word wrap without line break
 set whichwrap=b,s,h,l,<,>,[,]                                               " Backspace and cursor keys wrap too
 set wrap linebreak                                                          " Set wrapping with soft wrap (set wm=2 => hard wrap)
