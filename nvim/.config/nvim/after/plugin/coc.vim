@@ -135,6 +135,8 @@ autocmd BufWritePre * :silent call CocAction('runCommand', 'editor.action.organi
 set statusline^=%{coc#status()}%{get(b:,'coc_current_function','')}
 
 " Using CocList
+" Disable hidding cursor when pressing <C-c>
+let g:coc_disable_transparent_cursor=1
 " Show all diagnostics
 nnoremap <silent> <leader>ld :<C-u>CocList diagnostics<cr>
 nnoremap <silent> <leader>lbd :<C-u>CocList diagnostics --current-buf<cr>
