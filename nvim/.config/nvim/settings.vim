@@ -12,7 +12,6 @@ set autowrite                                                               " Sa
 "set autochdir!                                                             " Set the working directory
 set backspace=indent,eol,start                                              " Make backspace work like most other programs
 set backup
-" set clipboard+=unnamedplus
 set conceallevel=0
 set cursorline                                                              " Highlight the current line
 set encoding=utf-8
