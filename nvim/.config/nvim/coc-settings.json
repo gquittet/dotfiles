@@ -9,7 +9,6 @@
     "typescriptreact",
     "vue"
   ],
-  "tsserver.formatOnType": true,
   "coc.preferences.formatOnType": true,
   "coc.source.emoji.filetypes": ["markdown"],
   "codeLens.enable": true,
@@ -20,15 +19,15 @@
   "diagnostic.messageTarget": "echo",
   "diagnostic.virtualText": true,
   "eslint.autoFixOnSave": true,
-  "explorer.width": 30,
   "explorer.file.showHiddenFiles": true,
   "explorer.icon.enableNerdfont": true,
-  "explorer.previewAction.onHover": false,
   "explorer.keyMappings.global": {
     "<cr>": ["expandable?", "expand", "open"],
     "v": "open:vsplit"
   },
-  "list.source.files.command": "rg",
+  "explorer.previewAction.onHover": false,
+  "explorer.width": 30,
+  "git.enableGutters": true,
   "list.source.files.args": [
     "--files",
     "--hidden",
@@ -37,7 +36,7 @@
     "--glob",
     "!{.git}"
   ],
-  "list.source.grep.command": "rg",
+  "list.source.files.command": "rg",
   "list.source.grep.args": [
     "--hidden",
     "--ignore-case",
@@ -46,5 +45,6 @@
     "--glob",
     "!{.git}"
   ],
-  "git.enableGutters": true
+  "list.source.grep.command": "rg",
+  "tsserver.formatOnType": true
 }
