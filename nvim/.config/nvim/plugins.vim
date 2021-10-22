@@ -121,6 +121,12 @@ Plug 'szw/vim-maximizer'
 " Go to the good location
 Plug 'justinmk/vim-sneak'
 
+" Case conversion
+" Press crs (coerce to snake_case). MixedCase (crm), camelCase (crc), snake_case
+" (crs), UPPER_CASE (cru), dash-case (cr-), dot.case (cr.), space case
+" (cr<space>), and Title Case (crt) are all just 3 keystrokes away.
+Plug 'tpope/vim-abolish'
+
 " Better whitespace management for Vim
 Plug 'ntpeters/vim-better-whitespace'
 
