@@ -12,5 +12,12 @@ require'nvim-treesitter.configs'.setup {
     enable = false,
     disable = {},
   },
+  ensure_installed = {
+    'comment',
+    'dockerfile',
+    'fish',
+    'python',
+    'rust',
+  },
 }
 EOF
