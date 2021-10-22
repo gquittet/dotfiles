@@ -13,6 +13,8 @@
   "coc.preferences.formatOnType": true,
   "coc.source.emoji.filetypes": ["markdown"],
   "codeLens.enable": true,
+  "cSpellExt.enableDictionaries": ["french", "medical-terms"],
+  "cSpell.language": "en,fr",
   "diagnostic-languageserver.filetypes": {
     "markdown": ["write-good", "markdownlint"],
     "sh": "shellcheck"
