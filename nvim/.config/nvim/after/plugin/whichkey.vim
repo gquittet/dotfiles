@@ -276,7 +276,7 @@ let g:which_key_map_key_c = {
       \ }
 
 let g:which_key_map_key_g = {
-      \ 'name' : "+goto",
+      \ 'name' : '+goto',
       \ '%' : 'matchit-bracket-backward',
       \ 'T' : 'tab-previous',
       \ 'c' : 'comment',
