@@ -259,6 +259,22 @@ let g:which_key_map_localleader.s = {
       \ 'p' : 'previous',
       \ }
 
+let g:which_key_map_key_c = {
+      \ 'name' : '+change',
+      \ 'r' : {
+            \ 'name': '+case',
+            \ 'c': 'camelCase',
+            \ 'm': 'MixedCase',
+            \ 's': 'snake_case',
+            \ 't': 'to snake_case',
+            \ 'u': 'UPPER_CASE',
+            \ ' ': 'space case',
+            \ '-': 'dash-case',
+            \ '.': 'dot.case',
+            \ },
+      \ 'w': 'word',
+      \ }
+
 let g:which_key_map_key_g = {
       \ 'name' : "+goto",
       \ '%' : 'matchit-bracket-backward',
