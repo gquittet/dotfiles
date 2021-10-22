@@ -30,6 +30,19 @@ fish/.config/fish/functions/.*
 !fish/.config/fish/functions/v.fish
 
 # Script to avoid
-scripts/.local/bin/fnm
-scripts/.local/bin/rust-analyzer-mac
+scripts/.local/bin/__pycache__/
+scripts/.local/bin/django-admin
+scripts/.local/bin/django-admin.py
+scripts/.local/bin/dmypy
 scripts/.local/bin/fd
+scripts/.local/bin/fnm
+scripts/.local/bin/icalendar
+scripts/.local/bin/mypy
+scripts/.local/bin/mypyc
+scripts/.local/bin/pipenv
+scripts/.local/bin/pipenv-resolver
+scripts/.local/bin/rust-analyzer-mac
+scripts/.local/bin/sqlformat
+scripts/.local/bin/stubgen
+scripts/.local/bin/stubtest
+scripts/.local/bin/virtualenv-clone
