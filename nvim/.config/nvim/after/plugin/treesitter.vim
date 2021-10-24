@@ -7,7 +7,7 @@ require'nvim-treesitter.configs'.setup {
   highlight = {
     enable = true,
     disable = {},
-    },
+  },
   indent = {
     enable = false,
     disable = {},
@@ -18,6 +18,8 @@ require'nvim-treesitter.configs'.setup {
     'fish',
     'python',
     'rust',
+    'typescript',
+    'tsx',
   },
 }
 EOF
