@@ -234,6 +234,9 @@ tags
 # Debugger
 .vimspector.json
 
+# Vim per-project settings
+.vim/
+
 ### VisualStudioCode ###
 .vscode
 .vscode/*
