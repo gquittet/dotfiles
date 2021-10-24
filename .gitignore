@@ -45,4 +45,5 @@ scripts/.local/bin/rust-analyzer-mac
 scripts/.local/bin/sqlformat
 scripts/.local/bin/stubgen
 scripts/.local/bin/stubtest
+scripts/.local/bin/virtualenv
 scripts/.local/bin/virtualenv-clone
