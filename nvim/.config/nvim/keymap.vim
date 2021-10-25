@@ -56,9 +56,11 @@ nnoremap J Jzz
 " Undo breakpoints (to avoid to delete all changes)
 inoremap , ,<C-g>u
 inoremap . .<C-g>u
-inoremap :: ::<C-g>u
+inoremap :: ::C-g>u
+inoremap ( (<C-g>u
 inoremap ? ?<C-g>u
 inoremap ! !<C-g>u
+
 
 " Moving text
 vnoremap <C-j> :m '>+1<CR>gv=gv
