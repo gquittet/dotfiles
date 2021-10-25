@@ -54,6 +54,7 @@ nnoremap N Nzz
 nnoremap J Jzz
 
 " Undo breakpoints (to avoid to delete all changes)
+inoremap <C-u> <C-o>u
 inoremap , ,<C-g>u
 inoremap . .<C-g>u
 inoremap :: ::C-g>u
