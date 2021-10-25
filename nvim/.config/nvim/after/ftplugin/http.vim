@@ -4,6 +4,9 @@ nmap <buffer> <silent> <leader>mc :<C-u>HttpClean<CR>
 nmap <buffer> <silent> <leader>msc :<C-u>HttpShowCurl<CR>
 nmap <buffer> <silent> <leader>msr :<C-u>HttpShowRequest<CR>
 
+" Response buffers will overwrite each other instead of persisting forever
+let g:vim_http_tempbuffer = 1
+
 autocmd BufEnter *.md let g:which_key_map_leader.m = {
       \ 'name' : '+major' ,
       \ 'r' : 'run',
