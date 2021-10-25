@@ -158,8 +158,7 @@ nnoremap <silent> <leader>cr :<C-u>CocListResume<CR>
 nnoremap <silent> <leader>ff :<C-u>CocList files<CR>
 nnoremap <silent> <leader>fg :<C-u>CocList gfiles<CR>
 nnoremap <silent> <leader>ll :<C-u>CocList lines<CR>
-nnoremap <silent> <BSlash> :<C-u>CocList grep<CR>
-nnoremap <silent> <bar> :exe 'CocList --input='.expand('<cword>').' grep'<CR>
+nnoremap <silent> <leader>sg :<C-u>CocList grep<CR>
 nnoremap <silent> <leader>lL :<C-u>CocList locationlist<CR>
 nnoremap <silent> <leader>lr :<C-u>CocList mru<CR>
 nnoremap <silent> <leader>li :<C-u>CocList issues<CR>

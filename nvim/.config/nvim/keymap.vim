@@ -1,5 +1,5 @@
 let mapleader = "\<space>"
-let maplocalleader = ","
+let maplocalleader = "\\"
 
 " Disable
 " Arrow keys
