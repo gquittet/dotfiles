@@ -206,10 +206,6 @@ let g:which_key_map_leader.t = {
       \ 'name' : '+toggle' ,
       \ 'c' : 'color',
       \ 'e' : 'explorer',
-      \ 'i' : 'indent-guide',
-      \ 'n' : 'line-number',
-      \ 'o' : 'outline',
-      \ 'r' : 'rainbow-mode',
       \ 'u' : 'undo-tree',
       \ 'g' : {
         \ 'name' : '+git',

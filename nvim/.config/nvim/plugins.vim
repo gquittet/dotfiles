@@ -81,18 +81,12 @@ Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() } }
 Plug 'adelarsq/vim-matchit'
 
 Plug 'terryma/vim-multiple-cursors'                                     " Multiple cursors like sublime text
-Plug 'myusuf3/numbers.vim'                                              " Numbers.vim
 Plug 'weirongxu/plantuml-previewer.vim'                                 " Plantuml-previewer
 Plug 'tyru/open-browser.vim'                                            " Plantuml-previewer dependency
 Plug 'dhruvasagar/vim-table-mode'                                       " Table mode
 Plug 'godlygeek/tabular'                                                " Tabular : useful for great alignement
 Plug 'mbbill/undotree'                                                  " UndoTree : See all undos
 Plug 'kkoomen/vim-doge'                                                 " Vim doge - Documentation generator for code
-" See https://github.com/liuchengxu/vista.vim for dependencies installation
-" instruction
-Plug 'liuchengxu/vista.vim'
-
-Plug 'nathanaelkane/vim-indent-guides'
 
 if has('nvim')
     " Better syntax highlighting
@@ -104,8 +98,6 @@ endif
 " Database management features
 Plug 'tpope/vim-dadbod'
 Plug 'kristijanhusak/vim-dadbod-ui'
-
-Plug 'pechorin/any-jump.vim'
 
 Plug 'liuchengxu/vim-which-key'
 
@@ -166,12 +158,8 @@ Plug 'ghifarit53/tokyonight-vim'
 " Debug startup time
 Plug 'dstein64/vim-startuptime'
 
-" Font icons
-Plug 'ryanoasis/vim-devicons'
 
 " All of your Plugins must be added before the following line
 call plug#end()             " required
 syntax enable               " required
 
-" dev-icons enable folders open/close icons
-let g:DevIconsEnableFoldersOpenClose = 1

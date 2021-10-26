@@ -190,35 +190,13 @@ map <silent> <leader>nh :<C-u>nohl <bar> :let @/ = "" <bar> echo ':nohl'<CR>
 
 
 " Toggle
-nmap <silent> <leader>tc :<C-u>let &background = ( &background == "dark"? "light" : "dark" )<CR>
-nmap <silent> <leader>te :<C-u>CocCommand explorer<CR>
-nmap <silent> <leader>ti :<C-u>IndentGuidesToggle<CR>
-nmap <silent> <leader>tn :<C-u>call ToggleNumber()<CR>
-nmap <silent> <leader>tr :<C-u>RainbowToggle<CR>
-nmap <silent> <leader>to :<C-u>Vista!!<CR>
-nmap <silent> <leader>tu :<C-u>UndotreeToggle<CR>
-
-function! ToggleNumber()
-    if g:enable_numbers
-        set nonumber
-        set norelativenumber
-        call NumbersDisable()
-        let g:number_status = 'off'
-    else
-        set number
-        set relativenumber
-        call NumbersEnable()
-        let g:number_status = 'on'
-    endif
-endfunction
+nmap <silent> <leader>tc <cmd>let &background = ( &background == "dark"? "light" : "dark" )<cr>
+nmap <silent> <leader>te <cmd>CocCommand explorer<cr>
+nmap <silent> <leader>tu <cmd>UndotreeToggle<cr>
 
 " Settings
 " Reload settings
 nnoremap <silent> <leader>Sr :<C-u>source ~/.config/nvim/init.vim <bar> :call webdevicons#refresh() <bar> :echo "Settings refreshed!"<CR>
-
-" Sort
-" JSON
-map <silent> <leader>rsj :<C-u>%!python -m json.tool<CR>
 
 " Tabular
 nmap <silent> <leader>ri& :<C-u>Tabularize /&<CR>
