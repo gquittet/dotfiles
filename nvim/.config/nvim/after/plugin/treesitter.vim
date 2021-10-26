@@ -3,7 +3,7 @@ if !exists('g:loaded_nvim_treesitter')
 endif
 
 lua <<EOF
-require'nvim-treesitter.configs'.setup {
+require('nvim-treesitter.configs').setup {
   highlight = {
     enable = true,
     disable = {},
