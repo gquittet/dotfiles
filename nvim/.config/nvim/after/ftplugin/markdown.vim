@@ -3,8 +3,8 @@ setlocal textwidth=80
 setlocal colorcolumn=81
 setlocal wrapmargin=0
 
-nmap <buffer> <silent> <leader>mp :<C-u>MarkdownPreview<CR>
-nmap <buffer> <silent> <leader>mk :<C-u>MarkdownPreviewStop<CR>
+nmap <buffer> <silent> <leader>mp <cmd>MarkdownPreview<cr>
+nmap <buffer> <silent> <leader>mk <cmd>MarkdownPreviewStop<cr>
 
 autocmd BufEnter *.md let g:which_key_map_leader.m = {
       \ 'name' : '+major' ,

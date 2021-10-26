@@ -1,8 +1,8 @@
-nmap <buffer> <silent> <leader>mr :<C-u>Http<CR>
-nmap <buffer> <silent> <leader>ma :<C-u>HttpAuth<CR>
-nmap <buffer> <silent> <leader>mc :<C-u>HttpClean<CR>
-nmap <buffer> <silent> <leader>msc :<C-u>HttpShowCurl<CR>
-nmap <buffer> <silent> <leader>msr :<C-u>HttpShowRequest<CR>
+nmap <buffer> <silent> <leader>mr <cmd>Http<cr>
+nmap <buffer> <silent> <leader>ma <cmd>HttpAuth<cr>
+nmap <buffer> <silent> <leader>mc <cmd>HttpClean<cr>
+nmap <buffer> <silent> <leader>msc <cmd>HttpShowCurl<cr>
+nmap <buffer> <silent> <leader>msr <cmd>HttpShowRequest<cr>
 
 " Response buffers will overwrite each other instead of persisting forever
 let g:vim_http_tempbuffer = 1

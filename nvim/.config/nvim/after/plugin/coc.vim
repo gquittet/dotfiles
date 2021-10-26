@@ -141,42 +141,42 @@ set statusline^=%{coc#status()}%{get(b:,'coc_current_function','')}
 " Disable hidding cursor when pressing <C-c>
 let g:coc_disable_transparent_cursor=1
 " Show all diagnostics
-nnoremap <silent> <leader>ld :<C-u>CocList diagnostics<cr>
-nnoremap <silent> <leader>lbd :<C-u>CocList diagnostics --current-buf<cr>
+nnoremap <silent> <leader>ld <cmd>CocList diagnostics<cr>
+nnoremap <silent> <leader>lbd <cmd>CocList diagnostics --current-buf<cr>
 " Manage extensions
-nnoremap <silent> <leader>le :<C-u>CocList extensions<cr>
+nnoremap <silent> <leader>le <cmd>CocList extensions<cr>
 " Show commands
-nnoremap <silent> <leader>cc :<C-u>CocList commands<cr>
+nnoremap <silent> <leader>cc <cmd>CocList commands<cr>
 " Find symbol of current document
-nnoremap <silent> <leader>lo :<C-u>CocList outline<cr>
+nnoremap <silent> <leader>lo <cmd>CocList outline<cr>
 " Search leader symbols
-nnoremap <silent> <leader>ls :<C-u>CocList -I symbols<cr>
+nnoremap <silent> <leader>ls <cmd>CocList -I symbols<cr>
 " Do default action for next item.
-nnoremap <silent> <leader>cn :<C-u>CocNext<CR>
+nnoremap <silent> <leader>cn <cmd>CocNext<cr>
 " Do default action for previous item.
-nnoremap <silent> <leader>cp :<C-u>CocPrev<CR>
+nnoremap <silent> <leader>cp <cmd>CocPrev<cr>
 " Resume latest coc list
-nnoremap <silent> <leader>cr :<C-u>CocListResume<CR>
+nnoremap <silent> <leader>cr <cmd>CocListResume<cr>
 
-nnoremap <silent> <leader>ff :<C-u>CocList files<CR>
-nnoremap <silent> <leader>fg :<C-u>CocList gfiles<CR>
-nnoremap <silent> <leader>ll :<C-u>CocList lines<CR>
-nnoremap <silent> <leader>sg :<C-u>CocList grep<CR>
-nnoremap <silent> <leader>lL :<C-u>CocList locationlist<CR>
-nnoremap <silent> <leader>lr :<C-u>CocList mru<CR>
-nnoremap <silent> <leader>li :<C-u>CocList issues<CR>
-nnoremap <silent> <leader>lbl :<C-u>CocList buffers<CR>
-nnoremap <silent> <leader>lB :<C-u>CocList buffers<CR>
-nnoremap <silent> <leader>Sc :<C-u>CocList colors<CR>
-nmap <silent> <leader>gb :<C-u>CocList branches --all<CR>
-nnoremap <silent> <leader>lc :<C-u>CocList commits<CR>
-nnoremap <silent> <leader>lbc :<C-u>CocList bcommits<CR>
-nnoremap <silent> <leader>lft :<C-u>CocList filetypes<CR>
-nnoremap <silent> <leader>lsp :<C-u>CocList snippets<CR>
-nnoremap <silent> <leader>lq :<C-u>CocList quickfix<CR>
-nnoremap <silent> <leader>lbw :<C-u>CocList words<CR>
+nnoremap <silent> <leader>ff <cmd>CocList files<cr>
+nnoremap <silent> <leader>fg <cmd>CocList gfiles<cr>
+nnoremap <silent> <leader>ll <cmd>CocList lines<cr>
+nnoremap <silent> <leader>sg <cmd>CocList grep<cr>
+nnoremap <silent> <leader>lL <cmd>CocList locationlist<cr>
+nnoremap <silent> <leader>lr <cmd>CocList mru<cr>
+nnoremap <silent> <leader>li <cmd>CocList issues<cr>
+nnoremap <silent> <leader>lbl <cmd>CocList buffers<cr>
+nnoremap <silent> <leader>lB <cmd>CocList buffers<cr>
+nnoremap <silent> <leader>Sc <cmd>CocList colors<cr>
+nmap <silent> <leader>gb <cmd>CocList branches --all<cr>
+nnoremap <silent> <leader>lc <cmd>CocList commits<cr>
+nnoremap <silent> <leader>lbc <cmd>CocList bcommits<cr>
+nnoremap <silent> <leader>lft <cmd>CocList filetypes<cr>
+nnoremap <silent> <leader>lsp <cmd>CocList snippets<cr>
+nnoremap <silent> <leader>lq <cmd>CocList quickfix<cr>
+nnoremap <silent> <leader>lbw <cmd>CocList words<cr>
 nnoremap <silent> <leader>sw :exe 'CocList --input='.expand('<cword>').' words'<CR>
-nnoremap <silent> <leader>ly :<C-u>CocList yank<CR>
+nnoremap <silent> <leader>ly <cmd>CocList yank<cr>
 
 " Git
 " navigate conflicts of current buffer
@@ -187,7 +187,7 @@ nmap <leader>ghp <Plug>(coc-git-prevchunk)
 nmap <leader>ghn <Plug>(coc-git-nextchunk)
 " show chunk diff at current position
 nmap <leader>ghi <Plug>(coc-git-chunkinfo)
-nmap <silent> <leader>ghu :<C-u>CocCommand git.chunkUndo<CR>
+nmap <silent> <leader>ghu <cmd>CocCommand git.chunkUndo<cr>
 " show commit contains current position
 nmap <leader>ghK <Plug>(coc-git-commit)
 nmap <silent> <leader>guo :CocCommand git.browserOpen<CR>
@@ -225,4 +225,4 @@ let g:coc_snippet_next = '<tab>'
 
 " Coc Explorer
 autocmd BufEnter * if (winnr("$") == 1 && &filetype == 'coc-explorer') | q | endif
-nmap <silent> <leader>tgg :<C-u>CocCommand git.toggleGutters<CR>
+nmap <silent> <leader>tgg <cmd>CocCommand git.toggleGutters<cr>

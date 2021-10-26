@@ -16,6 +16,7 @@ require('nvim-treesitter.configs').setup {
     'comment',
     'dockerfile',
     'fish',
+    'javascript',
     'python',
     'rust',
     'typescript',

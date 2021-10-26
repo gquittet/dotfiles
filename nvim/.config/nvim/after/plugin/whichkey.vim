@@ -1,11 +1,11 @@
-nnoremap <silent> <leader> :<C-u>WhichKey '<space>'<CR>
-vnoremap <silent> <leader> :<C-u>WhichKey '<space>'<CR>
+nnoremap <silent> <leader> <cmd>WhichKey '<space>'<cr>
+vnoremap <silent> <leader> <cmd>WhichKey '<space>'<cr>
 call which_key#register('<space>', "g:which_key_map_leader")
-nnoremap <silent> <localleader> :<C-u>WhichKey ','<CR>
-vnoremap <silent> <localleader> :<C-u>WhichKey ','<CR>
+nnoremap <silent> <localleader> <cmd>WhichKey ','<cr>
+vnoremap <silent> <localleader> <cmd>WhichKey ','<cr>
 call which_key#register(',', "g:which_key_map_localleader")
-nnoremap <silent> g :<C-u>WhichKey 'g'<CR>
-vnoremap <silent> g :<C-u>WhichKey 'g'<CR>
+nnoremap <silent> g <cmd>WhichKey 'g'<cr>
+vnoremap <silent> g <cmd>WhichKey 'g'<cr>
 call which_key#register('g', "g:which_key_map_key_g")
 nnoremap <silent> <ESC> <ESC>
 vnoremap <silent> <ESC> <ESC>
