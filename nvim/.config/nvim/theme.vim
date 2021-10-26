@@ -30,7 +30,6 @@ syntax enable
 "set background=dark
 
 "colorscheme onehalfdark
-"let g:airline_theme='onehalfdark'
 
 "let ayucolor="light" " for mirage version of theme
 "colorscheme ayu
@@ -40,20 +39,17 @@ syntax enable
 "colorscheme nord
 
 " colorscheme onehalflight
-" let g:airline_theme='onehalflight'
 "
 " colorscheme PaperColor
 " set background=light
 "
 " colorscheme tender
-" let g:airline_theme = 'tender'
 
 " Material oceanic
 set background=dark
 let g:material_terminal_italics = 1
 let g:material_theme_style = 'oceanic'
 colorscheme material
-let g:airline_theme='material'
 
 " set background=dark
 " colorscheme moonlight
@@ -62,12 +58,10 @@ let g:airline_theme='material'
 " let g:tokyonight_style = 'storm' " available: night, storm
 " let g:tokyonight_enable_italic = 1
 " colorscheme tokyonight
-" let g:airline_theme = "tokyonight"
 
 " colorscheme OceanicNext
 " let g:oceanic_next_terminal_bold = 1
 " let g:oceanic_next_terminal_italic = 1
-" let g:airline_theme='space'
 
 " Solarized
 " colorscheme NeoSolarized
