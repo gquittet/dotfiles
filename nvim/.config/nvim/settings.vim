@@ -105,6 +105,10 @@ if executable(s:clip)
     augroup END
 endif
 
+" Highlight yank
+" au TextYankPost * silent! lua vim.highlight.on_yank {higroup="IncSearch", timeout=150, on_visual=false}
+au TextYankPost * silent! lua vim.highlight.on_yank()
+
 " ALE
 " Before plugins are loaded
 let g:ale_disable_lsp = 1

@@ -55,7 +55,6 @@ let g:coc_global_extensions = [
     \ 'coc-vimlsp',
     \ 'coc-xml',
     \ 'coc-yaml',
-    \ 'coc-yank'
     \ ]
 Plug 'neoclide/coc.nvim', {'branch': 'release', 'do': { -> coc#add_extension() }}
 
