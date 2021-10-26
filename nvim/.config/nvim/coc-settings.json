@@ -1,4 +1,6 @@
 {
+  "cSpell.language": "en,fr",
+  "cSpellExt.enableDictionaries": ["french", "medical-terms"],
   "coc.preferences.formatOnSaveFiletypes": [
     "javascript",
     "javascriptreact",
@@ -13,8 +15,6 @@
   "coc.preferences.formatOnType": true,
   "coc.source.emoji.filetypes": ["markdown"],
   "codeLens.enable": true,
-  "cSpellExt.enableDictionaries": ["french", "medical-terms"],
-  "cSpell.language": "en,fr",
   "diagnostic-languageserver.filetypes": {
     "markdown": ["write-good", "markdownlint"],
     "sh": "shellcheck"
@@ -48,6 +48,5 @@
     "--glob",
     "!{.git}"
   ],
-  "list.source.grep.command": "rg",
-  "tsserver.formatOnType": true
+  "list.source.grep.command": "rg"
 }
