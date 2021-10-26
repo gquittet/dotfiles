@@ -24,6 +24,9 @@ else
   set signcolumn=yes
 endif
 
+" Fix Coc error highlighting doesn't refresh and needs :edit
+au FocusGained,BufEnter,CursorHold * nested checktime %
+
 " Use tab for trigger completion with characters ahead and navigate.
 " NOTE: Use command ':verbose imap <tab>' to make sure tab is not mapped by
 " other plugin before putting this into your config.
