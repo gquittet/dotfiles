@@ -152,7 +152,7 @@ Plug 'kaicataldo/material.vim'
 Plug 'mhartington/oceanic-next'
 Plug 'karoliskoncevicius/moonshine-vim'
 Plug 'Brettm12345/moonlight.vim'
-Plug 'ghifarit53/tokyonight-vim'
+Plug 'folke/tokyonight.nvim', { 'branch': 'main' }
 
 " Debug startup time
 Plug 'dstein64/vim-startuptime'

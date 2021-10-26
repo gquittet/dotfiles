@@ -46,18 +46,18 @@ syntax enable
 " colorscheme tender
 
 " Material oceanic
-set background=dark
-let g:material_terminal_italics = 1
-let g:material_theme_style = 'oceanic'
-colorscheme material
+" set background=dark
+" let g:material_terminal_italics = 1
+" let g:material_theme_style = 'oceanic'
+" colorscheme material
 
 " set background=dark
 " colorscheme moonlight
 " let g:moonlight_terminal_italics=1
 
-" let g:tokyonight_style = 'storm' " available: night, storm
-" let g:tokyonight_enable_italic = 1
-" colorscheme tokyonight
+let g:tokyonight_style = 'night' " available: night, storm
+let g:tokyonight_italic_functions = 1
+colorscheme tokyonight
 
 " colorscheme OceanicNext
 " let g:oceanic_next_terminal_bold = 1
