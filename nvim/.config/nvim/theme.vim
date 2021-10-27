@@ -56,7 +56,7 @@ syntax enable
 " let g:moonlight_terminal_italics=1
 
 let g:tokyonight_style = 'night' " available: night, storm
-let g:tokyonight_italic_functions = 1
+let g:tokyonight_transparent = 1
 colorscheme tokyonight
 
 " colorscheme OceanicNext
