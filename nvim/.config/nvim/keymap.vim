@@ -174,8 +174,8 @@ nmap <silent> <leader>gbl <cmd>Git blame<cr>
 nmap <silent> <leader>gc <cmd>Git commit<cr>
 nmap <silent> <leader>gdd <cmd>Gdiff<cr>
 nmap <silent> <leader>gdv <cmd>Gvdiffsplit!<cr>
-nmap <silent> <leader>gda <cmd>diffget //2<cr>
-nmap <silent> <leader>gd; <cmd>diffget //3<cr>
+nmap <silent> <leader>gda <cmd>diffget //2<cr><cmd>diffput //3<cr>
+nmap <silent> <leader>gd; <cmd>diffget //3<cr><cmd>diffput //2<cr>
 nmap <silent> <leader>gl <cmd>Gclog<cr>
 nmap <silent> <leader>gP <cmd>Git push<cr>
 nmap <silent> <leader>gPf <cmd>Git push --force<cr>
