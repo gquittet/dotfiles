@@ -57,7 +57,7 @@ nnoremap J Jzz
 inoremap <C-u> <C-o>u
 inoremap , ,<C-g>u
 inoremap . .<C-g>u
-inoremap :: ::C-g>u
+inoremap :: ::<C-g>u
 inoremap ( (<C-g>u
 inoremap ? ?<C-g>u
 inoremap ! !<C-g>u
@@ -196,7 +196,7 @@ nmap <silent> <leader>tu <cmd>UndotreeToggle<cr>
 
 " Settings
 " Reload settings
-nnoremap <silent> <leader>Sr <cmd>source ~/.config/nvim/init.vim <bar> :call webdevicons#refresh() <bar> :echo "Settings refreshed!"<cr>
+nnoremap <silent> <leader>Sr <cmd>source ~/.config/nvim/init.vim <bar> :echo "Settings refreshed!"<cr>
 
 " Tabular
 nmap <silent> <leader>ri& <cmd>Tabularize /&<cr>
