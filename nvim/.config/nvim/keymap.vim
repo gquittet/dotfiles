@@ -64,8 +64,8 @@ inoremap ! !<C-g>u
 
 
 " Moving text
-vnoremap <C-j> :m '>+1<CR>gv=gv
-vnoremap <C-k> :m '<-2<CR>gv=gv
+vnoremap <C-j> :m '>+1<CR>gv
+vnoremap <C-k> :m '<-2<CR>gv
 
 nnoremap <silent> <leader>_c "_c
 nnoremap <silent> <leader>_d "_d
