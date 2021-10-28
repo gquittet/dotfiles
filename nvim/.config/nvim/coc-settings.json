@@ -1,5 +1,6 @@
 {
   "cSpell.language": "en,fr",
+  "cSpell.userWords": ["Quittet"],
   "cSpellExt.enableDictionaries": ["french", "medical-terms"],
   "coc.preferences.formatOnSaveFiletypes": [
     "javascript",
