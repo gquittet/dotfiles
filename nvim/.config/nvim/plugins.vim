@@ -17,6 +17,10 @@ if has('vim')
     endif
 endif
 
+Plug 'vim-airline/vim-airline'                                          " Vim-Airline
+Plug 'vim-airline/vim-airline-themes'                                   " Vim-Airline theme
+
+
 " Use release branch (recommend)
 " coc.vim
 let g:coc_global_extensions = [
@@ -90,8 +94,6 @@ Plug 'kkoomen/vim-doge'                                                 " Vim do
 if has('nvim')
     " Better syntax highlighting
     Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
-    " Status Line
-    Plug 'nvim-lualine/lualine.nvim'
 endif
 
 " Database management features

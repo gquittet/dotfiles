@@ -58,6 +58,7 @@ syntax enable
 let g:tokyonight_style = 'night' " available: night, storm
 let g:tokyonight_transparent = 1
 colorscheme tokyonight
+let g:airline_theme = 'tokyonight'
 
 " colorscheme OceanicNext
 " let g:oceanic_next_terminal_bold = 1
