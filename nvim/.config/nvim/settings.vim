@@ -109,13 +109,6 @@ endif
 " au TextYankPost * silent! lua vim.highlight.on_yank {higroup="IncSearch", timeout=150, on_visual=false}
 au TextYankPost * silent! lua vim.highlight.on_yank()
 
-" ALE
-" Before plugins are loaded
-let g:ale_disable_lsp = 1
-
-" Coldfusion
-au BufNewFile,BufRead *.cfm,*.cfc setf cfml
-
 " Grammalecte
 let g:grammalecte_cli_py='~/Downloads/Grammalecte-fr-v2.0.0/grammalecte-cli.py'
 
@@ -128,12 +121,3 @@ let g:indent_guides_exclude_filetypes = ['help', 'nerdtree', 'fzf']
 
 " Better whitespace
 let g:better_whitespace_operator='<leader>rw'
-
-" JavaScript + TypeScript syntax highlighting optimization for large files
-autocmd BufEnter *.{js,jsx,ts,tsx} :syntax sync fromstart
-autocmd BufLeave *.{js,jsx,ts,tsx} :syntax sync clear
-
-" Reload icons after init source
-if exists('g:loaded_webdevicons')
-  call webdevicons#refresh()
-endif

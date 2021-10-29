@@ -63,9 +63,7 @@ Plug 'neoclide/coc.nvim', {'branch': 'release', 'do': { -> coc#add_extension() }
 
 " Git
 Plug 'tpope/vim-fugitive'
-Plug 'junegunn/gv.vim'                                                  " A Git commit browser
 Plug 'rhysd/git-messenger.vim'                                          " VSCode: GitLens feature
-Plug 'tpope/vim-rhubarb'                                                " Open file remotely, show related issue, etc
 
 " Vim HTTP (handle http files that respect RFC 2616)
 Plug 'nicwest/vim-http'
@@ -89,7 +87,6 @@ Plug 'tyru/open-browser.vim'                                            " Plantu
 Plug 'dhruvasagar/vim-table-mode'                                       " Table mode
 Plug 'godlygeek/tabular'                                                " Tabular : useful for great alignement
 Plug 'mbbill/undotree'                                                  " UndoTree : See all undos
-Plug 'kkoomen/vim-doge'                                                 " Vim doge - Documentation generator for code
 
 if has('nvim')
     " Better syntax highlighting
@@ -124,16 +121,9 @@ Plug 'tpope/vim-abolish'
 Plug 'ntpeters/vim-better-whitespace'
 
 " Languages
-Plug 'ernstvanderlinden/vim-coldfusion'
-Plug 'davejlong/cf-utils.vim'
 Plug 'tpope/vim-jdaddy' " JSON
 Plug 'Stautob/vim-fish'
 Plug 'jceb/vim-orgmode'
-Plug 'kkvh/vim-docker-tools'
-" TypeScript
-Plug 'leafgarland/typescript-vim'
-" React
-Plug 'peitalin/vim-jsx-typescript'
 Plug 'jparise/vim-graphql'
 
 " Debugger
@@ -146,14 +136,6 @@ Plug 'honza/vim-snippets' " Snippets
 " Themes
 Plug 'ayu-theme/ayu-vim'                                                " Ayu
 Plug 'icymind/NeoSolarized'
-Plug 'morhetz/gruvbox'                                                  " Gruvbox
-Plug 'sonph/onehalf', {'rtp': 'vim/'}                                   " One Half
-Plug 'NLKNguyen/papercolor-theme'                                       " Paper color theme
-Plug 'jacoborus/tender.vim'                                             " Tender
-Plug 'kaicataldo/material.vim'
-Plug 'mhartington/oceanic-next'
-Plug 'karoliskoncevicius/moonshine-vim'
-Plug 'Brettm12345/moonlight.vim'
 Plug 'folke/tokyonight.nvim', { 'branch': 'main' }
 
 " Debug startup time
