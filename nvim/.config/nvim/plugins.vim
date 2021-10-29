@@ -61,6 +61,9 @@ let g:coc_global_extensions = [
     \ ]
 Plug 'neoclide/coc.nvim', {'branch': 'release', 'do': { -> coc#add_extension() }}
 
+" Copilot
+" Plug 'github/copilot.vim'
+
 " Git
 Plug 'tpope/vim-fugitive'
 Plug 'rhysd/git-messenger.vim'                                          " VSCode: GitLens feature
