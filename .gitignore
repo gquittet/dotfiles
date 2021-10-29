@@ -42,6 +42,7 @@ scripts/.local/bin/mypyc
 scripts/.local/bin/pipenv
 scripts/.local/bin/pipenv-resolver
 scripts/.local/bin/rust-analyzer-mac
+scripts/.local/bin/sourcery
 scripts/.local/bin/sqlformat
 scripts/.local/bin/stubgen
 scripts/.local/bin/stubtest
