@@ -91,6 +91,8 @@ nmap <silent> <leader>bf <cmd>bfirst<cr>
 nmap <silent> <leader>bl <cmd>blast<cr>
 nmap <silent> <leader>bn <cmd>bnext<cr>
 nmap <silent> <leader>bp <cmd>bprevious<cr>
+nmap <silent> <leader>bw <cmd>bwipeout<cr>
+nmap <silent> <leader>bW <cmd>bwipeout!<cr>
 
 " Tabs
 nmap <silent> <leader>TD <cmd>tabclose!<cr>
