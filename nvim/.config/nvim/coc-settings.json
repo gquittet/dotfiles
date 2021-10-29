@@ -33,6 +33,19 @@
   "explorer.width": 30,
   "git.enableGutters": true,
   "javascript.referencesCodeLens.enable": false,
+  "languageserver": {
+    "sourcery": {
+      "args": ["lsp"],
+      "command": "sourcery",
+      "filetypes": ["python"],
+      "initializationOptions": {
+        "editor_version": "vim",
+        "extension_version": "coc.vim",
+        "token": "user_PLavqbOyVllZbd3zcY5U9kXuA4ekJiKQ2pSe7rWU_QEP7FrOvrbMEpJnxE4"
+      },
+      "settings": { "sourcery": { "metricsEnabled": false } }
+    }
+  },
   "list.source.files.args": [
     "--files",
     "--hidden",
