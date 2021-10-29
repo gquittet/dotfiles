@@ -20,6 +20,7 @@ set history=1000                                                            " Se
 set lazyredraw                                                              " Render window only after the end of a macro (big improvement of speed)
 set linespace=0                                                             " No extra spaces between rows
 set nojoinspaces                                                            " Prevents inserting two spaces after punctuation on a join (J)
+set number                                                                  " set the number in vim
 set relativenumber                                                          " set the number in vim
 set scrolljump=5                                                            " Lines to scroll when cursor leaves screen
 set scrolloff=3                                                             " Minimum lines to keep above and below cursor
