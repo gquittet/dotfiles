@@ -141,6 +141,9 @@ Plug 'ayu-theme/ayu-vim'                                                " Ayu
 Plug 'icymind/NeoSolarized'
 Plug 'folke/tokyonight.nvim', { 'branch': 'main' }
 
+" Performance improvement with CursorHold
+Plug 'antoinemadec/FixCursorHold.nvim'
+
 " Debug startup time
 Plug 'dstein64/vim-startuptime'
 
