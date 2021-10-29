@@ -156,14 +156,14 @@ nnoremap <silent> <leader>cn <cmd>CocNext<cr>
 " Do default action for previous item.
 nnoremap <silent> <leader>cp <cmd>CocPrev<cr>
 " Resume latest coc list
-nnoremap <silent> <leader>cr <cmd>CocListResume<cr>
+nnoremap <silent> <leader>lr <cmd>CocListResume<cr>
 
 nnoremap <silent> <leader>ff <cmd>CocList files<cr>
 nnoremap <silent> <leader>fg <cmd>CocList gfiles<cr>
 nnoremap <silent> <leader>ll <cmd>CocList lines<cr>
 nnoremap <silent> <leader>sg <cmd>CocList grep<cr>
 nnoremap <silent> <leader>lL <cmd>CocList locationlist<cr>
-nnoremap <silent> <leader>lr <cmd>CocList mru<cr>
+nnoremap <silent> <leader>lR <cmd>CocList mru<cr>
 nnoremap <silent> <leader>li <cmd>CocList issues<cr>
 nnoremap <silent> <leader>lbl <cmd>CocList buffers<cr>
 nnoremap <silent> <leader>lB <cmd>CocList buffers<cr>
