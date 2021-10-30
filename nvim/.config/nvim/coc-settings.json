@@ -23,6 +23,7 @@
   "diagnostic.messageTarget": "echo",
   "diagnostic.virtualText": true,
   "eslint.autoFixOnSave": true,
+  "eslint.format.enable": true,
   "explorer.file.showHiddenFiles": true,
   "explorer.icon.enableNerdfont": true,
   "explorer.keyMappings.global": {
