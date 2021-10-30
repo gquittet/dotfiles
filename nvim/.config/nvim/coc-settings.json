@@ -13,7 +13,6 @@
     "typescriptreact",
     "vue"
   ],
-  "coc.preferences.formatOnType": true,
   "coc.source.emoji.filetypes": ["markdown"],
   "codeLens.enable": true,
   "diagnostic-languageserver.filetypes": {
