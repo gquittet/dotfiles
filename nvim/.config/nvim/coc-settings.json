@@ -3,6 +3,7 @@
   "cSpell.userWords": ["Quittet"],
   "cSpellExt.enableDictionaries": ["french", "medical-terms"],
   "coc.preferences.formatOnSaveFiletypes": [
+    "css",
     "javascript",
     "javascriptreact",
     "json",
