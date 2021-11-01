@@ -40,6 +40,7 @@ let g:coc_global_extensions = [
     \ 'coc-markdownlint',
     \ 'coc-marketplace',
     \ 'coc-pairs',
+    \ 'coc-prettier',
     \ 'coc-pyright',
     \ 'coc-rust-analyzer',
     \ 'coc-sh',

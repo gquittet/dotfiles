@@ -64,6 +64,7 @@
     "!{.git}"
   ],
   "list.source.grep.command": "rg",
+  "prettier.requireConfig": true,
   "tsserver.disableAutomaticTypeAcquisition": false,
   "typescript.referencesCodeLens.enable": false
 }
