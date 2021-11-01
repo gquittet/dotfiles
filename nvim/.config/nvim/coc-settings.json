@@ -44,7 +44,7 @@
         "extension_version": "coc.vim",
         "token": "user_PLavqbOyVllZbd3zcY5U9kXuA4ekJiKQ2pSe7rWU_QEP7FrOvrbMEpJnxE4"
       },
-      "settings": { "sourcery": { "metricsEnabled": false } }
+      "settings": {"sourcery": {"metricsEnabled": false}}
     }
   },
   "list.source.files.args": [
