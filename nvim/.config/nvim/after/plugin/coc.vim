@@ -80,7 +80,8 @@ function! s:show_documentation()
 endfunction
 
 " Highlight the symbol and its references when holding the cursor.
-autocmd CursorHold * silent call CocActionAsync('highlight')
+" Slowdown neovim => don't uncomment
+" autocmd CursorHold * silent call CocActionAsync('highlight')
 
 " Symbol renaming.
 nmap <leader>rn <Plug>(coc-rename)
@@ -130,7 +131,10 @@ command! -nargs=? Fold :call     CocAction('fold', <f-args>)
 " Add `:OR` command for organize imports of the current buffer.
 command! -nargs=0 OR :call     CocAction('runCommand', 'editor.action.organizeImport')
 " Sort imports on save
-autocmd BufWritePre * :silent call CocAction('runCommand', 'editor.action.organizeImport')
+" Never uncomment this line because it slows down neovim and it's not
+" recommended by the Coc developer.
+" https://github.com/neoclide/coc.nvim/issues/888#issuecomment-597553404
+" autocmd BufWritePre * :silent call CocAction('runCommand', 'editor.action.organizeImport')
 
 " Add (Neo)Vim's native statusline support.
 " NOTE: Please see `:h coc-status` for integrations with external plugins that
