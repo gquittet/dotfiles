@@ -106,6 +106,12 @@ if executable(s:clip)
     augroup END
 endif
 
+" Keep cursor in the middle of the screen
+augroup KeepCentered
+  autocmd!
+  autocmd CursorMoved * normal! zz
+augroup END
+
 " Highlight yank
 " au TextYankPost * silent! lua vim.highlight.on_yank {higroup="IncSearch", timeout=150, on_visual=false}
 au TextYankPost * silent! lua vim.highlight.on_yank()
