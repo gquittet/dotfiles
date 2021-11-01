@@ -20,7 +20,7 @@
     "markdown": ["write-good", "markdownlint"],
     "sh": "shellcheck"
   },
-  "diagnostic.messageTarget": "echo",
+  "diagnostic.enableMessage": "never",
   "diagnostic.virtualText": true,
   "eslint.autoFixOnSave": true,
   "eslint.format.enable": true,
