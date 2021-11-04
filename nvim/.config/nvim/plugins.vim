@@ -114,6 +114,9 @@ Plug 'szw/vim-maximizer'
 " Go to the good location
 Plug 'justinmk/vim-sneak'
 
+" Join and Split line easily
+Plug 'AndrewRadev/splitjoin.vim'
+
 " Case conversion
 " Press crs (coerce to snake_case). MixedCase (crm), camelCase (crc), snake_case
 " (crs), UPPER_CASE (cru), dash-case (cr-), dot.case (cr.), space case
