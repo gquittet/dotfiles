@@ -31,7 +31,6 @@ let g:coc_global_extensions = [
     \ 'coc-emmet',
     \ 'coc-emoji',
     \ 'coc-eslint',
-    \ 'coc-explorer',
     \ 'coc-git',
     \ 'coc-highlight',
     \ 'coc-html',
@@ -63,6 +62,18 @@ Plug 'neoclide/coc.nvim', {'branch': 'release', 'do': { -> coc#add_extension() }
 
 " Copilot
 " Plug 'github/copilot.vim'
+
+" Tree explorer
+if has('nvim')
+  Plug 'Shougo/defx.nvim', { 'do': ':UpdateRemotePlugins' }
+else
+  Plug 'Shougo/defx.nvim'
+  Plug 'roxma/nvim-yarp'
+  Plug 'roxma/vim-hug-neovim-rpc'
+endif
+Plug 't9md/vim-choosewin' " Needed to select which buffer will be replace
+Plug 'kristijanhusak/defx-git'
+Plug 'kristijanhusak/defx-icons'
 
 " Git
 Plug 'tpope/vim-fugitive'

@@ -228,6 +228,4 @@ endfunction
 
 let g:coc_snippet_next = '<tab>'
 
-" Coc Explorer
-autocmd BufEnter * if (winnr("$") == 1 && &filetype == 'coc-explorer') | q | endif
 nmap <silent> <leader>tgg <cmd>CocCommand git.toggleGutters<cr>

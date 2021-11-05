@@ -24,14 +24,6 @@
   "diagnostic.virtualText": true,
   "eslint.autoFixOnSave": true,
   "eslint.format.enable": true,
-  "explorer.file.showHiddenFiles": true,
-  "explorer.icon.enableNerdfont": true,
-  "explorer.keyMappings.global": {
-    "<cr>": ["expandable?", "expand", "open"],
-    "v": "open:vsplit"
-  },
-  "explorer.previewAction.onHover": false,
-  "explorer.width": 30,
   "git.enableGutters": true,
   "javascript.referencesCodeLens.enable": false,
   "languageserver": {
