@@ -85,26 +85,26 @@ nmap <silent> <space><Tab> <Esc>/<++><Enter>:nohl<Enter>"_c4l
 vnoremap // y/\V<C-r>=escape(@",'/\')<CR><CR>
 
 " Buffer
-nmap <silent> <leader>bD <cmd>bdelete!<cr>
-nmap <silent> <leader>bd <cmd>bdelete<cr>
-nmap <silent> <leader>bf <cmd>bfirst<cr>
-nmap <silent> <leader>bl <cmd>blast<cr>
-nmap <silent> <leader>bn <cmd>bnext<cr>
-nmap <silent> <leader>bp <cmd>bprevious<cr>
-nmap <silent> <leader>bw <cmd>bwipeout<cr>
-nmap <silent> <leader>bW <cmd>bwipeout!<cr>
+nmap <leader>bD <cmd>bdelete!<cr>
+nmap <leader>bd <cmd>bdelete<cr>
+nmap <leader>bf <cmd>bfirst<cr>
+nmap <leader>bl <cmd>blast<cr>
+nmap <leader>bn <cmd>bnext<cr>
+nmap <leader>bp <cmd>bprevious<cr>
+nmap <leader>bw <cmd>bwipeout<cr>
+nmap <leader>bW <cmd>bwipeout!<cr>
 
 " Tabs
-nmap <silent> <leader>tD <cmd>tabclose!<cr>
-nmap <silent> <leader>tc <cmd>tabnew<cr>
-nmap <silent> <leader>td <cmd>tabclose<cr>
-nmap <silent> <leader>te <cmd>tabedit<cr>
-nmap <silent> <leader>tf <cmd>tabfirst<cr>
-nmap <silent> <leader>tl <cmd>tablast<cr>
-nmap <silent> <leader>tn <cmd>tabnext<cr>
-nmap <silent> <leader>to <cmd>tabonly<cr>
-nmap <silent> <leader>tp <cmd>tabprevious<cr>
-nmap <silent> <leader>tr <cmd>tabrewind<cr>
+nmap <leader>tD <cmd>tabclose!<cr>
+nmap <leader>tc <cmd>tabnew<cr>
+nmap <leader>td <cmd>tabclose<cr>
+nmap <leader>te <cmd>tabedit<cr>
+nmap <leader>tf <cmd>tabfirst<cr>
+nmap <leader>tl <cmd>tablast<cr>
+nmap <leader>tn <cmd>tabnext<cr>
+nmap <leader>to <cmd>tabonly<cr>
+nmap <leader>tp <cmd>tabprevious<cr>
+nmap <leader>tr <cmd>tabrewind<cr>
 
 " Window
 nmap <leader>wq <C-w>q
@@ -167,59 +167,58 @@ nmap <leader>fw <cmd>noa w<cr>
 nmap <leader>fW <cmd>noa w!<cr>
 
 " Git
-nmap <silent> <leader>gs <cmd>Git<cr>
-nmap <silent> <leader>ga. <cmd>Git add .<cr>
-nmap <silent> <leader>gaa <cmd>Git add -A<cr>
-nmap <silent> <leader>gb <cmd>GBranches<cr>
-nmap <silent> <leader>gbl <cmd>Git blame<cr>
-nmap <silent> <leader>gc <cmd>Git commit<cr>
-nmap <silent> <leader>gdd <cmd>Gdiff<cr>
-nmap <silent> <leader>gdv <cmd>Gvdiffsplit!<cr>
-nmap <silent> <leader>gda <cmd>diffget //2<cr><cmd>diffput //3<cr>
-nmap <silent> <leader>gd; <cmd>diffget //3<cr><cmd>diffput //2<cr>
-nmap <silent> <leader>gl <cmd>Gclog<cr>
-nmap <silent> <leader>gP <cmd>Git push<cr>
-nmap <silent> <leader>gPf <cmd>Git push --force<cr>
-nmap <silent> <leader>gp <cmd>Git pull<cr>
-nmap <silent> <leader>gr <cmd>Gread<cr>
-nmap <silent> <leader>gw <cmd>Gwrite<cr>
-nmap <silent> <leader>gW <cmd>Gwrite!<cr>
-nmap <silent> <leader>ge <cmd>Gedit<cr>
+nmap <leader>gs <cmd>Git<cr>
+nmap <leader>ga. <cmd>Git add .<cr>
+nmap <leader>gaa <cmd>Git add -A<cr>
+nmap <leader>gbl <cmd>Git blame<cr>
+nmap <leader>gc <cmd>Git commit<cr>
+nmap <leader>gdd <cmd>Gdiff<cr>
+nmap <leader>gdv <cmd>Gvdiffsplit!<cr>
+nmap <leader>gda <cmd>diffget //2<cr><cmd>diffput //3<cr>
+nmap <leader>gd; <cmd>diffget //3<cr><cmd>diffput //2<cr>
+nmap <leader>gl <cmd>Gclog<cr>
+nmap <leader>gP <cmd>Git push<cr>
+nmap <leader>gPf <cmd>Git push --force<cr>
+nmap <leader>gp <cmd>Git pull<cr>
+nmap <leader>gr <cmd>Gread<cr>
+nmap <leader>gw <cmd>Gwrite<cr>
+nmap <leader>gW <cmd>Gwrite!<cr>
+nmap <leader>ge <cmd>Gedit<cr>
 
 " Highlight
-map <silent> <leader>nh <cmd>nohl <bar> :let @/ = "" <bar> echo ':nohl'<cr>
+map <leader>nh <cmd>nohl <bar> :let @/ = "" <bar> echo ':nohl'<cr>
 
 
 " Toggle
-nmap <silent> <leader>Tc <cmd>let &background = ( &background == "dark"? "light" : "dark" )<cr>
-nmap <silent> <leader>Te <cmd>CocCommand explorer<cr>
-nmap <silent> <leader>Tu <cmd>UndotreeToggle<cr>
+nmap <leader>Tc <cmd>let &background = ( &background == "dark"? "light" : "dark" )<cr>
+nmap <leader>Te <cmd>CocCommand explorer<cr>
+nmap <leader>Tu <cmd>UndotreeToggle<cr>
 
 " Settings
 " Reload settings
-nnoremap <silent> <leader>Sr <cmd>source ~/.config/nvim/init.vim <bar> :echo "Settings refreshed!"<cr>
+nnoremap <leader>Sr <cmd>source ~/.config/nvim/init.vim <bar> :echo "Settings refreshed!"<cr>
 
 " Tabular
-nmap <silent> <leader>ri& <cmd>Tabularize /&<cr>
-vmap <silent> <leader>ri& <cmd>Tabularize /&<cr>
-nmap <silent> <leader>ri- <cmd>Tabularize /-<cr>
-vmap <silent> <leader>ri- <cmd>Tabularize /-<cr>
-nmap <silent> <leader>ri= <cmd>Tabularize /=<cr>
-vmap <silent> <leader>ri= <cmd>Tabularize /=<cr>
-nmap <silent> <leader>ri=> <cmd>Tabularize /=><cr>
-vmap <silent> <leader>ri=> <cmd>Tabularize /=><cr>
-nmap <silent> <leader>ri: <cmd>Tabularize /:<cr>
-vmap <silent> <leader>ri: <cmd>Tabularize /:<cr>
-nmap <silent> <leader>ri:: <cmd>Tabularize /:\zs<cr>
-vmap <silent> <leader>ri:: <cmd>Tabularize /:\zs<cr>
-nmap <silent> <leader>ri, <cmd>Tabularize /,<cr>
-vmap <silent> <leader>ri, <cmd>Tabularize /,<cr>
-nmap <silent> <leader>ri,, <cmd>Tabularize /,\zs<cr>
-vmap <silent> <leader>ri,, <cmd>Tabularize /,\zs<cr>
-nmap <silent> <leader>ri<bar> <cmd>Tabularize /<bar><cr>
-vmap <silent> <leader>ri<bar> <cmd>Tabularize /<bar><cr>
-nmap <silent> <leader>ri\ <cmd>Tabularize /\\<cr>
-vmap <silent> <leader>ri\ <cmd>Tabularize /\\<cr>
-nmap <silent> <leader>ri" <cmd>Tabularize /"<cr>
-vmap <silent> <leader>ri" <cmd>Tabularize /"<cr>
+nmap <leader>ri& <cmd>Tabularize /&<cr>
+vmap <leader>ri& <cmd>Tabularize /&<cr>
+nmap <leader>ri- <cmd>Tabularize /-<cr>
+vmap <leader>ri- <cmd>Tabularize /-<cr>
+nmap <leader>ri= <cmd>Tabularize /=<cr>
+vmap <leader>ri= <cmd>Tabularize /=<cr>
+nmap <leader>ri=> <cmd>Tabularize /=><cr>
+vmap <leader>ri=> <cmd>Tabularize /=><cr>
+nmap <leader>ri: <cmd>Tabularize /:<cr>
+vmap <leader>ri: <cmd>Tabularize /:<cr>
+nmap <leader>ri:: <cmd>Tabularize /:\zs<cr>
+vmap <leader>ri:: <cmd>Tabularize /:\zs<cr>
+nmap <leader>ri, <cmd>Tabularize /,<cr>
+vmap <leader>ri, <cmd>Tabularize /,<cr>
+nmap <leader>ri,, <cmd>Tabularize /,\zs<cr>
+vmap <leader>ri,, <cmd>Tabularize /,\zs<cr>
+nmap <leader>ri<bar> <cmd>Tabularize /<bar><cr>
+vmap <leader>ri<bar> <cmd>Tabularize /<bar><cr>
+nmap <leader>ri\ <cmd>Tabularize /\\<cr>
+vmap <leader>ri\ <cmd>Tabularize /\\<cr>
+nmap <leader>ri" <cmd>Tabularize /"<cr>
+vmap <leader>ri" <cmd>Tabularize /"<cr>
 

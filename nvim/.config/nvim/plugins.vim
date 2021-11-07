@@ -1,76 +1,19 @@
 " Auto install vim-plug
-if has('nvim')
-    call plug#begin('~/.local/share/nvim/plugged')
-    if empty(glob($XDG_DATA_HOME.'/nvim/site/autoload/plug.vim'))
-        silent !curl -fLo $XDG_DATA_HOME.'/nvim/site/autoload/plug.vim' --create-dirs
-                    \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
-        autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
-    endif
+call plug#begin('~/.local/share/nvim/plugged')
+if empty(glob($XDG_DATA_HOME.'/nvim/site/autoload/plug.vim'))
+    silent !curl -fLo $XDG_DATA_HOME.'/nvim/site/autoload/plug.vim' --create-dirs
+                \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+    autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
 endif
 
-if has('vim')
-    call plug#begin('~/.vim/autoload/plug.vim')
-    if empty(glob('~/.vim/autoload/plug.vim'))
-        silent !curl -fLo ~/.vim/autoload/plug.vim --create-dirs
-                    \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
-        autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
-    endif
-endif
 
-Plug 'vim-airline/vim-airline'                                          " Vim-Airline
-Plug 'vim-airline/vim-airline-themes'                                   " Vim-Airline theme
-
-
-" Use release branch (recommend)
-" coc.vim
-let g:coc_global_extensions = [
-    \ 'coc-angular',
-    \ 'coc-css',
-    \ 'coc-diagnostic',
-    \ 'coc-docker',
-    \ 'coc-emmet',
-    \ 'coc-emoji',
-    \ 'coc-eslint',
-    \ 'coc-git',
-    \ 'coc-highlight',
-    \ 'coc-html',
-    \ 'coc-json',
-    \ 'coc-lists',
-    \ 'coc-markdownlint',
-    \ 'coc-marketplace',
-    \ 'coc-pairs',
-    \ 'coc-prettier',
-    \ 'coc-pyright',
-    \ 'coc-rust-analyzer',
-    \ 'coc-sh',
-    \ 'coc-snippets',
-    \ 'coc-spell-checker',
-    \ 'coc-cspell-dicts',
-    \ 'coc-sql',
-    \ 'coc-syntax',
-    \ 'coc-texlab',
-    \ 'coc-tailwindcss',
-    \ 'coc-toml',
-    \ 'coc-tslint-plugin',
-    \ 'coc-tsserver',
-    \ 'coc-vetur',
-    \ 'coc-vimlsp',
-    \ 'coc-xml',
-    \ 'coc-yaml',
-    \ ]
-Plug 'neoclide/coc.nvim', {'branch': 'release', 'do': { -> coc#add_extension() }}
+" Plugins
 
 " Copilot
 " Plug 'github/copilot.vim'
 
 " Tree explorer
-if has('nvim')
-  Plug 'Shougo/defx.nvim', { 'do': ':UpdateRemotePlugins' }
-else
-  Plug 'Shougo/defx.nvim'
-  Plug 'roxma/nvim-yarp'
-  Plug 'roxma/vim-hug-neovim-rpc'
-endif
+Plug 'Shougo/defx.nvim', { 'do': ':UpdateRemotePlugins' }
 Plug 't9md/vim-choosewin' " Needed to select which buffer will be replace
 Plug 'kristijanhusak/defx-git'
 Plug 'kristijanhusak/defx-icons'
@@ -102,10 +45,47 @@ Plug 'dhruvasagar/vim-table-mode'                                       " Table 
 Plug 'godlygeek/tabular'                                                " Tabular : useful for great alignement
 Plug 'mbbill/undotree'                                                  " UndoTree : See all undos
 
-if has('nvim')
-    " Better syntax highlighting
-    Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
-endif
+" {{{ Lua Plugins
+
+" Required by many Lua plugins
+Plug 'kyazdani42/nvim-web-devicons'
+
+" Better syntax highlighting
+Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
+
+" LSP
+Plug 'neovim/nvim-lspconfig'
+
+" Popup vim implementation for neovim
+Plug 'nvim-lua/popup.nvim'
+" Speed up nvim lua
+Plug 'nvim-lua/plenary.nvim'
+
+" Show LSP diagnostics
+Plug 'folke/trouble.nvim'
+Plug 'folke/lsp-colors.nvim'
+
+" Telescope
+Plug 'nvim-telescope/telescope.nvim'
+
+" Autopair
+Plug 'windwp/nvim-autopairs'
+
+" Lua line
+Plug 'nvim-lualine/lualine.nvim'
+
+" Completion
+Plug 'hrsh7th/cmp-nvim-lsp'
+Plug 'hrsh7th/cmp-buffer'
+Plug 'hrsh7th/cmp-path'
+Plug 'hrsh7th/cmp-cmdline'
+Plug 'hrsh7th/nvim-cmp'
+Plug 'quangnguyen30192/cmp-nvim-ultisnips'
+
+" Git
+Plug 'lewis6991/gitsigns.nvim'
+
+" }}}
 
 " Database management features
 Plug 'tpope/vim-dadbod'

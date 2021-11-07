@@ -95,7 +95,9 @@ set formatoptions-=t                                                        " Ke
 set textwidth=80                                                             " Word wrap without line break
 set wrapmargin=0                                                            " Word wrap without line break
 set whichwrap=b,s,h,l,<,>,[,]                                               " Backspace and cursor keys wrap too
-set wrap linebreak                                                          " Set wrapping with soft wrap (set wm=2 => hard wrap)
+" Disable wrap by default
+set nowrap
+" set wrap linebreak                                                          " Set wrapping with soft wrap (set wm=2 => hard wrap)
 
 " WSL copy clipboard support
 let s:clip = '/mnt/c/Windows/System32/clip.exe'  " change this path according to your mount point

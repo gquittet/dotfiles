@@ -1,5 +1,5 @@
-nnoremap <silent> <leader> <cmd>WhichKey '<space>'<cr>
-vnoremap <silent> <leader> <cmd>WhichKey '<space>'<cr>
+nnoremap <leader> <cmd>WhichKey '<space>'<cr>
+vnoremap <leader> <cmd>WhichKey '<space>'<cr>
 call which_key#register('<space>', "g:which_key_map_leader")
 nnoremap <silent> <localleader> <cmd>WhichKey ','<cr>
 vnoremap <silent> <localleader> <cmd>WhichKey ','<cr>
@@ -32,14 +32,6 @@ let g:which_key_map_leader.b = {
       \ 'l' : 'last',
       \ 'n' : 'next',
       \ 'p' : 'previous',
-      \ }
-
-let g:which_key_map_leader.c = {
-      \ 'name' : '+coc' ,
-      \ 'c' : 'commands',
-      \ 'n' : 'next',
-      \ 'p' : 'previous',
-      \ 'r' : 'resume',
       \ }
 
 let g:which_key_map_leader.d = {
@@ -81,7 +73,6 @@ let g:which_key_map_leader.f = {
 
 let g:which_key_map_leader.g = {
       \ 'name' : '+git',
-      \ 's' : 'status',
       \ 'a' : {
           \ 'name': '+add',
           \ '.': '.',
@@ -111,6 +102,8 @@ let g:which_key_map_leader.g = {
       \ 'Pf' : 'push-force',
       \ 'p' : 'pull',
       \ 'r' : 'read',
+      \ 's' : 'status',
+      \ 'st' : 'stash',
       \ 'w' : 'write',
       \ 'W' : 'write-force',
       \ 'e' : 'edit',
@@ -129,9 +122,12 @@ let g:which_key_map_leader.l = {
       \ 'd' : 'diagnostics',
       \ 'e' : 'extensions',
       \ 'ft' : 'filetypes',
+      \ 'j' : 'jump',
       \ 'l' : 'lines',
+      \ 'm' : 'marks',
       \ 'o' : 'outline',
-      \ 'r' : 'recent',
+      \ 'q' : 'quickfix',
+      \ 'r' : 'resume',
       \ 's' : 'symbols',
       \ 't' : 'tags',
       \ 'y' : 'yank',
@@ -141,6 +137,11 @@ let g:which_key_map_leader.l = {
           \ 'd' : 'diagnostics',
           \ 'l': 'list',
           \ 'w': 'words'
+          \ },
+      \ 'h' : {
+          \ 'name': '+history',
+          \ 'c': 'commands',
+          \ 's' : 'searchs',
           \ },
       \ }
 
