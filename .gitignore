@@ -37,10 +37,12 @@ scripts/.local/bin/dmypy
 scripts/.local/bin/fd
 scripts/.local/bin/fnm
 scripts/.local/bin/icalendar
+scripts/.local/bin/jetbrains-toolbox
 scripts/.local/bin/mypy
 scripts/.local/bin/mypyc
 scripts/.local/bin/pipenv
 scripts/.local/bin/pipenv-resolver
+scripts/.local/bin/rust-analyzer
 scripts/.local/bin/rust-analyzer-mac
 scripts/.local/bin/sourcery
 scripts/.local/bin/sqlformat
@@ -48,3 +50,4 @@ scripts/.local/bin/stubgen
 scripts/.local/bin/stubtest
 scripts/.local/bin/virtualenv
 scripts/.local/bin/virtualenv-clone
+scripts/.local/bin/webstorm
