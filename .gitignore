@@ -49,6 +49,7 @@ scripts/.local/bin/sourcery
 scripts/.local/bin/sqlformat
 scripts/.local/bin/stubgen
 scripts/.local/bin/stubtest
+scripts/.local/bin/texlab
 scripts/.local/bin/virtualenv
 scripts/.local/bin/virtualenv-clone
 
