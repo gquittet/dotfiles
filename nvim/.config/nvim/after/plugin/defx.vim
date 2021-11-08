@@ -2,7 +2,7 @@
 " - toggle => toggle mode
 " - -buffer-name=`'defx' . tabpagenr()` => different state per tabs
 " - -resume -search=`expand('%:p')` `escape(expand('%:p:h'), ' :')` => auto focus current file
-nnoremap <leader>te <cmd>Defx -toggle -buffer-name=`'defx' . tabpagenr()` -resume -search=`expand('%:p')` `escape(expand('%:p:h'), ' :')`<cr>
+nnoremap <leader>Te <cmd>Defx -toggle -buffer-name=`'defx' . tabpagenr()` -resume -search=`expand('%:p')` `escape(expand('%:p:h'), ' :')`<cr>
 
 call defx#custom#option('_', {
             \ 'winwidth': 30,

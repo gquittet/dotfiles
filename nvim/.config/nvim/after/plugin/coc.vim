@@ -228,4 +228,4 @@ endfunction
 
 let g:coc_snippet_next = '<tab>'
 
-nmap <silent> <leader>tgg <cmd>CocCommand git.toggleGutters<cr>
+nmap <silent> <leader>Tgg <cmd>CocCommand git.toggleGutters<cr>

@@ -95,16 +95,16 @@ nmap <silent> <leader>bw <cmd>bwipeout<cr>
 nmap <silent> <leader>bW <cmd>bwipeout!<cr>
 
 " Tabs
-nmap <silent> <leader>TD <cmd>tabclose!<cr>
-nmap <silent> <leader>Tc <cmd>tabnew<cr>
-nmap <silent> <leader>Td <cmd>tabclose<cr>
-nmap <silent> <leader>Te <cmd>tabedit<cr>
-nmap <silent> <leader>Tf <cmd>tabfirst<cr>
-nmap <silent> <leader>Tl <cmd>tablast<cr>
-nmap <silent> <leader>Tn <cmd>tabnext<cr>
-nmap <silent> <leader>To <cmd>tabonly<cr>
-nmap <silent> <leader>Tp <cmd>tabprevious<cr>
-nmap <silent> <leader>Tr <cmd>tabrewind<cr>
+nmap <silent> <leader>tD <cmd>tabclose!<cr>
+nmap <silent> <leader>tc <cmd>tabnew<cr>
+nmap <silent> <leader>td <cmd>tabclose<cr>
+nmap <silent> <leader>te <cmd>tabedit<cr>
+nmap <silent> <leader>tf <cmd>tabfirst<cr>
+nmap <silent> <leader>tl <cmd>tablast<cr>
+nmap <silent> <leader>tn <cmd>tabnext<cr>
+nmap <silent> <leader>to <cmd>tabonly<cr>
+nmap <silent> <leader>tp <cmd>tabprevious<cr>
+nmap <silent> <leader>tr <cmd>tabrewind<cr>
 
 " Window
 nmap <leader>wq <C-w>q
@@ -191,9 +191,9 @@ map <silent> <leader>nh <cmd>nohl <bar> :let @/ = "" <bar> echo ':nohl'<cr>
 
 
 " Toggle
-nmap <silent> <leader>tc <cmd>let &background = ( &background == "dark"? "light" : "dark" )<cr>
-nmap <silent> <leader>te <cmd>CocCommand explorer<cr>
-nmap <silent> <leader>tu <cmd>UndotreeToggle<cr>
+nmap <silent> <leader>Tc <cmd>let &background = ( &background == "dark"? "light" : "dark" )<cr>
+nmap <silent> <leader>Te <cmd>CocCommand explorer<cr>
+nmap <silent> <leader>Tu <cmd>UndotreeToggle<cr>
 
 " Settings
 " Reload settings
