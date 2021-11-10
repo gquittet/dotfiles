@@ -92,6 +92,10 @@ if string match -i '*WSL2*' (cat /proc/version) > /dev/null
     set -x PULSE_SERVER tcp:(cat /etc/resolv.conf | grep nameserver | awk '{print $2; exit;}')
     set -x LIBGL_ALWAYS_INDIRECT 1
     set -x GTK_THEME Pop
+
+    # Lang
+    set -x LANG en_US.UTF-8
+    set -x LC_TIME fr_FR.UTF-8
 end
 
 # -----------------------------------------------------------------------------
