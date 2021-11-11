@@ -91,7 +91,7 @@ if string match -i '*WSL2*' (cat /proc/version) > /dev/null
     set -x DISPLAY (cat /etc/resolv.conf | grep nameserver | awk '{print $2; exit;}'):0.0
     set -x PULSE_SERVER tcp:(cat /etc/resolv.conf | grep nameserver | awk '{print $2; exit;}')
     set -x LIBGL_ALWAYS_INDIRECT 1
-    set -x GTK_THEME Pop
+    set -x GTK_THEME Windows-10-light
 
     # Lang
     set -x LANG en_US.UTF-8
