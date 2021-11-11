@@ -36,6 +36,7 @@ scripts/.local/bin/django-admin.py
 scripts/.local/bin/dmypy
 scripts/.local/bin/fd
 scripts/.local/bin/fnm
+scripts/.local/bin/fx
 scripts/.local/bin/icalendar
 scripts/.local/bin/jetbrains-toolbox
 scripts/.local/bin/mypy
