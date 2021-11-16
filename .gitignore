@@ -39,7 +39,6 @@ scripts/.local/bin/fd
 scripts/.local/bin/fnm
 scripts/.local/bin/fx
 scripts/.local/bin/icalendar
-scripts/.local/bin/jetbrains-toolbox
 scripts/.local/bin/mypy
 scripts/.local/bin/mypyc
 scripts/.local/bin/pipenv
@@ -52,4 +51,9 @@ scripts/.local/bin/stubgen
 scripts/.local/bin/stubtest
 scripts/.local/bin/virtualenv
 scripts/.local/bin/virtualenv-clone
+
+# JetBrains IDE
+scripts/.local/bin/jetbrains-toolbox
+scripts/.local/bin/clion
+scripts/.local/bin/pycharm
 scripts/.local/bin/webstorm
