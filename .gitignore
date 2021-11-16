@@ -31,6 +31,7 @@ fish/.config/fish/functions/.*
 
 # Script to avoid
 scripts/.local/bin/__pycache__/
+scripts/.local/bin/bat
 scripts/.local/bin/django-admin
 scripts/.local/bin/django-admin.py
 scripts/.local/bin/dmypy
