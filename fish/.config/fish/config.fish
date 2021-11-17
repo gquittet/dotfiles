@@ -83,10 +83,9 @@ if test (uname) = Darwin
 
     # Pass
     set -x PASSWORD_STORE_DIR "$HOME/Library/Mobile Documents/com~apple~CloudDocs/pass"
-end
 
 # Detect WSL2
-if string match -i '*WSL2*' (cat /proc/version) > /dev/null
+else if string match -i '*WSL2*' (cat /proc/version) > /dev/null
     # Set up DISPLAY to run GUI apps
     set -x DISPLAY (cat /etc/resolv.conf | grep nameserver | awk '{print $2; exit;}'):0.0
     set -x PULSE_SERVER tcp:(cat /etc/resolv.conf | grep nameserver | awk '{print $2; exit;}')
