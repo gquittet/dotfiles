@@ -95,10 +95,6 @@ else if string match -i '*WSL2*' (cat /proc/version) > /dev/null
     # Lang
     set -x LANG en_US.UTF-8
     set -x LC_TIME fr_FR.UTF-8
-
-    if status is-interactive
-        xrdb -merge "$HOME/.Xresources"
-    end
 end
 
 # -----------------------------------------------------------------------------
