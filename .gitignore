@@ -56,5 +56,6 @@ scripts/.local/bin/virtualenv-clone
 # JetBrains IDE
 scripts/.local/bin/jetbrains-toolbox
 scripts/.local/bin/clion
+scripts/.local/bin/idea
 scripts/.local/bin/pycharm
 scripts/.local/bin/webstorm
