@@ -123,9 +123,6 @@ Plug 'Stautob/vim-fish'
 Plug 'jceb/vim-orgmode'
 Plug 'jparise/vim-graphql'
 
-" Debugger
-Plug 'puremourning/vimspector', {'do': './install_gadget.py --enable-bash --enable-rust --enable-python --force-enable-node'}
-
 " Snippets
 Plug 'SirVer/ultisnips'   " Engine
 Plug 'honza/vim-snippets' " Snippets
