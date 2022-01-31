@@ -50,6 +50,7 @@ abbr -a gbl git blame
 abbr -a gblL git blame -L
 abbr -a gc git commit
 abbr -a gca git commit --amend
+abbr -a gcane git commit --amend --no-edit
 abbr -a gcae git commit --allow-empty
 abbr -a gcaem git commit --allow-empty -m
 abbr -a gch "git checkout (git branch --all | fzf | tr -d '[:space:]')"
