@@ -57,6 +57,9 @@ abbr -a gch "git checkout (git branch --all | fzf | tr -d '[:space:]')"
 abbr -a gcl git clone
 abbr -a gcm git commit -m
 abbr -a gcp git cherry-pick
+abbr -a gcpa git cherry-pick --abort
+abbr -a gcpc git cherry-pick --continue
+abbr -a gcps git cherry-pick --skip
 abbr -a gco git checkout
 abbr -a gcob git checkout -b
 abbr -a gcof git checkout -f
