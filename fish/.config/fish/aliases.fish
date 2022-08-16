@@ -14,3 +14,7 @@ if test (uname) = Linux
         alias java "java $_SILENT_JAVA_OPTIONS"
     end
 end
+
+if command -q curl
+    alias install_pnpm "curl -fsSL https://get.pnpm.io/install.sh | sh -"
+end
