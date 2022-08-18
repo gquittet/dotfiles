@@ -64,6 +64,7 @@ fish_add_path $CARGO_HOME/bin
 
 if test (uname) = Darwin
     # Homebrew
+    fish_add_path /opt/homebrew/bin
     set -g fish_user_paths /usr/local/sbin $fish_user_paths
 
     # iTerm2
