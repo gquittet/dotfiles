@@ -24,17 +24,17 @@ abbr -a drun docker run
 abbr -a drunn docker run --name
 abbr -a dsa 'docker stop (docker ps -q)'
 # Docker Compose
-abbr -a dcd docker-compose down
-abbr -a dck docker-compose kill
-abbr -a dcl docker-compose logs
-abbr -a dclf docker-compose logs -f
-abbr -a dclft docker-compose logs -f --tail
-abbr -a dclt docker-compose logs --tail
-abbr -a dcS docker-compose stop
-abbr -a dcs docker-compose start
-abbr -a dcu docker-compose up
-abbr -a dcud docker-compose up -d
-abbr -a dcuf docker-compose up -f
+abbr -a dcd docker compose down
+abbr -a dck docker compose kill
+abbr -a dcl docker compose logs
+abbr -a dclf docker compose logs -f
+abbr -a dclft docker compose logs -f --tail
+abbr -a dclt docker compose logs --tail
+abbr -a dcS docker compose stop
+abbr -a dcs docker compose start
+abbr -a dcu docker compose up
+abbr -a dcud docker compose up -d
+abbr -a dcuf docker compose up -f
 
 # Git
 abbr -a g git
