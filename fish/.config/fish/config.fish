@@ -90,27 +90,6 @@ if test (uname) = Darwin
     # Pass
     set -x PASSWORD_STORE_DIR "$HOME/Library/Mobile Documents/com~apple~CloudDocs/pass"
 
-# Detect WSL2
-else if string match -i '*WSL2*' (cat /proc/version) > /dev/null
-    ## Set up DISPLAY to run GUI apps
-    #set -x DISPLAY :0
-    #if ! pgrep wsld >> /dev/null 2>&1
-    #    nohup wsld > /dev/null < /dev/null 2>&1 &
-    #    disown
-    # 
-    #    # sleep until $DISPLAY is up
-    #    while ! xset q > /dev/null 2>&1 ;
-    #        sleep 0.3;
-    #    end
-    #end
-    # set -x DISPLAY (cat /etc/resolv.conf | grep nameserver | awk '{print $2; exit;}'):0.0
-    #set -x PULSE_SERVER tcp:(cat /etc/resolv.conf | grep nameserver | awk '{print $2; exit;}')
-    #set -x LIBGL_ALWAYS_INDIRECT 1
-    #set -x GTK_THEME Windows-10-light
-
-    # Lang
-    set -x LANG en_US.UTF-8
-    set -x LC_TIME fr_FR.UTF-8
 end
 
 # -----------------------------------------------------------------------------
