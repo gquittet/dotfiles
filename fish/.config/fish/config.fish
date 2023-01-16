@@ -64,6 +64,11 @@ set -x RUSTUP_HOME $XDG_DATA_HOME/rustup
 fish_add_path $CARGO_HOME/bin
 
 if test (uname) = Darwin
+    # Locale
+    set -gx LC_ALL C
+    set -gx LC_CTYPE C
+    set -gx LANG C
+
     # Homebrew
     fish_add_path /opt/homebrew/bin
     set -g fish_user_paths /usr/local/sbin $fish_user_paths
