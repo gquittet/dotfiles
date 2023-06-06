@@ -155,6 +155,12 @@ if functions -q fzf
     set fzf_fd_opts --hidden --exclude=.git,node_modules,build,dist
 end
 
+# PNPM
+if test -e $XDG_CONFIG_HOME/tabtab/fish/__tabtab.fish
+    source $XDG_CONFIG_HOME/tabtab/fish/__tabtab.fish
+end
+
+
 # -----------------------------------------------------------------------------
 # Aliases settings
 # -----------------------------------------------------------------------------
@@ -167,4 +173,5 @@ end
 if command -q starship
     starship init fish | source
 end
+
 
