@@ -29,6 +29,9 @@ fish/.config/fish/functions/.*
 !fish/.config/fish/functions/unset.fish
 !fish/.config/fish/functions/v.fish
 
+# tmux
+tmux/.config/tmux/plugins
+
 # Script to avoid
 scripts/.local/bin/__pycache__/
 scripts/.local/bin/bat
