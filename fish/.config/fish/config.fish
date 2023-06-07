@@ -65,9 +65,9 @@ fish_add_path $CARGO_HOME/bin
 
 if test (uname) = Darwin
     # Locale
-    set -gx LC_ALL C
-    set -gx LC_CTYPE C
-    set -gx LANG C
+    set -gx LC_ALL en_US.UTF-8
+    set -gx LC_CTYPE en_US.UTF-8
+    set -gx LANG en_US.UTF-8
 
     # Homebrew
     fish_add_path /opt/homebrew/bin
