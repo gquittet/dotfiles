@@ -58,6 +58,10 @@ set -x NPM_CONFIG_USERCONFIG $XDG_CONFIG_HOME/npm/npmrc
 set -x PNPM_HOME $XDG_DATA_HOME/pnpm
 fish_add_path $PNPM_HOME
 
+# Python
+set -x POETRY_DATA_DIR $XDG_DATA_HOME/pypoetry
+set -x POETRY_CONFIG_DIR $XDG_CONFIG_HOME/pypoetry
+
 # Rust
 set -x CARGO_HOME $XDG_DATA_HOME/cargo
 set -x RUSTUP_HOME $XDG_DATA_HOME/rustup
