@@ -169,9 +169,14 @@ end
 # Aliases settings
 # -----------------------------------------------------------------------------
 
-# Enable aliasses
+# Alias
 if test -e $XDG_CONFIG_HOME/fish/aliases.fish
     source $XDG_CONFIG_HOME/fish/aliases.fish
+end
+
+# Abbr
+if test -e $XDG_CONFIG_HOME/fish/abbr.fish
+    source $XDG_CONFIG_HOME/fish/abbr.fish
 end
 
 if command -q starship

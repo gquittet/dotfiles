@@ -1,10 +1,3 @@
-#!/usr/bin/env fish
-
-for ab in (abbr -l)
-    abbr -e $ab
-end
-
-
 # cd
 abbr -a -- - 'cd -'
 
