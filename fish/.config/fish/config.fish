@@ -98,7 +98,6 @@ if test (uname) = Darwin
 
     # Pass
     set -x PASSWORD_STORE_DIR "$HOME/Library/Mobile Documents/com~apple~CloudDocs/pass"
-
 end
 
 # -----------------------------------------------------------------------------
@@ -156,7 +155,7 @@ if functions -q fzf
         echo Please install the dependencies: https://github.com/PatrickF1/fzf.fish#installation
     end
 
-    set fzf_fd_opts --hidden --exclude=.git,node_modules,build,dist
+    set fzf_fd_opts --hidden --exclude=.git,node_modules,build,dist,__pycache__,.pytest_cache,htmlcov
 end
 
 # PNPM
