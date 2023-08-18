@@ -50,7 +50,7 @@ abbr -a gca git commit --amend
 abbr -a gcane git commit --amend --no-edit
 abbr -a gcae git commit --allow-empty
 abbr -a gcaem git commit --allow-empty -m
-abbr -a gch "git checkout (git branch --all | fzf | tr -d '[:space:]')"
+abbr -a gch "git checkout (git branch --all | fzf | tr -d '[:space:]' | sed 's/^remotes\/origin\///g')"
 abbr -a gcl git clone
 abbr -a gcm git commit -m
 abbr -a gcp git cherry-pick
