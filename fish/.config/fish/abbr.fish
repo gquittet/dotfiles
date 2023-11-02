@@ -2,7 +2,7 @@
 abbr -a -- - 'cd -'
 
 # Easi wallpaper
-abbr -a fick 'cp /Library/Desktop/Wallpaper.jpg.good /Library/Desktop/Wallpaper.jpg && killall Dock'
+abbr -a fick 'cp /Library/Desktop/Wallpaper.good.jpg /Library/Desktop/Wallpaper.jpg && killall Dock'
 
 # Docker
 abbr -a de docker exec
@@ -73,13 +73,15 @@ abbr -a gf git fetch -p
 abbr -a gfo git fetch -p origin
 abbr -a gicm "git commit --allow-empty -m 'Initial commit.'"
 # abbr -a glcbc 'git log --oneline --color | emojify | less -r'
-abbr -a glc "git log --first-parent --abbrev-commit --color --pretty=format:'[%h] %s (%an <%ae>, %ad)' HEAD^..HEAD"
+abbr -a glc "git log --first-parent --abbrev-commit --color --pretty=format:'* %h - %s' HEAD^..HEAD"
+abbr -a glcwa "git log --first-parent --abbrev-commit --color --pretty=format:'[%h] %s (%an <%ae>, %ad)' HEAD^..HEAD"
 abbr -a glcbc "git log --first-parent --abbrev-commit --color --pretty=format:'* %h - %s'"
 abbr -a glcbcwa "git log --first-parent --abbrev-commit --color --pretty=format:'* %h - %s (%an)'"
 abbr -a glcbcwat "git log --first-parent --abbrev-commit --color --pretty=format:'* %h - %s (%an%d)'"
 abbr -a glcbcslt "git log --first-parent --abbrev-commit --color --pretty=format:'* %h - %s' (git describe --tags --abbrev=0)..HEAD"
 abbr -a glcbcsltwa "git log --first-parent --abbrev-commit --color --pretty=format:'* %h - %s (%an)' (git describe --tags --abbrev=0)..HEAD"
 abbr -a glcbcsltwat "git log --first-parent --abbrev-commit --color --pretty=format:'* %h - %s (%an%d)' (git describe --tags --abbrev=0)..HEAD"
+abbr -a glcbcmr "git log --reverse --first-parent --abbrev-commit --color --pretty=format:'* %s' origin/master..HEAD | sed 's/ .*: \(.\)/ \u\1/g' | pbcopy"
 abbr -a glf git log --follow
 abbr -a glfp git log --follow -p
 abbr -a glg "git log --graph --abbrev-commit --decorate --pretty=format:'%C(bold blue)%h%C(reset) - %C(bold green)(%ar)%C(reset) %C(white)%s%C(reset) %C(dim white)- %an%C(reset)%C(bold yellow)%d%C(reset)' --all"
