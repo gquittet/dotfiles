@@ -1,5 +1,5 @@
-if command -q exa
-    alias ls exa
+if command -q eza
+    alias ls eza
 end
 
 if command -q tmux
