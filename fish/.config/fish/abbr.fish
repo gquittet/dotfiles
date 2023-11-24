@@ -42,7 +42,7 @@ abbr -a gadog git
 abbr -a gb git branch
 abbr -a gbd git branch -d
 abbr -a gbD git branch -D
-abbr -a gbdm "git branch --merged | grep -v '*' | grep -wv 'master' | xargs -n 1 git branch -d"
+abbr -a gbdm "git branch --merged | grep -v '*' | grep -v '^ *master\$' | grep -v '^ *main\$' | xargs -n 1 git branch -d"
 abbr -a gbl git blame
 abbr -a gblL git blame -L
 abbr -a gc git commit
