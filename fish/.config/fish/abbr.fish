@@ -2,7 +2,7 @@
 abbr -a -- - 'cd -'
 
 # Easi wallpaper
-abbr -a fick 'cp /Library/Desktop/Wallpaper.good.jpg /Library/Desktop/Wallpaper.jpg && killall Dock'
+abbr -a fick 'cp /Library/Desktop/Wallpaper.good.jpg /Library/Desktop/Wallpaper.jpg && killall WallpaperAgent'
 
 # Docker
 abbr -a de docker exec
