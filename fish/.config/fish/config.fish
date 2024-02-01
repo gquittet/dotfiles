@@ -178,8 +178,5 @@ if test -e $XDG_CONFIG_HOME/fish/abbr.fish
     source $XDG_CONFIG_HOME/fish/abbr.fish
 end
 
-if command -q starship
-    starship init fish | source
-end
-
+fish_config prompt choose astronaut
 
