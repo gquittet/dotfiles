@@ -4,6 +4,9 @@ abbr -a -- - 'cd -'
 # Easi wallpaper
 abbr -a fick 'cp /Library/Desktop/Wallpaper.good.jpg /Library/Desktop/Wallpaper.jpg && killall WallpaperAgent'
 
+# Homebrew
+abbr -a brup 'brew update && brew upgrade && brew autoremove && brew cleanup'
+
 # Docker
 abbr -a de docker exec
 abbr -a deit docker exec -it
