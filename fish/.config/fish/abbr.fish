@@ -53,7 +53,7 @@ abbr -a gca git commit --amend
 abbr -a gcane git commit --amend --no-edit
 abbr -a gcae git commit --allow-empty
 abbr -a gcaem git commit --allow-empty -m
-abbr -a gch "git fetch -p origin && git checkout (git branch --all | fzf | tr -d '[:space:]' | sed 's/^remotes\/origin\///g' | sed 's/^*//g')"
+abbr -a gch "git fetch -p origin && git checkout (git branch --all | fzf | tr -d '[:space:]' | sed 's/^remotes\/\(.*\/\)\?//g' | sed 's/^*//g')"
 abbr -a gcl git clone
 abbr -a gcm git commit -m
 abbr -a gcp git cherry-pick
@@ -84,7 +84,7 @@ abbr -a glcbcwat "git log --first-parent --abbrev-commit --color --pretty=format
 abbr -a glcbcslt "git log --first-parent --abbrev-commit --color --pretty=format:'* %h - %s' (git describe --tags --abbrev=0)..HEAD"
 abbr -a glcbcsltwa "git log --first-parent --abbrev-commit --color --pretty=format:'* %h - %s (%an)' (git describe --tags --abbrev=0)..HEAD"
 abbr -a glcbcsltwat "git log --first-parent --abbrev-commit --color --pretty=format:'* %h - %s (%an%d)' (git describe --tags --abbrev=0)..HEAD"
-abbr -a glcbcmr "git log --reverse --first-parent --abbrev-commit --color --pretty=format:'* %s' origin/master..HEAD | sed 's/ .*: \(.\)/ \u\1/g' | pbcopy"
+abbr -a glcbcmr "git log --reverse --first-parent --abbrev-commit --color --pretty=format:'* %s' origin/master..HEAD | sed 's/ .*(\(.*\)): \(.*\)/ [\u\1]: \u\2/g' | sed 's/ .*[^]]: \(.*\)/ \u\1/g' | pbcopy"
 abbr -a glf git log --follow
 abbr -a glfp git log --follow -p
 abbr -a glg "git log --graph --abbrev-commit --decorate --pretty=format:'%C(bold blue)%h%C(reset) - %C(bold green)(%ar)%C(reset) %C(white)%s%C(reset) %C(dim white)- %an%C(reset)%C(bold yellow)%d%C(reset)' --all"
@@ -173,4 +173,3 @@ abbr -a yvmi yarn version --minor
 # software
 abbr -a v nvim
 abbr -a vd nvim -d
-
