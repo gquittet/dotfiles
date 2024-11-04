@@ -91,7 +91,8 @@ if test (uname) = Darwin
     fish_add_path $FLUTTERPATH/bin
 
     # Java
-    set -x JAVA_HOME /Library/Java/JavaVirtualMachines/adoptopenjdk-14/Contents/Home
+    fish_add_path /opt/homebrew/opt/openjdk/bin
+    set -gx CPPFLAGS "-I/opt/homebrew/opt/openjdk/include"
 
     # Node
     set -x NVM_DIR (brew --prefix nvm)
