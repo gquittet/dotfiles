@@ -20,8 +20,7 @@ if test -n "$SSH_CONNECTION"
 else
     # set -x EDITOR subl -n -w
     # set -x EDITOR nvim
-    set -x EDITOR vim
-    # set -x EDITOR code --wait
+    set -x EDITOR idea -e -w
 end
 set GIT_EDITOR $EDITOR
 set -x VISUAL $EDITOR
