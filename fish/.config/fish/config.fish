@@ -25,6 +25,9 @@ end
 set GIT_EDITOR $EDITOR
 set -x VISUAL $EDITOR
 
+# SSH 1Password
+set -x SSH_AUTH_SOCK ~/.1password/agent.sock
+
 # MANPAGES/Less colors
 set -x LESS_TERMCAP_md (printf "\e[01;31m")
 set -x LESS_TERMCAP_me (printf "\e[0m")
