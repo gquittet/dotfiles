@@ -20,7 +20,6 @@
 [core]
 	ignorecase = false
 	excludesfile = ~/.config/git/gitignore
-	pager = diff-so-fancy | less --tabs=4 -RFX
 
 [pull]
 	rebase = true
