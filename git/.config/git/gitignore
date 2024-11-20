@@ -281,6 +281,11 @@ GitHub.sublime-settings
 
 *.sublime-project
 
+# venv
+.venv/
+venv/
+pyrightconfig.json
+
 # Env file
 .env
 .env.bak
