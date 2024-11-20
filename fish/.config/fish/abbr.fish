@@ -74,6 +74,7 @@ abbr -a gdnoc git diff --name-only --cached
 abbr -a gdnof git diff --name-only --diff-filter
 abbr -a gf git fetch -p
 abbr -a gfo git fetch -p origin
+abbr -a ggh "cd (git rev-parse --show-toplevel)"
 abbr -a gicm "git commit --allow-empty -m 'Initial commit.'"
 # abbr -a glcbc 'git log --oneline --color | emojify | less -r'
 abbr -a glc "git log --first-parent --abbrev-commit --color --pretty=format:'* %h - %s' HEAD^..HEAD"
