@@ -97,7 +97,7 @@ abbr -a gm git merge --no-ff
 abbr -a gma git merge --abort
 abbr -a gmf git merge
 abbr -a gmfs git merge --squash
-abbr -a gmlcbc "git log --oneline --color --author=\"`git config user.name`\" | emojify | less -r"
+abbr -a gmlcbc "git log --oneline --color --author=\"`git config user.name`\" | less -r"
 abbr -a gmm git merge master
 abbr -a gp git pull
 abbr -a gpr git pull --rebase
