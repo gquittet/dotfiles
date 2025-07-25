@@ -99,7 +99,7 @@ if test (uname) = Darwin
 
     # Java
     fish_add_path /opt/homebrew/opt/openjdk/bin
-    set -gx CPPFLAGS "-I/opt/homebrew/opt/openjdk/include"
+    set -gx CPPFLAGS -I/opt/homebrew/opt/openjdk/include
 
     # Node
     set -x NVM_DIR (brew --prefix nvm)
@@ -171,7 +171,6 @@ if test -e $XDG_CONFIG_HOME/tabtab/fish/__tabtab.fish
     source $XDG_CONFIG_HOME/tabtab/fish/__tabtab.fish
 end
 
-
 # -----------------------------------------------------------------------------
 # Aliases settings
 # -----------------------------------------------------------------------------
@@ -187,7 +186,6 @@ if test -e $XDG_CONFIG_HOME/fish/abbr.fish
 end
 
 fish_config prompt choose astronaut
-
 
 # bun
 set --export BUN_INSTALL "$HOME/.bun"
