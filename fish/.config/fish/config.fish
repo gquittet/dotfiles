@@ -18,9 +18,11 @@ fish_add_path $HOME/.local/bin
 if test -n "$SSH_CONNECTION"
     set -x EDITOR vim
 else
-    # set -x EDITOR subl -n -w
+    # set -x EDITOR vim
     # set -x EDITOR nvim
-    set -x EDITOR idea -e -w
+    # set -x EDITOR subl -n -w
+    # set -x EDITOR idea -e -w
+    set -x EDITOR idea -w
 end
 set GIT_EDITOR $EDITOR
 set -x VISUAL $EDITOR
