@@ -44,9 +44,6 @@ set -x TERM xterm-256color
 # Elixir
 set -x MIX_HOME $XDG_DATA_HOME/mix
 
-# Gemini CLI
-set -x GEMINI_MODEL "gemini-2.5-flash"
-
 # Go
 set -x GOPATH $HOME/Documents/Projets/go
 fish_add_path $GOPATH/bin
