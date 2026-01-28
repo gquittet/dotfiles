@@ -103,6 +103,9 @@ if test (uname) = Darwin
 
     # Pass
     set -x PASSWORD_STORE_DIR "$HOME/Library/Mobile Documents/com~apple~CloudDocs/pass"
+
+    # PostgreSQL 16
+    fish_add_path /opt/homebrew/opt/postgresql@16/bin
 end
 
 # -----------------------------------------------------------------------------
