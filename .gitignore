@@ -42,6 +42,8 @@ scripts/.local/bin/fd
 scripts/.local/bin/fnm
 scripts/.local/bin/fx
 scripts/.local/bin/icalendar
+scripts/.local/bin/junie
+scripts/.local/bin/kubectl
 scripts/.local/bin/mypy
 scripts/.local/bin/mypyc
 scripts/.local/bin/pipenv
@@ -55,6 +57,8 @@ scripts/.local/bin/stubtest
 scripts/.local/bin/texlab
 scripts/.local/bin/virtualenv
 scripts/.local/bin/virtualenv-clone
+scripts/.local/bin/zed
+
 
 # JetBrains IDE
 scripts/.local/bin/jetbrains-toolbox
