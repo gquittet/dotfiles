@@ -41,6 +41,10 @@ set -x LESS_TERMCAP_us (printf "\e[01;32m")
 # True color support for *nix system
 set -x TERM xterm-256color
 
+# bun
+set --export BUN_INSTALL "$HOME/.bun"
+set --export PATH $BUN_INSTALL/bin $PATH
+
 # Elixir
 set -x MIX_HOME $XDG_DATA_HOME/mix
 
@@ -62,6 +66,11 @@ set -x NPM_CONFIG_USERCONFIG $XDG_CONFIG_HOME/npm/npmrc
 set -x PNPM_HOME $XDG_DATA_HOME/pnpm
 fish_add_path $PNPM_HOME
 
+# OpenCode
+if test -e "$HOME/.opencode"
+    fish_add_path "$HOME/.opencode/bin"
+end
+
 # Python
 set -x POETRY_DATA_DIR $XDG_DATA_HOME/pypoetry
 set -x POETRY_CONFIG_DIR $XDG_CONFIG_HOME/pypoetry
@@ -80,6 +89,9 @@ if test (uname) = Darwin
     # Homebrew
     fish_add_path /opt/homebrew/bin
     set -g fish_user_paths /usr/local/sbin $fish_user_paths
+
+    # 1Password
+    fish_add_path "/Applications/1Password.app/Contents/MacOS/"
 
     # iTerm2
     if test $ITERM_SESSION_ID
@@ -106,6 +118,10 @@ if test (uname) = Darwin
 
     # PostgreSQL 16
     fish_add_path /opt/homebrew/opt/postgresql@16/bin
+end
+
+if test (uname) = Linux
+    fish_add_path /opt/1Password/
 end
 
 # -----------------------------------------------------------------------------
@@ -187,6 +203,4 @@ end
 
 fish_config prompt choose astronaut
 
-# bun
-set --export BUN_INSTALL "$HOME/.bun"
-set --export PATH $BUN_INSTALL/bin $PATH
+
