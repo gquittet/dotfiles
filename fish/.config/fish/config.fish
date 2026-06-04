@@ -102,6 +102,9 @@ if test (uname) = Darwin
     set -x ANDROID_SDK_ROOT $HOME/Library/Android/sdk
     fish_add_path "$ANDROID_SDK_ROOT/platform-tools"
 
+    # dotnet
+    set -x DOTNET_ROOT /opt/homebrew/opt/dotnet/libexec
+
     # Flutter
     set -x FLUTTERPATH $HOME/Library/flutter
     fish_add_path $FLUTTERPATH/bin
