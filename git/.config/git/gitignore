@@ -294,5 +294,10 @@ todo.org
 # Ignore file
 .ignore
 
+# AI
+GEMINI.md
+AGENTS.md
+.junie/
+
 # End of https://www.gitignore.io/api/linux,macos,windows
 
