@@ -298,6 +298,7 @@ todo.org
 GEMINI.md
 AGENTS.md
 .junie/
+.opencode/
 
 # End of https://www.gitignore.io/api/linux,macos,windows
 
