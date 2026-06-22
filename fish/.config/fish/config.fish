@@ -64,7 +64,7 @@ set -x NVM_DIR $XDG_DATA_HOME/nvm
 set -x NPM_CONFIG_USERCONFIG $XDG_CONFIG_HOME/npm/npmrc
 
 set -x PNPM_HOME $XDG_DATA_HOME/pnpm
-fish_add_path $PNPM_HOME
+fish_add_path $PNPM_HOME/bin
 
 # OpenCode
 if test -e "$HOME/.opencode"
