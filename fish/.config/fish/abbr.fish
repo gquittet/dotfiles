@@ -172,5 +172,7 @@ abbr -a yvma yarn version --major
 abbr -a yvmi yarn version --minor
 
 # software
+abbr -a oc opencode
 abbr -a v nvim
 abbr -a vd nvim -d
+
