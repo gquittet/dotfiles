@@ -89,6 +89,8 @@ if test (uname) = Darwin
     # Homebrew
     fish_add_path /opt/homebrew/bin
     set -g fish_user_paths /usr/local/sbin $fish_user_paths
+    # Stop update `auto_update: true` cask with brew upgrade: https://github.com/Homebrew/brew/pull/21962
+    set -x HOMEBREW_NO_UPGRADE_AUTO_UPDATES_CASKS 1
 
     # 1Password
     fish_add_path "/Applications/1Password.app/Contents/MacOS/"
