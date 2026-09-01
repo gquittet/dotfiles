@@ -227,6 +227,7 @@ tags
 
 # Vim per-project settings
 .vim/
+.nvim.lua
 .lazy.lua
 
 ### VisualStudioCode ###
