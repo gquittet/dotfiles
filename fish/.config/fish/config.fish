@@ -29,6 +29,7 @@ set -x VISUAL $EDITOR
 
 # SSH 1Password
 set -x SSH_AUTH_SOCK ~/.1password/agent.sock
+set -x OP_BIOMETRIC_UNLOCK_ENABLED true
 
 # MANPAGES/Less colors
 set -x LESS_TERMCAP_md (printf "\e[01;31m")
@@ -207,5 +208,4 @@ if test -e $XDG_CONFIG_HOME/fish/abbr.fish
 end
 
 fish_config prompt choose astronaut
-
 
